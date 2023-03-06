@@ -85,8 +85,10 @@
                                                         <div class="wizard__main mx-680">
                                                             <div class="row justify-content-center">
                                                                 <div class="col-sm-6 col-12">
-                                                                    <div class="form-group">
-                                                                        <a href="javascript:void(0);" class="btn-main step2 w-100 utilityProvider">Other</a>
+                                                                    <div class="form-group text-center">
+                                                                        <!-- <a href="javascript:void(0);" class="btn-main step2 w-100 utilityProvider">Other</a> -->
+
+                                                                        <p class="text-white">Loading ....</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
