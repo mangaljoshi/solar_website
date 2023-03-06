@@ -138,7 +138,7 @@ class BaseController extends Controller
         $url = "https://api.leadprosper.io/ingest";
        
         $userData = Session::get('userData');
-        return true;
+        // return true;
         
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
