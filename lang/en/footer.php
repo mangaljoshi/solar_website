@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'copyright_text' => 'Wise Energy Power All Rights Reserved.',
+    'copyright_text' => 'Wise Solar Power All Rights Reserved.',
     'contact' => 'Contact',
     'privacy_policy' => 'Privacy Policy',
     'terms_of_use' => 'Terms of Use',
