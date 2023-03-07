@@ -9,7 +9,13 @@ use Illuminate\Support\Facades\Session;
 class BaseController extends Controller
 {
     
-    public function home() {
+    public function home(Request $request) {
+        if ($request->input('lp_subid1')) {
+            $userData = [
+                'lp_subid1' => $request->input('lp_subid1'),
+            ];
+            Session::put('userData', $userData);
+        }
         return view('pages.home');
     }
 
@@ -19,10 +25,10 @@ class BaseController extends Controller
         ]);
 
         $userData = [
-            "lp_campaign_id" => "12444",
-            "lp_key" => "o6e2twdofpyp6",
-            "lp_supplier_id" => "25370",
-            "sub_id1" => "112",
+            "lp_campaign_id" => "11036",
+            "lp_key" => "yxp3uemdcrpy1",
+            "lp_supplier_id" => "22807",
+            "sub_id1" => "NAT",
             "lp_response" => "JSON",
             "zip_code" => $request->input('zip_code'),
             "ip_address" => $request->ip(),
