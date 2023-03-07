@@ -4,7 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Wise Energy Power-Best Solar Panels For Solar & Renewable Energy</title>
+        <link rel="icon" type="image/x-icon" href="./images/logo.png">
+
+        <title>{{ config('base.website_name') }}-Best Solar Panels For Solar & Renewable Energy</title>
         <link rel="icon" type="image/x-icon" href="./images/logo.png">
         <!-- Required meta tags -->
         <meta charset="utf-8">
