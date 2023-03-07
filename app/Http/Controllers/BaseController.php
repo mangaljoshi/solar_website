@@ -35,14 +35,8 @@ class BaseController extends Controller
 
         Session::put('userData', $userData);
 
-        // dd(Session::get('userData'));
-
         return redirect('/solar-wizard');
     }
-
-
-    // Session::set('variableName', $value);
-
 
     public function marketingPartners() {
         return view('pages.marketing-partners');
@@ -57,7 +51,6 @@ class BaseController extends Controller
         } else {
             return redirect('/');
         }
-        // dd(Session::get('userData'));
         return view('pages.solar-wizard');
     }
 
@@ -114,7 +107,6 @@ class BaseController extends Controller
             $userData['first_name'] = $request->get('first_name');
             $userData['last_name'] = $request->get('last_name');
         } else if ($step == 7) {
-            // dd(var_dump($request->get('phone')));
             $this->validate($request, [
                 'phone' => 'required|size:10'
             ]);
@@ -130,15 +122,13 @@ class BaseController extends Controller
         }
         
         Session::put('userData', $userData);
-        // dump($userData);
         return response()->json(['success' => true, 'step' => $step]);
     }
 
     public function leadprosperAPI() {
         $url = "https://api.leadprosper.io/ingest";
-       
+        
         $userData = Session::get('userData');
-        // return true;
         
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
