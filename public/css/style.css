@@ -499,7 +499,7 @@ input[type="range"]::-moz-range-thumb {
 
 .lead_text {
     margin-top: 1rem;
-    font-size: 8px;
+    font-size: 12px;
     line-height: 1.5;
     margin: 8px 20px;
 }
