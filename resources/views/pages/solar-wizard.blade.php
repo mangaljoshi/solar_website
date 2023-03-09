@@ -311,7 +311,7 @@
                                                                             </div>
                                                                         </div>
 
-                                                                        <div class="col-sm-12 col-12">
+                                                                        <div class="col-sm-12 col-12 mt-4">
                                                                         <label for="leadid_tcpa_disclosure" class="lead_text">
                                                                             By clicking the "View My Savings" button, you authorize www.wiseenergypower.com and up to <a href="./marketingPartners.html" target="_blank" tabindex="0" style="color:#7b7b7b;text-decoration:underline">4 solar partners</a> to call you and send you pre-recorded messages and text messages at the number you entered above, using an autodialer, with offers about their products or services, even if your phone number is on any national or state "Do Not Call" list. Message and data rates may apply. Your consent here is not based on a condition of purchase. You agree to the Terms of Use and Privacy Policy.
                                                                         </label>  
