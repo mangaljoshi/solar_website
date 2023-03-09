@@ -312,7 +312,7 @@ const con = getGeo();
       
       geocoder.geocode({ 'latLng': latlng }, function (results, status) {
         var address = results[0].formatted_address;
-        enteredAddress = results[0].formatted_address;
+        // enteredAddress = results[0].formatted_address;
       });
       
       for (const component of place.address_components) {
@@ -320,6 +320,16 @@ const con = getGeo();
         const componentType = component.types[0];
     
         switch (componentType) {
+          case "street_number":{
+            enteredAddress = component.short_name;
+            enteredAddress += " "
+            break;
+          }
+          case "route": {
+            enteredAddress += component.short_name;
+            break;
+          }
+
           case "locality": {
             enteredCity = component.short_name;
             break;
