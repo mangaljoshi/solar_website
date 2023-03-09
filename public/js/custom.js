@@ -1,5 +1,3 @@
-// localStorage.clear();
-
 const utility = async (zipCode) => {
   const URL = "https://apis.wattbuy.com/v3/electricity/info?zip="+zipCode;
   const options = {
@@ -49,25 +47,13 @@ $(document).ready(function () {
     trusted_form_cert_url: "",
   };
 
-
-  console.log('dataObj---',dataObj);
-
-  // let getLocalStorage = JSON.parse(localStorage.getItem("solar-data"));
-
-  // if (!getLocalStorage) {
-  //     localStorage.setItem("solar-data", JSON.stringify(data));
-  // }
-
   getIP();
 
   function getIP() {
     var range = $(".avgBillRange").val();
     if (range) {
-      // let getLocalStorage = JSON.parse(localStorage.getItem("solar-data"));
       var monthly_bill= range;
-      // getLocalStorage["monthly_bill"] = range;
       if (monthly_bill < 100) {
-        // getLocalStorage["monthly_bill"] = "Less than $100";
         dataObj.monthly_bill = "Less than $100";
       } else if (monthly_bill > 100 && monthly_bill < 200) {
         dataObj.monthly_bill = "From $100 to $200";
@@ -76,24 +62,13 @@ $(document).ready(function () {
       } else {
         dataObj.monthly_bill = "More than $300";
       }
-      // localStorage.setItem("solar-data", JSON.stringify(getLocalStorage));
     }
 
     var url = new URL(window.location.href);
     var lp_subid1 = url.searchParams.get("lp_subid1");
     if (lp_subid1) {
       dataObj.lp_subid1 = lp_subid1;
-      // let getLocalStorage = JSON.parse(localStorage.getItem("solar-data"));
-      // getLocalStorage["lp_subid1"] = lp_subid1;
-      // localStorage.setItem("solar-data", JSON.stringify(getLocalStorage));
     } 
-
-    // $.getJSON("https://api.ipify.org?format=json", function(data) {
-    //   let getLocalStorage = JSON.parse(localStorage.getItem("solar-data"));
-    //   getLocalStorage["ip_address"] = data.ip;
-    //   localStorage.setItem("solar-data", JSON.stringify(getLocalStorage));
-    //   return data.ip;
-    // }); 
   }
 
 });
@@ -140,7 +115,6 @@ const con = getGeo();
 
   // ------------register-steps--------------
   $(document).ready(function ($) {
-    // google.maps.event.addDomListener(window, 'load', initialize);
     $("#phone")
     .mask("(999)999-9999")
     .on("change", function() {
@@ -166,12 +140,11 @@ const con = getGeo();
       if ($target.hasClass("disabled")) {
         return false;
       }
-  
+
       // handle with prgressbar
       var step = $(e.target).data("step");
       var percent = (parseFloat(step) / 7) * 100;
       percent = parseInt(percent);
-      // percent = percent.toFixed(2)
       $(".wizard-persantage").html(percent + "%");
       $(".progress-bar").css({ width: percent + "%" });
       $(".progress-bar").text("Step " + step + " of 7");
@@ -203,8 +176,6 @@ const con = getGeo();
 
         let zipCode = $('.zip_code').val();
         //Show Loader
-        // Btn.querySelector('.text').style.display = 'none';
-        // Btn.querySelector('.spinner-border').style.display = 'inline-block'
         
         let getLocalStorage = JSON.parse(localStorage.getItem("solar-data"));
   
@@ -254,37 +225,14 @@ const con = getGeo();
         </div>`
 
         document.querySelector('p[data-zip-error] + .wizard__main .row').innerHTML = utilities;
-
-        // var $active = $(".wizard .nav-tabs li a.active");
-        // $active.parent().next().children().removeClass("disabled");
-        // $active.parent().addClass("done");
-        // nextTab($active);
-
-        // $(".next-step").click(async function (e) {
-        //   var $active = $(".wizard .nav-tabs li a.active");
-        //   $active.parent().next().children().removeClass("disabled");
-        //   $active.parent().addClass("done");
-        //   nextTab($active);
-        // })
-
       }
-      // else{
-      //   var $active = $(".wizard .nav-tabs li a.active");
-      //   $active.parent().next().children().removeClass("disabled");
-      //   $active.parent().addClass("done");
-      //   nextTab($active);
-      // }
 
       if (document.querySelector(".utilityProvider")) {
         document.querySelectorAll(".utilityProvider").forEach((ele) => {
           ele.addEventListener("click", (e) => {
             let selectedOption = e.currentTarget.innerText;
-            console.log('selectedOption--jj-',selectedOption);
-            // let getLocalStorage = JSON.parse(localStorage.getItem("solar-data"));
-            // getLocalStorage["utility_provider"] = selectedOption;
-            // localStorage.setItem("solar-data", JSON.stringify(getLocalStorage));
-
             updateData(2, {'utility_provider': selectedOption});
+            progressBar(2);
           });
         });
       }
@@ -365,9 +313,6 @@ const con = getGeo();
       geocoder.geocode({ 'latLng': latlng }, function (results, status) {
         var address = results[0].formatted_address;
         enteredAddress = results[0].formatted_address;
-        // getLocalStorage["address"] = address;
-        // localStorage.setItem("solar-data", JSON.stringify(getLocalStorage));
-        // updateData(3, {'address': address});
       });
       
       for (const component of place.address_components) {
@@ -376,16 +321,10 @@ const con = getGeo();
     
         switch (componentType) {
           case "locality": {
-            // getLocalStorage["city"] = component.short_name;
-            // localStorage.setItem("solar-data", JSON.stringify(getLocalStorage));
-            // updateData(3, {'city': component.short_name});
             enteredCity = component.short_name;
             break;
           }
           case "administrative_area_level_1": {
-            // getLocalStorage["state"] = component.short_name;
-            // localStorage.setItem("solar-data", JSON.stringify(getLocalStorage));
-            // updateData(3, {'state': component.short_name});
             enteredState = component.short_name;
             break;
           }
@@ -512,30 +451,12 @@ const con = getGeo();
       let formData = new FormData(form);
 
       var trustedForm = $("#xxTrustedFormCertUrl_0").val();
-      // if (trustedForm) {
-      //   let getLocalStorage = JSON.parse(localStorage.getItem("solar-data"));
-      //   getLocalStorage["trusted_form_cert_url"] = trustedForm;
-      //   localStorage.setItem("solar-data", JSON.stringify(getLocalStorage));
-      // }
-      
+    
       var jornaya = $("#leadid_token").val();
-      // if (jornaya) {
-      //   let getLocalStorage = JSON.parse(localStorage.getItem("solar-data"));
-      //   getLocalStorage["jornaya_lead_id"] = jornaya;
-      //   localStorage.setItem("solar-data", JSON.stringify(getLocalStorage));
-      // }
-      // console.log('here--indie');
-      // if(formData.get('phone') == '' || formData.get('phone').length < 13 || formData.get('phone').length > 14){
-      //   console.log('here--indie-if');
-      //   $(".phoneNumber_errormsg").text('Please Enter a Valid US Phone Number');
-      //   return ; 
-      // }else{
-        var number = formData.get('phone');
-        number = number.replace(/\D+/g, "");
-        updateData(7, {'phone': number, 'trusted_form_cert_url': trustedForm, 'jornaya_lead_id': jornaya});
-        
-        // window.location.href = "/quote-report";
-      // }
+      
+      var number = formData.get('phone');
+      number = number.replace(/\D+/g, "");
+      updateData(7, {'phone': number, 'trusted_form_cert_url': trustedForm, 'jornaya_lead_id': jornaya});
     })
   }
 
@@ -559,16 +480,12 @@ const con = getGeo();
         form.querySelector('input').classList.add('error');
         return ;
       }
-
-      // form.querySelector('a.next-step').click();
     })
   }
 
   function handleInput(e){
     let elment = e.currentTarget.closest('div')
-    // console.log(elment.querySelector('span.error-msg'));
     elment.querySelector('span.error-msg').style.display = 'none'
-    // elment.style.display = 'none';
   }
 
   function isNumberKey(evt){
@@ -593,16 +510,6 @@ const con = getGeo();
     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     return regex.test(email);
   }
-
-  //============= validations =================
-  
-  // if (document.querySelector(".homeSqFootRange")) {
-  //   document.querySelector(".homeSqFootRange").addEventListener("input", (e) => {
-  //     let getLocalStorage = JSON.parse(localStorage.getItem("solar-data"));
-  //     getLocalStorage["homeSqFoot"] = e.currentTarget.value;
-  //     localStorage.setItem("solar-data", JSON.stringify(getLocalStorage));
-  //   });
-  // }
   
   if (document.getElementById("zipCode")) {
     document.getElementById("zipCode").addEventListener("keyup", (e) => {
@@ -613,23 +520,6 @@ const con = getGeo();
       localStorage.setItem("solar-data", JSON.stringify(getLocalStorage));
     });
   }
-  
-  // if (document.querySelector(".avgBillRange")) {
-  //   document.querySelector(".avgBillRange").addEventListener("input", (e) => {
-  //     // let getLocalStorage = JSON.parse(localStorage.getItem("solar-data"));
-  //     // var monthly_bill= e.currentTarget.value;
-  //     // if (monthly_bill < 100) {
-  //     //   monthly_bill = "Less than $100";
-  //     // } else if (monthly_bill > 100 && monthly_bill < 200) {
-  //     //   monthly_bill = "From $100 to $200";
-  //     // } else if (monthly_bill > 200 && monthly_bill < 300) {
-  //     //   monthly_bill = "From $200 to $300";
-  //     // } else {
-  //     //   monthly_bill = "More than $300";
-  //     // }   
-     
-  //   });
-  // }
 
   $(".step1").click(function(e){
     var range = $(".avgBillRange").val();
@@ -644,6 +534,7 @@ const con = getGeo();
     }   
     
     updateData(1, {'monthly_bill': monthly_bill});
+    progressBar(1);
   });
 
   $(".step3").click(function(e){
@@ -653,24 +544,13 @@ const con = getGeo();
       enteredState='';
     }
     updateData(3, {'address': enteredAddress, 'city': enteredCity, 'state': enteredState});
+    progressBar(3);
   });
-  
-  if (document.querySelector(".utilityProvider")) {
-    document.querySelectorAll(".utilityProvider").forEach((ele) => {
-      ele.addEventListener("click", (e) => {
-        let selectedOption = e.currentTarget.innerText;
-        // let getLocalStorage = JSON.parse(localStorage.getItem("solar-data"));
-        // getLocalStorage["utility_provider"] = selectedOption;
-        // localStorage.setItem("solar-data", JSON.stringify(getLocalStorage));
-      });
-    });
-  }
   
   if (document.querySelector(".roofSunlight")) {
     document.querySelectorAll(".roofSunlight").forEach((ele) => {
       ele.addEventListener("click", (e) => {
         let selectedOption = e.currentTarget.querySelector("h3").innerText;
-        // let getLocalStorage = JSON.parse(localStorage.getItem("solar-data"));
 
         var roof_shade= selectedOption;
         
@@ -683,65 +563,25 @@ const con = getGeo();
         } else if (roof_shade == 'Severe Shade') {
           roof_shade_type = "Completely shaded";
         }
-
         updateData(4, {'roof_shade': roof_shade_type});
-        // localStorage.setItem("solar-data", JSON.stringify(getLocalStorage));
+        progressBar(4);
       });
     });
   }
-  
-  // if (document.querySelector(".emailInp")) {
-  //   document.querySelector(".emailInp").addEventListener("keyup", (e) => {
-  //     // let getLocalStorage = JSON.parse(localStorage.getItem("solar-data"));
-  //     // getLocalStorage["email"] = e.currentTarget.value;
-  //     // localStorage.setItem("solar-data", JSON.stringify(getLocalStorage));
-
-  //     // updateData(5, {'email': e.currentTarget.value});
-  //   });
-  // }
 
   $(".step5").click(function(e){
     var email = $(".emailInp").val();
     updateData(5, {'email': email});
+    progressBar(5);
   });
   
-  // if (document.querySelector(".firstNameInp")) {
-  //   document.querySelector(".firstNameInp").addEventListener("keyup", (e) => {
-  //     let getLocalStorage = JSON.parse(localStorage.getItem("solar-data"));
-  //     getLocalStorage["first_name"] = e.currentTarget.value;
-  //     localStorage.setItem("solar-data", JSON.stringify(getLocalStorage));
-  //   });
-  // }
-  
-  // if (document.querySelector(".lastNameInp")) {
-  //   document.querySelector(".lastNameInp").addEventListener("keyup", (e) => {
-  //     let getLocalStorage = JSON.parse(localStorage.getItem("solar-data"));
-  //     getLocalStorage["last_name"] = e.currentTarget.value;
-  //     localStorage.setItem("solar-data", JSON.stringify(getLocalStorage));
-  //   });
-  // }
 
   $(".step6").click(function(e){
     var first_name = $(".firstNameInp").val();
     var last_name = $(".lastNameInp").val();
     updateData(6, {'first_name': first_name, 'last_name': last_name});
+    progressBar(6);
   });
-  
-  // $(".step7").click(function(e){
-  //   var number = $(".phone").val();
-  //   number = number.replace(/\D+/g, "");
-  //   updateData(7, {'phone': number});
-  // });
-
-  // if (document.getElementById("phone")) {
-  //   document.getElementById("phone").addEventListener("keyup", (e) => {
-  //     let number = e.currentTarget.value;
-  //     number = number.replace(/\D+/g, "");
-  //     let getLocalStorage = JSON.parse(localStorage.getItem("solar-data"));
-  //     getLocalStorage["phone"] = number;
-  //     localStorage.setItem("solar-data", JSON.stringify(getLocalStorage));
-  //   });
-  // }
 
   $('*[class^="prev-step-"]').click(function(){
     $prevStep = $(this).data("prev-step");
@@ -751,70 +591,6 @@ const con = getGeo();
     stepNumber = stepNumber + 1;
     $('#step'+stepNumber).hide();
   });
-  
-  // const onSubmitData = async () => {
-  //   let getLocalStorage = JSON.parse(localStorage.getItem("solar-data"));
-    
-  //   $('#loading').show();
-
-  //   if (await validateJsonData()) {
-  //     alert("Something is wrong while submitting the data. Please try to submit the details again. Thankyou!");
-  //     return window.location.reload();
-  //   } else {
-  //     let obj = {
-  //       lp_campaign_id: getLocalStorage.lp_campaign_id,
-  //       lp_campaign_key: getLocalStorage.lp_campaign_key,
-  //       first_name: getLocalStorage.first_name,
-  //       last_name: getLocalStorage.last_name,
-  //       phone: getLocalStorage.phone,
-  //       address: getLocalStorage.address,
-  //       city: getLocalStorage.city,
-  //       state: getLocalStorage.state,
-  //       zip_code: getLocalStorage.zip_code,
-  //       email: getLocalStorage.email,
-  //       monthly_bill: getLocalStorage.monthly_bill,
-  //       ip_address: getLocalStorage.ip_address,
-  //       roof_shade: getLocalStorage.roof_shade,
-  //       homeowner: getLocalStorage.homeowner,
-  //       landing_page: getLocalStorage.landing_page,
-  //       user_agent: getLocalStorage.user_agent,
-  //       tcpa_text: getLocalStorage.tcpa_text,
-  //       time_frame: getLocalStorage.time_frame,
-  //       utility_provider: getLocalStorage.utility_provider,
-  //       jornaya_lead_id: getLocalStorage.jornaya_lead_id,
-  //       trusted_form_cert_url: getLocalStorage.trusted_form_cert_url
-  //     }
-  
-  //     localStorage.setItem("solar-data", JSON.stringify(getLocalStorage));
-  //     const URL = `https://api.leadprosper.io/ingest`;
-      
-  //     const options = {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(getLocalStorage),
-  //     };
-    
-  //     const response = await fetch(URL, options);
-    
-  //     const data = await response.json();
-  
-  //     if (data && data.status) {
-  //       // localStorage.clear();
-  //       window.location.href = "quote-report.html";
-  //     }
-  //   }
-  // };
-  
-  // const validateJsonData = async() => {
-  //   let getLocalStorage = JSON.parse(localStorage.getItem("solar-data"));
-
-  //   if (getLocalStorage.ip_address == null || getLocalStorage.address == null || getLocalStorage.state == null || getLocalStorage.first_name == null || getLocalStorage.last_name == null || getLocalStorage.email == null || getLocalStorage.roof_shade == null ||  getLocalStorage.phone.length < 10) {
-  //     return true;
-  //   }
-  //   return false;
-  // }
 
   const updateData = (step, data) => {
     if (step == 7) {
@@ -843,8 +619,19 @@ const con = getGeo();
           }
           $('.error_step_'+step).text(errorResponse.responseJSON.message);
           $('.error_step_'+step).show();
-          console.log(errorResponse.responseJSON.errors);
       }
+    });
+  }
+
+  const progressBar = (step) => {   
+    var percent = (parseFloat(step) / 7) * 100;
+    percent = parseInt(percent);
+    $(".wizard-persantage").html(percent + "%");
+    $(".progress-bar").css({ width: percent + "%" });
+    $(".progress-bar").text("Step " + step + " of 7");
+    $(".wizard-persantage").blur(function () {
+      var amt = parseFloat(this.value);
+      $(this).val("$" + amt.toFixed(2));
     });
   }
 
@@ -866,7 +653,6 @@ const con = getGeo();
         address: getLocalStorage.address.replaceAll(' ', '+'),
         zipcode: getLocalStorage.zipCode
       }
-      // console.log(obj);
       let queryString = ''
       for (key in obj){
         queryString += `${key}=${obj[key]}`
