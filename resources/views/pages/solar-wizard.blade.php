@@ -306,7 +306,7 @@
                                                                         </div>
 
                                                                         <div class="col-md-12 col-sm-12 col-12 mt-2">
-                                                                            <div class="form-group picker text-center mt-4 mb-2">
+                                                                            <div class="form-group picker text-center mt-4 mb-4">
                                                                                 <button type="submit" class="btn-main">View My Savings</button>
                                                                             </div>
                                                                         </div>
