@@ -501,7 +501,7 @@ input[type="range"]::-moz-range-thumb {
     margin-top: 1rem;
     font-size: 12px;
     line-height: 1.5;
-    margin: 8px 20px;
+    margin: 50px 20px 20px;
 }
 
 .hero-inner .form-list {
