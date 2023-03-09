@@ -305,8 +305,8 @@
                                                                         <div class="invalid-feedback error_step_7 text-white phoneNumber_errormsg"></div>
                                                                         </div>
 
-                                                                        <div class="col-md-12 col-sm-12 col-12">
-                                                                            <div class="form-group picker text-center mt-2 mb-2">
+                                                                        <div class="col-md-12 col-sm-12 col-12 mt-2">
+                                                                            <div class="form-group picker text-center mt-4 mb-2">
                                                                                 <button type="submit" class="btn-main">View My Savings</button>
                                                                             </div>
                                                                         </div>
