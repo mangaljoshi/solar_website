@@ -4,7 +4,9 @@
     <div class="main-wrapper wizard-box">
         <div class="d-table w-100">
             <div class="d-table-cell">
-                @include('partials.header_home')
+                <div class="d-none d-sm-block d-md-block">
+                    @include('partials.header_home')
+                </div>
                 <section class="hero-banner quate-report wizard-bg page-paddings pt-1 pb-4">
                     <div class="container">
                         <div class="row justify-content-center">
