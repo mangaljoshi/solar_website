@@ -29,6 +29,7 @@ class BaseController extends Controller
             "lp_key" => "yxp3uemdcrpy1",
             "lp_supplier_id" => "22807",
             "sub_id1" => "NAT",
+            "lp_subid2" => "nat",
             "lp_response" => "JSON",
             "zip_code" => $request->input('zip_code'),
             "ip_address" => $request->ip(),
