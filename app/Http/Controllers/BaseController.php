@@ -24,6 +24,8 @@ class BaseController extends Controller
             'zip_code' => 'required|digits:5|numeric'
         ]);
 
+        $userData = Session::get('userData');
+       
         $userData = [
             "lp_campaign_id" => "11036",
             "lp_key" => "yxp3uemdcrpy1",
@@ -39,6 +41,8 @@ class BaseController extends Controller
             "tcpa_text"=> config('base.tcpa_text'),
             "time_frame" => "Immediate",
         ];
+
+        // dd(Session::get('userData', $userData));
 
         Session::put('userData', $userData);
 
