@@ -38,8 +38,8 @@
                                                 <div class="tab-pane fade in active" role="tabpanel" id="step1">
                                                     <div class="wizard__box">
                                                         <div class="page-title text-center mb-3">
-                                                            <h2>What is Your Average Electric Bill?</h2>
-                                                            <p>We use this information to calculate your savings. Move the slider to select.</p>
+                                                            <h2>{{ __('solar.page_title') }}</h2>
+                                                            <p>{{ __('solar.page_title_description') }}</p>
                                                         </div>
                                                         <div class="wizard__main">
                                                             <div class="row justify-content-center">
@@ -78,10 +78,10 @@
                                                 <div class="tab-pane tab-pane" role="tabpanel" id="step2">
                                                     <div class="wizard__box">
                                                         <div class="page-title text-center mb-3">
-                                                            <h2>Select Your Utility Provider</h2>
-                                                            <p>We'll look up utility rates to calculate new savings</p>
+                                                            <h2>{{ __('solar.utility_text_heading')}}</h2>
+                                                            <p>{{ __('solar.utility_text_details')}}</p>
                                                         </div>
-                                                        <p data-zip-error style="text-align: center; color: red; display: none;">No record found againts entered Zip Code</p>
+                                                        <p data-zip-error style="text-align: center; color: red; display: none;">{{ __('solar.zip_code_result')}}</p>
                                                         <div class="wizard__main mx-680">
                                                             <div class="row justify-content-center">
                                                                 <div class="col-sm-6 col-12">
@@ -104,8 +104,8 @@
                                                 <div class="tab-pane tab-pane" role="tabpanel" id="step3">
                                                     <div class="wizard__box">
                                                         <div class="page-title text-center mb-3">
-                                                            <h2>Your Home Address</h2>
-                                                            <p>We'll lookup rebates and incentives for your home</p>
+                                                            <h2>{{ __('solar.address')}}</h2>
+                                                            <p>{{ __('solar.address_text')}}</p>
                                                         </div>
                                                         <div class="wizard__main mx-680">
                                                             <form id="pac-input-form">
@@ -120,7 +120,7 @@
                                                                         <div class="invalid-feedback error_step_3 text-white"></div>
 
                                                                         <div class="dropdown-menu">
-                                                                            <i class="hasNoResults">No matching results</i>
+                                                                            <i class="hasNoResults">{{ __('solar.matching_results')}}</i>
                                                                             <div class="list-autocomplete">
                                                                                 <button type="button" class="dropdown-item">New Orleans, LA, USA</button>
                                                                                 <button type="button" class="dropdown-item">Cherokee, NC, USA</button>
@@ -153,8 +153,8 @@
                                                 <div class="tab-pane tab-pane" role="tabpanel" id="step4">
                                                     <div class="wizard__box">
                                                         <div class="page-title text-center mb-3">
-                                                            <h2>Does Your Roof Get Sunlight?</h2>
-                                                            <p>We'll calculate the best possible savings for your particular project.</p>
+                                                            <h2>{{ __('solar.sunlight_heading')}}</h2>
+                                                            <p>{{ __('solar.sunlight_text')}}</p>
                                                         </div>
                                                         <div class="wizard__main mx-680">
                                                             <div class="row justify-content-center">
@@ -209,8 +209,8 @@
                                                 <div class="tab-pane tab-pane" role="tabpanel" id="step5">
                                                     <div class="wizard__box">
                                                         <div class="page-title text-center mb-3">
-                                                            <h2>Your Estimate Is Almost Ready!</h2>
-                                                            <p>We'll Deliver Your Exclusive Savings By Email</p>
+                                                            <h2>{{ __('solar.estimate_heading')}}</h2>
+                                                            <p>{{ __('solar.estimate_text')}}</p>
                                                         </div>
                                                         <div class="wizard__main mx-680">
                                                             <div class="row justify-content-center">
@@ -240,8 +240,8 @@
                                                         <div class="col-12">
                                                             <div class="wizard__box">
                                                             <div class="page-title text-center mb-3">
-                                                                <h2>Who Is This Estimate For?</h2>
-                                                                <p>We Take Privacy Seriously. No Spam Ever!</p>
+                                                                <h2>{{ __('solar.estimate_for')}}</h2>
+                                                                <p>{{ __('solar.privacy_text')}}</p>
                                                             </div>
                                                             <div class="wizard__main mx-680">
                                                                 <div class="row justify-content-center">
@@ -283,8 +283,8 @@
                                                             <div class="col-12">
                                                             <div class="wizard__box">
                                                                 <div class="page-title text-center mb-3">
-                                                                    <h2>Final Step!</h2>
-                                                                    <p>Complete The Final Step To See Savings!</p>
+                                                                    <h2>{{ __('solar.final_step')}}</h2>
+                                                                    <p>{{ __('solar.final_step_text')}}</p>
                                                                 </div>
                                                                 <div class="wizard__main mx-680">
                                                                     <div class="row justify-content-center">
@@ -313,10 +313,10 @@
 
                                                                         <div class="col-sm-12 col-12 mt-4">
                                                                         <label for="leadid_tcpa_disclosure" class="lead_text">
-                                                                            By clicking the "View My Savings" button, you authorize www.powersolarsavings.com and up to <a href="{{ route('marketing') }}" target="_blank" tabindex="0" style="color:#7b7b7b;text-decoration:underline">4 solar partners</a> to call you and send you pre-recorded messages and text messages at the number you entered above, using an autodialer, with offers about their products or services, even if your phone number is on any national or state "Do Not Call" list. Message and data rates may apply. Your consent here is not based on a condition of purchase. You agree to the Terms of Use and Privacy Policy.
+                                                                        {{ __('solar.tcpa_label._1') }} <a href="{{ route('marketing') }}" target="_blank" tabindex="0" style="color:#7b7b7b;text-decoration:underline">{{ __('solar.tcpa_label._2') }}</a> {{ __('solar.tcpa_label._3') }}
                                                                         </label>  
                                                                             
-                                                                        <input type="hidden" id="leadid_tcpa_disclosure" name="tcpa" tabindex="0" value='By clicking the "View My Savings" button, you authorize www.powersolarsavings.com and up to 4 solar partners to call you and send you pre-recorded messages and text messages at the number you entered above, using an autodialer, with offers about their products or services, even if your phone number is on any national or state "Do Not Call" list. Message and data rates may apply. Your consent here is not based on a condition of purchase. You agree to the Terms of Use and Privacy Page.'>
+                                                                        <input type="hidden" id="leadid_tcpa_disclosure" name="tcpa" tabindex="0" value="{{ __('solar.tcpa_text') }}">
                                                                         </div>
                                                 
                                                                         
