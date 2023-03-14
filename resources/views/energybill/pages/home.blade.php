@@ -1,12 +1,12 @@
-@extends('layouts.base')
+@extends('energybill.layouts.base')
 
 @section('style')
-    <link href="{{ asset('css/c-wizard.css') }}" rel="stylesheet">
+    <link href="{{ asset('energybill/css/c-wizard.css') }}" rel="stylesheet">
 @endsection
 
 @section('content')
     <div class="main-wrapper">
-        @include('partials.header_home')
+        @include('energybill.partials.header_home')
         <section class="hero-banner">
             <div class="d-table w-100">
                <div class="d-table-cell">
@@ -78,7 +78,7 @@
                 <div class="col-md-6 col-sm-12 col-12">
                     <div class="government-left position-relative">
                         <div class="government-media">
-                        <img src="images/electrician-installing.jpg" alt="">
+                        <img src="energybill/images/electrician-installing.jpg" alt="">
                         </div>
                         <div class="government-data text-center">
                         <h2><span>$17,727</span>Government <br> Incentives</h2>
@@ -134,7 +134,7 @@
             <div class="row">
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                     <div class="report-list text-center">
-                        <div class="icon"><img src="images/save-icon.svg" alt=""></div>
+                        <div class="icon"><img src="energybill/images/save-icon.svg" alt=""></div>
                         <div class="content">
                         <span class="number">$2,074</span>
                         <h6>You Save</h6>
@@ -144,7 +144,7 @@
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                     <div class="report-list text-center">
-                        <div class="icon"><img src="images/reduce-co2-emissions.svg" alt=""></div>
+                        <div class="icon"><img src="energybill/images/reduce-co2-emissions.svg" alt=""></div>
                         <div class="content">
                         <span class="number">16.2</span>
                         <h6>Reduces CO2 Emissions</h6>
@@ -154,7 +154,7 @@
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                     <div class="report-list text-center">
-                        <div class="icon"><img src="images/planting-icon.svg" alt=""></div>
+                        <div class="icon"><img src="energybill/images/planting-icon.svg" alt=""></div>
                         <div class="content">
                         <span class="number">1,173</span>
                         <h6>Equivalent to planting</h6>
@@ -164,7 +164,7 @@
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                     <div class="report-list text-center">
-                        <div class="icon"><img src="images/equivalent-driving-icon.svg" alt=""></div>
+                        <div class="icon"><img src="energybill/images/equivalent-driving-icon.svg" alt=""></div>
                         <div class="content">
                         <span class="number">40,180mi</span>
                         <h6>Equivalent to Driving</h6>
@@ -213,27 +213,27 @@
             <div class="col-sm-12">
                 <div class="how-it-works clearfix">
                     <div class="work-process position-relative">
-                    <img src="images/solar-panels.png" alt="">
+                    <img src="energybill/images/solar-panels.png" alt="">
                     <h3 class="theme-title mt-3">Solar Panels</h3>
                     <span class="work-budge">01</span>
                     </div>
                     <div class="work-process position-relative">
-                    <img src="images/inverter.png" alt="">
+                    <img src="energybill/images/inverter.png" alt="">
                     <h3 class="theme-title mt-3">Inverter</h3>
                     <span class="work-budge">02</span>
                     </div>
                     <div class="work-process position-relative">
-                    <img src="images/switch-board.png" alt="">
+                    <img src="energybill/images/switch-board.png" alt="">
                     <h3 class="theme-title mt-3">Switch Board</h3>
                     <span class="work-budge">03</span>
                     </div>
                     <div class="work-process position-relative">
-                    <img src="images/utility-meter.png" alt="">
+                    <img src="energybill/images/utility-meter.png" alt="">
                     <h3 class="theme-title mt-3">Utility Meter</h3>
                     <span class="work-budge">04</span>
                     </div>
                     <div class="work-process position-relative">
-                    <img src="images/grid.png" alt="">
+                    <img src="energybill/images/grid.png" alt="">
                     <h3 class="theme-title mt-3">Grid</h3>
                     <span class="work-budge">05</span>
                     </div>
@@ -257,7 +257,7 @@
                 <div class="col-lg-6 col-md-12 col-sm-12 col-12">
                     <div class="government-left md-none position-relative">
                     <div class="government-media">
-                        <img src="images/electrician-installing.jpg" alt="">
+                        <img src="energybill/images/electrician-installing.jpg" alt="">
                     </div>
                     </div>
                 </div>
@@ -271,7 +271,7 @@
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-sm-12 col-12">
                     <div class="going-solar-media">
-                        <img src="images/solar-plant.png" alt="">
+                        <img src="energybill/images/solar-plant.png" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12 col-12">

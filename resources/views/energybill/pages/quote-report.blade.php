@@ -1,11 +1,11 @@
-@extends('layouts.base')
+@extends('energybill.layouts.base')
 
 @section('content')
     <div class="main-wrapper wizard-box">
         <div class="d-table w-100">
             <div class="d-table-cell">
                 <div class="d-none d-sm-block d-md-block">
-                    @include('partials.header_home')
+                    @include('energybill.partials.header_home')
                 </div>
                 <section class="hero-banner quate-report wizard-bg page-paddings pt-1 pb-4">
                     <div class="container">
@@ -30,7 +30,7 @@
                                                 </div>
                                                 <div class="row justify-content-around">
                                                     <div class="col-xs-12 col-sm-12 col-md-8  text-center text-dark">
-                                                        <img src="./images/solar-saver-program-logo.png" alt="Solar Saver Program-logo" class="object-contain">
+                                                        <img src="./energybill/images/solar-saver-program-logo.png" alt="Solar Saver Program-logo" class="object-contain">
                                                     </div>
                                                 </div>
                                                 <div class="row justify-content-around">
@@ -59,7 +59,7 @@
                                             <div class="yell">
 
                                                 <div class="credit-score d-none d-sm-block d-md-block">
-                                                    <a href=""><img src="./images/thank-you-image.png"></a>
+                                                    <a href=""><img src="./energybill/images/thank-you-image.png"></a>
                                                 </div>
 
                                                 <div class="body">
@@ -68,7 +68,7 @@
                                                     </div>
 
                                                     <div class="credit-score d-block d-sm-none d-md-none">
-                                                        <a href=""><img src="images/thank-you-image.png"></a>
+                                                        <a href=""><img src="energybill/images/thank-you-image.png"></a>
                                                     </div>
 
                                                     <div class="cta-subtitle text-dark">
@@ -97,15 +97,15 @@
                         <div class="item">
                             <div class="ts-block">
                                 <div class="ts-author">
-                                    <img src="images/testimonial-1.png" width="60" height="60" alt="">
+                                    <img src="energybill/images/testimonial-1.png" width="60" height="60" alt="">
                                     <div class="content">
                                     <h3 class="theme-title">Linda R.</h3>
                                     <div class="rating">
-                                        <span><img src="images/star-fill-icon.svg" width="17" height="16" alt=""></span>
-                                        <span><img src="images/star-fill-icon.svg" width="17" height="16" alt=""></span>
-                                        <span><img src="images/star-fill-icon.svg" width="17" height="16" alt=""></span>
-                                        <span><img src="images/star-fill-icon.svg" width="17" height="16" alt=""></span>
-                                        <span><img src="images/star-fill-icon.svg" width="17" height="16" alt=""></span>
+                                        <span><img src="energybill/images/star-fill-icon.svg" width="17" height="16" alt=""></span>
+                                        <span><img src="energybill/images/star-fill-icon.svg" width="17" height="16" alt=""></span>
+                                        <span><img src="energybill/images/star-fill-icon.svg" width="17" height="16" alt=""></span>
+                                        <span><img src="energybill/images/star-fill-icon.svg" width="17" height="16" alt=""></span>
+                                        <span><img src="energybill/images/star-fill-icon.svg" width="17" height="16" alt=""></span>
                                     </div>
                                     </div>
                                 </div>
@@ -115,15 +115,15 @@
                         <div class="item">
                             <div class="ts-block">
                                 <div class="ts-author">
-                                    <img src="images/testimonial-2.png" width="60" height="60" alt="">
+                                    <img src="energybill/images/testimonial-2.png" width="60" height="60" alt="">
                                     <div class="content">
                                     <h3 class="theme-title">Amanda C.</h3>
                                     <div class="rating">
-                                        <span><img src="images/star-fill-icon.svg" width="17" height="16" alt=""></span>
-                                        <span><img src="images/star-fill-icon.svg" width="17" height="16" alt=""></span>
-                                        <span><img src="images/star-fill-icon.svg" width="17" height="16" alt=""></span>
-                                        <span><img src="images/star-fill-icon.svg" width="17" height="16" alt=""></span>
-                                        <span><img src="images/star-fill-icon.svg" width="17" height="16" alt=""></span>
+                                        <span><img src="energybill/images/star-fill-icon.svg" width="17" height="16" alt=""></span>
+                                        <span><img src="energybill/images/star-fill-icon.svg" width="17" height="16" alt=""></span>
+                                        <span><img src="energybill/images/star-fill-icon.svg" width="17" height="16" alt=""></span>
+                                        <span><img src="energybill/images/star-fill-icon.svg" width="17" height="16" alt=""></span>
+                                        <span><img src="energybill/images/star-fill-icon.svg" width="17" height="16" alt=""></span>
                                     </div>
                                     </div>
                                 </div>
@@ -133,15 +133,15 @@
                         <div class="item">
                             <div class="ts-block">
                                 <div class="ts-author">
-                                    <img src="images/testimonial-3.png" width="60" height="60" alt="">
+                                    <img src="energybill/images/testimonial-3.png" width="60" height="60" alt="">
                                     <div class="content">
                                     <h3 class="theme-title">John P.</h3>
                                     <div class="rating">
-                                        <span><img src="images/star-fill-icon.svg" width="17" height="16" alt=""></span>
-                                        <span><img src="images/star-fill-icon.svg" width="17" height="16" alt=""></span>
-                                        <span><img src="images/star-fill-icon.svg" width="17" height="16" alt=""></span>
-                                        <span><img src="images/star-fill-icon.svg" width="17" height="16" alt=""></span>
-                                        <span><img src="images/star-fill-icon.svg" width="17" height="16" alt=""></span>
+                                        <span><img src="energybill/images/star-fill-icon.svg" width="17" height="16" alt=""></span>
+                                        <span><img src="energybill/images/star-fill-icon.svg" width="17" height="16" alt=""></span>
+                                        <span><img src="energybill/images/star-fill-icon.svg" width="17" height="16" alt=""></span>
+                                        <span><img src="energybill/images/star-fill-icon.svg" width="17" height="16" alt=""></span>
+                                        <span><img src="energybill/images/star-fill-icon.svg" width="17" height="16" alt=""></span>
                                     </div>
                                     </div>
                                 </div>

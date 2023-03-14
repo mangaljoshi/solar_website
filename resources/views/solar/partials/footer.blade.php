@@ -8,7 +8,7 @@
                     </div>
                     <div class="logo">
                         <a href="{{ route('home') }}">
-                            <img src="images/logo.png" alt="">
+                            <img src="solar/images/logo.png" alt="">
                         </a>
                     </div>
                     <div class="links">

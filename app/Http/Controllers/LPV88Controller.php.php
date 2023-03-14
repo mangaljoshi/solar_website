@@ -10,7 +10,7 @@ class BaseController extends Controller
     public $theme;
 
     public function __construct(){
-        $this->theme = 'solar';
+        $this->theme = 'energybill';
     }
     
     public function home() {

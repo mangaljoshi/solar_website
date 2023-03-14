@@ -1,4 +1,4 @@
-@extends('layouts.base')
+@extends('solar.layouts.base')
 
 @section('content')
     <section class="user-text page-paddings">

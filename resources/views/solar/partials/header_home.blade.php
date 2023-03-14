@@ -4,9 +4,7 @@
             <div class="col-sm-12">
                 <div class="hero-logo">
                     <a href="{{ route('home') }}">
-                        <img src="{{ asset('images/logo.png') }}" alt="" class="d-none d-lg-block">
-                        
-                        
+                        <img src="{{ asset('solar/images/logo.png') }}" alt="" class="d-none d-lg-block">
                     </a>
                 </div>
             </div>

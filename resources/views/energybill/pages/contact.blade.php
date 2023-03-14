@@ -1,4 +1,4 @@
-@extends('layouts.base')
+@extends('energybill.layouts.base')
 
 @section('content')
     <section class="contact-area page-paddings">

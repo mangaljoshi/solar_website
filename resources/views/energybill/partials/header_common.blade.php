@@ -4,7 +4,7 @@
             <div class="col-sm-12">
                 <div class="hero-logo">
                     <a href="{{ route('home') }}">
-                        <img src="images/logo.png" alt="" class="d-none d-lg-block">
+                        <img src="energybill/images/logo.png" alt="" class="d-none d-lg-block">
                        
                     
                     </a>
