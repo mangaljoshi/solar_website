@@ -40,7 +40,7 @@ class Lpv88Controller extends Controller
 
         Session::put('userData', $userData);
 
-        return redirect('/solar-wizard');
+        return redirect('/lpv88/solar-wizard');
     }
 
     public function marketingPartners() {
@@ -51,10 +51,10 @@ class Lpv88Controller extends Controller
         if (Session::has('userData')) {
             $userData = Session::get('userData');
             if (!$userData['zip_code']) {
-                return redirect('/');
+                return redirect('/lpv88');
             }
         } else {
-            return redirect('/');
+            return redirect('/lpv88');
         }
         return view($this->theme.'.pages.solar-wizard');
     }

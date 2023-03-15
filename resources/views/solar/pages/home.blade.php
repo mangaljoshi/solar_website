@@ -38,7 +38,6 @@
                                             <span id="demo">1750 </span> {{ __('home.section_1.sq_ft') }}
                                         </p>
                                     </div>
-                                    <!-- <form id="zipCodeForm"> -->
                                     <form method="post" action="{{ route('zip.post') }}">
                                         {{ csrf_field() }}
                                         <div class="form-list d-flex justify-content-between align-items-center">

@@ -8,13 +8,13 @@
                     </div>
                     <div class="logo">
                         <a href="{{ route('home') }}">
-                            <img src="energybill/images/logo.png" alt="">
+                            <img src="{{ asset('energybill/images/logo.png') }}" alt="">
                         </a>
                     </div>
                     <div class="links">
-                        <a href="{{ route('contact') }}">{{ __('footer.contact') }}</a>
-                        <a href="{{ route('privacy') }}">{{ __('footer.privacy_policy') }}</a>
-                        <a href="{{ route('terms') }}" target="_blank">{{ __('footer.terms_of_use') }}</a>
+                        <a href="{{ route('energy.contact') }}">{{ __('footer.contact') }}</a>
+                        <a href="{{ route('energy.privacy') }}">{{ __('footer.privacy_policy') }}</a>
+                        <a href="{{ route('energy.terms') }}" target="_blank">{{ __('footer.terms_of_use') }}</a>
                     </div>
                 </div>
             </div>
