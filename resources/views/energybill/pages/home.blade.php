@@ -7,7 +7,7 @@
 @section('content')
 <div id="root">
          <div class="qpmywg-4 jsEGxl">
-            <div class="qpmywg-3 WnJYq"><img src="./energybill/images/us-flag.svg" alt=""/></div>
+            <div class="qpmywg-3 WnJYq"><img src="{{ asset('energybill/images/us-flag.svg') }}" alt=""/></div>
             <div class="qpmywg-0 cusrAz">
                <div class="qpmywg-7 jeVraF">
                   <div class="qpmywg-1 kWNlXB"> 
@@ -32,16 +32,16 @@
                   </div>
                   <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-lg-6 MuiGrid-grid-xl-5">
                      <div class="qpmywg-5 jyhrBC">
-                        <div class="qpmywg-6 SWfUG"><img src="./energybill/images/stars.svg" alt=""/></div>
+                        <div class="qpmywg-6 SWfUG"><img src="{{ asset('energybill/images/stars.svg') }}" alt=""/></div>
                         <div id="lead" class="sc-1mfr99g-0 jTfmBg">
                            <div class="sc-1f6gucm-0 bepWUU">
                               <form method="post" action="{{ route('energy.zip.post') }}">
                                  {{ csrf_field() }}
                                  <div class="sc-1f6gucm-3 iHrnEv">
                                     <div class="sc-1f6gucm-4 bgRNrx">
-                                       <img src="./energybill/images/star.svg" alt=""/>
+                                       <img src="{{ asset('energybill/images/star.svg') }}" alt=""/>
                                        <p><span>FREE</span> Expert Solar Quote</p>
-                                       <img src="./energybill/images/star.svg" alt=""/>
+                                       <img src="{{ asset('energybill/images/star.svg') }}" alt=""/>
                                     </div>
                                  </div>
                                  <div class="sc-1f6gucm-2 ixxZa">

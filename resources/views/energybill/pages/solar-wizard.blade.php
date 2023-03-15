@@ -2,7 +2,7 @@
 
 @section('content')
     <div id="loading" style="display: none;">
-        <img id="loading-image" src="energybill/images/loader.gif" alt="Loading..." />
+        <img id="loading-image" src="{{ asset('energybill/images/loader.gif" alt="Loading..." />
     </div>
     <div class="main-wrapper wizard-box">
         <div class="d-table w-100">
@@ -12,7 +12,7 @@
                         <div class="row">
                         <div class="col-sm-12">
                             <div class="hero-logo">
-                                <a href="{{ route('home') }}"><img src="energybill/images/logo.png" alt=""></a>
+                                <a href="{{ route('home') }}"><img src="{{ asset('energybill/images/logo.png') }}" alt=""></a>
                             </div>
                             <div class="wizard-bg-box mt-4">
                                 <div class="progress" style="height: 20px;">
@@ -162,7 +162,7 @@
                                                                 <div class="sunlight-box text-center">
                                                                     <a href="javascript:void(0);" class="step4 roofSunlight">
                                                                         <div class="sunlight-ico">
-                                                                        <img src="energybill/images/no-shade.svg" alt="">
+                                                                        <img src="{{ asset('energybill/images/no-shade.svg') }}" alt="">
                                                                         </div>
                                                                         <h3 class="theme-title">Full Sunlight</h3>
                                                                     </a>
@@ -172,7 +172,7 @@
                                                                 <div class="sunlight-box text-center">
                                                                     <a href="javascript:void(0);" class="step4 roofSunlight">
                                                                         <div class="sunlight-ico">
-                                                                        <img src="energybill/images/little-shade.svg" alt="">
+                                                                        <img src="{{ asset('energybill/images/little-shade.svg') }}" alt="">
                                                                         </div>
                                                                         <h3 class="theme-title">Some Shade</h3>
                                                                     </a>
@@ -182,7 +182,7 @@
                                                                 <div class="sunlight-box text-center">
                                                                     <a href="javascript:void(0);" class="step4 roofSunlight">
                                                                         <div class="sunlight-ico">
-                                                                        <img src="energybill/images/lot-of-shade.svg" alt="">
+                                                                        <img src="{{ asset('energybill/images/lot-of-shade.svg') }}" alt="">
                                                                         </div>
                                                                         <h3 class="theme-title">Severe Shade</h3>
                                                                     </a>
@@ -192,7 +192,7 @@
                                                                 <div class="sunlight-box text-center">
                                                                     <a href="javascript:void(0);" class="step4 roofSunlight">
                                                                         <div class="sunlight-ico">
-                                                                        <img src="energybill/images/uncertain.svg" alt="">
+                                                                        <img src="{{ asset('energybill/images/uncertain.svg') }}" alt="">
                                                                         </div>
                                                                         <h3 class="theme-title">Uncertain</h3>
                                                                     </a>
