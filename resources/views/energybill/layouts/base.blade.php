@@ -25,7 +25,11 @@
         
         @yield('content')
 
-        @include('energybill.partials.footer')
+        @if(Route::current()->getName() != 'energy.home')
+            @include('energybill.partials.footer')
+        @endif
+
+        <!-- @include('energybill.partials.footer') -->
 
         @include('energybill.partials.script')
 

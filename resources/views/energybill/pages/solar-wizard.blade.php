@@ -312,8 +312,8 @@
                                                                         </div>
 
                                                                         <div class="col-sm-12 col-12 mt-4">
-                                                                        <label for="leadid_tcpa_disclosure" class="lead_text">
-                                                                        {{ __('solar.tcpa_label._1') }} <a href="{{ route('marketing') }}" target="_blank" tabindex="0" style="color:#0d0d0d;text-decoration:underline">{{ __('solar.tcpa_label._2') }}</a> {{ __('solar.tcpa_label._3') }}
+                                                                        <label for="leadid_tcpa_disclosure" class="lead_text" >
+                                                                        {{ __('solar.tcpa_label._1') }} <a href="{{ route('marketing') }}" target="_blank" tabindex="0" style="color:#0d0d0d;text-decoration:underline;">{{ __('solar.tcpa_label._2') }}</a> {{ __('solar.tcpa_label._3') }}
                                                                         </label>  
                                                                             
                                                                         <input type="hidden" id="leadid_tcpa_disclosure" name="tcpa" tabindex="0" value="{{ __('solar.tcpa_text') }}">
@@ -414,4 +414,9 @@
         <img src="https://api.trustedform.com/ns.gif" />
     </noscript>
     <!-- End TrustedForm -->
+    <style>
+        .lead_text{
+            font-size:14px;
+        }
+    </style>
 @endsection
