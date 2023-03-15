@@ -14,6 +14,12 @@ class Lpv88Controller extends Controller
     }
     
     public function home() {
+        if ($request->input('lp_subid1')) {
+            $userData = [
+                'lp_subid1' => $request->input('lp_subid1'),
+            ];
+            Session::put('userData', $userData);
+        }
         return view($this->theme.'.pages.home');
     }  
 
@@ -22,21 +28,20 @@ class Lpv88Controller extends Controller
             'zip_code' => 'required|digits:5|numeric'
         ]);
 
-        $userData = [
-            "lp_campaign_id" => "12444",
-            "lp_key" => "o6e2twdofpyp6",
-            "lp_supplier_id" => "25370",
-            "lp_subid2" => "sr",
-            "sub_id1" => "112",
-            "lp_response" => "JSON",
-            "zip_code" => $request->input('zip_code'),
-            "ip_address" => $request->ip(),
-            "homeowner" => "Yes",
-            "landing_page" => $_SERVER["SERVER_NAME"],
-            "user_agent" => $request->header('User-Agent'),
-            "tcpa_text"=> config('base.tcpa_text'),
-            "time_frame" => "Immediate",
-        ];
+        $userData = Session::get('userData');
+        $userData["lp_campaign_id"] = "11036";
+        $userData["lp_key"] = "yxp3uemdcrpy1";
+        $userData["lp_supplier_id"] = "22807";
+        $userData["sub_id1"] = "NAT";
+        $userData["lp_subid2"] ="nat";
+        $userData["lp_response"] = "JSON";
+        $userData["zip_code"] = $request->input('zip_code');
+        $userData["ip_address"] = $request->ip();
+        $userData["homeowner"] = "Yes";
+        $userData["landing_page"] = "LP1";
+        $userData["user_agent"] = $request->header('User-Agent');
+        $userData["tcpa_text"] = config('base.tcpa_text');
+        $userData["time_frame"] = "Immediate";
 
         Session::put('userData', $userData);
 

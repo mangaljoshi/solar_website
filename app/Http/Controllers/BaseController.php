@@ -14,6 +14,12 @@ class BaseController extends Controller
     }
     
     public function home() {
+        if ($request->input('lp_subid1')) {
+            $userData = [
+                'lp_subid1' => $request->input('lp_subid1'),
+            ];
+            Session::put('userData', $userData);
+        }
         return view($this->theme.'.pages.home');
     }  
 
