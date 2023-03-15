@@ -19,7 +19,7 @@
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
     </head>
     <body>    
-        @if(Route::current()->getName() != 'home' && Route::current()->getName() != 'thankyou' && Route::current()->getName() != 'solar.wizard')
+        @if(Route::current()->getName() != 'energy.home' && Route::current()->getName() != 'energy.thankyou' && Route::current()->getName() != 'energy.solar.wizard')
             @include('energybill.partials.header_common')
         @endif
         
