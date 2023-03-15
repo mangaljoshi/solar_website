@@ -2,7 +2,7 @@
 
 @section('content')
     <div id="loading" style="display: none;">
-        <img id="loading-image" src="{{ asset('energybill/images/loader.gif" alt="Loading..." />
+        <img id="loading-image" src="{{ asset('energybill/images/loader.gif') }}" alt="Loading..." />
     </div>
     <div class="main-wrapper wizard-box">
         <div class="d-table w-100">
@@ -12,7 +12,7 @@
                         <div class="row">
                         <div class="col-sm-12">
                             <div class="hero-logo">
-                                <a href="{{ route('home') }}"><img src="{{ asset('energybill/images/logo.png') }}" alt=""></a>
+                                <a href="{{ route('energy.home') }}"><img src="{{ asset('energybill/images/logo.png') }}" alt=""></a>
                             </div>
                             <div class="wizard-bg-box mt-4">
                                 <div class="progress" style="height: 20px;">
@@ -313,7 +313,7 @@
 
                                                                         <div class="col-sm-12 col-12 mt-4">
                                                                         <label for="leadid_tcpa_disclosure" class="lead_text">
-                                                                        {{ __('solar.tcpa_label._1') }} <a href="{{ route('marketing') }}" target="_blank" tabindex="0" style="color:#7b7b7b;text-decoration:underline">{{ __('solar.tcpa_label._2') }}</a> {{ __('solar.tcpa_label._3') }}
+                                                                        {{ __('solar.tcpa_label._1') }} <a href="{{ route('marketing') }}" target="_blank" tabindex="0" style="color:#0d0d0d;text-decoration:underline">{{ __('solar.tcpa_label._2') }}</a> {{ __('solar.tcpa_label._3') }}
                                                                         </label>  
                                                                             
                                                                         <input type="hidden" id="leadid_tcpa_disclosure" name="tcpa" tabindex="0" value="{{ __('solar.tcpa_text') }}">
