@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
-class LPV88Controller extends Controller
+class Lpv88Controller extends Controller
 {   
     public $theme;
 

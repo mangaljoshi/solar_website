@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BaseController;
-use App\Http\Controllers\LPV88Controller;
+use App\Http\Controllers\Lpv88Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,14 +28,14 @@ Route::post('/update-data/{step}', [BaseController::class, 'updateData'])->name(
 
 
 Route::group(['prefix'=>'lpv88','as'=>'energy.'], function(){
-    Route::get('/', [LPV88Controller::class, 'home'])->name('home');
-    Route::post('/zip-data', [LPV88Controller::class, 'zipForm'])->name('zip.post');
-    Route::get('/solar-wizard', [LPV88Controller::class, 'solarWizard'])->name('solar.wizard');
-    Route::get('/marketing-partners', [LPV88Controller::class, 'marketingPartners'])->name('marketing');
-    Route::get('/terms', [LPV88Controller::class, 'terms'])->name('terms');
-    Route::get('/contact', [LPV88Controller::class, 'contact'])->name('contact');
-    Route::get('/privacy', [LPV88Controller::class, 'privacy'])->name('privacy');
-    Route::get('/quote-report', [LPV88Controller::class, 'thankyou'])->name('thankyou');
-    Route::post('/update-data/{step}', [LPV88Controller::class, 'updateData'])->name('update.data');
+    Route::get('/', [Lpv88Controller::class, 'home'])->name('home');
+    Route::post('/zip-data', [Lpv88Controller::class, 'zipForm'])->name('zip.post');
+    Route::get('/solar-wizard', [Lpv88Controller::class, 'solarWizard'])->name('solar.wizard');
+    Route::get('/marketing-partners', [Lpv88Controller::class, 'marketingPartners'])->name('marketing');
+    Route::get('/terms', [Lpv88Controller::class, 'terms'])->name('terms');
+    Route::get('/contact', [Lpv88Controller::class, 'contact'])->name('contact');
+    Route::get('/privacy', [Lpv88Controller::class, 'privacy'])->name('privacy');
+    Route::get('/quote-report', [Lpv88Controller::class, 'thankyou'])->name('thankyou');
+    Route::post('/update-data/{step}', [Lpv88Controller::class, 'updateData'])->name('update.data');
 });
 

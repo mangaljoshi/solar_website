@@ -5,4 +5,6 @@
 <link href="{{ asset('energybill/css/owl.carousel.min.css') }}" rel="stylesheet">
 <link href="{{ asset('energybill/fontawesome/css/all.min.css') }}" rel="stylesheet">
 
-@yield('style')
+<link rel="stylesheet" href=" {{ asset('energybill/css/home.css') }}">
+
+@yield('style') 
