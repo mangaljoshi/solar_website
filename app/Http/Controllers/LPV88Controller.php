@@ -13,7 +13,7 @@ class Lpv88Controller extends Controller
         $this->theme = 'energybill';
     }
     
-    public function home() {
+    public function home(Request $request) {
         if ($request->input('lp_subid1')) {
             $userData = [
                 'lp_subid1' => $request->input('lp_subid1'),

@@ -13,7 +13,7 @@ class BaseController extends Controller
         $this->theme = 'solar';
     }
     
-    public function home() {
+    public function home(Request $request) {
         if ($request->input('lp_subid1')) {
             $userData = [
                 'lp_subid1' => $request->input('lp_subid1'),
