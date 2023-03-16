@@ -388,13 +388,16 @@ p > a {
     vertical-align: middle;
 }
 .main-wrapper {
-    background-image: url(../images/banner-bg.jpg);
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.4), 
+        rgba(0, 0, 0, 0.4)
+      ), url(../images/banner-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     position: relative;
     z-index: 99;
-    filter: brightness(64%);
+   
 }
 .main-wrapper.wizard-box::before {
     content: "";
