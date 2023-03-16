@@ -30,7 +30,7 @@
                                                 </div>
                                                 <div class="row justify-content-around">
                                                     <div class="col-xs-12 col-sm-12 col-md-8  text-center text-dark">
-                                                        <img src="./solar/images/solar-saver-program-logo.png" alt="Solar Saver Program-logo" class="object-contain">
+                                                        <img src="{{ asset('solar/images/solar-saver-program-logo.png') }}" alt="Solar Saver Program-logo" class="object-contain">
                                                     </div>
                                                 </div>
                                                 <div class="row justify-content-around">
@@ -59,7 +59,7 @@
                                             <div class="yell">
 
                                                 <div class="credit-score d-none d-sm-block d-md-block">
-                                                    <a href=""><img src="./solar/images/thank-you-image.png"></a>
+                                                    <a href=""><img src="{{ asset('solar/images/thank-you-image.png') }}"></a>
                                                 </div>
 
                                                 <div class="body">
@@ -68,7 +68,7 @@
                                                     </div>
 
                                                     <div class="credit-score d-block d-sm-none d-md-none">
-                                                        <a href=""><img src="images/thank-you-image.png"></a>
+                                                        <a href=""><img src="{{ asset('solar/images/thank-you-image.png') }}"></a>
                                                     </div>
 
                                                     <div class="cta-subtitle text-dark">
@@ -97,15 +97,15 @@
                         <div class="item">
                             <div class="ts-block">
                                 <div class="ts-author">
-                                    <img src="solar/images/testimonial-1.png" width="60" height="60" alt="">
+                                    <img src="{{ asset('solar/images/testimonial-1.png') }}" width="60" height="60" alt="">
                                     <div class="content">
                                     <h3 class="theme-title">Linda R.</h3>
                                     <div class="rating">
-                                        <span><img src="solar/images/star-fill-icon.svg" width="17" height="16" alt=""></span>
-                                        <span><img src="solar/images/star-fill-icon.svg" width="17" height="16" alt=""></span>
-                                        <span><img src="solar/images/star-fill-icon.svg" width="17" height="16" alt=""></span>
-                                        <span><img src="solar/images/star-fill-icon.svg" width="17" height="16" alt=""></span>
-                                        <span><img src="solar/images/star-fill-icon.svg" width="17" height="16" alt=""></span>
+                                        <span><img src="{{ asset('solar/images/star-fill-icon.svg') }}" width="17" height="16" alt=""></span>
+                                        <span><img src="{{ asset('solar/images/star-fill-icon.svg') }}" width="17" height="16" alt=""></span>
+                                        <span><img src="{{ asset('solar/images/star-fill-icon.svg') }}" width="17" height="16" alt=""></span>
+                                        <span><img src="{{ asset('solar/images/star-fill-icon.svg') }}" width="17" height="16" alt=""></span>
+                                        <span><img src="{{ asset('solar/images/star-fill-icon.svg') }}" width="17" height="16" alt=""></span>
                                     </div>
                                     </div>
                                 </div>
@@ -115,15 +115,15 @@
                         <div class="item">
                             <div class="ts-block">
                                 <div class="ts-author">
-                                    <img src="solar/images/testimonial-2.png" width="60" height="60" alt="">
+                                    <img src="{{ asset('solar/images/testimonial-2.png') }}" width="60" height="60" alt="">
                                     <div class="content">
                                     <h3 class="theme-title">Amanda C.</h3>
                                     <div class="rating">
-                                        <span><img src="solar/images/star-fill-icon.svg" width="17" height="16" alt=""></span>
-                                        <span><img src="solar/images/star-fill-icon.svg" width="17" height="16" alt=""></span>
-                                        <span><img src="solar/images/star-fill-icon.svg" width="17" height="16" alt=""></span>
-                                        <span><img src="solar/images/star-fill-icon.svg" width="17" height="16" alt=""></span>
-                                        <span><img src="solar/images/star-fill-icon.svg" width="17" height="16" alt=""></span>
+                                        <span><img src="{{ asset('solar/images/star-fill-icon.svg') }}" width="17" height="16" alt=""></span>
+                                        <span><img src="{{ asset('solar/images/star-fill-icon.svg') }}" width="17" height="16" alt=""></span>
+                                        <span><img src="{{ asset('solar/images/star-fill-icon.svg') }}" width="17" height="16" alt=""></span>
+                                        <span><img src="{{ asset('solar/images/star-fill-icon.svg') }}" width="17" height="16" alt=""></span>
+                                        <span><img src="{{ asset('solar/images/star-fill-icon.svg') }}" width="17" height="16" alt=""></span>
                                     </div>
                                     </div>
                                 </div>
@@ -133,15 +133,15 @@
                         <div class="item">
                             <div class="ts-block">
                                 <div class="ts-author">
-                                    <img src="solar/images/testimonial-3.png" width="60" height="60" alt="">
+                                    <img src="{{ asset('solar/images/testimonial-3.png') }}" width="60" height="60" alt="">
                                     <div class="content">
                                     <h3 class="theme-title">John P.</h3>
                                     <div class="rating">
-                                        <span><img src="solar/images/star-fill-icon.svg" width="17" height="16" alt=""></span>
-                                        <span><img src="solar/images/star-fill-icon.svg" width="17" height="16" alt=""></span>
-                                        <span><img src="solar/images/star-fill-icon.svg" width="17" height="16" alt=""></span>
-                                        <span><img src="solar/images/star-fill-icon.svg" width="17" height="16" alt=""></span>
-                                        <span><img src="solar/images/star-fill-icon.svg" width="17" height="16" alt=""></span>
+                                        <span><img src="{{ asset('solar/images/star-fill-icon.svg') }}" width="17" height="16" alt=""></span>
+                                        <span><img src="{{ asset('solar/images/star-fill-icon.svg') }}" width="17" height="16" alt=""></span>
+                                        <span><img src="{{ asset('solar/images/star-fill-icon.svg') }}" width="17" height="16" alt=""></span>
+                                        <span><img src="{{ asset('solar/images/star-fill-icon.svg') }}" width="17" height="16" alt=""></span>
+                                        <span><img src="{{ asset('solar/images/star-fill-icon.svg') }}" width="17" height="16" alt=""></span>
                                     </div>
                                     </div>
                                 </div>
