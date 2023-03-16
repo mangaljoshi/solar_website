@@ -394,6 +394,7 @@ p > a {
     background-position: center center;
     position: relative;
     z-index: 99;
+    filter: brightness(64%);
 }
 .main-wrapper.wizard-box::before {
     content: "";
