@@ -11,6 +11,7 @@
                     <div class="container">
                         <div class="row">
                         <div class="col-sm-12">
+                            <div class="lock"></div>
                             <div class="hero-logo">
                                 <a href="{{ route('home') }}"><img src="solar/images/logo.png" alt=""></a>
                             </div>

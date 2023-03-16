@@ -381,12 +381,29 @@ p > a {
     max-width: 220px;
     margin: 0px auto;
 }
+
+.header-main .lock{
+    position: absolute;
+    top: 0;
+    left: 40px;
+    width: 36px;
+    height: 36px;
+    background: #078041 url(../images/lock.svg) center center no-repeat;
+    background-size: 11px auto;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    margin-top: 30px;
+}
+
 .hero-banner .d-table {
     height: calc(100vh - 112px);
 }
 .hero-banner .d-table .d-table-cell {
     vertical-align: middle;
 }
+
+
 .main-wrapper {
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.4), 
