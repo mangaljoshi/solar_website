@@ -310,7 +310,7 @@
                         </ul>
                         </div>
                         <div class="solar-fl-btn text-center mt-4">
-                        <a href="index.html" class="btn-main m-auto">Continue</a>
+                        <a href="#" class="btn-main m-auto">Continue</a>
                         </div>
                     </div>
                 </div>
