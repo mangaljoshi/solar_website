@@ -20,7 +20,7 @@
                                     <h4 class="sub-title mb-20 location-text">
                                         {{ __('home.section_1.h4') }}
                                     </h4>
-                                    <h5><strong>{{ __('home.section_1.h5') }}</strong></h5>
+                                    <!-- <h5><strong>{{ __('home.section_1.h5') }}</strong></h5>
                                     <div class="range-slider">
                                         <div class="sliderLegend">
                                             <p class="sliderLegendItem--start" style="margin-bottom:0px">
@@ -37,7 +37,7 @@
                                         <p class="range-slider__value text-center">
                                             <span id="demo">1750 </span> {{ __('home.section_1.sq_ft') }}
                                         </p>
-                                    </div>
+                                    </div> -->
                                     <form method="post" action="{{ route('zip.post') }}">
                                         {{ csrf_field() }}
                                         <div class="form-list d-flex justify-content-between align-items-center">
