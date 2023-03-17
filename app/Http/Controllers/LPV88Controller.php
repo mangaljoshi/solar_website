@@ -111,8 +111,8 @@ class Lpv88Controller extends Controller
             $userData['email'] = $request->get('email');
         } else if ($step == 6) {
             $this->validate($request, [
-                'first_name' => 'required',
-                'last_name' => 'required'
+                'first_name' => 'required|min:2',
+                'last_name' => 'required|min:2'
             ]);
             $userData['first_name'] = $request->get('first_name');
             $userData['last_name'] = $request->get('last_name');
