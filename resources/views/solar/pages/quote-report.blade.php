@@ -44,7 +44,7 @@
                                                 </div>
                                                 <div class="row justify-content-around">
                                                     <div class="col-12 text-dark">
-                                                        <a class="btn btn-danger btn-lg btn-block prog-btn" target="_blank" rel="noreferrer" href="{{ config('base.first_creative_link') }}">
+                                                        <a class="btn btn-danger btn-lg btn-block prog-btn" target="_blank" rel="noreferrer" href="https://www.tymd83trk.com/4C2WD7/7D4XXB/">
                                                             Continue 
                                                         </a>
                                                     </div>
