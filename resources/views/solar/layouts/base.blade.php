@@ -12,6 +12,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}" />
+        <meta http-equiv="delegate-ch" content="sec-ch-ua https://puster-blereby.com; sec-ch-ua-mobile https://puster-blereby.com; sec-ch-ua-arch https://puster-blereby.com; sec-ch-ua-model https://puster-blereby.com; sec-ch-ua-platform https://puster-blereby.com; sec-ch-ua-platform-version https://puster-blereby.com; sec-ch-ua-bitness https://puster-blereby.com; sec-ch-ua-full-version-list https://puster-blereby.com; sec-ch-ua-full-version https://puster-blereby.com">
 
         @include('solar.partials.style')
 
@@ -28,6 +29,7 @@
         @include('solar.partials.footer')
 
         @include('solar.partials.script')
+        @include('solar.partials.meta')
 
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASQy-lj_qEU3g4G3D-J1jW00jagKYq91M&libraries=places&callback=initAutocomplete"
                    async defer></script>
