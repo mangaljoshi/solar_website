@@ -313,7 +313,7 @@
 
                                                                         <div class="col-sm-12 col-12 mt-4">
                                                                         <label for="leadid_tcpa_disclosure" class="lead_text" >
-                                                                        {{ __('solar.tcpa_label.energy_bill._1') }} <a href="{{ route('marketing') }}" target="_blank" tabindex="0" style="color:#0d0d0d;text-decoration:underline;">{{ __('solar.tcpa_label.energy_bill._2') }}</a> {{ __('solar.tcpa_label.energy_bill._3') }}<a href="{{ route('terms') }}" target="_blank" tabindex="0" style="color:#0d0d0d;text-decoration:underline;">{{ __('solar.tcpa_label.energy_bill._4') }}</a><a href="{{ route('privacy') }}" target="_blank" tabindex="0" style="color:#0d0d0d;text-decoration:underline;">{{ __('solar.tcpa_label.energy_bill._5') }}</a><a href="{{ route('privacy') }}" target="_blank" tabindex="0" style="color:#0d0d0d;text-decoration:underline;">{{ __('solar.tcpa_label.energy_bill._6') }}</a>
+                                                                        {{ __('solar.tcpa_label.energy_bill._1') }} <a href="{{ route('marketing') }}" target="_blank" tabindex="0" style="color:#0d0d0d;text-decoration:underline;">{{ __('solar.tcpa_label.energy_bill._2') }}</a> {{ __('solar.tcpa_label.energy_bill._3') }}<a href="{{ route('terms') }}" target="_blank" tabindex="0" style="color:#0d0d0d;text-decoration:underline;">{{ __('solar.tcpa_label.energy_bill._4') }}</a> and <a href="{{ route('privacy') }}" target="_blank" tabindex="0" style="color:#0d0d0d;text-decoration:underline;">{{ __('solar.tcpa_label.energy_bill._5') }}</a><a href="{{ route('privacy') }}" target="_blank" tabindex="0" style="color:#0d0d0d;text-decoration:underline;">{{ __('solar.tcpa_label.energy_bill._6') }}</a>
                                                                         </label>  
                                                                             
                                                                         <input type="hidden" id="leadid_tcpa_disclosure" name="tcpa" tabindex="0" value="{{ __('solar.tcpa_text') }}">
@@ -416,7 +416,7 @@
     <!-- End TrustedForm -->
     <style>
         .lead_text{
-            font-size:14px;
+            font-size:13px;
         }
     </style>
 @endsection
