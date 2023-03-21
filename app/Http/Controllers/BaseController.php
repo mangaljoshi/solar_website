@@ -17,6 +17,7 @@ class BaseController extends Controller
         if ($request->input('lp_subid1')) {
             $userData = [
                 'lp_subid1' => $request->input('lp_subid1'),
+                'sub_id1' => $request->get('subid'),
             ];
             Session::put('userData', $userData);
         }
@@ -32,7 +33,7 @@ class BaseController extends Controller
         $userData["lp_campaign_id"] = "11036";
         $userData["lp_key"] = "yxp3uemdcrpy1";
         $userData["lp_supplier_id"] = "22807";
-        $userData["sub_id1"] = "NAT";
+        // $userData["sub_id1"] = "NAT";
         $userData["lp_subid2"] ="nat";
         $userData["lp_response"] = "JSON";
         $userData["zip_code"] = $request->input('zip_code');
