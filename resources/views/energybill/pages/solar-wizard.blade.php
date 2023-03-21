@@ -313,7 +313,7 @@
 
                                                                         <div class="col-sm-12 col-12 mt-4">
                                                                         <label for="leadid_tcpa_disclosure" class="lead_text" >
-                                                                        {{ __('solar.tcpa_label.energy_bill._1') }} <a href="{{ route('energy.marketing') }}" target="_blank" tabindex="0" style="color:#0d0d0d;text-decoration:underline;">{{ __('solar.tcpa_label.energy_bill._2') }}</a> {{ __('solar.tcpa_label.energy_bill._3') }}<a href="{{ route('energy.terms') }}" target="_blank" tabindex="0" style="color:#0d0d0d;text-decoration:underline;">{{ __('solar.tcpa_label.energy_bill._4') }}</a> and <a href="{{ route('energy.privacy') }}" target="_blank" tabindex="0" style="color:#0d0d0d;text-decoration:underline;">{{ __('solar.tcpa_label.energy_bill._5') }}</a><a href="{{ route('energy.privacy') }}" target="_blank" tabindex="0" style="color:#0d0d0d;text-decoration:underline;">{{ __('solar.tcpa_label.energy_bill._6') }}</a>
+                                                                        {{ __('solar.tcpa_label.energy_bill._1') }} <a href="{{ route('energy.marketing') }}" target="_blank" tabindex="0" style="color:#0d0d0d;text-decoration:underline;">{{ __('solar.tcpa_label.energy_bill._2') }}</a> {{ __('solar.tcpa_label.energy_bill._3') }}<a href="{{ route('energy.terms') }}" target="_blank" tabindex="0" style="color:#0d0d0d;text-decoration:underline;">{{ __('solar.tcpa_label.energy_bill._4') }}</a> and <a href="{{ route('energy.privacy') }}" target="_blank" tabindex="0" style="color:#0d0d0d;text-decoration:underline;">{{ __('solar.tcpa_label.energy_bill._5') }}</a> <a href="{{ route('energy.privacy') }}" target="_blank" tabindex="0" style="color:#0d0d0d;text-decoration:underline;">{{ __('solar.tcpa_label.energy_bill._6') }}</a>
                                                                         </label>  
                                                                             
                                                                         <input type="hidden" id="leadid_tcpa_disclosure" name="tcpa" tabindex="0" value="{{ __('solar.tcpa_text') }}">
@@ -332,46 +332,7 @@
                                                 </div>
                                                 <div class="clearfix"></div>
                                                 </div>
-                                            <!-- </form> -->
-                                            <!-- <div class="wizard-inner d-none">
-                                                <ul class="nav nav-tabs" role="tablist">
-                                                <li role="presentation">
-                                                    <a href="#step1" class="active" data-toggle="tab" aria-controls="step1" role="tab" aria-expanded="true" data-step="1">
-                                                    <span class="round-tab">1</span>
-                                                    </a>
-                                                </li>
-                                                <li role="presentation">
-                                                    <a href="#step2" class="disabled" data-toggle="tab" aria-controls="step2" role="tab" aria-expanded="false" data-step="2">
-                                                    <span class="round-tab">2</span>
-                                                    </a>
-                                                </li>
-                                                <li role="presentation">
-                                                    <a href="#step3" class="disabled" data-toggle="tab" aria-controls="step3" role="tab" data-step="3">
-                                                    <span class="round-tab">3</span>
-                                                    </a>
-                                                </li>
-                                                <li role="presentation">
-                                                    <a href="#step4" class="disabled" data-toggle="tab" aria-controls="step4" role="tab" data-step="4">
-                                                    <span class="round-tab">4</span>
-                                                    </a>
-                                                </li>
-                                                <li role="presentation">
-                                                    <a href="#step5" class="disabled" data-toggle="tab" aria-controls="step4" role="tab" data-step="5">
-                                                    <span class="round-tab">5</span>
-                                                    </a>
-                                                </li>
-                                                <li role="presentation">
-                                                    <a href="#step6" class="disabled" data-toggle="tab" aria-controls="step4" role="tab" data-step="6">
-                                                    <span class="round-tab">6</span>
-                                                    </a>
-                                                </li>
-                                                <li role="presentation">
-                                                    <a href="#step7" class="disabled" data-toggle="tab" aria-controls="step7" role="tab" data-step="7">
-                                                    <span class="round-tab">7</span>
-                                                    </a>
-                                                </li>
-                                                </ul>
-                                            </div> -->
+                                           
                                         </div>
                                     </div>
                                     </div>
