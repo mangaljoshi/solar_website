@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+    @include('solar.partials.top_header')
     <div class="main-wrapper">
         @include('solar.partials.header_home')
         <section class="hero-banner">
