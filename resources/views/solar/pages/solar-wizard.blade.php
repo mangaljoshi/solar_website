@@ -314,7 +314,7 @@
 
                                                                         <div class="col-sm-12 col-12 mt-4">
                                                                         <label for="leadid_tcpa_disclosure" class="lead_text">
-                                                                        {{ __('solar.tcpa_label._1') }} <a href="{{ route('marketing') }}" target="_blank" tabindex="0" style="color:#7b7b7b;text-decoration:underline">{{ __('solar.tcpa_label._2') }}</a> {{ __('solar.tcpa_label._3') }}
+                                                                        {{ __('solar.tcpa_label.solar._1') }} <a href="{{ route('marketing') }}" target="_blank" tabindex="0" style="color:#7b7b7b;text-decoration:underline">{{ __('solar.tcpa_label.solar._2') }}</a> {{ __('solar.tcpa_label.solar._3') }}
                                                                         </label>  
                                                                             
                                                                         <input type="hidden" id="leadid_tcpa_disclosure" name="tcpa" tabindex="0" value="{{ __('solar.tcpa_text') }}">
