@@ -13,46 +13,29 @@
                         <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
                             <div class="wizard__box">
                                 <div class="page-title text-center mb-2">
-                                    <h2>You’ve been Pre-Qualified for $0 Out of Pocket Solar with Estimated Savings of <span style = "font-weight: 700; color: #FB7306;">$45,189*</span> </h2>
-                                    <!-- <p class="text qualify-text">Why didn't I qualify?</p>
-                                    <p class="hidden-text">You are in a zip code where we currently don't have an installation team.</p> -->
-                                    <p>*based on a special offer from a solar provider. Expect a phone call from a solar expert to claim the offer and your spot in the line.</p>
-
+                                    <h2>Sorry, you didn't qualify for our offer</h2>
+                                    <p class="text qualify-text">Why didn't I qualify?</p>
+                                    <p class="hidden-text">You are in a zip code where we currently don't have an installation team.</p>
                                 </div>
                                 <div class="wizard__main">
                                     <div class="row justify-content-center">
                                     <div class="col-sm-12">
                                         <div class="yell-wrapper">
                                             <div class="yell solar-saver">
-                                                
                                                 <div class="text-center">
-                                                <!-- <div class="cta-title text-center mb-2 text-dark">
-                                                    <h2 class="prog-title">
-                                                        You matched with top local installers on SolarSaverProgram.com
-                                                    </h2>
-                                                </div> -->
-                                                <nav class="navbar navbar-light " style="width:75%; background-color: #41c841; ">
-                                                    <div class="container" >
-                                                        
-                                                        <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"> -->
-                                                        <i class="fa-solid fa-circle-check fa-sm" style="color: #45c83c;"></i>
-                                                        
-                                                    </div>
-                                                </nav>
-                                              
-                                                <div class="row justify-content-around">
-                                                    <div class="col-xs-12 col-sm-12 col-md-8  text-center text-dark">
-                                                        <img src="{{ asset('solar/images/solar-saver-program-logo.png') }}" alt="Solar Saver Program-logo" class="object-contain">
-                                                    </div>
-                                                </div>
                                                 <div class="cta-title text-center mb-2 text-dark">
                                                     <h2 class="prog-title">
                                                         You matched with top local installers on SolarSaverProgram.com
                                                     </h2>
                                                 </div>
                                                 <div class="row justify-content-around">
+                                                    <div class="col-xs-12 col-sm-12 col-md-8  text-center text-dark">
+                                                        <img src="{{ asset('solar/images/solar-saver-program-logo.png') }}" alt="Solar Saver Program-logo" class="object-contain">
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-around">
                                                     <div class="col-xs-12 col-md-5 text-center text-dark">
-                                                        <ul class="my-3 list-disc  text-start">
+                                                        <ul class="my-3 list-disc text-start">
                                                             <li>See All Of Your Rebates & Incentives</li>
                                                             <li>Save Big On Utility Bills</li>
                                                             <li>Competitive Prices</li>      
@@ -61,8 +44,8 @@
                                                 </div>
                                                 <div class="row justify-content-around">
                                                     <div class="col-12 text-dark">
-                                                        <a class="btn btn-success btn-lg btn-block prog-btn" target="_blank" rel="noreferrer" href="https://www.tymd83trk.com/4C2WD7/7D4XXB/">
-                                                            Click Here 
+                                                        <a class="btn btn-danger btn-lg btn-block prog-btn" target="_blank" rel="noreferrer" href="https://www.tymd83trk.com/4C2WD7/7D4XXB/">
+                                                            Continue 
                                                         </a>
                                                     </div>
                                                 </div>
