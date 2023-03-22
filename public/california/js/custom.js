@@ -616,7 +616,7 @@ const con = getGeo();
       success: function (response) {
         var stepNumber = Number(response.step);
         if (stepNumber == 7) {
-          return window.location.href = "/quote-report";
+          return window.location.href = "solar-energy-resolution-california/quote-report";
         }
         $('#step'+stepNumber).hide();
         stepNumber = stepNumber + 1;

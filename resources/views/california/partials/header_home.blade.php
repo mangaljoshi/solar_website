@@ -12,11 +12,3 @@
         </div>
     </div>
 </header>
-<!-- <style>
-    img {
-        max-width: 63px!important;
-    }
-    .hero-logo {
-        margin: 0 0 !important;
-    }
-</style> -->

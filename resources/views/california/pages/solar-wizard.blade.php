@@ -2,7 +2,7 @@
 
 @section('content')
     <div id="loading" style="display: none;">
-        <img id="loading-image" src="california/images/loader.gif" alt="Loading..." />
+        <img id="loading-image" src="{{ asset('california/images/loader.gif') }}" alt="Loading..." />
     </div>
     @include('california.partials.top_header')
     <div class="main-wrapper wizard-box">
@@ -164,7 +164,7 @@
                                                                 <div class="sunlight-box text-center">
                                                                     <a href="javascript:void(0);" class="step4 roofSunlight">
                                                                         <div class="sunlight-ico">
-                                                                        <img src="california/images/no-shade.svg" alt="">
+                                                                        <img src="{{ asset('california/images/no-shade.svg') }}" alt="">
                                                                         </div>
                                                                         <h3 class="theme-title">Full Sunlight</h3>
                                                                     </a>
@@ -174,7 +174,7 @@
                                                                 <div class="sunlight-box text-center">
                                                                     <a href="javascript:void(0);" class="step4 roofSunlight">
                                                                         <div class="sunlight-ico">
-                                                                        <img src="california/images/little-shade.svg" alt="">
+                                                                        <img src="{{ asset('california/images/little-shade.svg') }}" alt="">
                                                                         </div>
                                                                         <h3 class="theme-title">Some Shade</h3>
                                                                     </a>
@@ -184,7 +184,7 @@
                                                                 <div class="sunlight-box text-center">
                                                                     <a href="javascript:void(0);" class="step4 roofSunlight">
                                                                         <div class="sunlight-ico">
-                                                                        <img src="california/images/lot-of-shade.svg" alt="">
+                                                                        <img src="{{ asset('california/images/lot-of-shade.svg') }}" alt="">
                                                                         </div>
                                                                         <h3 class="theme-title">Severe Shade</h3>
                                                                     </a>
@@ -194,7 +194,7 @@
                                                                 <div class="sunlight-box text-center">
                                                                     <a href="javascript:void(0);" class="step4 roofSunlight">
                                                                         <div class="sunlight-ico">
-                                                                        <img src="california/images/uncertain.svg" alt="">
+                                                                        <img src="{{ asset('california/images/uncertain.svg') }}" alt="">
                                                                         </div>
                                                                         <h3 class="theme-title">Uncertain</h3>
                                                                     </a>
