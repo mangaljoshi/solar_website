@@ -2,7 +2,7 @@
 
 @section('content')
     <div id="loading" style="display: none;">
-        <img id="loading-image" src="solar/images/loader.gif" alt="Loading..." />
+        <img id="loading-image" src="{{ asset('solar/images/loader.gif') }}" alt="Loading..." />
     </div>
     @include('solar.partials.top_header')
     <div class="main-wrapper wizard-box">
@@ -14,7 +14,7 @@
                         <div class="col-sm-12">
                             <div class="lock"></div>
                             <div class="hero-logo">
-                                <a href="{{ route('home') }}"><img src="solar/images/logo.png" alt=""></a>
+                                <a href="{{ route('home') }}"><img src="{{ asset('solar/images/logo.png') }}" alt=""></a>
                             </div>
                             <div class="wizard-bg-box mt-4">
                                 <div class="progress" style="height: 20px;">
@@ -164,7 +164,7 @@
                                                                 <div class="sunlight-box text-center">
                                                                     <a href="javascript:void(0);" class="step4 roofSunlight">
                                                                         <div class="sunlight-ico">
-                                                                        <img src="solar/images/no-shade.svg" alt="">
+                                                                        <img src="{{ asset('solar/images/no-shade.svg') }}" alt="">
                                                                         </div>
                                                                         <h3 class="theme-title">Full Sunlight</h3>
                                                                     </a>
@@ -174,7 +174,7 @@
                                                                 <div class="sunlight-box text-center">
                                                                     <a href="javascript:void(0);" class="step4 roofSunlight">
                                                                         <div class="sunlight-ico">
-                                                                        <img src="solar/images/little-shade.svg" alt="">
+                                                                        <img src="{{ asset('solar/images/little-shade.svg') }}" alt="">
                                                                         </div>
                                                                         <h3 class="theme-title">Some Shade</h3>
                                                                     </a>
@@ -184,7 +184,7 @@
                                                                 <div class="sunlight-box text-center">
                                                                     <a href="javascript:void(0);" class="step4 roofSunlight">
                                                                         <div class="sunlight-ico">
-                                                                        <img src="solar/images/lot-of-shade.svg" alt="">
+                                                                        <img src="{{ asset('solar/images/lot-of-shade.svg') }}" alt="">
                                                                         </div>
                                                                         <h3 class="theme-title">Severe Shade</h3>
                                                                     </a>
@@ -194,7 +194,7 @@
                                                                 <div class="sunlight-box text-center">
                                                                     <a href="javascript:void(0);" class="step4 roofSunlight">
                                                                         <div class="sunlight-ico">
-                                                                        <img src="solar/images/uncertain.svg" alt="">
+                                                                        <img src="{{ asset('solar/images/uncertain.svg') }}" alt="">
                                                                         </div>
                                                                         <h3 class="theme-title">Uncertain</h3>
                                                                     </a>
