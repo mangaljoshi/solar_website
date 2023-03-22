@@ -13,8 +13,9 @@
 	    font-size: 15px;
 	}
 	.top_header_text {
-		font-weight: 500;
-		font-size: 14px;
+		font-weight: normal;
+		font-size: 1.125rem;
+		line-height: 1.125;
 	}
 }
 @media screen and (max-width: 575px){
