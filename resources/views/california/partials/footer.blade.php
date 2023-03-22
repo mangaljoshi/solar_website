@@ -8,7 +8,7 @@
                     </div>
                     <div class="logo">
                         <a href="{{ route('solar.california.home') }}">
-                            <img src="california/images/logo.png" alt="">
+                            <img src="{{ asset('california/images/logo.png') }}" alt="">
                         </a>
                     </div>
                     <div class="links">
