@@ -7,7 +7,7 @@
                         <p>© {{date('Y')}} {{ __('footer.copyright_text') }}</p>
                     </div>
                     <div class="logo">
-                        <a href="{{ route('home') }}">
+                        <a href="{{ route('solar.california.home') }}">
                             <img src="california/images/logo.png" alt="">
                         </a>
                     </div>

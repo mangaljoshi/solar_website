@@ -4,7 +4,7 @@
             <div class="col-sm-12">
                 <div class="lock"></div>
                 <div class="hero-logo">
-                    <a href="{{ route('home') }}">
+                    <a href="{{ route('solar.california.home') }}">
                         <img src="{{ asset('california/images/logo.png') }}" alt="" class=" d-lg-block">
                     </a>
                 </div>
