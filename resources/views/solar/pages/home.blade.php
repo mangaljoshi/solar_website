@@ -16,7 +16,7 @@
                             <div class="col-sm-12">
                                 <div class="hero-inner text-center">
                                     <h1>
-                                        <span class="city bold">NY</span> {{ __('home.section_1.h1') }}
+                                        <span class="city bold"></span> {{ __('home.section_1.h1') }}
                                     </h1>
                                     <h4 class="sub-title mb-20 location-text">
                                         {{ __('home.section_1.h4') }}
