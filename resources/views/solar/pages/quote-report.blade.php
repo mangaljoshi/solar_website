@@ -13,9 +13,11 @@
                         <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
                             <div class="wizard__box">
                                 <div class="page-title text-center mb-2">
-                                    <h2>Sorry, you didn't qualify for our offer</h2>
-                                    <p class="text qualify-text">Why didn't I qualify?</p>
-                                    <p class="hidden-text">You are in a zip code where we currently don't have an installation team.</p>
+                                    <h2>You’ve been Pre-Qualified for $0 Out of Pocket Solar with Estimated Savings of <span style="color:#FB7306"> $45,243*</span></h2>
+                                    <p class="">*based on a special offer from a solar provider.Expect a phone call from a solar expert to claim the offer and your spot in the line.</p>
+                                    <!-- <h2>Sorry, you didn't qualify for our offer</h2>
+                                    <p class="text qualify-text">Why didn't I qualify?</p> -->
+                                    <!-- <p class="hidden-text">You are in a zip code where we currently don't have an installation team.</p> -->
                                 </div>
                                 <div class="wizard__main">
                                     <div class="row justify-content-center">
@@ -24,6 +26,10 @@
                                             <div class="yell solar-saver">
                                                 <div class="text-center">
                                                 <div class="cta-title text-center mb-2 text-dark">
+                                                <!-- <nav class="navbar navbar-light " style="background-color:#5ae15a;width:70%;margin-left:-40px;margin-top:-20px;border-radius:8px;margin-bottom: 34px;">
+                                                      <i class="fas fa-check fa-lg" style="color: #7cdd3c; background-color:white;border-radius:50%;width:30px;height:25px;margin-left:10px;padding-top:5px"></i>
+                                                     <span style="font-weight:bold!important;font-size:20px;padding-right:264px;color:white">Recommended For You</span>
+                                                     </nav> -->
                                                     <h2 class="prog-title">
                                                         You matched with top local installers on SolarSaverProgram.com
                                                     </h2>
@@ -35,17 +41,17 @@
                                                 </div>
                                                 <div class="row justify-content-around">
                                                     <div class="col-xs-12 col-md-5 text-center text-dark">
-                                                        <ul class="my-3 list-disc text-start">
-                                                            <li>See All Of Your Rebates & Incentives</li>
-                                                            <li>Save Big On Utility Bills</li>
-                                                            <li>Competitive Prices</li>      
+                                                        <ul class="my-3  text-start">
+                                                            <li><i class="fa fa-check fa-lg" style="color: #6ceb8e;padding-right:5px"></i>See All Of Your Rebates & Incentives</li>
+                                                            <li><i class="fa fa-check fa-lg" style="color: #6ceb8e;padding-right:5px"></i>Save Big On Utility Bills</li>
+                                                            <li><i class="fa fa-check fa-lg" style="color: #6ceb8e;padding-right:5px"></i>Competitive Prices</li>      
                                                         </ul>
                                                     </div>
                                                 </div>
                                                 <div class="row justify-content-around">
                                                     <div class="col-12 text-dark">
-                                                        <a class="btn btn-danger btn-lg btn-block prog-btn" target="_blank" rel="noreferrer" href="https://www.tymd83trk.com/4C2WD7/7D4XXB/">
-                                                            Continue 
+                                                        <a class="btn btn-success btn-lg btn-block prog-btn" style="background-color:#6ceb8e;border:none" target="_blank" rel="noreferrer" href="https://www.tymd83trk.com/4C2WD7/7D4XXB/">
+                                                            Click Here 
                                                         </a>
                                                     </div>
                                                 </div>

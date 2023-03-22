@@ -13,9 +13,12 @@
                         <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
                             <div class="wizard__box">
                                 <div class="page-title text-center mb-2">
-                                    <h2>Sorry, you didn't qualify for our offer</h2>
+                                    <!-- <h2>Sorry, you didn't qualify for our offer</h2>
                                     <p class="text qualify-text">Why didn't I qualify?</p>
-                                    <p class="hidden-text">You are in a zip code where we currently don't have an installation team.</p>
+                                    <p class="hidden-text">You are in a zip code where we currently don't have an installation team.</p> -->
+                                    <h2>You’ve been Pre-Qualified for $0 Out of Pocket Solar with Estimated Savings of <span style>$64,147*</span></h2>
+                                    <p>*based on a special offer from a solar provider.Expect a phone call from a solar expert to claim the offer and your spot in the line.</p>
+
                                 </div>
                                 <div class="wizard__main">
                                     <div class="row justify-content-center">
@@ -35,17 +38,22 @@
                                                 </div>
                                                 <div class="row justify-content-around">
                                                     <div class="col-xs-12 col-md-5 text-center text-dark">
-                                                        <ul class="my-3 list-disc text-start">
+                                                        <!-- <ul class="my-3 list-disc text-start">
                                                             <li>See All Of Your Rebates & Incentives</li>
                                                             <li>Save Big On Utility Bills</li>
                                                             <li>Competitive Prices</li>      
+                                                        </ul> -->
+                                                        <ul class="my-3  text-start">
+                                                            <li><i class="fa fa-check fa-lg" style="color: #6ceb8e;padding-right:5px"></i>See All Of Your Rebates & Incentives</li>
+                                                            <li><i class="fa fa-check fa-lg" style="color: #6ceb8e;padding-right:5px"></i>Save Big On Utility Bills</li>
+                                                            <li><i class="fa fa-check fa-lg" style="color: #6ceb8e;padding-right:5px"></i>Competitive Prices</li>      
                                                         </ul>
                                                     </div>
                                                 </div>
                                                 <div class="row justify-content-around">
                                                     <div class="col-12 text-dark">
-                                                        <a class="btn btn-danger btn-lg btn-block prog-btn" target="_blank" rel="noreferrer" href="{{ config('base.first_creative_link') }}">
-                                                            Continue 
+                                                        <a class="btn btn-danger btn-lg btn-block prog-btn" style='background-color:#6ceb8e;border:none'target="_blank" rel="noreferrer" href="{{ config('base.first_creative_link') }}">
+                                                            Click Here 
                                                         </a>
                                                     </div>
                                                 </div>
