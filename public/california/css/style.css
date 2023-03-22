@@ -68,6 +68,20 @@ input::-webkit-inner-spin-button {
     border: none;
 }
 
+.top_header {
+    background-color: rgba(116,26,7,1);
+    border-color: rgba(116,26,7,1);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.top_header_text {
+    font-weight: 700;
+    font-size: 18px;
+    font-family: "Lato", sans-serif;
+}
+
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;

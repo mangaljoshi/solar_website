@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+    @include('california.partials.top_header')
     <div class="main-wrapper">
         @include('california.partials.header_home')
         <section class="hero-banner">

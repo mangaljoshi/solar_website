@@ -12,6 +12,10 @@
 	.wizard__main .sunlight-box > a .theme-title {
 	    font-size: 15px;
 	}
+	.top_header_text {
+		font-weight: 500;
+		font-size: 14px;
+	}
 }
 @media screen and (max-width: 575px){
 	.hero-inner h1 {

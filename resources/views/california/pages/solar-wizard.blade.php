@@ -4,6 +4,7 @@
     <div id="loading" style="display: none;">
         <img id="loading-image" src="california/images/loader.gif" alt="Loading..." />
     </div>
+    @include('california.partials.top_header')
     <div class="main-wrapper wizard-box">
         <div class="d-table w-100">
             <div class="d-table-cell">
@@ -13,7 +14,7 @@
                         <div class="col-sm-12">
                             <div class="lock"></div>
                             <div class="hero-logo">
-                                <a href="{{ route('solar.california.home') }}"><img src="california/images/logo.png" alt=""></a>
+                                <a href="{{ route('solar.california.home') }}"><img src="{{ asset('california/images/logo.png') }}" alt=""></a>
                             </div>
                             <div class="wizard-bg-box mt-4">
                                 <div class="progress" style="height: 20px;">
