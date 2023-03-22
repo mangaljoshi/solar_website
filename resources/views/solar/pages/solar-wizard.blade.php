@@ -4,6 +4,7 @@
     <div id="loading" style="display: none;">
         <img id="loading-image" src="solar/images/loader.gif" alt="Loading..." />
     </div>
+    @include('solar.partials.top_header')
     <div class="main-wrapper wizard-box">
         <div class="d-table w-100">
             <div class="d-table-cell">
