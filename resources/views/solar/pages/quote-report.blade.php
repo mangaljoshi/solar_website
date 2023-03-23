@@ -22,14 +22,10 @@
                                 <div class="wizard__main">
                                     <div class="row justify-content-center">
                                     <div class="col-sm-12">
-                                        <div class="yell-wrapper">
+                                        <!-- <div class="yell-wrapper">
                                             <div class="yell solar-saver">
                                                 <div class="text-center">
                                                 <div class="cta-title text-center mb-2 text-dark">
-                                                <!-- <nav class="navbar navbar-light " style="background-color:#5ae15a;width:70%;margin-left:-40px;margin-top:-20px;border-radius:8px;margin-bottom: 34px;">
-                                                      <i class="fas fa-check fa-lg" style="color: #7cdd3c; background-color:white;border-radius:50%;width:30px;height:25px;margin-left:10px;padding-top:5px"></i>
-                                                     <span style="font-weight:bold!important;font-size:20px;padding-right:264px;color:white">Recommended For You</span>
-                                                     </nav> -->
                                                     <h2 class="prog-title">
                                                         You matched with top local installers on SolarSaverProgram.com
                                                     </h2>
@@ -41,10 +37,10 @@
                                                 </div>
                                                 <div class="row justify-content-around">
                                                     <div class="col-xs-12 col-md-5 text-center text-dark">
-                                                        <ul class="my-3  text-start">
-                                                            <li><i class="fa fa-check fa-lg" style="color: #6ceb8e;padding-right:5px"></i>See All Of Your Rebates & Incentives</li>
-                                                            <li><i class="fa fa-check fa-lg" style="color: #6ceb8e;padding-right:5px"></i>Save Big On Utility Bills</li>
-                                                            <li><i class="fa fa-check fa-lg" style="color: #6ceb8e;padding-right:5px"></i>Competitive Prices</li>      
+                                                        <ul class="my-3 list-disc text-start">
+                                                            <li>See All Of Your Rebates & Incentives<li>
+                                                            <li>Save Big On Utility Bills</li>
+                                                            <li>Competitive Prices</li>      
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -57,7 +53,46 @@
                                                 </div>
                                                 </div>
                                             </div>   
+                                        </div> -->
+                                        <div class="" >
+                                        <div class="card-deck mb-3 text-center">
+                                            <div class="card mb-4 box-shadow" style='border: 3px solid  #3ddb75; border-radius:10px'>
+                                            <div class="card-header " style="width:80%;background-color:#3ddb75;border-radius:4px;height:42px">
+                                                <h4 class="my-0 font-weight-normal" style="color:white;font-weight:700;"><i class="fas fa-check fa-sm" style="color: #3ddb75; background-color:white;border-radius:50%;width:30px;height:30px!important;padding:5px;margin-right:7px;"></i>Recommended For You</h4>
+                                            </div>
+                                            <div class="card-body">
+                                            <div class="text-center">
+                                                    <div class="cta-title text-center mb-2 text-dark">
+                                                        <h2 class="prog-title">
+                                                            You matched with top local installers on SolarSaverProgram.com
+                                                        </h2>
+                                                    </div>
+                                                    <div class="row justify-content-around">
+                                                        <div class="col-xs-12 col-sm-12 col-md-8  text-center text-dark">
+                                                            <img src="{{ asset('solar/images/solar-saver-program-logo.png') }}" alt="Solar Saver Program-logo" class="object-contain">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row justify-content-around">
+                                                        <div class="col-xs-12 col-md-5 text-center text-dark">
+                                                            <ul class="my-3  text-start">
+                                                                <li> <i class="fa fa-check fa-lg" style="color: #6ceb8e;padding-right:5px"></i>See All Of Your Rebates & Incentives</li>
+                                                                <li> <i class="fa fa-check fa-lg" style="color: #6ceb8e;padding-right:5px"></i>Save Big On Utility Bills</li>
+                                                                <li> <i class="fa fa-check fa-lg" style="color: #3ddb75;padding-right:5px"></i>Competitive Prices</li>      
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row justify-content-around">
+                                                        <div class="col-12 text-dark">
+                                                            <a class="btn btn-danger btn-lg btn-block prog-btn" style="background-color:#3ddb75;border:none; width:88%"  target="_blank" rel="noreferrer" href="https://www.tymd83trk.com/623T3S/7D4XXB/">
+                                                                Click Here 
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </div>
                                         </div>
+                                    </div>
                                     </div>
                                     <div class="col-sm-12">
                                         <div class="yell-wrapper">
