@@ -16,7 +16,7 @@
                                     <!-- <h2>Sorry, you didn't qualify for our offer</h2>
                                     <p class="text qualify-text">Why didn't I qualify?</p>
                                     <p class="hidden-text">You are in a zip code where we currently don't have an installation team.</p> -->
-                                    <h2>You’ve been Pre-Qualified for $0 Out of Pocket Solar with Estimated Savings of <span style>$64,147*</span></h2>
+                                    <h2>You’ve been Pre-Qualified for $0 Out of Pocket Solar with Estimated Savings of <span style="color:#FB7306">$64,147*</span></h2>
                                     <p>*based on a special offer from a solar provider.Expect a phone call from a solar expert to claim the offer and your spot in the line.</p>
 
                                 </div>
@@ -70,7 +70,7 @@
                                                     </div>
                                                     <div class="row justify-content-around">
                                                         <div class="col-xs-12 col-sm-12 col-md-8  text-center text-dark">
-                                                            <img src="{{ asset('images/solar-saver-program-logo.png') }}" alt="Solar Saver Program-logo" class="object-contain">
+                                                            <img src="{{ asset('energybill/images/solar-saver-program-logo.png') }}" alt="Solar Saver Program-logo" class="object-contain">
                                                         </div>
                                                     </div>
                                                     <div class="row justify-content-around">
