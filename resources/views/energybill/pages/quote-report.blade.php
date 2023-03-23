@@ -57,9 +57,9 @@
                                         </div> -->
                                         <div class="" >
                                         <div class="card-deck mb-3 text-center">
-                                            <div class="card mb-4 box-shadow" style='border: 3px solid  #3ddb75; border-radius:10px'>
-                                            <div class="card-header " style="width:80%;background-color:#3ddb75;border-radius:4px;height:42px">
-                                                <h4 class="my-0 font-weight-normal" style="color:white;font-weight:700;"><i class="fas fa-check fa-sm" style="color: #3ddb75; background-color:white;border-radius:50%;width:30px;height:30px!important;padding:5px;margin-right:7px;"></i>Recommended For You</h4>
+                                            <div class="card mb-4 box-shadow" style='border: 3px solid  #2dc254; border-radius:10px'>
+                                            <div class="card-header " style="width:80%;background-color:#2dc254;border-radius:4px;height:42px;text-align:left">
+                                                <h4 class="my-0 font-weight-normal" style="color:white;font-weight:700;"><i class="fas fa-check fa-sm" style="color: #2dc254; background-color:white;border-radius:50%;width:30px;height:30px!important;padding:5px;margin-right:7px;"></i>Recommended For You</h4>
                                             </div>
                                             <div class="card-body">
                                             <div class="text-center">
@@ -76,15 +76,15 @@
                                                     <div class="row justify-content-around">
                                                         <div class="col-xs-12 col-md-5 text-center text-dark">
                                                             <ul class="my-3  text-start">
-                                                                <li> <i class="fa fa-check fa-lg" style="color: #6ceb8e;padding-right:5px"></i>See All Of Your Rebates & Incentives</li>
-                                                                <li> <i class="fa fa-check fa-lg" style="color: #6ceb8e;padding-right:5px"></i>Save Big On Utility Bills</li>
-                                                                <li> <i class="fa fa-check fa-lg" style="color: #3ddb75;padding-right:5px"></i>Competitive Prices</li>      
+                                                                <li> <i class="fa fa-check fa-lg" style="color: #2dc254;padding-right:5px"></i>See All Of Your Rebates & Incentives</li>
+                                                                <li> <i class="fa fa-check fa-lg" style="color: #2dc254;padding-right:5px"></i>Save Big On Utility Bills</li>
+                                                                <li> <i class="fa fa-check fa-lg" style="color: #2dc254;padding-right:5px"></i>Competitive Prices</li>      
                                                             </ul>
                                                         </div>
                                                     </div>
                                                     <div class="row justify-content-around">
                                                         <div class="col-12 text-dark">
-                                                            <a class="btn btn-danger btn-lg btn-block prog-btn" style="background-color:#3ddb75;border:none; width:88%"  target="_blank" rel="noreferrer" href="https://www.tymd83trk.com/623T3S/7D4XXB/">
+                                                            <a class="btn btn-danger btn-lg btn-block prog-btn mobile-btn" style="background-color:#2dc254;border:none; width:88%"  target="_blank" rel="noreferrer" href="https://www.tymd83trk.com/623T3S/7D4XXB/">
                                                                 Click Here 
                                                             </a>
                                                         </div>
@@ -205,4 +205,10 @@
     .hero-logo {
         margin: 0 0 !important;
     }
+    @media screen and (min-width: 375px) {
+    .mobile-btn {
+        font-weight:600!important;
+        min-width:318px!important;
+    }}
+
 </style>
