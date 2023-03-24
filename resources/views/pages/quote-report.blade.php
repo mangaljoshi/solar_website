@@ -12,11 +12,11 @@
                         <div class="row justify-content-center">
                         <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
                             <div class="wizard__box">
-                                <div class="page-title text-center mb-2">
+                                <div class="page-title text-center mb-2 ">
                                     <!-- <h2 class='sorry-qualify'>Sorry, you didn't qualify for our offer</h2>
                                     <p class="text qualify-text">Why didn't I qualify?</p>
                                     <p class="hidden-text">You are in a zip code where we currently don't have an installation team.</p> -->
-                                    <h2>You’ve been Pre-Qualified for $0 Out of Pocket Solar with Estimated Savings of <span style="color:#FB7306">$64,147*</span> </h2>
+                                    <h2 >You’ve been Pre-Qualified for $0 Out of Pocket Solar with Estimated Savings of <span style="color:#FB7306">$64,147*</span> </h2>
                                     <p>*based on a special offer from a solar provider. Expect a phone call from a solar expert to claim the offer and your spot in the line.</p>
                                 </div>
                                 <div class="wizard__main">

@@ -16,9 +16,8 @@
                                     <!-- <h2>Sorry, you didn't qualify for our offer</h2>
                                     <p class="text qualify-text">Why didn't I qualify?</p>
                                     <p class="hidden-text">You are in a zip code where we currently don't have an installation team.</p> -->
-                                    <h2>You’ve been Pre-Qualified for $0 Out of Pocket Solar with Estimated Savings of <span style="color:#FB7306">$64,147*</span></h2>
-                                    <p>*based on a special offer from a solar provider.Expect a phone call from a solar expert to claim the offer and your spot in the line.</p>
-
+                                    <h2 class="mobile-text">You’ve been Pre-Qualified for $0 Out of Pocket Solar with Estimated Savings of <span style="color:#FB7306">$64,147*</span></h2>
+                                    <p class="mobile-text">*based on a special offer from a solar provider.Expect a phone call from a solar expert to claim the offer and your spot in the line.</p>
                                 </div>
                                 <div class="wizard__main">
                                     <div class="row justify-content-center">
@@ -63,28 +62,28 @@
                                             </div>
                                             <div class="card-body">
                                             <div class="text-center">
-                                                    <div class="cta-title text-center mb-2 text-dark">
-                                                        <h2 class="prog-title">
-                                                            You matched with top local installers on SolarSaverProgram.com
-                                                        </h2>
-                                                    </div>
                                                     <div class="row justify-content-around">
                                                         <div class="col-xs-12 col-sm-12 col-md-8  text-center text-dark">
                                                             <img src="{{ asset('energybill/images/solar-saver-program-logo.png') }}" alt="Solar Saver Program-logo" class="object-contain">
                                                         </div>
                                                     </div>
+                                                    <div class="cta-title text-center mb-2 text-dark">
+                                                        <h2 class="prog-title">
+                                                            Drop Your Auto Insurance Rates Now!
+                                                        </h2>
+                                                    </div>
                                                     <div class="row justify-content-around">
                                                         <div class="col-xs-12 col-md-5 text-center text-dark">
                                                             <ul class="my-3  text-start">
-                                                                <li> <i class="fa fa-check fa-lg" style="color:#22c55d;padding-right:5px"></i>See All Of Your Rebates & Incentives</li>
-                                                                <li> <i class="fa fa-check fa-lg" style="color: #22c55d;padding-right:5px"></i>Save Big On Utility Bills</li>
-                                                                <li> <i class="fa fa-check fa-lg" style="color: #22c55d;padding-right:5px"></i>Competitive Prices</li>      
+                                                                 <li style="font-weight:600"> <i class="fa fa-check fa-lg" style="color: #22c55d;padding-right:5px"></i>Compare Cheap car Insurance</li>
+                                                                 <li style="font-weight:600"> <i class="fa fa-check fa-lg" style="color: #22c55d;padding-right:5px"></i>Find Coverage Options That You Need</li>
+                                                                 <li style="font-weight:600"> <i class="fa fa-check fa-lg" style="color: #22c55d;padding-right:5px"></i>Click To Save On Your Insurance  </li>       
                                                             </ul>
                                                         </div>
                                                     </div>
                                                     <div class="row justify-content-around">
                                                         <div class="col-12 text-dark">
-                                                            <a class="btn btn-danger btn-lg btn-block prog-btn mobile-btn" style="background-color:#22c55d;border:none; width:88%"  target="_blank" rel="noreferrer" href="https://www.tymd83trk.com/623T3S/7D4XXB/">
+                                                            <a class="btn btn-danger btn-lg btn-block prog-btn mobile-btn" style="background-color:#22c55d;border:none; width:60%"  target="_blank" rel="noreferrer" href="https://synergyplayer.com/a4e7244f957c5d8219defbc368c457367/?sid1=nat&sid2=&sid3=&sid4=">
                                                                 Click Here 
                                                             </a>
                                                         </div>
@@ -205,10 +204,22 @@
     .hero-logo {
         margin: 0 0 !important;
     }
-    @media screen and (min-width: 375px) {
+    @media screen and (max-width: 414px) {
     .mobile-btn {
         font-weight:600!important;
         min-width:318px!important;
     }}
+    @media screen and (max-width: 414px) {
+    p.mobile-text {
+        font-size: 18px!important;
+        line-height:1.3!important;
+    }}
+   
+    @media screen and (max-width: 414px){
+        .wizard__box .page-title h2 {
+	    font-size: 16px !important;
+        line-height:1.3!important;
+	}}
+    
 
 </style>
