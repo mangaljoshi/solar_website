@@ -5,19 +5,19 @@
         <div class="d-table w-100">
             <div class="d-table-cell">
                 <div class="d-none d-sm-block d-md-block">
-                    @include('solar.partials.header_home')
+                  @include('solar.partials.header_home')
                 </div>
                 <section class="hero-banner quate-report wizard-bg page-paddings pt-1 pb-4">
                     <div class="container">
                         <div class="row justify-content-center">
                         <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
                             <div class="wizard__box">
-                                <div class="page-title text-center mb-2 mobile-text" >
-                                    <h2 class="mobile-text">You’ve been Pre-Qualified for $0 Out of Pocket Solar with Estimated Savings of <span style="color:#FB7306"> $45,243*</span></h2>
+                                <div class="page-title text-center mb-2">
+                                    <!-- <h2 class='sorry-qualify'>Sorry, you didn't qualify for our offer</h2>
+                                    <p class="text qualify-text">Why didn't I qualify?</p>
+                                    <p class="hidden-text">You are in a zip code where we currently don't have an installation team.</p> -->
+                                    <h2>You’ve been Pre-Qualified for $0 Out of Pocket Solar with Estimated Savings of <span style="color:#FB7306">$64,147*</span> </h2>
                                     <p class="mobile-text">*based on a special offer from a solar provider. Expect a phone call from a solar expert to claim the offer and your spot in the line.</p>
-                                    <!-- <h2>Sorry, you didn't qualify for our offer</h2>
-                                    <p class="text qualify-text">Why didn't I qualify?</p> -->
-                                    <!-- <p class="hidden-text">You are in a zip code where we currently don't have an installation team.</p> -->
                                 </div>
                                 <div class="wizard__main">
                                     <div class="row justify-content-center">
@@ -32,13 +32,13 @@
                                                 </div>
                                                 <div class="row justify-content-around">
                                                     <div class="col-xs-12 col-sm-12 col-md-8  text-center text-dark">
-                                                        <img src="{{ asset('solar/images/solar-saver-program-logo.png') }}" alt="Solar Saver Program-logo" class="object-contain">
+                                                        <img src="{{ asset('_solar/images/solar-saver-program-logo.png') }}" alt="Solar Saver Program-logo" class="object-contain">
                                                     </div>
                                                 </div>
                                                 <div class="row justify-content-around">
                                                     <div class="col-xs-12 col-md-5 text-center text-dark">
                                                         <ul class="my-3 list-disc text-start">
-                                                            <li>See All Of Your Rebates & Incentives<li>
+                                                            <li>See All Of Your Rebates & Incentives</li>
                                                             <li>Save Big On Utility Bills</li>
                                                             <li>Competitive Prices</li>      
                                                         </ul>
@@ -46,7 +46,7 @@
                                                 </div>
                                                 <div class="row justify-content-around">
                                                     <div class="col-12 text-dark">
-                                                        <a class="btn btn-success btn-lg btn-block prog-btn" style="background-color:#6ceb8e;border:none" target="_blank" rel="noreferrer" href="https://www.tymd83trk.com/4C2WD7/7D4XXB/">
+                                                        <a class="btn btn-danger btn-lg btn-block prog-btn" style="background-color:#6ceb8e; border:none" target="_blank" rel="noreferrer" href="https://www.tymd83trk.com/623T3S/7D4XXB/">
                                                             Click Here 
                                                         </a>
                                                     </div>
@@ -54,36 +54,37 @@
                                                 </div>
                                             </div>   
                                         </div> -->
-                                        
-                                        <div class="card-deck mb-3 text-center mobile-height">
+                                        <div class="" >
+                                        <div class="card-deck mb-3 text-center">
                                             <div class="card mb-4 box-shadow" style='border: 3px solid  #22c55d; border-radius:10px'>
-                                            <div class="card-header " style="width:81%;background-color:#22c55d;border-radius:4px;height:42px">
-                                                <h4 class="my-0 font-weight-normal" style="color:white;font-weight:700;text-align:left"><i class="fas fa-check fa-sm" style="color: #22c55d; background-color:white;border-radius:50%;width:30px;height:30px!important;padding:5px;margin-right:7px;"></i>Recommended For You</h4>
+                                            <div class="card-header " style="width:81%;background-color:#22c55d;border-radius:4px;height:38px;text-align:left;padding-top:1px;padding-bottom:30px;margin-bottom:16px">
+                                                <h4 class=" font-weight-normal" style="color:white;font-weight:700;"><i class="fa fa-check fa-xs" style="color: #22c55d; background-color:white;border-radius:50%;width:25px;height:25px!important;padding:5px;margin-right:7px;"></i>Recommended For You</h4>
                                             </div>
                                             <div class="card-body">
                                             <div class="text-center">
-                                                   <div class="row justify-content-around">
+                                                    <div class="row justify-content-around">
                                                         <div class="col-xs-12 col-sm-12 col-md-8  text-center text-dark">
-                                                            <img src="{{ asset('solar/images/solar-saver-program-logo.png') }}" alt="Solar Saver Program-logo" class="object-contain">
+                                                            <!-- <img src="{{ asset('_solar/images/solar-saver-program-logo.png') }}" alt="Solar Saver Program-logo" class="object-contain"> -->
+                                                            <span class="text-dark" style="font-size: 45px;font-weight: 600;">BestPolicyRate</span>
                                                         </div>
                                                     </div>
                                                     <div class="cta-title text-center mb-2 text-dark">
-                                                        <h2 class="prog-title">
-                                                            Drop Your Auto Insurance Rates Now!
+                                                        <h2 class="prog-title" style="font-size:23px!important;margin-top:25px">
+                                                        Drop Your Auto Insurance Rates Now!
                                                         </h2>
                                                     </div>
                                                     <div class="row justify-content-around">
                                                         <div class="col-xs-12 col-md-5 text-center text-dark">
-                                                            <ul class="my-3  text-start ">
-                                                                <li style="font-weight:600"> <i class="fa fa-check fa-lg" style="color: #22c55d;padding-right:5px"></i>Compare Cheap car Insurance</li>
-                                                                <li style="font-weight:600"> <i class="fa fa-check fa-lg" style="color: #22c55d;padding-right:5px"></i>Find Coverage Options That You Need</li>
-                                                                <li style="font-weight:600"> <i class="fa fa-check fa-lg" style="color: #22c55d;padding-right:5px"></i>Click To Save On Your Insurance  </li>      
+                                                            <ul class=" text-start">
+                                                                <li style="font-weight:600;" > <i class="fa fa-check " style="color: #22c55d;padding-right:5px"></i>Compare Cheap Car Insurance</li>
+                                                                <li  style="font-weight:600;"> <i class="fa fa-check " style="color: #22c55d;padding-right:5px"></i>Find Coverage Options That You Need</li>
+                                                                <li  style="font-weight:600;"> <i class="fa fa-check " style="color: #22c55d;padding-right:5px"></i>Click To Save On Your Insurance</li>      
                                                             </ul>
                                                         </div>
                                                     </div>
                                                     <div class="row justify-content-around">
-                                                        <div class="col-12 text-dark ">
-                                                            <a class="btn btn-danger btn-lg btn-block prog-btn mobile-btn" style="background-color:#22c55d;border:none; width:60%"  target="_blank" rel="noreferrer" href="https://synergyplayer.com/a4e7244f957c5d8219defbc368c457367/?sid1=nat&sid2=&sid3=&sid4=">
+                                                        <div class="col-12 text-dark">
+                                                            <a class="btn btn-danger btn-lg btn-block prog-btn mobile-btn" style="background-color:#22c55d;border:none; width:70%;margin:20px auto"  target="_blank" rel="noreferrer" href="https://synergyplayer.com/a4e7244f957c5d8219defbc368c457367/?sid1=&sid2=sr2&sid3=&sid4=">
                                                                 Click Here 
                                                             </a>
                                                         </div>
@@ -91,11 +92,11 @@
                                                 </div>
                                             </div>
                                             </div>
-                                        
+                                        </div>
                                     </div>
                                     </div>
                                     <div class="col-sm-12">
-                                        <div class="yell-wrapper">
+                                        <div class="yell-wrapper box-2">
 
                                             <div class="yell">
 
@@ -195,29 +196,54 @@
             </div>
         </div>
     </div>
+  
+   
 @endsection
-<style>
-    .hero-logo img{
-        max-width: 63px!important;
-       
-    }
-    .hero-logo {
-        margin: 0 0 !important;
-    }
-    @media screen and (max-width: 414px) {
+@section('style')
+    <style>
+        .hero-logo img{
+            max-width: 63px!important;
+        
+        }
+        .hero-logo {
+            margin: 0 0 !important;
+        }
+    
+        @media screen and (max-width: 414px) {
     .mobile-btn {
         font-weight:600!important;
         min-width:318px!important;
+        font-size:18px;
+        padding:4px;
+        margin-top:13px;
+        margin-bottom:-3px!important;
     }}
     @media screen and (max-width: 414px) {
     p.mobile-text {
-        font-size: 18px!important;
-        line-height:1.3!important;
-    }}
-    @media screen and (max-width: 414px) {
-    h2.mobile-text {
-        font-size: 16px!important;
-        line-height:1.3!important;
+        font-size: 13px!important;
+        line-height:1.5!important;
     }}
    
-</style>
+    @media screen and (max-width: 414px){
+        .wizard__box .page-title h2 {
+	    font-size: 16px !important;
+        line-height:1.4!important;
+	}}
+    @media screen and (max-width: 414px){
+        ul li {
+	    
+        line-height:1.2!important;
+        font-weight:500!important;
+	}}
+    @media screen and (max-width: 414px){
+        ul  {
+	    margin-top:-3px!important;
+	}}
+    @media screen and (max-width: 414px){
+        .box-2{
+	    margin-top:-30px!important;
+	}}
+    </style>
+    
+    
+@endsection

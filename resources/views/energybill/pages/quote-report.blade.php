@@ -57,27 +57,29 @@
                                         <div class="" >
                                         <div class="card-deck mb-3 text-center">
                                             <div class="card mb-4 box-shadow" style='border: 3px solid  #22c55d; border-radius:10px'>
-                                            <div class="card-header " style="width:80%;background-color:#22c55d;border-radius:4px;height:42px;text-align:left">
-                                                <h4 class="my-0 font-weight-normal" style="color:white;font-weight:700;"><i class="fas fa-check fa-sm" style="color: #22c55d; background-color:white;border-radius:50%;width:30px;height:30px!important;padding:5px;margin-right:7px;"></i>Recommended For You</h4>
+                                            <div class="card-header " style="width:80%;background-color:#22c55d;border-radius:4px;height:36px;text-align:left;margin-bottom:16px">
+                                                <h4 class=" font-weight-normal" style="color:white;font-weight:700;"><i class="fa fa-check fa-xs" style="color: #22c55d; background-color:white;border-radius:50%;width:25px;height:25px!important;padding:5px;margin-right:7px;"></i>Recommended For You</h4>
                                             </div>
                                             <div class="card-body">
                                             <div class="text-center">
                                                     <div class="row justify-content-around">
                                                         <div class="col-xs-12 col-sm-12 col-md-8  text-center text-dark">
-                                                            <img src="{{ asset('energybill/images/solar-saver-program-logo.png') }}" alt="Solar Saver Program-logo" class="object-contain">
+                                                            <!-- <img src="{{ asset('energybill/images/solar-saver-program-logo.png') }}" alt="Solar Saver Program-logo" class="object-contain"> -->
+                                                            <span class="text-dark" style="font-size: 45px;font-weight: 600;">BestPolicyRate</span>
+                                                            
                                                         </div>
                                                     </div>
                                                     <div class="cta-title text-center mb-2 text-dark">
-                                                        <h2 class="prog-title">
-                                                            Drop Your Auto Insurance Rates Now!
+                                                        <h2 class="prog-title" style="font-size:23px!important;margin-top:25px;font-weight:bold">
+                                                        Drop Your Auto Insurance Rates Now!
                                                         </h2>
                                                     </div>
                                                     <div class="row justify-content-around">
                                                         <div class="col-xs-12 col-md-5 text-center text-dark">
                                                             <ul class="my-3  text-start">
-                                                                 <li style="font-weight:600"> <i class="fa fa-check fa-lg" style="color: #22c55d;padding-right:5px"></i>Compare Cheap car Insurance</li>
-                                                                 <li style="font-weight:600"> <i class="fa fa-check fa-lg" style="color: #22c55d;padding-right:5px"></i>Find Coverage Options That You Need</li>
-                                                                 <li style="font-weight:600"> <i class="fa fa-check fa-lg" style="color: #22c55d;padding-right:5px"></i>Click To Save On Your Insurance  </li>       
+                                                                 <li style="font-weight:600"> <i class="fa fa-check " style="color: #22c55d;padding-right:5px"></i>Compare Cheap car Insurance</li>
+                                                                 <li style="font-weight:600"> <i class="fa fa-check" style="color: #22c55d;padding-right:5px"></i>Find Coverage Options That You Need</li>
+                                                                 <li style="font-weight:600"> <i class="fa fa-check" style="color: #22c55d;padding-right:5px"></i>Click To Save On Your Insurance  </li>       
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -95,7 +97,7 @@
                                     </div>
                                     </div>
                                     <div class="col-sm-12">
-                                        <div class="yell-wrapper">
+                                        <div class="yell-wrapper box-2">
 
                                             <div class="yell">
 
@@ -204,22 +206,41 @@
     .hero-logo {
         margin: 0 0 !important;
     }
+ 
     @media screen and (max-width: 414px) {
     .mobile-btn {
         font-weight:600!important;
         min-width:318px!important;
+        font-size:18px;
+        padding:4px;
+        margin-top:-6px;
     }}
     @media screen and (max-width: 414px) {
     p.mobile-text {
-        font-size: 18px!important;
-        line-height:1.3!important;
+        font-size: 13px!important;
+        line-height:1.5!important;
     }}
    
     @media screen and (max-width: 414px){
         .wizard__box .page-title h2 {
 	    font-size: 16px !important;
-        line-height:1.3!important;
+        line-height:1.4!important;
 	}}
+    @media screen and (max-width: 414px){
+        ul li {
+	    
+        line-height:1.2!important;
+        font-weight:500!important;
+	}}
+    @media screen and (max-width: 414px){
+        ul  {
+	    margin-top:-3px!important;
+	}}
+    @media screen and (max-width: 414px){
+        .box-2{
+	    margin-top:-30px!important;
+	}}
+        
     
 
 </style>
