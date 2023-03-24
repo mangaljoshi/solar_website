@@ -70,7 +70,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="cta-title text-center mb-2 text-dark">
-                                                        <h2 class="prog-title" style="font-size:23px!important;margin-top:25px;font-weight:bold">
+                                                        <h2 class="prog-title" style="font-size:23px!important;margin-top:18px;font-weight:bold">
                                                         Drop Your Auto Insurance Rates Now!
                                                         </h2>
                                                     </div>
@@ -214,6 +214,7 @@
         font-size:18px;
         padding:4px;
         margin-top:-6px;
+        margin-bottom:-6px!important;
     }}
     @media screen and (max-width: 414px) {
     p.mobile-text {
