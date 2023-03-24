@@ -13,8 +13,8 @@
                         <div class="row">
                         <div class="col-sm-12">
                             <div class="lock"></div>
-                            <div class="hero-logo">
-                                <a href="{{ route('solar.california.home') }}"><img src="{{ asset('california/images/logo.png') }}" alt=""></a>
+                            <div class="hero-logo class=" >
+                                <a  href="{{ route('solar.california.home') }}"><img  src="{{ asset('california/images/logo.png') }}" class="d-none d-lg-block" alt=""></a>
                             </div>
                             <div class="wizard-bg-box mt-4">
                                 <div class="progress" style="height: 20px;">
