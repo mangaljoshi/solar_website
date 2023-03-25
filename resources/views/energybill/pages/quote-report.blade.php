@@ -57,8 +57,8 @@
                                         <div class="" >
                                         <div class="card-deck mb-3 text-center">
                                             <div class="card mb-4 box-shadow" style='border: 3px solid  #22c55d; border-radius:10px'>
-                                            <div class="card-header " style="width:80%;background-color:#22c55d;border-radius:4px;height:36px;text-align:left;margin-bottom:16px">
-                                                <h4 class=" font-weight-normal" style="color:white;font-weight:700;"><i class="fa fa-check fa-xs" style="color: #22c55d; background-color:white;border-radius:50%;width:25px;height:25px!important;padding:5px;margin-right:7px;"></i>Recommended For You</h4>
+                                            <div class="card-header " style="width:80%;background-color:#22c55d;border-radius:4px;height:35px;padding-top:3px;margin-bottom:10px">
+                                                <h4 class="my-0 font-weight-normal" style="color:white;font-weight:700;text-align:left"><i class="fas fa-check fa-sm" style="color: #22c55d; background-color:white;border-radius:50%;width:30px;height:28px!important;padding:5px;margin-right:7px;"></i>Recommended For You</h4>
                                             </div>
                                             <div class="card-body">
                                             <div class="text-center">
@@ -76,7 +76,7 @@
                                                     </div>
                                                     <div class="row justify-content-around">
                                                         <div class="col-xs-12 col-md-5 text-center text-dark">
-                                                            <ul class="my-3  text-start">
+                                                            <ul class="my-1  text-start">
                                                                  <li style="font-weight:600"> <i class="fa fa-check " style="color: #22c55d;padding-right:5px"></i>Compare Cheap car Insurance</li>
                                                                  <li style="font-weight:600"> <i class="fa fa-check" style="color: #22c55d;padding-right:5px"></i>Find Coverage Options That You Need</li>
                                                                  <li style="font-weight:600"> <i class="fa fa-check" style="color: #22c55d;padding-right:5px"></i>Click To Save On Your Insurance  </li>       
@@ -208,39 +208,45 @@
     }
  
     @media screen and (max-width: 414px) {
-    .mobile-btn {
-        font-weight:600!important;
-        min-width:318px!important;
-        font-size:18px;
-        padding:4px;
-        margin-top:-6px;
-        margin-bottom:-6px!important;
-    }}
-    @media screen and (max-width: 414px) {
-    p.mobile-text {
-        font-size: 13px!important;
-        line-height:1.5!important;
-    }}
+        .mobile-btn {
+            font-weight:600!important;
+            min-width:318px!important;
+            font-size: 16px!important;
+            margin-bottom:-10px;
+            padding:4px;
+         }}
+
+        @media screen and (max-width: 414px) {
+         p.mobile-text {
+            font-size: 15px!important;
+            line-height:1.2!important;
+        }}
    
-    @media screen and (max-width: 414px){
-        .wizard__box .page-title h2 {
-	    font-size: 16px !important;
-        line-height:1.4!important;
-	}}
-    @media screen and (max-width: 414px){
-        ul li {
-	    
-        line-height:1.2!important;
-        font-weight:500!important;
-	}}
-    @media screen and (max-width: 414px){
-        ul  {
-	    margin-top:-3px!important;
-	}}
-    @media screen and (max-width: 414px){
-        .box-2{
-	    margin-top:-30px!important;
-	}}
+        @media screen and (max-width: 414px){
+            .wizard__box .page-title h2 {
+            font-size: 17px !important;
+            line-height:1.3!important;
+            font-weight:400!important;
+	    }}
+
+         @media screen and (max-width: 414px){
+        .prog-title {
+            font-size: 23px !important;
+        }}
+        @media screen and (max-width: 414px){
+            ul li {
+            
+            line-height:1.2!important;
+            font-weight:500!important;
+            }}
+        @media screen and (max-width: 414px){
+            ul {
+             margin-top:5px!important;
+        }}
+        @media screen and (max-width: 414px){
+            .box-2 {
+                margin-top: -30px;
+        }}
         
     
 
