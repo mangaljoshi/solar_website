@@ -12,7 +12,6 @@
                <div class="qpmywg-7 jeVraF">
                   <div class="qpmywg-1 kWNlXB"> 
                     @include('energybill.partials.header_home')
-
                   </div>
                </div>
             </div>
@@ -22,10 +21,10 @@
                      <div class="fu7ycq-0 eNUsAC">
                         <div class="fu7ycq-1 iUWgez">
                            <h1 class="fu7ycq-2 bMYtbr">
-                              <span class="city"> </span> </br> Residents </br>Own Your Power </br>By Going Solar
+                              <span class="city"> </span> </br> Program Offers </br>Solar For $0 </br>Down
                            </h1>
                            <h1 class="fu7ycq-3 ieziWX">
-                              The best deals on solar panels from local <span class="city"> </span> installers. Free no-obligation quotes.
+                              Enter basic home information to see if you quality!
                            </h1>
                         </div>
                      </div>
@@ -45,7 +44,7 @@
                                     </div>
                                  </div>
                                  <div class="sc-1f6gucm-2 ixxZa">
-                                    <h2>See if you qualify for affordable solar panels in your area with zero upfront costs!</h2>
+                                    <h2>See if you qualify for incentives in your area and get solar with zero upfront costs!</h2>
                                  </div>
                                  <div class="step">
                                     <div class="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth">
