@@ -1189,11 +1189,11 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .page-title h2 {
-    font-size: 32px !important;
+    font-size: 32px ;
 }
 
 .prog-btn {
-    padding: 8px 170px;
+    /* padding: 8px 170px; */
     font-size: 34px;
     font-weight: 900;
 }

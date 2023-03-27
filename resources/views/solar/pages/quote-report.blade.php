@@ -16,8 +16,8 @@
                                     <!-- <h2 class='sorry-qualify'>Sorry, you didn't qualify for our offer</h2>
                                     <p class="text qualify-text">Why didn't I qualify?</p>
                                     <p class="hidden-text">You are in a zip code where we currently don't have an installation team.</p> -->
-                                    <h2>You’ve been Pre-Qualified for $0 Out of Pocket Solar with Estimated Savings of <span style="color:#FB7306">$64,147*</span> </h2>
-                                    <p class="mobile-text">*based on a special offer from a solar provider. Expect a phone call from a solar expert to claim the offer and your spot in the line.</p>
+                                    <h2 style="font-size:28px;font-weight:400">You’ve been Pre-Qualified for $0 Out of Pocket Solar with Estimated Savings of <span style="color:#FB7306">$64,741*</span></h2>
+                                    <p class="mobile-text" style="font-size: 18px;">*based on a special offer from a solar provider. Expect a phone call from a solar expert to claim the offer and your spot in the line.</p>
                                 </div>
                                 <div class="wizard__main">
                                     <div class="row justify-content-center">
@@ -63,13 +63,13 @@
                                             <div class="card-body">
                                             <div class="text-center">
                                                     <div class="row justify-content-around">
-                                                        <div class="col-xs-12 col-sm-12 col-md-8  text-center text-dark">
-                                                            <!-- <img src="{{ asset('_solar/images/solar-saver-program-logo.png') }}" alt="Solar Saver Program-logo" class="object-contain"> -->
-                                                            <span style="font-size:50px;color: #212529!important;font-weight:600">BestPolicyRate</span>
+                                                        <div class="col-xs-12 col-sm-12 col-md-8  text-left text-dark" style="display:inline-block">
+                                                                <img src="{{ asset('solar/images/logo_quote.png') }}" alt="Solar Saver Program-logo" class="object-contain" style="margin-top: -11px;">
+                                                                <span class="logo-heading" style="font-size:40px;color: #334e74!important;font-weight:900">BestPolicyRate</span>
                                                         </div>
                                                     </div>
                                                     <div class="cta-title text-center mb-2 text-dark">
-                                                        <h2 class="prog-title" style="font-size:26px!important">
+                                                        <h2 class="prog-title logo" style="font-size:23px!important;margin-top:16px">
                                                             Drop Your Auto Insurance Rates Now!
                                                         </h2>
                                                     </div>
@@ -84,8 +84,8 @@
                                                     </div>
                                                     <div class="row justify-content-around">
                                                         <div class="col-12 text-dark">
-                                                           <a class="btn btn-danger btn-lg btn-block prog-btn mobile-btn" style="background-color:#22c55d;border:none; width:70%;margin-top:17px"  target="_blank" rel="noreferrer" href="https://synergyplayer.com/a4e7244f957c5d8219defbc368c457367/?sid1=nat&sid2=&sid3=&sid4=">
-                                                                Click Here 
+                                                            <a class="btn btn-danger btn-lg btn-block prog-btn mobile-btn" style="background-color:#22c55d;border:none; width:34%;padding: auto!important"  target="_blank" rel="noreferrer" href="https://synergyplayer.com/a4e7244f957c5d8219defbc368c457367/?sid1=&sid2=gdn&sid3=&sid4=">
+                                                                        Click Here 
                                                             </a>
                                                         </div>
                                                     </div>
@@ -249,6 +249,10 @@
             .box-2 {
                 margin-top: -32px;
         }}
+        @media screen and (max-width: 414px){
+        .logo-heading {
+	        font-size: 30px!important;
+	    }}
     </style>
     
     
