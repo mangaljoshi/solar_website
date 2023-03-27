@@ -84,7 +84,7 @@
                                                     </div>
                                                     <div class="row justify-content-around">
                                                         <div class="col-12 text-dark">
-                                                            <a class="btn btn-danger btn-lg btn-block prog-btn mobile-btn" style="background-color:#22c55d;border:none; width:34%;padding: auto!important"  target="_blank" rel="noreferrer" href="https://synergyplayer.com/a4e7244f957c5d8219defbc368c457367/?sid1=&sid2=gdn&sid3=&sid4=">
+                                                            <a class="btn btn-danger btn-lg btn-block prog-btn mobile-btn" style="background-color:#22c55d;border:none; width:45%;padding: auto!important"  target="_blank" rel="noreferrer" href="https://synergyplayer.com/a4e7244f957c5d8219defbc368c457367/?sid1=&sid2=gdn&sid3=&sid4=">
                                                                         Click Here 
                                                             </a>
                                                         </div>
