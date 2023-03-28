@@ -14,9 +14,9 @@ class BaseController extends Controller
     }
     
     public function home(Request $request) {
-        if ($request->input('lp_subid1')) {
+        if ($request->get('lp_subid1')|| $request->get('sub_id1')) {
             $userData = [
-                'lp_subid1' => $request->input('lp_subid1'),
+                'lp_subid1' => $request->get('lp_subid1'),
                 'sub_id1' => $request->get('subid'),
             ];
             Session::put('userData', $userData);
