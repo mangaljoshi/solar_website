@@ -31,7 +31,6 @@ return [
             '_4' => ' Terms of Use',
             '_5' => ' Privacy Policy.',
             '_6' => ' California residents.',
-            
         ]
     ]
 ];

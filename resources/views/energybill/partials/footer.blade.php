@@ -1,4 +1,4 @@
-<footer class="site-footer">
+<!-- <footer class="site-footer">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -20,4 +20,15 @@
             </div>
         </div>
     </div>
-</footer>
+</footer> -->
+<div class="sc-1xt41li-1 lhbSTG">
+    <div class="sc-1xt41li-0 bouawQ"></div>
+    <footer class="sc-1xt41li-2 eYHupb">
+        <span>
+            <p>© 2023 Power Solar All Rights Reserved.</p>
+        </span>
+        <a href="{{ route('energy.contact') }}">Contact Us</a>
+        <a href="{{ route('energy.privacy') }}">Privacy Policy</a>
+        <a href="{{ route('energy.terms') }}" target="_blank">Terms of Use</a>
+    </footer>
+</div>

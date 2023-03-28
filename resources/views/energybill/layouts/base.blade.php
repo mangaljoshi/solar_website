@@ -25,10 +25,6 @@
         
         @yield('content')
 
-        @if(Route::current()->getName() != 'energy.home')
-            @include('energybill.partials.footer')
-        @endif
-
         @include('energybill.partials.script')
 
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASQy-lj_qEU3g4G3D-J1jW00jagKYq91M&libraries=places&callback=initAutocomplete"

@@ -32,7 +32,7 @@
                   <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-lg-6 MuiGrid-grid-xl-5">
                      <div class="qpmywg-5 jyhrBC">
                         <div class="qpmywg-6 SWfUG"><img src="{{ asset('energybill/images/stars.svg') }}" alt=""/></div>
-                        <div id="lead" class="sc-1mfr99g-0 jTfmBg">
+                        <div id="lead" class="sc-1mfr99g-0 jTfmBgA">
                            <div class="sc-1f6gucm-0 bepWUU">
                               <form method="post" action="{{ route('energy.zip.post') }}">
                                  {{ csrf_field() }}
