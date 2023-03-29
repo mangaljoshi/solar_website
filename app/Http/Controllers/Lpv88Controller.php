@@ -21,6 +21,9 @@ class Lpv88Controller extends Controller
             ];
             Session::put('userData', $userData);
         }
+        if ($request->get('zip')) {
+            return redirect('lpv88/solar-wizard?zip='.$request->get('zip'));
+        }
         return view($this->theme.'.pages.home');
     }  
 
