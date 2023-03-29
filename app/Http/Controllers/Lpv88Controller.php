@@ -22,7 +22,7 @@ class Lpv88Controller extends Controller
             Session::put('userData', $userData);
         }
         if ($request->get('zip')) {
-            return redirect('lpv88/solar-wizard?zip='.$request->get('zip'));
+            return redirect('/lpv88/solar-wizard?zip='.$request->get('zip'));
         }
         return view($this->theme.'.pages.home');
     }  
@@ -46,6 +46,9 @@ class Lpv88Controller extends Controller
         $userData["user_agent"] = $request->header('User-Agent');
         $userData["tcpa_text"] = config('base.tcpa_text');
         $userData["time_frame"] = "Immediate";
+        $userData["house_size"] = "2-3 Bedroom";
+        $userData["credit_rating"] = "Good";
+        $userData["type_of_home"] = "Single Family";
 
         Session::put('userData', $userData);
 
@@ -57,6 +60,7 @@ class Lpv88Controller extends Controller
     }
 
     public function solarWizard(Request $request) {
+        
         if ($request->get('zip')) {
             $userData = Session::get('userData');
             $userData["lp_campaign_id"] = "12325";
@@ -74,7 +78,9 @@ class Lpv88Controller extends Controller
             $userData["house_size"] = "2-3 Bedroom";
             $userData["credit_rating"] = "Good";
             $userData["type_of_home"] = "Single Family";
+            Session::put('userData', $userData);
         }
+
         if (Session::has('userData')) {
             $userData = Session::get('userData');
             if (!$userData['zip_code']) {
