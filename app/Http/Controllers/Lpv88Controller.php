@@ -5,19 +5,18 @@ namespace App\Http\Controllers;
 use Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
-class BaseController extends Controller
+class Lpv88Controller extends Controller
 {   
     public $theme;
 
     public function __construct(){
-        $this->theme = 'solar';
+        $this->theme = 'energybill';
     }
     
     public function home(Request $request) {
-        if ($request->get('lp_subid1')|| $request->get('sub_id1')) {
+        if ($request->input('lp_subid1')) {
             $userData = [
-                'lp_subid1' => $request->get('lp_subid1'),
-                'sub_id1' => $request->get('subid'),
+                'lp_subid1' => $request->input('lp_subid1'),
             ];
             Session::put('userData', $userData);
         }
@@ -30,10 +29,10 @@ class BaseController extends Controller
         ]);
 
         $userData = Session::get('userData');
-        $userData["lp_campaign_id"] = "12325";
-        $userData["lp_key"] = "wo2jugw6bkwqy";
-        $userData["lp_supplier_id"] = "25154";
-        // $userData["sub_id1"] = "NAT";
+        $userData["lp_campaign_id"] = "11036";
+        $userData["lp_key"] = "yxp3uemdcrpy1";
+        $userData["lp_supplier_id"] = "22807";
+        $userData["sub_id1"] = "NAT";
         $userData["lp_subid2"] ="nat";
         $userData["lp_response"] = "JSON";
         $userData["zip_code"] = $request->input('zip_code');
@@ -43,12 +42,10 @@ class BaseController extends Controller
         $userData["user_agent"] = $request->header('User-Agent');
         $userData["tcpa_text"] = config('base.tcpa_text');
         $userData["time_frame"] = "Immediate";
-        $userData["house_size"] = "2-3 Bedroom";
-        $userData["credit_rating"] = "Good";
-        $userData["type_of_home"] = "Single Family";
+
         Session::put('userData', $userData);
 
-        return redirect('/solar-wizard');
+        return redirect('/lpv88/solar-wizard');
     }
 
     public function marketingPartners() {
@@ -59,10 +56,10 @@ class BaseController extends Controller
         if (Session::has('userData')) {
             $userData = Session::get('userData');
             if (!$userData['zip_code']) {
-                return redirect('/');
+                return redirect('/lpv88');
             }
         } else {
-            return redirect('/');
+            return redirect('/lpv88');
         }
         return view($this->theme.'.pages.solar-wizard');
     }
@@ -114,8 +111,8 @@ class BaseController extends Controller
             $userData['email'] = $request->get('email');
         } else if ($step == 6) {
             $this->validate($request, [
-                'first_name' => 'required|min:2',
-                'last_name' => 'required|min:2'
+                'first_name' => 'required',
+                'last_name' => 'required'
             ]);
             $userData['first_name'] = $request->get('first_name');
             $userData['last_name'] = $request->get('last_name');

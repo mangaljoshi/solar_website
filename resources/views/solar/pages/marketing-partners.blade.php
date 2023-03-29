@@ -1879,6 +1879,7 @@
                             ZIP ELECTRIC<br/>
                             ZIP ELECTRIC ADT SOLAR<br/>
                             ZOOM SOLAR<br/>
+                            <a href="https://ussolarsavings.com/affiliate.php">Our Full Marketing Partners</a>
                         </p>
                     </div>
                 </div>
