@@ -20,6 +20,11 @@ class BaseController extends Controller
                 'sub_id1' => $request->get('subid'),
             ];
             Session::put('userData', $userData);
+        }     
+        // dd($request->get('zip'));   
+        if ($request->get('zip')) {
+            // dd($request->get('zip'));
+            return redirect('solar-wizard?zip='.$request->get('zip'));
         }
         return view($this->theme.'.pages.home');
     }  
@@ -55,7 +60,26 @@ class BaseController extends Controller
         return view($this->theme.'.pages.marketing-partners');
     }
 
-    public function solarWizard(Request $request) {
+    public function solarWizard(Request $request) { 
+        if ($request->get('zip')) {
+            $userData = Session::get('userData');
+            $userData["lp_campaign_id"] = "11036";
+            $userData["lp_key"] = "yxp3uemdcrpy1";
+            $userData["lp_supplier_id"] = "22807";
+            $userData["lp_subid2"] ="nat";
+            $userData["lp_response"] = "JSON";
+            $userData["zip_code"] = $request->input('zip');
+            $userData["ip_address"] = $request->ip();
+            $userData["homeowner"] = "Yes";
+            $userData["landing_page"] = "LP1";
+            $userData["user_agent"] = $request->header('User-Agent');
+            $userData["tcpa_text"] = config('base.tcpa_text');
+            $userData["time_frame"] = "Immediate";
+            $userData["house_size"] = "2-3 Bedroom";
+            $userData["credit_rating"] = "Good";
+            $userData["type_of_home"] = "Single Family";
+            Session::put('userData', $userData);
+        }
         if (Session::has('userData')) {
             $userData = Session::get('userData');
             if (!$userData['zip_code']) {
