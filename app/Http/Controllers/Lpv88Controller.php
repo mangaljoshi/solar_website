@@ -46,6 +46,9 @@ class Lpv88Controller extends Controller
         $userData["user_agent"] = $request->header('User-Agent');
         $userData["tcpa_text"] = config('base.tcpa_text');
         $userData["time_frame"] = "Immediate";
+        $userData["house_size"] = "2-3 Bedroom";
+        $userData["credit_rating"] = "Good";
+        $userData["type_of_home"] = "Single Family";
 
         Session::put('userData', $userData);
 
