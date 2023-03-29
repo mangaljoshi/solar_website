@@ -53,7 +53,7 @@
                                                 <div class="col-sm-12">
                                                     <div class="range-slider">
                                                         <div class="rSlider">
-                                                            <span class="slide"></span>
+                                                            <!-- <span class="slide"></span> -->
                                                             <input id="range" class="avgBillRange" type="range" data-val="dec" min="101" max="800" >
                                                         </div>
                                                         <input type="hidden" class="zip_code" name="zip_code" value="{{ Session::get('userData')['zip_code']}}">
