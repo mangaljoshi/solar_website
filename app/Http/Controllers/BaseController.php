@@ -63,9 +63,9 @@ class BaseController extends Controller
     public function solarWizard(Request $request) { 
         if ($request->get('zip')) {
             $userData = Session::get('userData');
-            $userData["lp_campaign_id"] = "11036";
-            $userData["lp_key"] = "yxp3uemdcrpy1";
-            $userData["lp_supplier_id"] = "22807";
+            $userData["lp_campaign_id"] = "12325";
+            $userData["lp_key"] = "wo2jugw6bkwqy";
+            $userData["lp_supplier_id"] = "25154";
             $userData["lp_subid2"] ="nat";
             $userData["lp_response"] = "JSON";
             $userData["zip_code"] = $request->input('zip');

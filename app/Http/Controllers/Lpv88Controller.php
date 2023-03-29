@@ -14,9 +14,10 @@ class Lpv88Controller extends Controller
     }
     
     public function home(Request $request) {
-        if ($request->input('lp_subid1')) {
+        if ($request->get('lp_subid1') || $request->get('sub_id1')) {
             $userData = [
-                'lp_subid1' => $request->input('lp_subid1'),
+                'lp_subid1' => $request->get('lp_subid1'),
+                'sub_id1' => $request->get('subid'),
             ];
             Session::put('userData', $userData);
         }
@@ -29,9 +30,9 @@ class Lpv88Controller extends Controller
         ]);
 
         $userData = Session::get('userData');
-        $userData["lp_campaign_id"] = "11036";
-        $userData["lp_key"] = "yxp3uemdcrpy1";
-        $userData["lp_supplier_id"] = "22807";
+        $userData["lp_campaign_id"] = "12325";
+        $userData["lp_key"] = "wo2jugw6bkwqy";
+        $userData["lp_supplier_id"] = "25154";
         $userData["sub_id1"] = "NAT";
         $userData["lp_subid2"] ="nat";
         $userData["lp_response"] = "JSON";
@@ -53,6 +54,24 @@ class Lpv88Controller extends Controller
     }
 
     public function solarWizard(Request $request) {
+        if ($request->get('zip')) {
+            $userData = Session::get('userData');
+            $userData["lp_campaign_id"] = "12325";
+            $userData["lp_key"] = "wo2jugw6bkwqy";
+            $userData["lp_supplier_id"] = "25154";
+            $userData["lp_subid2"] ="nat";
+            $userData["lp_response"] = "JSON";
+            $userData["zip_code"] = $request->input('zip');
+            $userData["ip_address"] = $request->ip();
+            $userData["homeowner"] = "Yes";
+            $userData["landing_page"] = "LP1";
+            $userData["user_agent"] = $request->header('User-Agent');
+            $userData["tcpa_text"] = config('base.tcpa_text');
+            $userData["time_frame"] = "Immediate";
+            $userData["house_size"] = "2-3 Bedroom";
+            $userData["credit_rating"] = "Good";
+            $userData["type_of_home"] = "Single Family";
+        }
         if (Session::has('userData')) {
             $userData = Session::get('userData');
             if (!$userData['zip_code']) {
