@@ -239,7 +239,7 @@
                                                 <div class="row justify-content-center">
                                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                                         <div class="form-group picker text-center mt-20">
-                                                            <a href="javascript:void(0);" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary btn-main step5" style="background-color: #e11c1c; font-weight: bold;line-height: 1.5em; width: 100%">Next</a>
+                                                            <a href="javascript:void(0);" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary btn-main step5" style="background-color: #e11c1c; font-weight: bold;line-height: 1.5em; width: 100%;font-size: 17px;">Next</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -264,9 +264,6 @@
                                                                 <div class="invalid-feedback error_step_6 text-danger"></div>
                                                             </div>
                                                         </div>
-                                                        <!-- <div class="col-sm-6 col-12 text-center">
-                                                            
-                                                        </div> -->
                                                     </div>
                                                     <div class="row justify-content-center">
                                                         <div class="col-xs-6 col-sm-6 col-md-6">
@@ -280,7 +277,7 @@
                                                     <div class="row justify-content-center">
                                                         <div class="col-xs-6 col-sm-6 col-md-6">
                                                             <div class="form-group picker text-center mt-20">
-                                                            <a href="javascript:void(0);" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary btn-main step6" style="background-color: #e11c1c; font-weight: bold; line-height: 1.5em;width: 100%;">Next</a>
+                                                            <a href="javascript:void(0);" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary btn-main step6" style="background-color: #e11c1c; font-weight: bold; line-height: 1.5em;width: 100%;font-size: 17px;">Next</a>
                                                             </div>
                                                         </div>
                                                     </div>
