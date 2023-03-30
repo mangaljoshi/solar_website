@@ -3,7 +3,7 @@
 return [
     'page_title' => 'What is Your Average Electric Bill?',
     'page_title_description' => 'We use this information to calculate your savings. Move the slider to select.',
-    'utility_text_heading' => 'Select Your Utility Provider',
+    'utility_text_heading' => 'Who is your electricity provider?',
     'utility_text_details' => "We'll look up utility rates to calculate new savings",
     'zip_code_result' => 'No record found againts entered Zip Code',
     'address' => 'Your Home Address',
