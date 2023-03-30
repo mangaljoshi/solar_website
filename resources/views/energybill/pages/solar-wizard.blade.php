@@ -24,7 +24,6 @@
                         </div>
                     </div>
                 </header>
-                
             </div>
         </div>
     </div>
@@ -37,39 +36,39 @@
                 </div>
             </div>
             <div>
-                <div class="sc-1j985zc-0 flSVMS">
+                <div class="sc-1j985zc-0 FwqCW">
                     <div class="MuiLinearProgress-root MuiLinearProgress-colorPrimary MuiLinearProgress-determinate" role="progressbar" aria-valuenow="22" aria-valuemin="0" aria-valuemax="100">
                         <div class="MuiLinearProgress-bar MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate">
-                            <div class="wizard sc-1mfr99g-0 jTfmBg" style="padding: 25px 10px;">
+                            <div class="wizard sc-1mfr99g-0 jTfmBgS" style="padding: 25px 10px;">
                                 <div class="tab-content" id="main_form">
                                     <div class="tab-pane fade in active" role="tabpanel" id="step1">
                                         <div class="wizard__box">
                                             <div class="page-title text-center mb-3">
                                                 <h2>{{ __('solarenergy.electricity_bill_heading')}}</h2>
-                                                <p>{{ __('solarenergy.savings_text')}}</p>
+                                                <!-- <p>{{ __('solarenergy.savings_text')}}</p> -->
                                             </div>
                                             <div class="wizard__main">
                                                 <div class="row justify-content-center">
-                                                <div class="col-sm-12">
-                                                    <div class="range-slider">
-                                                        <div class="rSlider">
-                                                            <!-- <span class="slide"></span> -->
-                                                            <input id="range" class="avgBillRange" type="range" data-val="dec" min="101" max="800" >
+                                                    <div class="col-sm-12">
+                                                        <div class="range-slider">
+                                                            <div class="rSlider">
+                                                                <!-- <span class="slide"></span> -->
+                                                                <input id="range" class="avgBillRange" type="range" data-val="dec" min="101" max="800" >
+                                                            </div>
+                                                            <input type="hidden" class="zip_code" name="zip_code" value="{{ Session::get('userData')['zip_code']}}">
+                                                            <p class="range-slider__value text-center">$<span id="demo">450</span></p>
                                                         </div>
-                                                        <input type="hidden" class="zip_code" name="zip_code" value="{{ Session::get('userData')['zip_code']}}">
-                                                        <p class="range-slider__value text-center">$<span id="demo">450</span></p>
                                                     </div>
-                                                </div>
-                                                <div class="col-sm-12">
-                                                    <span class="error-msg billInp_v error_step_1" style="color: red; display: none;"></span>
-                                                </div>
-                                                <div class="col-sm-12">
-                                                    <div class="form-group picker text-center mt-20">
-                                                        <a href="javascript:void(0);" data-zip-btn class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary jTfmBg next-step1 step1" style="background-color: #e11c1c; font-weight: bold;">
-                                                            <span class="MuiButton-label" style="line-height: 1.5em;">Continue</span>
-                                                        </a>
+                                                    <div class="col-sm-12">
+                                                        <span class="error-msg billInp_v error_step_1" style="color: red; display: none;"></span>
                                                     </div>
-                                                </div>
+                                                    <div class="col-xs-12 col-sm-6 col-md-6">
+                                                        <div class="form-group picker text-center mt-20">
+                                                            <a href="javascript:void(0);" data-zip-btn class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary next-step1 step1" style="background-color: #e11c1c; font-weight: bold;width: 100%;">
+                                                                <span class="MuiButton-label" style="line-height: 1.5em;">Continue</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -78,15 +77,39 @@
                                         <div class="wizard__box">
                                             <div class="page-title text-center mb-3">
                                                 <h2>{{ __('solarenergy.utility_provider')}}</h2>
-                                                <p>{{ __('solarenergy.utility_text')}}</p>
+                                                <!-- <p>{{ __('solarenergy.utility_text')}}</p> -->
                                             </div>
                                             <p data-zip-error style="text-align: center; color: red; display: none;">{{ __('solarenergy.zip_code')}}</p>
                                             <div class="wizard__main mx-680">
-                                                <div class="row justify-content-center">
+                                                <!-- <div class="row justify-content-center">
                                                     <div class="col-sm-6 col-12">
                                                         <div class="form-group text-center">
                                                             <p class="text-dark">Loading ....</p>
                                                         </div>
+                                                    </div>
+                                                </div> -->
+
+                                                <div class="byMguB">
+                                                    <div class="cwbftf">
+                                                        <div class="row justify-content-center">
+                                                            <div class="col-sm-6 col-12">
+                                                                <div class="form-group text-center">
+                                                                    <p class="text-dark">Loading ....</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- <button class="selected">
+                                                            <svg class="MuiSvgIcon-root MUIRadioIcon" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path>
+                                                            </svg>
+                                                            <div>New York State Elec &amp; Gas Corp</div>
+                                                        </button>
+                                                        <button class="">
+                                                            <svg class="MuiSvgIcon-root MUIRadioIcon" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path>
+                                                            </svg>
+                                                            <div>Niagara Mohawk Power Corp.</div>
+                                                        </button> -->
                                                     </div>
                                                 </div>
                                             </div>
@@ -102,40 +125,38 @@
                                         <div class="wizard__box">
                                             <div class="page-title text-center mb-3">
                                                 <h2>{{ __('solarenergy.address')}}</h2>
-                                                <p>{{ __('solarenergy.rebates')}}</p>
+                                                <!-- <p>{{ __('solarenergy.rebates')}}</p> -->
                                             </div>
-                                            <div class="wizard__main mx-680">
+                                            <div>
                                                 <form id="pac-input-form">
                                                 <div class="row justify-content-center">
-                                                <div class="col-12">
-                                                    <div class="form-group">
+                                                    <div class="col-xs-10 col-md-6">
+                                                        <div class="form-group">
                                                             <div class="dropdown">
-                                                            <input type="search" id="pac-input" name="home_address" class="jAuto form-control" placeholder="Type Here e.g. 123 West Main Road" autocomplete="off" required>
+                                                                <input type="search" id="pac-input" name="home_address" class="jAuto form-control" placeholder="Street Address" autocomplete="off" required>
 
-                                                            <div class="invalid-feedback error_step_3 text-danger"></div>
+                                                                <div class="invalid-feedback error_step_3 text-danger"></div>
 
-                                                            <div class="dropdown-menu">
-                                                                <i class="hasNoResults">{{ __('solarenergy.matching_results')}}</i>
-                                                                <div class="list-autocomplete">
-                                                                    <button type="button" class="dropdown-item">New Orleans, LA, USA</button>
-                                                                    <button type="button" class="dropdown-item">Cherokee, NC, USA</button>
-                                                                    <button type="button" class="dropdown-item">New York, NY, USA</button>
-                                                                    <button type="button" class="dropdown-item">Baltimore, MD, USA</button>
-                                                                    <button type="button" class="dropdown-item">Nashville, TN, USA</button>
+                                                                <div class="dropdown-menu">
+                                                                    <i class="hasNoResults">{{ __('solarenergy.matching_results')}}</i>
+                                                                    <div class="list-autocomplete">
+                                                                        <button type="button" class="dropdown-item">New Orleans, LA, USA</button>
+                                                                        <button type="button" class="dropdown-item">Cherokee, NC, USA</button>
+                                                                        <button type="button" class="dropdown-item">New York, NY, USA</button>
+                                                                        <button type="button" class="dropdown-item">Baltimore, MD, USA</button>
+                                                                        <button type="button" class="dropdown-item">Nashville, TN, USA</button>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-
-                                                
-                                                </div>
-                                                <div class="row">
-                                                <div class="col-md-12 col-sm-12 col-12">
-                                                    <div class="form-group picker text-center mt-20">
-                                                        <button type="submit" class="btn-main step3 MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary jTfmBg" style="background-color: #e11c1c; font-weight: bold;">Continue</button>
+                                                <div class="row justify-content-center">
+                                                    <div class="col-xs-12 col-md-6 col-sm-6 ">
+                                                        <div class="form-group picker text-center mt-20">
+                                                            <button type="submit" class="btn-main step3 MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary jTfmBg" style="background-color: #e11c1c; font-weight: bold;">Continue</button>
+                                                        </div>
                                                     </div>
-                                                </div>
                                                 </div>
                                             </div>
                                             </form>
@@ -147,51 +168,51 @@
                                     <div class="tab-pane tab-pane" role="tabpanel" id="step4">
                                         <div class="wizard__box">
                                             <div class="page-title text-center mb-3">
-                                                <h2>{{ __('solarenergy.sunlight')}}</h2>
-                                                <p>{{ __('solarenergy.savings')}}</p>
+                                                <h2 class="title_">{{ __('solarenergy.sunlight')}}</h2>
+                                                <!-- <p>{{ __('solarenergy.savings')}}</p> -->
                                             </div>
                                             <div class="wizard__main mx-680">
                                                 <div class="row justify-content-center">
-                                                <div class="col-sm-6 col-6">
-                                                    <div class="sunlight-box text-center">
-                                                        <a href="javascript:void(0);" class="step4 roofSunlight">
-                                                            <div class="sunlight-ico">
-                                                            <img src="{{ asset('energybill/images/no-shade.svg') }}" alt="">
-                                                            </div>
-                                                            <h3 class="theme-title">Full Sunlight</h3>
-                                                        </a>
+                                                    <div class="col-xs-12 col-sm-3 col-md-3">
+                                                        <div class="sunlight-box text-center">
+                                                            <a href="javascript:void(0);" class="step4 roofSunlight">
+                                                                <div class="sunlight-ico">
+                                                                <img src="{{ asset('energybill/images/noshade.svg') }}" alt="">
+                                                                </div>
+                                                                <span class="text_ text-dark">Full Sunlight</span>
+                                                            </a>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-sm-6 col-6">
-                                                    <div class="sunlight-box text-center">
-                                                        <a href="javascript:void(0);" class="step4 roofSunlight">
-                                                            <div class="sunlight-ico">
-                                                            <img src="{{ asset('energybill/images/little-shade.svg') }}" alt="">
-                                                            </div>
-                                                            <h3 class="theme-title">Some Shade</h3>
-                                                        </a>
+                                                    <div class="col-xs-12 col-sm-3 col-md-3">
+                                                        <div class="sunlight-box text-center">
+                                                            <a href="javascript:void(0);" class="step4 roofSunlight">
+                                                                <div class="sunlight-ico">
+                                                                <img src="{{ asset('energybill/images/littleshade.svg') }}" alt="">
+                                                                </div>
+                                                                <span class="text_ text-dark">Some Shade</span>
+                                                            </a>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-sm-6 col-6">
-                                                    <div class="sunlight-box text-center">
-                                                        <a href="javascript:void(0);" class="step4 roofSunlight">
-                                                            <div class="sunlight-ico">
-                                                            <img src="{{ asset('energybill/images/lot-of-shade.svg') }}" alt="">
-                                                            </div>
-                                                            <h3 class="theme-title">Severe Shade</h3>
-                                                        </a>
+                                                    <div class="col-xs-12 col-sm-3 col-md-3">
+                                                        <div class="sunlight-box text-center">
+                                                            <a href="javascript:void(0);" class="step4 roofSunlight">
+                                                                <div class="sunlight-ico">
+                                                                <img src="{{ asset('energybill/images/alotshade.svg') }}" alt="">
+                                                                </div>
+                                                                <span class="text_ text-dark">Severe Shade</span>
+                                                            </a>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-sm-6 col-6">
-                                                    <div class="sunlight-box text-center">
-                                                        <a href="javascript:void(0);" class="step4 roofSunlight">
-                                                            <div class="sunlight-ico">
-                                                            <img src="{{ asset('energybill/images/uncertain.svg') }}" alt="">
-                                                            </div>
-                                                            <h3 class="theme-title">Uncertain</h3>
-                                                        </a>
+                                                    <div class="col-xs-12 col-sm-3 col-md-3">
+                                                        <div class="sunlight-box text-center">
+                                                            <a href="javascript:void(0);" class="step4 roofSunlight">
+                                                                <div class="sunlight-ico">
+                                                                <img src="{{ asset('energybill/images/uncertain.svg') }}" alt="">
+                                                                </div>
+                                                                <span class="text_ text-dark">Uncertain</span>
+                                                            </a>
+                                                        </div>
                                                     </div>
-                                                </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -206,21 +227,21 @@
                                                 <h2>{{ __('solarenergy.estimate')}}</h2>
                                                 <p>{{ __('solarenergy.email')}}</p>
                                             </div>
-                                            <div class="wizard__main mx-680">
+                                            <div>
                                                 <div class="row justify-content-center">
-                                                <div class="col-12">
-                                                    <div class="form-group">
-                                                        <input type="email" oninput="handleInput(event)" class="form-control emailInp" placeholder="Email address" required>
-                                                        <div class="invalid-feedback error_step_5 text-danger"></div>
+                                                    <div class="col-xs-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <input type="email" oninput="handleInput(event)" class="form-control emailInp" placeholder="Email address" required>
+                                                            <div class="invalid-feedback error_step_5 text-danger"></div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                </div>
-                                                <div class="row">
-                                                <div class="col-md-12 col-sm-12 col-12">
-                                                    <div class="form-group picker text-center mt-20">
-                                                        <a href="javascript:void(0);" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary jTfmBg btn-main step5" style="background-color: #e11c1c; font-weight: bold;line-height: 1.5em;">Next</a>
+                                                <div class="row justify-content-center">
+                                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                                        <div class="form-group picker text-center mt-20">
+                                                            <a href="javascript:void(0);" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary btn-main step5" style="background-color: #e11c1c; font-weight: bold;line-height: 1.5em; width: 100%">Next</a>
+                                                        </div>
                                                     </div>
-                                                </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -232,38 +253,40 @@
                                         <div class="row">
                                             <div class="col-12">
                                                 <div class="wizard__box">
-                                                <div class="page-title text-center mb-3">
-                                                    <h2>{{ __('solarenergy.estimate_for')}}</h2>
-                                                    <p>{{ __('solarenergy.privacy')}}</p>
-                                                </div>
-                                                <div class="wizard__main mx-680">
-                                                    <div class="row justify-content-center">
-                                                        <div class="col-sm-6 col-12">
+                                                    <div class="page-title text-center mb-3">
+                                                        <h2>{{ __('solarenergy.estimate_for')}}</h2>
+                                                        <p>{{ __('solarenergy.privacy')}}</p>
+                                                    </div>
+                                                    <div class="row d-flex justify-content-center ">
+                                                        <div class="col-xs-6 col-sm-6 col-md-6">
                                                             <div class="form-group">
                                                                 <input type="text" oninput="handleInput(event)" class="form-control firstNameInp" placeholder="Enter first name" required>
+                                                                <div class="invalid-feedback error_step_6 text-danger"></div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-sm-6 col-12">
+                                                        <!-- <div class="col-sm-6 col-12 text-center">
+                                                            
+                                                        </div> -->
+                                                    </div>
+                                                    <div class="row justify-content-center">
+                                                        <div class="col-xs-6 col-sm-6 col-md-6">
                                                             <div class="form-group">
                                                                 <input type="text" oninput="handleInput(event)" class="form-control lastNameInp" placeholder="Enter last name" required>
-                                                            </div>
-                                                        </div>
 
-                                                        <div class="col-sm-6 col-12 text-center">
-                                                            <div class="invalid-feedback error_step_6 text-danger"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12 col-sm-12 col-12">
-                                                            <div class="form-group picker text-center mt-20">
-                                                            <a href="javascript:void(0);" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary jTfmBg  btn-main step6" style="background-color: #e11c1c; font-weight: bold; line-height: 1.5em;">Next</a>
+                                                                <div class="invalid-feedback error_step_6 text-danger"></div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                    <div class="row justify-content-center">
+                                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                                            <div class="form-group picker text-center mt-20">
+                                                            <a href="javascript:void(0);" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary btn-main step6" style="background-color: #e11c1c; font-weight: bold; line-height: 1.5em;width: 100%;">Next</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <div class="wizard-back-btn text-center mt-4 text-dark">
-                                                <span class="prev-step-5" data-prev-step="5"><i class="fas fa-chevron-left"></i> Back</span>
+                                                    <span class="prev-step-5" data-prev-step="5"><i class="fas fa-chevron-left"></i> Back</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -272,47 +295,56 @@
                                         <form id="phoneNumberForm">
                                             <div class="row">
                                                 <div class="col-12">
-                                                <div class="wizard__box">
-                                                    <div class="page-title text-center mb-3">
-                                                        <h2>{{ __('solarenergy.final_step')}}!</h2>
-                                                        <p>{{ __('solarenergy.savings_text_final')}}</p>
-                                                    </div>
-                                                    <div class="wizard__main mx-680">
-                                                        <div class="row justify-content-center">
-                                                            <div class="col-sm-12 col-12">
-                                                            <div class="input-group" style="height: 60px;">
-                                                                <div class="input-group-prepend left_border">
-                                                                    <b>+ 1</b>
+                                                    <div class="wizard__box">
+                                                        <div class="page-title text-center mb-3">
+                                                            <h2>{{ __('solarenergy.final_step')}}!</h2>
+                                                            <p>{{ __('solarenergy.savings_text_final')}}</p>
+                                                        </div>
+                                                        <div>
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-xs-12 col-sm-6 col-md-6">
+                                                                    <div class="input-group mb-3" style="height: 60px;">
+                                                                        <div class="input-group-prepend">
+                                                                            <span class="input-group-text" id="basic-phone" style="height: 60px; width: 50px;font-size: 22px;">+1</span>
+                                                                        </div>
+                                                                        <input id="phone" type="tel" class="form-control phoneNumber" placeholder="Enter Phone Number"
+                                                                        required aria-describedby="basic-phone" onkeypress="return onlyNumberKey(event)"
+                                                                        style="font-size: 22px;">
+                                                                    </div>
+                                                                    <div>
+                                                                        <!-- <div class="input-group-prepend">
+                                                                            <b>+ 1</b>
+                                                                        </div>
+                                                                        <input id="phone" type="tel" 
+                                                                        name="phone" oninput="handleInput(event)" class="form-control phoneNumber " placeholder="Enter Phone Number" required onkeypress="return onlyNumberKey(event)"> -->
+
+                                                                        <input id="leadid_token" name="universal_leadid" type="hidden" value=""/>
+                                                                        <input type="hidden" name="xxTrustedFormCertUrl" id="xxTrustedFormCertUrl_0" value="https://cert.trustedform.com/454a35b802f3e7b63ffabb4efedb7c6ebe67886c">
+                                                                        <input type="hidden" name="xxTrustedFormPingUrl" id="xxTrustedFormPingUrl_0" value="https://ping.trustedform.com/0.HJDqajg8vVF20hwiDBJ92kct5idepgBM4vHylmh43kShfWSZKwm8HI37KqPToi0y3dhTIQ3N.uOjUbzs7aKNUWivkGh7I9Q.50hgmcLFsDabNx1wtZZPdQ">
+                                                                    </div>
+                                                                    <div class="invalid-feedback error_step_7 text-white phoneNumber_errormsg"></div>
                                                                 </div>
-                                                                <input id="phone" type="tel" 
-                                                                name="phone" oninput="handleInput(event)" class="form-control phoneNumber right_border" placeholder="Enter Phone Number" required onkeypress="return onlyNumberKey(event)">
-
-                                                                <input id="leadid_token" name="universal_leadid" type="hidden" value=""/>
-                                                                <input type="hidden" name="xxTrustedFormCertUrl" id="xxTrustedFormCertUrl_0" value="https://cert.trustedform.com/454a35b802f3e7b63ffabb4efedb7c6ebe67886c">
-                                                                <input type="hidden" name="xxTrustedFormPingUrl" id="xxTrustedFormPingUrl_0" value="https://ping.trustedform.com/0.HJDqajg8vVF20hwiDBJ92kct5idepgBM4vHylmh43kShfWSZKwm8HI37KqPToi0y3dhTIQ3N.uOjUbzs7aKNUWivkGh7I9Q.50hgmcLFsDabNx1wtZZPdQ">
                                                             </div>
-                                                            <div class="invalid-feedback error_step_7 text-white phoneNumber_errormsg"></div>
-                                                            </div>
-
-                                                            <div class="col-md-12 col-sm-12 col-12 mt-2">
-                                                                <div class="form-group picker text-center mt-4 mb-4">
-                                                                    <button type="submit" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary jTfmBg btn-main" style="background-color: #e11c1c; font-weight: bold;">View My Savings</button>
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-xs-12 col-md-6 col-sm-6 mt-2">
+                                                                    <div class="form-group picker text-center mt-4 mb-4">
+                                                                        <button type="submit" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary jTfmBg btn-main" style="background-color: #e11c1c; font-weight: bold;">View My Savings</button>
+                                                                    </div>
                                                                 </div>
-                                                            </div>
 
-                                                            <div class="col-sm-12 col-12 mb-4">
-                                                            <label for="leadid_tcpa_disclosure" class="lead_text">
-                                                            {{ __('solarenergy.tcpa_label._1')}} <a href="{{ route('energy.marketing') }}" target="_blank" tabindex="0" style="color:#7b7b7b;text-decoration:underline">{{ __('solarenergy.tcpa_label._2')}}</a> {{ __('solarenergy.tcpa_label._3')}}
-                                                            </label>  
-                                                                
-                                                            <input type="hidden" id="leadid_tcpa_disclosure" name="tcpa" tabindex="0" value="{{ __('solarenergy.tcpa_text')}}">
+                                                                <div class="col-xs-12 col-md-10 col-md-10 mt-4 mb-4">
+                                                                <label for="leadid_tcpa_disclosure" class="lead_text">
+                                                                {{ __('solarenergy.tcpa_label._1')}} <a href="{{ route('energy.marketing') }}" target="_blank" tabindex="0" style="color:#7b7b7b;text-decoration:underline">{{ __('solarenergy.tcpa_label._2')}}</a> {{ __('solarenergy.tcpa_label._3')}}
+                                                                </label>  
+                                                                    
+                                                                <input type="hidden" id="leadid_tcpa_disclosure" name="tcpa" tabindex="0" value="{{ __('solarenergy.tcpa_text')}}">
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="wizard-back-btn text-center mt-4 text-dark">
-                                                    <span class="prev-step-6" data-prev-step="6"><i class="fas fa-chevron-left"></i> Back</span>
-                                                </div>
+                                                    <div class="wizard-back-btn text-center mt-4 text-dark">
+                                                        <span class="prev-step-6" data-prev-step="6"><i class="fas fa-chevron-left"></i> Back</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </form>
@@ -358,9 +390,4 @@
         <img src="https://api.trustedform.com/ns.gif" />
     </noscript>
     <!-- End TrustedForm -->
-    <style>
-        .lead_text{
-            font-size:13px;
-        }
-    </style>
 @endsection
