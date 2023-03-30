@@ -24,7 +24,6 @@
                         </div>
                     </div>
                 </header>
-                
             </div>
         </div>
     </div>
@@ -63,9 +62,9 @@
                                                     <div class="col-sm-12">
                                                         <span class="error-msg billInp_v error_step_1" style="color: red; display: none;"></span>
                                                     </div>
-                                                    <div class="col-sm-12">
+                                                    <div class="col-xs-12 col-sm-6 col-md-6">
                                                         <div class="form-group picker text-center mt-20">
-                                                            <a href="javascript:void(0);" data-zip-btn class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary jTfmBg next-step1 step1" style="background-color: #e11c1c; font-weight: bold;">
+                                                            <a href="javascript:void(0);" data-zip-btn class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary next-step1 step1" style="background-color: #e11c1c; font-weight: bold;width: 100%;">
                                                                 <span class="MuiButton-label" style="line-height: 1.5em;">Continue</span>
                                                             </a>
                                                         </div>
@@ -92,6 +91,13 @@
 
                                                 <div class="byMguB">
                                                     <div class="cwbftf">
+                                                        <div class="row justify-content-center">
+                                                            <div class="col-sm-6 col-12">
+                                                                <div class="form-group text-center">
+                                                                    <p class="text-dark">Loading ....</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                         <!-- <button class="selected">
                                                             <svg class="MuiSvgIcon-root MUIRadioIcon" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
                                                                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path>
@@ -121,7 +127,7 @@
                                                 <h2>{{ __('solarenergy.address')}}</h2>
                                                 <!-- <p>{{ __('solarenergy.rebates')}}</p> -->
                                             </div>
-                                            <div class="wizard__main mx-680">
+                                            <div>
                                                 <form id="pac-input-form">
                                                 <div class="row justify-content-center">
                                                     <div class="col-xs-10 col-md-6">
@@ -145,8 +151,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="row">
-                                                    <div class="col-md-12 col-sm-12 col-12">
+                                                <div class="row justify-content-center">
+                                                    <div class="col-xs-12 col-md-6 col-sm-6 ">
                                                         <div class="form-group picker text-center mt-20">
                                                             <button type="submit" class="btn-main step3 MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary jTfmBg" style="background-color: #e11c1c; font-weight: bold;">Continue</button>
                                                         </div>
@@ -221,7 +227,7 @@
                                                 <h2>{{ __('solarenergy.estimate')}}</h2>
                                                 <p>{{ __('solarenergy.email')}}</p>
                                             </div>
-                                            <div class="wizard__main mx-680">
+                                            <div>
                                                 <div class="row justify-content-center">
                                                     <div class="col-xs-12 col-md-6">
                                                         <div class="form-group">
@@ -230,10 +236,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="row">
-                                                    <div class="col-md-12 col-sm-12 col-12">
+                                                <div class="row justify-content-center">
+                                                    <div class="col-md-6 col-sm-6 col-xs-12">
                                                         <div class="form-group picker text-center mt-20">
-                                                            <a href="javascript:void(0);" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary jTfmBg btn-main step5" style="background-color: #e11c1c; font-weight: bold;line-height: 1.5em;">Next</a>
+                                                            <a href="javascript:void(0);" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary btn-main step5" style="background-color: #e11c1c; font-weight: bold;line-height: 1.5em; width: 100%">Next</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -271,10 +277,10 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12 col-sm-12 col-12">
+                                                    <div class="row justify-content-center">
+                                                        <div class="col-xs-6 col-sm-6 col-md-6">
                                                             <div class="form-group picker text-center mt-20">
-                                                            <a href="javascript:void(0);" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary jTfmBg  btn-main step6" style="background-color: #e11c1c; font-weight: bold; line-height: 1.5em;">Next</a>
+                                                            <a href="javascript:void(0);" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary btn-main step6" style="background-color: #e11c1c; font-weight: bold; line-height: 1.5em;width: 100%;">Next</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -294,7 +300,7 @@
                                                             <h2>{{ __('solarenergy.final_step')}}!</h2>
                                                             <p>{{ __('solarenergy.savings_text_final')}}</p>
                                                         </div>
-                                                        <div class="wizard__main mx-680">
+                                                        <div>
                                                             <div class="row justify-content-center">
                                                                 <div class="col-xs-12 col-sm-6 col-md-6">
                                                                     <div class="input-group mb-3" style="height: 60px;">
@@ -318,14 +324,15 @@
                                                                     </div>
                                                                     <div class="invalid-feedback error_step_7 text-white phoneNumber_errormsg"></div>
                                                                 </div>
-
-                                                                <div class="col-md-12 col-sm-12 col-12 mt-2">
+                                                            </div>
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-xs-12 col-md-6 col-sm-6 mt-2">
                                                                     <div class="form-group picker text-center mt-4 mb-4">
                                                                         <button type="submit" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary jTfmBg btn-main" style="background-color: #e11c1c; font-weight: bold;">View My Savings</button>
                                                                     </div>
                                                                 </div>
 
-                                                                <div class="col-sm-12 col-12 mb-4">
+                                                                <div class="col-xs-12 col-md-10 col-md-10 mt-4 mb-4">
                                                                 <label for="leadid_tcpa_disclosure" class="lead_text">
                                                                 {{ __('solarenergy.tcpa_label._1')}} <a href="{{ route('energy.marketing') }}" target="_blank" tabindex="0" style="color:#7b7b7b;text-decoration:underline">{{ __('solarenergy.tcpa_label._2')}}</a> {{ __('solarenergy.tcpa_label._3')}}
                                                                 </label>  

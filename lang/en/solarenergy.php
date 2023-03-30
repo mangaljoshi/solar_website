@@ -12,10 +12,10 @@ return [
     'matching_results' => 'No matching results',
     'sunlight' => 'How much roof shade do you have?',
     'savings' => "We'll calculate the best possible savings for your particular project.",
-    'estimate' => 'Your Estimate Is Almost Ready!',
+    'estimate' => "What's your email?",
     'email' => "We'll Deliver Your Exclusive Savings By Email",
-    'estimate_for' => "Who Is This Estimate For?",
-    'privacy' => 'We Take Privacy Seriously. No Spam Ever!',
+    'estimate_for' => "What's your name?",
+    'privacy' => 'Personal Information Is Safe & Secure.',
     'final_step' => "You've Been Matched With Solar Experts In Your Area!",
     'savings_text_final' => 'Complete The Final Step To See Savings!',
 
