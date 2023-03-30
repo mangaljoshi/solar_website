@@ -124,10 +124,10 @@
                                             <div class="wizard__main mx-680">
                                                 <form id="pac-input-form">
                                                 <div class="row justify-content-center">
-                                                    <div class="col-12">
+                                                    <div class="col-xs-10 col-md-6">
                                                         <div class="form-group">
                                                             <div class="dropdown">
-                                                                <input type="search" id="pac-input" name="home_address" class="jAuto form-control" placeholder="Type Here e.g. 123 West Main Road" autocomplete="off" required>
+                                                                <input type="search" id="pac-input" name="home_address" class="jAuto form-control" placeholder="Street Address" autocomplete="off" required>
 
                                                                 <div class="invalid-feedback error_step_3 text-danger"></div>
 
@@ -223,7 +223,7 @@
                                             </div>
                                             <div class="wizard__main mx-680">
                                                 <div class="row justify-content-center">
-                                                    <div class="col-12">
+                                                    <div class="col-xs-12 col-md-6">
                                                         <div class="form-group">
                                                             <input type="email" oninput="handleInput(event)" class="form-control emailInp" placeholder="Email address" required>
                                                             <div class="invalid-feedback error_step_5 text-danger"></div>
@@ -251,28 +251,30 @@
                                                         <h2>{{ __('solarenergy.estimate_for')}}</h2>
                                                         <p>{{ __('solarenergy.privacy')}}</p>
                                                     </div>
-                                                    <div class="wizard__main mx-680">
-                                                        <div class="row justify-content-center">
-                                                            <div class="col-sm-6 col-12">
-                                                                <div class="form-group">
-                                                                    <input type="text" oninput="handleInput(event)" class="form-control firstNameInp" placeholder="Enter first name" required>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-6 col-12">
-                                                                <div class="form-group">
-                                                                    <input type="text" oninput="handleInput(event)" class="form-control lastNameInp" placeholder="Enter last name" required>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-sm-6 col-12 text-center">
+                                                    <div class="row d-flex justify-content-center ">
+                                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                                            <div class="form-group">
+                                                                <input type="text" oninput="handleInput(event)" class="form-control firstNameInp" placeholder="Enter first name" required>
                                                                 <div class="invalid-feedback error_step_6 text-danger"></div>
                                                             </div>
                                                         </div>
-                                                        <div class="row">
-                                                            <div class="col-md-12 col-sm-12 col-12">
-                                                                <div class="form-group picker text-center mt-20">
-                                                                <a href="javascript:void(0);" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary jTfmBg  btn-main step6" style="background-color: #e11c1c; font-weight: bold; line-height: 1.5em;">Next</a>
-                                                                </div>
+                                                        <!-- <div class="col-sm-6 col-12 text-center">
+                                                            
+                                                        </div> -->
+                                                    </div>
+                                                    <div class="row justify-content-center">
+                                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                                            <div class="form-group">
+                                                                <input type="text" oninput="handleInput(event)" class="form-control lastNameInp" placeholder="Enter last name" required>
+
+                                                                <div class="invalid-feedback error_step_6 text-danger"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12 col-sm-12 col-12">
+                                                            <div class="form-group picker text-center mt-20">
+                                                            <a href="javascript:void(0);" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary jTfmBg  btn-main step6" style="background-color: #e11c1c; font-weight: bold; line-height: 1.5em;">Next</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -294,19 +296,27 @@
                                                         </div>
                                                         <div class="wizard__main mx-680">
                                                             <div class="row justify-content-center">
-                                                                <div class="col-sm-12 col-12">
-                                                                <div class="input-group" style="height: 60px;">
-                                                                    <div class="input-group-prepend left_border">
-                                                                        <b>+ 1</b>
+                                                                <div class="col-xs-12 col-sm-6 col-md-6">
+                                                                    <div class="input-group mb-3" style="height: 60px;">
+                                                                        <div class="input-group-prepend">
+                                                                            <span class="input-group-text" id="basic-phone" style="height: 60px; width: 50px;font-size: 22px;">+1</span>
+                                                                        </div>
+                                                                        <input id="phone" type="tel" class="form-control phoneNumber" placeholder="Enter Phone Number"
+                                                                        required aria-describedby="basic-phone" onkeypress="return onlyNumberKey(event)"
+                                                                        style="font-size: 22px;">
                                                                     </div>
-                                                                    <input id="phone" type="tel" 
-                                                                    name="phone" oninput="handleInput(event)" class="form-control phoneNumber right_border" placeholder="Enter Phone Number" required onkeypress="return onlyNumberKey(event)">
+                                                                    <div>
+                                                                        <!-- <div class="input-group-prepend">
+                                                                            <b>+ 1</b>
+                                                                        </div>
+                                                                        <input id="phone" type="tel" 
+                                                                        name="phone" oninput="handleInput(event)" class="form-control phoneNumber " placeholder="Enter Phone Number" required onkeypress="return onlyNumberKey(event)"> -->
 
-                                                                    <input id="leadid_token" name="universal_leadid" type="hidden" value=""/>
-                                                                    <input type="hidden" name="xxTrustedFormCertUrl" id="xxTrustedFormCertUrl_0" value="https://cert.trustedform.com/454a35b802f3e7b63ffabb4efedb7c6ebe67886c">
-                                                                    <input type="hidden" name="xxTrustedFormPingUrl" id="xxTrustedFormPingUrl_0" value="https://ping.trustedform.com/0.HJDqajg8vVF20hwiDBJ92kct5idepgBM4vHylmh43kShfWSZKwm8HI37KqPToi0y3dhTIQ3N.uOjUbzs7aKNUWivkGh7I9Q.50hgmcLFsDabNx1wtZZPdQ">
-                                                                </div>
-                                                                <div class="invalid-feedback error_step_7 text-white phoneNumber_errormsg"></div>
+                                                                        <input id="leadid_token" name="universal_leadid" type="hidden" value=""/>
+                                                                        <input type="hidden" name="xxTrustedFormCertUrl" id="xxTrustedFormCertUrl_0" value="https://cert.trustedform.com/454a35b802f3e7b63ffabb4efedb7c6ebe67886c">
+                                                                        <input type="hidden" name="xxTrustedFormPingUrl" id="xxTrustedFormPingUrl_0" value="https://ping.trustedform.com/0.HJDqajg8vVF20hwiDBJ92kct5idepgBM4vHylmh43kShfWSZKwm8HI37KqPToi0y3dhTIQ3N.uOjUbzs7aKNUWivkGh7I9Q.50hgmcLFsDabNx1wtZZPdQ">
+                                                                    </div>
+                                                                    <div class="invalid-feedback error_step_7 text-white phoneNumber_errormsg"></div>
                                                                 </div>
 
                                                                 <div class="col-md-12 col-sm-12 col-12 mt-2">
@@ -373,9 +383,4 @@
         <img src="https://api.trustedform.com/ns.gif" />
     </noscript>
     <!-- End TrustedForm -->
-    <style>
-        .lead_text{
-            font-size:13px;
-        }
-    </style>
 @endsection
