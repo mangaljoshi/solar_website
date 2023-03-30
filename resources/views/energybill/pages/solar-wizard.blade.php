@@ -81,14 +81,6 @@
                                             </div>
                                             <p data-zip-error style="text-align: center; color: red; display: none;">{{ __('solarenergy.zip_code')}}</p>
                                             <div class="wizard__main mx-680">
-                                                <!-- <div class="row justify-content-center">
-                                                    <div class="col-sm-6 col-12">
-                                                        <div class="form-group text-center">
-                                                            <p class="text-dark">Loading ....</p>
-                                                        </div>
-                                                    </div>
-                                                </div> -->
-
                                                 <div class="byMguB">
                                                     <div class="cwbftf">
                                                         <div class="row justify-content-center">
@@ -98,18 +90,6 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <!-- <button class="selected">
-                                                            <svg class="MuiSvgIcon-root MUIRadioIcon" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
-                                                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path>
-                                                            </svg>
-                                                            <div>New York State Elec &amp; Gas Corp</div>
-                                                        </button>
-                                                        <button class="">
-                                                            <svg class="MuiSvgIcon-root MUIRadioIcon" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
-                                                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path>
-                                                            </svg>
-                                                            <div>Niagara Mohawk Power Corp.</div>
-                                                        </button> -->
                                                     </div>
                                                 </div>
                                             </div>
