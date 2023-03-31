@@ -272,7 +272,7 @@ p > a {
     color: #ccc;
 }
 .owl-nav button {
-    background-color: transparent; !important;
+    background-color: transparent !important;
     height: 45px;
     width: 45px;
     color: #2c3d8c !important;
@@ -705,7 +705,7 @@ input[type="range"]::-moz-range-thumb {
     border-radius: 60px 60px;
     padding: 15px 25px;
 }
-.wizard__main .sunlight-box > a {
+.wizard__main .sunlight-box {
     display: block;
     background-color: #078041;
     padding: 30px 30px;
@@ -715,7 +715,7 @@ input[type="range"]::-moz-range-thumb {
     margin-bottom: 30px;
     transition: all 0.3s;
 }
-.wizard__main .sunlight-box > a:hover {
+.wizard__main .sunlight-box:hover {
     background-color: #f7c51d;
 }
 .wizard__main .sunlight-box > a .theme-title {
