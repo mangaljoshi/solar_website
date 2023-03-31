@@ -278,7 +278,7 @@
                                                                 <div class="col-xs-12 col-sm-6 col-md-6">
                                                                     <div class="input-group mb-3" style="height: 60px;">
                                                                         <div class="input-group-prepend">
-                                                                            <span class="input-group-text" id="basic-phone" style="height: 60px; width: 50px;font-size: 22px;">+1</span>
+                                                                            <span class="input-group-text" id="basic-phone" style="height: 60px; width: 50px;font-size: 22px;font-weight: bold;">+1</span>
                                                                         </div>
                                                                         <input id="phone" type="tel" class="form-control phoneNumber" placeholder="Enter Phone Number"
                                                                         required aria-describedby="basic-phone" onkeypress="return onlyNumberKey(event)"
