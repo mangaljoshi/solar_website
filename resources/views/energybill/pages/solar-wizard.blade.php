@@ -47,10 +47,14 @@
                                                 <h2>{{ __('solarenergy.electricity_bill_heading')}}</h2>
                                                 <!-- <p>{{ __('solarenergy.savings_text')}}</p> -->
                                             </div>
-                                            <div class="wizard__main">
+                                            <div class="wizard__main" >
                                                 <div class="row justify-content-center">
                                                     <div class="col-sm-12">
                                                         <div class="range-slider">
+                                                            <div class="sliderLegend">
+                                                                <p class="sliderLegendItem--start" style="margin-bottom:0px">$101+</p>
+                                                                <p class="sliderLegendItem--end" style="margin-bottom:0px">$800+</p>
+                                                            </div>
                                                             <div class="rSlider">
                                                                 <!-- <span class="slide"></span> -->
                                                                 <input id="range" class="avgBillRange" type="range" data-val="dec" min="101" max="800" >
@@ -205,7 +209,7 @@
                                         <div class="wizard__box">
                                             <div class="page-title text-center mb-3">
                                                 <h2>{{ __('solarenergy.estimate')}}</h2>
-                                                <p>{{ __('solarenergy.email')}}</p>
+                                                <p class="note">{{ __('solarenergy.email')}}</p>
                                             </div>
                                             <div>
                                                 <div class="row justify-content-center">
@@ -268,14 +272,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane tab-pane" role="tabpanel" id="step7">
+                                    <div class="tab-pane tab-pane" role="tabpanel" id="step7" style="margin: 0 150px;">
                                         <form id="phoneNumberForm">
                                             <div class="row">
-                                                <div class="col-12">
+                                                <div class="col-md-12">
                                                     <div class="wizard__box">
                                                         <div class="page-title text-center mb-3">
-                                                            <h2>{{ __('solarenergy.final_step')}}!</h2>
-                                                            <p>{{ __('solarenergy.savings_text_final')}}</p>
+                                                            <h2>{{ __('solarenergy.final_step') }}</h2>
+                                                            <p class="note">{{ __('solarenergy.savings_text_final') }}</p>
                                                         </div>
                                                         <div>
                                                             <div class="row justify-content-center">
@@ -289,12 +293,6 @@
                                                                         style="font-size: 22px;">
                                                                     </div>
                                                                     <div>
-                                                                        <!-- <div class="input-group-prepend">
-                                                                            <b>+ 1</b>
-                                                                        </div>
-                                                                        <input id="phone" type="tel" 
-                                                                        name="phone" oninput="handleInput(event)" class="form-control phoneNumber " placeholder="Enter Phone Number" required onkeypress="return onlyNumberKey(event)"> -->
-
                                                                         <input id="leadid_token" name="universal_leadid" type="hidden" value=""/>
                                                                         <input type="hidden" name="xxTrustedFormCertUrl" id="xxTrustedFormCertUrl_0" value="https://cert.trustedform.com/454a35b802f3e7b63ffabb4efedb7c6ebe67886c">
                                                                         <input type="hidden" name="xxTrustedFormPingUrl" id="xxTrustedFormPingUrl_0" value="https://ping.trustedform.com/0.HJDqajg8vVF20hwiDBJ92kct5idepgBM4vHylmh43kShfWSZKwm8HI37KqPToi0y3dhTIQ3N.uOjUbzs7aKNUWivkGh7I9Q.50hgmcLFsDabNx1wtZZPdQ">
@@ -303,18 +301,18 @@
                                                                 </div>
                                                             </div>
                                                             <div class="row justify-content-center">
-                                                                <div class="col-xs-12 col-md-6 col-sm-6 mt-2">
-                                                                    <div class="form-group picker text-center mt-4 mb-4">
-                                                                        <button type="submit" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary jTfmBg btn-main" style="background-color: #e11c1c; font-weight: bold;">View My Savings</button>
+                                                                <div class="col-xs-12 col-md-6 col-sm-6 mt-2" style="margin-top: 80px;">
+                                                                    <div class="form-group picker text-center mb-4">
+                                                                        <button type="submit" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary btn-main" style="background-color: #e11c1c; font-weight: bold; margin-top: 0px;">Get Free Quote</button>
                                                                     </div>
                                                                 </div>
 
                                                                 <div class="col-xs-12 col-md-10 col-md-10 mt-4 mb-4">
-                                                                <label for="leadid_tcpa_disclosure" class="lead_text">
-                                                                {{ __('solarenergy.tcpa_label._1')}} <a href="{{ route('energy.marketing') }}" target="_blank" tabindex="0" style="color:#7b7b7b;text-decoration:underline">{{ __('solarenergy.tcpa_label._2')}}</a> {{ __('solarenergy.tcpa_label._3')}}
-                                                                </label>  
-                                                                    
-                                                                <input type="hidden" id="leadid_tcpa_disclosure" name="tcpa" tabindex="0" value="{{ __('solarenergy.tcpa_text')}}">
+                                                                    <label for="leadid_tcpa_disclosure" class="lead_text" style="margin: 85px auto 0px;">
+                                                                    {{ __('solarenergy.tcpa_label._1')}} <a href="{{ route('energy.marketing') }}" target="_blank" tabindex="0" style="color:#7b7b7b;text-decoration:underline">{{ __('solarenergy.tcpa_label._2')}}</a> {{ __('solarenergy.tcpa_label._3')}}
+                                                                    </label>  
+                                                                        
+                                                                    <input type="hidden" id="leadid_tcpa_disclosure" name="tcpa" tabindex="0" value="{{ __('solarenergy.tcpa_text')}}">
                                                                 </div>
                                                             </div>
                                                         </div>
