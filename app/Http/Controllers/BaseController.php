@@ -21,9 +21,8 @@ class BaseController extends Controller
             ];
             Session::put('userData', $userData);
         }     
-        // dd($request->get('zip'));   
+
         if ($request->get('zip')) {
-            // dd($request->get('zip'));
             return redirect('solar-wizard?zip='.$request->get('zip'));
         }
         return view($this->theme.'.pages.home');
