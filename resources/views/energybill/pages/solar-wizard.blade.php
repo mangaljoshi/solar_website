@@ -158,44 +158,36 @@
                                             <div class="wizard__main mx-680">
                                                 <div class="row justify-content-center">
                                                     <div class="col-xs-12 col-sm-3 col-md-3">
-                                                        <div class="sunlight-box text-center">
-                                                            <a href="javascript:void(0);" class="step4 roofSunlight">
-                                                                <div class="sunlight-ico">
+                                                        <a href="javascript:void(0);" class="step4 roofSunlight sunlight-box text-center">
+                                                            <div class="sunlight-ico">
                                                                 <img src="{{ asset('energybill/images/noshade.svg') }}" alt="">
-                                                                </div>
-                                                                <span class="text_ text-dark">Full Sunlight</span>
-                                                            </a>
-                                                        </div>
+                                                            </div>
+                                                            <span class="text_ text-dark">Full Sunlight</span>
+                                                        </a>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-3 col-md-3">
-                                                        <div class="sunlight-box text-center">
-                                                            <a href="javascript:void(0);" class="step4 roofSunlight">
-                                                                <div class="sunlight-ico">
+                                                        <a href="javascript:void(0);" class="step4 roofSunlight sunlight-box text-center">
+                                                            <div class="sunlight-ico">
                                                                 <img src="{{ asset('energybill/images/littleshade.svg') }}" alt="">
-                                                                </div>
-                                                                <span class="text_ text-dark">Some Shade</span>
-                                                            </a>
-                                                        </div>
+                                                            </div>
+                                                            <span class="text_ text-dark">Some Shade</span>
+                                                        </a>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-3 col-md-3">
-                                                        <div class="sunlight-box text-center">
-                                                            <a href="javascript:void(0);" class="step4 roofSunlight">
-                                                                <div class="sunlight-ico">
+                                                        <a href="javascript:void(0);" class="step4 roofSunlight sunlight-box text-center">
+                                                            <div class="sunlight-ico">
                                                                 <img src="{{ asset('energybill/images/alotshade.svg') }}" alt="">
-                                                                </div>
-                                                                <span class="text_ text-dark">Severe Shade</span>
-                                                            </a>
-                                                        </div>
+                                                            </div>
+                                                            <span class="text_ text-dark">Severe Shade</span>
+                                                        </a>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-3 col-md-3">
-                                                        <div class="sunlight-box text-center">
-                                                            <a href="javascript:void(0);" class="step4 roofSunlight">
-                                                                <div class="sunlight-ico">
+                                                        <a href="javascript:void(0);" class="step4 roofSunlight sunlight-box text-center">
+                                                            <div class="sunlight-ico">
                                                                 <img src="{{ asset('energybill/images/uncertain.svg') }}" alt="">
-                                                                </div>
-                                                                <span class="text_ text-dark">Uncertain</span>
-                                                            </a>
-                                                        </div>
+                                                            </div>
+                                                            <span class="text_ text-dark">Uncertain</span>
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </div>
