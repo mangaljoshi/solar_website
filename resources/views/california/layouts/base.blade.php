@@ -17,7 +17,7 @@
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
     </head>
     <body>    
-        @if(Route::current()->getName() != 'solar.california.home' && Route::current()->getName() != 'solar.california.thankyou' && Route::current()->getName() != 'solar.california.solar.wizard')
+        @if(Route::current()->getName() != 'solar.california.home' && Route::current()->getName() != 'solar.california.thankyou' && Route::current()->getName() != 'solar.california.solar.wizard' && Route::current()->getName() != 'energy.thankyou')
             @include('california.partials.header_common')
         @endif
         
