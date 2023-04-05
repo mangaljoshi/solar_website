@@ -272,7 +272,7 @@ p > a {
     color: #ccc;
 }
 .owl-nav button {
-    background-color: transparent; !important;
+    background-color: transparent !important;
     height: 45px;
     width: 45px;
     color: #2c3d8c !important;
@@ -394,6 +394,7 @@ p > a {
 .header-main .hero-logo {
     max-width: 220px;
     margin: 0px auto;
+    text-align: -webkit-center;
 }
 
 .header-main .lock{

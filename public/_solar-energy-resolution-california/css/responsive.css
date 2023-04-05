@@ -27,7 +27,6 @@
 	.main-wrapper.wizard-box .hero-banner {
 		padding: 15px 0px;
 	}
-	
 }
 @media screen and (max-width: 575px){
 	.hero-inner h1 {
@@ -255,7 +254,7 @@
 	    display: block !important;
 	}
 	.hero-banner .d-table {
-	    padding: 40px 0px;
+	    padding: 30px 0px;
 	}
 	.hero-inner h1,
 	.wizard__box .page-title h2 {
@@ -284,7 +283,7 @@
 	    display: block !important;
 	}*/
 	.hero-banner .d-table {
-	    padding: 40px 0px;
+	    padding: 30px 0px;
 	}
 	/*.hero-inner h1,
 	.wizard__box .page-title h2 {
