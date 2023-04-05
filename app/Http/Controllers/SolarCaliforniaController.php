@@ -14,7 +14,7 @@ class SolarCaliforniaController extends Controller
     }
     
     public function home(Request $request) {
-        if ($request->input('lp_subid1')) {
+        if ($request->input('lp_subid1') || $request->get('sub_id1')) {
             $userData = [
                 'lp_subid1' => $request->input('lp_subid1'),
                 'sub_id1' => $request->get('subid'),
@@ -30,9 +30,9 @@ class SolarCaliforniaController extends Controller
         ]);
 
         $userData = Session::get('userData');
-        $userData["lp_campaign_id"] = "11036";
-        $userData["lp_key"] = "yxp3uemdcrpy1";
-        $userData["lp_supplier_id"] = "22807";
+        $userData["lp_campaign_id"] = "12325";
+        $userData["lp_key"] = "wo2jugw6bkwqy";
+        $userData["lp_supplier_id"] = "25154";
         // $userData["sub_id1"] = "NAT";
         $userData["lp_subid2"] ="nat";
         $userData["lp_response"] = "JSON";
