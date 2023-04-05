@@ -36,7 +36,7 @@ class Lpv88Controller extends Controller
         $userData["lp_campaign_id"] = "12325";
         $userData["lp_key"] = "wo2jugw6bkwqy";
         $userData["lp_supplier_id"] = "25154";
-        $userData["sub_id1"] = "NAT";
+        // $userData["sub_id1"] = "NAT";
         $userData["lp_subid2"] ="nat";
         $userData["lp_response"] = "JSON";
         $userData["zip_code"] = $request->input('zip_code');
