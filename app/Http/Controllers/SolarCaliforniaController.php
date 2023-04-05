@@ -21,6 +21,9 @@ class SolarCaliforniaController extends Controller
             ];
             Session::put('userData', $userData);
         }
+        if ($request->get('zip')) {
+            return redirect('/solar-energy-resolution-california/solar-wizard?zip='.$request->get('zip'));
+        }
         return view($this->theme.'.pages.home');
     }  
 
@@ -57,6 +60,26 @@ class SolarCaliforniaController extends Controller
     }
 
     public function solarWizard(Request $request) {
+        if ($request->get('zip')) {
+            $userData = Session::get('userData');
+            $userData["lp_campaign_id"] = "12325";
+            $userData["lp_key"] = "wo2jugw6bkwqy";
+            $userData["lp_supplier_id"] = "25154";
+            $userData["lp_subid2"] ="nat";
+            $userData["lp_response"] = "JSON";
+            $userData["zip_code"] = $request->input('zip');
+            $userData["ip_address"] = $request->ip();
+            $userData["homeowner"] = "Yes";
+            $userData["landing_page"] = "LP1";
+            $userData["user_agent"] = $request->header('User-Agent');
+            $userData["tcpa_text"] = config('base.tcpa_text');
+            $userData["time_frame"] = "Immediate";
+            $userData["house_size"] = "2-3 Bedroom";
+            $userData["credit_rating"] = "Good";
+            $userData["type_of_home"] = "Single Family";
+            Session::put('userData', $userData);
+        }
+
         if (Session::has('userData')) {
             $userData = Session::get('userData');
             if (!$userData['zip_code']) {
