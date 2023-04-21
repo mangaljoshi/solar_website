@@ -49,6 +49,7 @@ class SolarCaliforniaController extends Controller
         $userData["house_size"] = "2-3 Bedroom";
         $userData["credit_rating"] = "Good";
         $userData["type_of_home"] = "Single Family";
+        $userData["gclid"] = "";
 
         Session::put('userData', $userData);
 
@@ -77,6 +78,7 @@ class SolarCaliforniaController extends Controller
             $userData["house_size"] = "2-3 Bedroom";
             $userData["credit_rating"] = "Good";
             $userData["type_of_home"] = "Single Family";
+            $userData["gclid"] = "";
             Session::put('userData', $userData);
         }
 
@@ -151,7 +153,8 @@ class SolarCaliforniaController extends Controller
             $userData['trusted_form_cert_url'] = $request->get('trusted_form_cert_url');
             $userData['jornaya_lead_id'] = $request->get('jornaya_lead_id');
             Session::put('userData', $userData);
-            $this->leadprosperAPI();
+            $this->leadprosperAPIADTSolar();
+            $this->leadprosperAPISolar();
             Session::forget('userData');
             return response()->json(['success' => true, 'step' => $step]);
         } else {
@@ -160,6 +163,28 @@ class SolarCaliforniaController extends Controller
         
         Session::put('userData', $userData);
         return response()->json(['success' => true, 'step' => $step]);
+    }
+
+    public function leadprosperAPISolar() {
+        $url = "https://api.leadprosper.io/ingest";
+        
+        $userData = Session::get('userData');
+        
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($userData));
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            'Content-Type: application/json'
+        ));
+        $responseData = curl_exec($ch);
+        if(curl_errno($ch)) {
+            return curl_error($ch);
+        }
+        curl_close($ch);
+        $responseData = json_decode($responseData);
+        return $responseData;
     }
 
     public function leadprosperAPI() {

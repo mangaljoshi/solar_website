@@ -301,7 +301,8 @@
 
                                                                 <div class="col-xs-12 col-md-10 col-md-10 mt-4 mb-4">
                                                                     <label for="leadid_tcpa_disclosure" class="lead_text" style="margin: 85px auto 0px;">
-                                                                    {{ __('solarenergy.tcpa_label._1')}} <a href="{{ route('energy.marketing') }}" target="_blank" tabindex="0" style="color:#7b7b7b;text-decoration:underline">{{ __('solarenergy.tcpa_label._2')}}</a> {{ __('solarenergy.tcpa_label._3')}}
+                                                                    {{ __('solarenergy.tcpa_label._1')}} <a href="{{ route('energy.marketing') }}" target="_blank" tabindex="0" style="color:#7b7b7b;text-decoration:underline">{{ __('solarenergy.tcpa_label._2')}}</a> {{ __('solarenergy.tcpa_label._3')}} <a href="{{ route('energy.terms') }}" target="_blank" tabindex="0" style="color:#7b7b7b;text-decoration:underline">{{ __('solarenergy.tcpa_label._4')}}</a>
+                                                                    {{ __('solarenergy.tcpa_label._5')}} <a href="{{ route('energy.privacy') }}" target="_blank" tabindex="0" style="color:#7b7b7b;text-decoration:underline">{{ __('solarenergy.tcpa_label._6')}}</a>
                                                                     </label>  
                                                                         
                                                                     <input type="hidden" id="leadid_tcpa_disclosure" name="tcpa" tabindex="0" value="{{ __('solarenergy.tcpa_text')}}">
