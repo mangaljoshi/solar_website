@@ -44,7 +44,7 @@
                                     </div>
                                  </div>
                                  <div class="sc-1f6gucm-2 ixxZa">
-                                    <h2>See if you qualify for incentives in your area and get solar with zero upfront costs!</h2>
+                                    <h2>Get the best savings on solar from local experts in your area!</h2>
                                  </div>
                                  <div class="step">
                                     <div class="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth">
