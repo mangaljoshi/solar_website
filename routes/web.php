@@ -52,3 +52,29 @@ Route::group(['prefix'=>'solar-energy-resolution-california','as'=>'solar.califo
     Route::post('/update-data/{step}', [SolarCaliforniaController::class, 'updateData'])->name('update.data');
 });
 
+
+Route::get('/', [BaseController::class, 'home'])->name('home');
+Route::post('/zip-data', [BaseController::class, 'zipForm'])->name('zip.post');
+Route::get('/solar-wizard', [BaseController::class, 'solarWizard'])->name('solar.wizard');
+Route::get('/marketing-partners', [BaseController::class, 'marketingPartners'])->name('marketing');
+Route::get('/terms', [BaseController::class, 'terms'])->name('terms');
+Route::get('/contact', [BaseController::class, 'contact'])->name('contact');
+Route::get('/privacy', [BaseController::class, 'privacy'])->name('privacy');
+Route::get('/quote-report', [BaseController::class, 'thankyou'])->name('thankyou');
+Route::post('/update-data/{step}', [BaseController::class, 'updateData'])->name('update.data');
+Route::post('/second-service', [BaseController::class, 'secondService'])->name('second.service');
+Route::get('/thank-you', [BaseController::class, 'thankYou'])->name('thank.you');
+Route::get('/verify-phone/{number}', [BaseController::class, 'verifyPhone'])->name('verify.phone');
+
+Route::group(['prefix'=>'{route_name}','as'=>'solar.'], function(){
+    Route::get('/', [BaseController::class, 'home'])->name('home');
+    Route::post('/zip-data', [BaseController::class, 'zipForm'])->name('zip.post');
+    Route::get('/solar-wizard', [BaseController::class, 'solarWizard'])->name('solar.wizard');
+    Route::get('/marketing-partners', [BaseController::class, 'marketingPartners'])->name('marketing');
+    Route::get('/terms', [BaseController::class, 'terms'])->name('terms');
+    Route::get('/contact', [BaseController::class, 'contact'])->name('contact');
+    Route::get('/privacy', [BaseController::class, 'privacy'])->name('privacy');
+    Route::get('/quote-report', [BaseController::class, 'thankyou'])->name('thankyou');
+    Route::post('/second-service', [BaseController::class, 'secondService'])->name('second.service');
+    Route::get('/thank-you', [BaseController::class, 'thankYouPage'])->name('thank.you');
+});
