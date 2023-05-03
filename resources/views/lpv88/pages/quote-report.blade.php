@@ -1,4 +1,4 @@
-@extends('california.layouts.base')
+@extends('lpv88.layouts.base')
 
 @section('content')
     <div class="main-wrapper wizard-box">

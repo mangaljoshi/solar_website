@@ -1,4 +1,4 @@
-@extends('energybill.layouts.base')
+@extends('lpv88.layouts.base')
 
 @section('style')
     <link href="{{ asset('energybill/css/c-wizard.css') }}" rel="stylesheet">
@@ -11,7 +11,7 @@
             <div class="qpmywg-0 cusrAz">
                <div class="qpmywg-7 jeVraF">
                   <div class="qpmywg-1 kWNlXB"> 
-                    @include('energybill.partials.header_home')
+                    @include('lpv88.partials.header_home')
                   </div>
                </div>
             </div>
@@ -34,7 +34,7 @@
                         <div class="qpmywg-6 SWfUG"><img src="{{ asset('energybill/images/stars.svg') }}" alt=""/></div>
                         <div id="lead" class="sc-1mfr99g-0 jTfmBgA">
                            <div class="sc-1f6gucm-0 bepWUU">
-                              <form method="post" action="{{ route('energy.zip.post') }}">
+                              <form method="post" action="{{ route('solar.zip.post', ['route_name' => 'lpv88']) }}">
                                  {{ csrf_field() }}
                                  <div class="sc-1f6gucm-3 iHrnEv">
                                     <div class="sc-1f6gucm-4 bgRNrx">
@@ -79,9 +79,9 @@
                   <span>
                      <p>© 2023 Power Solar All Rights Reserved.</p>
                   </span>
-                  <a href="{{ route('energy.contact') }}">Contact Us</a>
-                  <a href="{{ route('energy.privacy') }}">Privacy Policy</a>
-                  <a href="{{ route('energy.terms') }}" target="_blank">Terms of Use</a>
+                  <a href="{{ route('solar.contact', ['route_name' => 'lpv88']) }}">Contact Us</a>
+                  <a href="{{ route('solar.privacy', ['route_name' => 'lpv88']) }}">Privacy Policy</a>
+                  <a href="{{ route('solar.terms', ['route_name' => 'lpv88']) }}" target="_blank">Terms of Use</a>
                </footer>
             </div>
          </div>

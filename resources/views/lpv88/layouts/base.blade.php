@@ -13,19 +13,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}" />
 
-        @include('energybill.partials.style')
+        @include('lpv88.partials.style')
 
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
     </head>
-    <body>    
-        @if(Route::current()->getName() != 'energy.home' && Route::current()->getName() != 'energy.thankyou' && Route::current()->getName() != 'energy.solar.wizard')
-            @include('energybill.partials.header_common')
+    <body>  
+        @if(Route::current()->getName() != 'solar.home' && Route::current()->getName() != 'solar.thankyou' && Route::current()->getName() != 'solar.solar.wizard')
+            @include('lpv88.partials.header_common')
         @endif
         
         @yield('content')
 
-        @include('energybill.partials.script')
+        @include('lpv88.partials.script')
 
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASQy-lj_qEU3g4G3D-J1jW00jagKYq91M&libraries=places&callback=initAutocomplete"
                    async defer></script>

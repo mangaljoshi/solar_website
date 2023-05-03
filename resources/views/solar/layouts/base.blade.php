@@ -20,7 +20,7 @@
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
     </head>
     <body>    
-        @if(Route::current()->getName() != 'home' && Route::current()->getName() != 'thankyou' && Route::current()->getName() != 'solar.wizard')
+        @if(Route::current()->getName() != 'home' && Route::current()->getName() != 'solar.home' && Route::current()->getName() != 'solar.thankyou' && Route::current()->getName() != 'solar.solar.wizard')
             @include('solar.partials.header_common')
         @endif
         
