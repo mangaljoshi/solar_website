@@ -22,7 +22,7 @@ class Lpv88Controller extends Controller
             Session::put('userData', $userData);
         }
         if ($request->get('zip')) {
-            return redirect('/lpv88/solar-wizard?zip='.$request->get('zip'));
+            return redirect('lpv88/solar-wizard?zip='.$request->get('zip'));
         }
         return view($this->theme.'.pages.home');
     }  
@@ -36,7 +36,6 @@ class Lpv88Controller extends Controller
         $userData["lp_campaign_id"] = "12325";
         $userData["lp_key"] = "wo2jugw6bkwqy";
         $userData["lp_supplier_id"] = "25154";
-        // $userData["sub_id1"] = "NAT";
         $userData["lp_subid2"] ="nat";
         $userData["lp_response"] = "JSON";
         $userData["zip_code"] = $request->input('zip_code');
@@ -60,12 +59,11 @@ class Lpv88Controller extends Controller
     }
 
     public function solarWizard(Request $request) {
-        
         if ($request->get('zip')) {
             $userData = Session::get('userData');
-            $userData["lp_campaign_id"] = "12325";
-            $userData["lp_key"] = "wo2jugw6bkwqy";
-            $userData["lp_supplier_id"] = "25154";
+            $userData["lp_campaign_id"] = "11036";
+            $userData["lp_key"] = "yxp3uemdcrpy1";
+            $userData["lp_supplier_id"] = "22807";
             $userData["lp_subid2"] ="nat";
             $userData["lp_response"] = "JSON";
             $userData["zip_code"] = $request->input('zip');
@@ -78,9 +76,7 @@ class Lpv88Controller extends Controller
             $userData["house_size"] = "2-3 Bedroom";
             $userData["credit_rating"] = "Good";
             $userData["type_of_home"] = "Single Family";
-            Session::put('userData', $userData);
         }
-
         if (Session::has('userData')) {
             $userData = Session::get('userData');
             if (!$userData['zip_code']) {
@@ -139,8 +135,8 @@ class Lpv88Controller extends Controller
             $userData['email'] = $request->get('email');
         } else if ($step == 6) {
             $this->validate($request, [
-                'first_name' => 'required',
-                'last_name' => 'required'
+                'first_name' => 'required|min:2',
+                'last_name' => 'required|min:2'
             ]);
             $userData['first_name'] = $request->get('first_name');
             $userData['last_name'] = $request->get('last_name');
