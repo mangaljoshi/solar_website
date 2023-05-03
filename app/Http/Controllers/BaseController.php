@@ -127,7 +127,7 @@ class BaseController extends Controller
             $userData['trusted_form_cert_url'] = $request->get('trusted_form_cert_url');
             $userData['jornaya_lead_id'] = $request->get('jornaya_lead_id');
             Session::put('userData', $userData);
-            $this->leadprosperAPIADTSolar();
+            $this->leadprosperAPI($userData);
             // $this->leadprosperAPISolar();
             return response()->json(['success' => true, 'step' => $step]);
         } else {
@@ -156,9 +156,9 @@ class BaseController extends Controller
     }
 
     public function roofingData($userData, $services) {
-        $roofingData['lp_campaign_id'] = "15007";
-        $roofingData['lp_supplier_id'] = "30570";
-        $roofingData['lp_key'] = "qgvpi5z5wt0ejd";
+        $roofingData['lp_campaign_id'] = "14988";
+        $roofingData['lp_supplier_id'] = "30547";
+        $roofingData['lp_key'] = "wo2jue3xrsyzmw";
         $roofingData['lp_subid2'] = "sr2";
         $roofingData['first_name'] = $userData['first_name'];
         $roofingData['last_name'] = $userData['last_name'];
@@ -189,9 +189,9 @@ class BaseController extends Controller
     }
 
     public function gutterData($userData, $services) {
-        $gutterData['lp_campaign_id'] = "14652";
-        $gutterData['lp_supplier_id'] = "29933";
-        $gutterData['lp_key'] = "mpy2uddyvagn6d";
+        $gutterData['lp_campaign_id'] = "14650";
+        $gutterData['lp_supplier_id'] = "29931";
+        $gutterData['lp_key'] = "r23jcmm66c6n7n";
         $gutterData['lp_subid2'] = "sr2";
         $gutterData['first_name'] = $userData['first_name'];
         $gutterData['last_name'] = $userData['last_name'];

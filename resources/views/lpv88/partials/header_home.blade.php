@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="hero-logo">
-                    <a href="{{ route('energy.home') }}">
+                    <a href="{{ route('solar.home', ['route_name' => 'lpv88']) }}">
                         <img src="{{ asset('energybill/images/logo.png') }}" alt="" class="d-none d-lg-block">                        
                     </a>
                 </div>

@@ -1,4 +1,4 @@
-@extends('energybill.layouts.base')
+@extends('lpv88.layouts.base')
 
 @section('content')
     <section class="user-text page-paddings">

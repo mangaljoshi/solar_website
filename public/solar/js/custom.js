@@ -608,7 +608,7 @@ const con = getGeo();
     }
     $.ajax({
       type:'POST',
-      url: 'update-data/'+step,
+      url: '/update-data/'+step,
       data: data,
       headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -616,11 +616,12 @@ const con = getGeo();
       success: function (response) {
         var stepNumber = Number(response.step);
         if (stepNumber == 7) {
-          return window.location.href = "/quote-report";
+          return window.location.href = "/solar/quote-report";
         }
         $('#step'+stepNumber).hide();
         stepNumber = stepNumber + 1;
         $('#step'+stepNumber).show();
+        autoScroll();
         return true;
       },
       error: function (errorResponse) {
@@ -684,3 +685,7 @@ const con = getGeo();
   $(".qualify-text").click(function(){
     $(".hidden-text").toggle(100);
   });
+
+  function autoScroll() {
+    $('html,body').scrollTop(0);
+  }

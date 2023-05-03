@@ -1,4 +1,4 @@
-@extends('energybill.layouts.base')
+@extends('lpv88.layouts.base')
 
 @section('content')
     <div id="loading" style="display: none;">
@@ -12,7 +12,7 @@
                         <div class="row">
                         <div class="col-sm-12">
                             <div class="hero-logo">
-                                <a href="{{ route('energy.home') }}"><img src="{{ asset('energybill/images/logo.png') }}" alt=""></a>
+                                <a href="{{ route('solar.home', ['route_name' => 'lpv88']) }}"><img src="{{ asset('energybill/images/logo.png') }}" alt=""></a>
                             </div>
                             <!-- <div class="wizard-bg-box mt-4">
                                 <div class="progress" style="height: 20px;">
@@ -301,8 +301,8 @@
 
                                                                 <div class="col-xs-12 col-md-10 col-md-10 mt-4 mb-4">
                                                                     <label for="leadid_tcpa_disclosure" class="lead_text" style="margin: 85px auto 0px;">
-                                                                    {{ __('solarenergy.tcpa_label._1')}} <a href="{{ route('energy.marketing') }}" target="_blank" tabindex="0" style="color:#7b7b7b;text-decoration:underline">{{ __('solarenergy.tcpa_label._2')}}</a> {{ __('solarenergy.tcpa_label._3')}} <a href="{{ route('energy.terms') }}" target="_blank" tabindex="0" style="color:#7b7b7b;text-decoration:underline">{{ __('solarenergy.tcpa_label._4')}}</a>
-                                                                    {{ __('solarenergy.tcpa_label._5')}} <a href="{{ route('energy.privacy') }}" target="_blank" tabindex="0" style="color:#7b7b7b;text-decoration:underline">{{ __('solarenergy.tcpa_label._6')}}</a>
+                                                                    {{ __('solarenergy.tcpa_label._1')}} <a href="{{ route('solar.marketing', ['route_name' => 'lpv88']) }}" target="_blank" tabindex="0" style="color:#7b7b7b;text-decoration:underline">{{ __('solarenergy.tcpa_label._2')}}</a> {{ __('solarenergy.tcpa_label._3')}} <a href="{{ route('solar.terms', ['route_name' => 'lpv88']) }}" target="_blank" tabindex="0" style="color:#7b7b7b;text-decoration:underline">{{ __('solarenergy.tcpa_label._4')}}</a>
+                                                                    {{ __('solarenergy.tcpa_label._5')}} <a href="{{ route('solar.privacy', ['route_name' => 'lpv88']) }}" target="_blank" tabindex="0" style="color:#7b7b7b;text-decoration:underline">{{ __('solarenergy.tcpa_label._6')}}</a>
                                                                     </label>  
                                                                         
                                                                     <input type="hidden" id="leadid_tcpa_disclosure" name="tcpa" tabindex="0" value="{{ __('solarenergy.tcpa_text')}}">
@@ -325,7 +325,7 @@
                 </div>
             </div>
         </div>
-        @include('energybill.partials.footer')
+        @include('lpv88.partials.footer')
     </div>
 </div>
 @endsection
