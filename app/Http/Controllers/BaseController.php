@@ -159,7 +159,7 @@ class BaseController extends Controller
         $roofingData['lp_campaign_id'] = "14988";
         $roofingData['lp_supplier_id'] = "30547";
         $roofingData['lp_key'] = "wo2jue3xrsyzmw";
-        $roofingData['lp_subid2'] = "sr2";
+        $roofingData['lp_subid2'] = "nat";
         $roofingData['first_name'] = $userData['first_name'];
         $roofingData['last_name'] = $userData['last_name'];
         $roofingData['email'] = $userData['email'];
@@ -192,7 +192,7 @@ class BaseController extends Controller
         $gutterData['lp_campaign_id'] = "14650";
         $gutterData['lp_supplier_id'] = "29931";
         $gutterData['lp_key'] = "r23jcmm66c6n7n";
-        $gutterData['lp_subid2'] = "sr2";
+        $gutterData['lp_subid2'] = "nat";
         $gutterData['first_name'] = $userData['first_name'];
         $gutterData['last_name'] = $userData['last_name'];
         $gutterData['email'] = $userData['email'];
