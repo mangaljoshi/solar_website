@@ -21,7 +21,7 @@
                         <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
                             <div class="wizard__box">
                                 <div class="page-title text-center mb-2">
-                                    <h2 style="font-size:24px;font-weight:400">You’ve been Pre-Qualified for $0 Out of Pocket Solar with Estimated Savings of <span style="color:#FB7306">$64,741*</span></h2>
+                                    <h2 style="font-size:22px;font-weight:400">You’ve been Pre-Qualified for $0 Out of Pocket Solar with Estimated Savings of <span style="color:#FB7306">$64,741*</span></h2>
                                     <p class="mobile-text" style="font-size: 14px;">*based on a special offer from a solar provider. Expect a phone call from a solar expert to claim the offer and your spot in the line.</p>
                                 </div>
                                 <div class="wizard__main">
