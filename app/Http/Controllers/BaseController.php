@@ -8,13 +8,13 @@ use Illuminate\Support\Facades\Session;
 
 class BaseController extends Controller
 {
-    public $theme;
+    // public $theme;
 
-    public function __construct(){
-        $this->theme = 'solar';
-    }
+    // public function __construct(){
+    //     $this->theme = 'energybill';
+    // }
 
-    public function home(Request $request, $route_name = 'solar') {
+    public function home(Request $request, $route_name = 'energybill') {
         if ($request->get('lp_subid1') || $request->get('sub_id1')) {
             $userData = [
                 'lp_subid1' => $request->get('lp_subid1'),
@@ -22,10 +22,11 @@ class BaseController extends Controller
             ];
             Session::put('userData', $userData);
         }
+        // dd($route_name.'.pages.home');
         return view($route_name.'.pages.home');
     }
 
-    public function zipForm(Request $request, $route_name = 'solar') {
+    public function zipForm(Request $request, $route_name = 'energybill') {
         $this->validate($request, [
             'zip_code' => 'required|digits:5|numeric'
         ]);
@@ -48,14 +49,15 @@ class BaseController extends Controller
         $userData["gclid"] = "";
 
         Session::put('userData', $userData);
+        // dd($route_name.'/solar-wizard');
         return redirect($route_name.'/solar-wizard');
     }
 
-    public function marketingPartners($route_name = 'solar') {
+    public function marketingPartners($route_name = 'energybill') {
         return view($route_name.'.pages.marketing-partners');
     }
 
-    public function solarWizard(Request $request, $route_name = 'solar') {
+    public function solarWizard(Request $request, $route_name = 'energybill') {
         if (Session::has('userData')) {
             $userData = Session::get('userData');
             if (!$userData['zip_code']) {
@@ -67,19 +69,19 @@ class BaseController extends Controller
         return view($route_name.'.pages.solar-wizard');
     }
 
-    public function terms($route_name = 'solar') {
+    public function terms($route_name = 'energybill') {
         return view($route_name.'.pages.terms');
     }
 
-    public function contact($route_name = 'solar') {
+    public function contact($route_name = 'energybill') {
         return view($route_name.'.pages.contact');
     }
 
-    public function privacy($route_name = 'solar') {
+    public function privacy($route_name = 'energybill') {
         return view($route_name.'.pages.privacy');
     }
 
-    public function thankyou($route_name = 'solar') {
+    public function thankyou($route_name = 'energybill') {
         return view($route_name.'.pages.quote-report');
     }
 
@@ -138,7 +140,7 @@ class BaseController extends Controller
         return response()->json(['success' => true, 'step' => $step]);
     }
 
-    public function secondService(Request $request, $route_name = 'solar') {
+    public function secondService(Request $request, $route_name = 'energybill') {
         $userData = Session::get('userData');
         if(!$request->has('services')) {
             return redirect($route_name.'/thank-you');
@@ -243,7 +245,7 @@ class BaseController extends Controller
         return $responseData;
     }
 
-    public function thankYouPage($route_name = 'solar') {
+    public function thankYouPage($route_name = 'energybill') {
         Session::forget('userData');
         return view($route_name.'.pages.thank-you');
     }

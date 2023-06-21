@@ -66,7 +66,7 @@ Route::post('/second-service', [BaseController::class, 'secondService'])->name('
 Route::get('/thank-you', [BaseController::class, 'thankYou'])->name('thank.you');
 Route::get('/verify-phone/{number}', [BaseController::class, 'verifyPhone'])->name('verify.phone');
 
-Route::group(['prefix'=>'{route_name}','as'=>'solar.'], function(){
+Route::group(['prefix'=>'{route_name}','as'=>'energybill.'], function(){
     Route::get('/', [BaseController::class, 'home'])->name('home');
     Route::post('/zip-data', [BaseController::class, 'zipForm'])->name('zip.post');
     Route::get('/solar-wizard', [BaseController::class, 'solarWizard'])->name('solar.wizard');

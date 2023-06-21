@@ -4,8 +4,8 @@
             <div class="col-sm-12">
                 <div class="lock"></div>
                 <div class="hero-logo">
-                    <a href="{{ route('home') }}">
-                        <img src="{{ asset('_lpv88/images/logo.png') }}" alt="" class="d-none d-lg-block">
+                    <a href="{{ route('home', ['route_name' => 'energybill']) }}">
+                        <img src="{{ asset('_energybill/images/logo.png') }}" alt="" class="d-none d-lg-block">
                     </a>
                 </div>
             </div>

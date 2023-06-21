@@ -1,6 +1,7 @@
-@extends('lpv88.layouts.base')
+@extends('energybill.layouts.base')
 
 @section('content')
+@include('energybill.partials.header_common')
     <section class="user-text page-paddings">
         <div class="container">
             <div class="row">
@@ -1879,7 +1880,6 @@
                             ZIP ELECTRIC<br/>
                             ZIP ELECTRIC ADT SOLAR<br/>
                             ZOOM SOLAR<br/>
-                            <a href="https://ussolarsavings.com/affiliate.php">Our Full Marketing Partners</a>
                         </p>
                     </div>
                 </div>
