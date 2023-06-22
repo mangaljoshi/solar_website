@@ -1209,3 +1209,7 @@ input[type="range"]::-moz-range-thumb {
 .cwbftf button div {
     margin: 0px 10px;
 }
+
+.main-wrapper-bg-color {
+    background-color: #000 !important;
+ }

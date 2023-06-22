@@ -1,14 +1,14 @@
 @extends('energybill.layouts.base')
 @section('style')
-    <link href="{{ asset('_lpv88/css/second-service.css') }}" rel="stylesheet">
+    <link href="{{ asset('_energybill/css/second-service.css') }}" rel="stylesheet">
 @endsection
 
 @section('script')
-    <script src="{{ asset('_lpv88/js/second-service.js') }}" type="text/javascript" ></script>
+    <script src="{{ asset('_energybill/js/second-service.js') }}" type="text/javascript" ></script>
 @endsection
 
 @section('content')
-    <div class="main-wrapper wizard-box">
+    <div class="main-wrapper wizard-box main-wrapper-bg-color" >
         <div class="d-table w-100">
             <div class="d-table-cell">
                 <div class="d-none d-sm-block d-md-block">

@@ -1,5 +1,7 @@
 @extends('energybill.layouts.base')
-
+@section('style')
+<link href="{{ asset('_energybill/css/style.css') }}" rel="stylesheet">
+@endsection
 @section('content')
 {{-- @include('energybill.partials.header_common') --}}
     <div id="loading" style="display: none;">
@@ -147,7 +149,7 @@
                                             </form>
                                         </div>
                                         <div class="wizard-back-btn text-center mt-4">
-                                            <span class="prev-step-2 text-dark" data-prev-step="2"><i class="fas fa-chevron-left"></i> Back</span>
+                                            <span class="prev-step-2 text-dark" data-prev-step="2"> Back</span>
                                         </div>
                                     </div>
                                     <div class="tab-pane tab-pane" role="tabpanel" id="step4">
@@ -195,7 +197,7 @@
                                         </div>
                                         <div class="wizard-back-btn text-center mt-4">
                                             <div class="invalid-feedback error_step_4 text-white"></div>
-                                            <span class="prev-step-3 text-dark" data-prev-step="3"><i class="fas fa-chevron-left"></i> Back</span>
+                                            <span class="prev-step-3 text-dark" data-prev-step="3"> Back</span>
                                         </div>
                                     </div>
                                     <div class="tab-pane tab-pane" role="tabpanel" id="step5">
@@ -223,7 +225,7 @@
                                             </div>
                                         </div>
                                         <div class="wizard-back-btn text-center mt-4 text-dark">
-                                            <span class="prev-step-4" data-prev-step="4"><i class="fas fa-chevron-left"></i> Back</span>
+                                            <span class="prev-step-4" data-prev-step="4"> Back</span>
                                         </div>
                                     </div>
                                     <div class="tab-pane tab-pane" role="tabpanel" id="step6">
@@ -260,7 +262,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="wizard-back-btn text-center mt-4 text-dark">
-                                                    <span class="prev-step-5" data-prev-step="5"><i class="fas fa-chevron-left"></i> Back</span>
+                                                    <span class="prev-step-5" data-prev-step="5"> Back</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -312,7 +314,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="wizard-back-btn text-center mt-4 text-dark">
-                                                        <span class="prev-step-6" data-prev-step="6"><i class="fas fa-chevron-left"></i> Back</span>
+                                                        <span class="prev-step-6" data-prev-step="6"> Back</span>
                                                     </div>
                                                 </div>
                                             </div>
