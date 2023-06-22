@@ -81,8 +81,12 @@ class BaseController extends Controller
         return view($route_name.'.pages.privacy');
     }
 
-    public function thankyou($route_name = 'energybill') {
+    public function quotereport($route_name = 'energybill') {
         return view($route_name.'.pages.quote-report');
+    }
+
+    public function thankyou($route_name = 'energybill') {
+        return view($route_name.'.pages.thank-you');
     }
 
     public function updateData(Request $request, $step) {

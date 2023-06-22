@@ -1,6 +1,7 @@
 @extends('lpv88.layouts.base')
 
 @section('content')
+@include('lpv88.partials.header_common')
     <section class="user-text page-paddings" style="height: 600px;">
         <div class="container">
             <div class="row">

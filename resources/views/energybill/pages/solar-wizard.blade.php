@@ -104,7 +104,7 @@
                                         <div class="wizard-back-btn text-center mt-4">
                                             <span class="error-msg billInp_v error_step_2" style="color: red; display: none;"></span><br>
                                             <a class="prev-step-1 text-dark" style="text-decoration: none; color: white;" href="#" data-prev-step="1">
-                                                <span><i class="fas fa-chevron-left text-dark"></i> Back</span>
+                                                <span>Back</span>
                                             </a>
                                         </div>
                                     </div>

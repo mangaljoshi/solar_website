@@ -31,7 +31,7 @@
                                                 <h3 class="mt-xs-0" style="color: #3c763d; font-weight:600;">Increase your property value with these home upgrades. Get your free quote from top local installers.</h3>
                                                 <div class="second-service mt-xs-30">
                                                     <p>Select needed project(s):</p>
-                                                    <form novalidate="novalidate" action="{{ route('energybill.second.service', ['route_name' => 'energybill']) }}" accept-charset="UTF-8" method="post">
+                                                    <form novalidate="novalidate" action="{{ route('energybill.second.service', ['route_name' => 'lpv88']) }}" accept-charset="UTF-8" method="post">
                                                         @csrf()
                                                         <div class="service">
                                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
