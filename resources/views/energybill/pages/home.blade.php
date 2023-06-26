@@ -24,7 +24,7 @@
                               <span class="city"> </span> </br> Residents Own Your Power By Going Solar
                            </h1>
                            <h1 class="fu7ycq-3 ieziWX">
-                              Enter basic home information to see if you quality!
+                              Enter basic home information to see if you qualify!
                            </h1>
                         </div>
                      </div>
