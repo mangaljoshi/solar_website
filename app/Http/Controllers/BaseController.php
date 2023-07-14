@@ -8,17 +8,15 @@ use Illuminate\Support\Facades\Session;
 
 class BaseController extends Controller
 {
-    // public $theme;
-
-    // public function __construct(){
-    //     $this->theme = 'energybill';
-    // }
 
     public function home(Request $request, $route_name = 'energybill') {
-        if ($request->get('lp_subid1') || $request->get('sub_id1')) {
+        if ($request->get('ef_transaction_id') || $request->get('sub1') || $request->get('aff_id') ||$request->get('lp_subid1') || $request->get('sub_id1')) {
             $userData = [
                 'lp_subid1' => $request->get('lp_subid1'),
                 'sub_id1' => $request->get('subid'),
+                'lp_subid1' => $request->get('lp_subid1'),
+                'ef_transaction_id' => $request->get('ef_transaction_id'),
+                'sub1' => $request->get('sub1'),
             ];
             Session::put('userData', $userData);
         }
