@@ -14,8 +14,8 @@ class BaseController extends Controller
             $userData = [
                 'lp_subid1' => $request->get('lp_subid1'),
                 'sub_id1' => $request->get('subid'),
-                'lp_subid1' => $request->get('lp_subid1'),
                 'ef_transaction_id' => $request->get('ef_transaction_id'),
+                'aff_id' => $request->get('aff_id'),
                 'sub1' => $request->get('sub1'),
             ];
             Session::put('userData', $userData);

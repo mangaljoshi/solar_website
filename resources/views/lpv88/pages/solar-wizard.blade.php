@@ -242,7 +242,6 @@
                                                             <div class="wizard__box">
                                                             <div class="page-title text-center mb-3">
                                                                 <h2>{{ __('solar.estimate_for')}}</h2>
-                                                                <p>{{ __('solar.privacy_text')}}</p>
                                                             </div>
                                                             <div class="wizard__main mx-680">
                                                                 <div class="row justify-content-center">

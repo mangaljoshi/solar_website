@@ -697,7 +697,7 @@ input[type="range"]::-moz-range-thumb {
     margin-right: 6px;
 }
 .wizard__main.mx-680 {
-    max-width: 680px;
+    /* max-width: 680px; */
     margin: 0px auto;
 }
 .wizard__main .form-group .form-control {
