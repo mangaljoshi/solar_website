@@ -217,7 +217,7 @@
                                                             <div class="row justify-content-center">
                                                             <div class="col-12">
                                                                 <div class="form-group">
-                                                                    <input type="email" oninput="handleInput(event)" class="form-control emailInp" placeholder="Email address" required>
+                                                                    <input type="email"  value="{{ Session::has('userData') && isset(Session::get('userData')['email']) ? Session::get('userData')['email'] : '' }}" oninput="handleInput(event)" class="form-control emailInp" placeholder="Email address" required>
                                                                     <!-- <span class="error-msg emailInp_vemail" style="color: white; display: none;">Please Enter a Valid Email Address</span> -->
                                                                     <div class="invalid-feedback error_step_5 text-white"></div>
                                                                 </div>
@@ -247,13 +247,13 @@
                                                                 <div class="row justify-content-center">
                                                                     <div class="col-sm-6 col-12">
                                                                         <div class="form-group">
-                                                                            <input type="text" oninput="handleInput(event)" class="form-control firstNameInp" placeholder="Enter first name" required>
+                                                                            <input type="text"  value="{{ Session::has('userData') && isset(Session::get('userData')['first_name']) ? Session::get('userData')['first_name'] : '' }}" oninput="handleInput(event)" class="form-control firstNameInp" placeholder="Enter first name" required>
                                                                             <!-- <span class="error-msg firstNameInp_errormsg" style="color: white; display: none;">Please Enter Your First Name</span> -->
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-sm-6 col-12">
                                                                         <div class="form-group">
-                                                                            <input type="text" oninput="handleInput(event)" class="form-control lastNameInp" placeholder="Enter last name" required>
+                                                                            <input type="text" oninput="handleInput(event)" class="form-control lastNameInp"  value="{{ Session::has('userData') && isset(Session::get('userData')['last_name']) ? Session::get('userData')['last_name'] : '' }}" placeholder="Enter last name" required>
                                                                         <!-- <span class="error-msg lastNameInp_errormsg" style="color: white; display: none;">Please Enter Your Last Name</span> -->
                                                                         </div>
                                                                     </div>

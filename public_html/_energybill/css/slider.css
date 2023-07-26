@@ -1,0 +1,22 @@
+#range {
+	background: linear-gradient(to right, #0160B0 0%, #0160B0 50%, #d9d3d3 50%, #d9d3d3 100%);
+	border: solid 1px #d9d3d3;
+	border-radius: 8px;
+	height: 13px;
+	width: 100%;
+	outline: none;
+	transition: background 450ms ease-in;
+	-webkit-appearance: none;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+	/* box-shadow: 3px 3px 3px #00AA00; */
+	border: 8px solid #0160B0;
+	height: 35px;
+	width: 35px;
+	border-radius: 23px;
+	background: #fff;
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -7px;
+  }

@@ -8,15 +8,22 @@ use Illuminate\Support\Facades\Session;
 
 class BaseController extends Controller
 {
-
+    // ?address=1851&city=&email=&fname=Thomas&lname=Haroldson&lptoken=33xrgjdq0g0fj6pky70041&state=&trafficsource=RevContent&vid=ef7KWBtmIDQhYaxBpqlWya6B9Ux&zip=
     public function home(Request $request, $route_name = 'energybill') {
-        if ($request->get('ef_transaction_id') || $request->get('sub1') || $request->get('aff_id') ||$request->get('lp_subid1') || $request->get('sub_id1')) {
+        if ($request->get('ef_transaction_id') || $request->get('sub1') || $request->get('aff_id') ||$request->get('lptoken') || $request->get('sub_id1') || $request->get('fname')|| $request->get('lname') || $request->get('email')|| $request->get('zip')|| $request->get('trafficsource')||$request->get('vid')) {
             $userData = [
-                'lp_subid1' => $request->get('lp_subid1'),
-                'sub_id1' => $request->get('subid'),
+                'sub_id1' => $request->get('subid1'),
                 'ef_transaction_id' => $request->get('ef_transaction_id'),
                 'aff_id' => $request->get('aff_id'),
                 'sub1' => $request->get('sub1'),
+                'first_name' => $request->get('fname'),
+                'last_name' => $request->get('lname'),
+                'zip_code' => $request->get('zip'),
+                'email' => $request->get('email'),
+                'source' => $request->get('trafficsource'),
+                'lp_subid1' => $request->get('lptoken'),
+                "vid" => $request->get('vid'),
+
             ];
             Session::put('userData', $userData);
         }
@@ -47,7 +54,6 @@ class BaseController extends Controller
         $userData["gclid"] = "";
 
         Session::put('userData', $userData);
-        // dd($route_name.'/solar-wizard');
         return redirect($route_name.'/solar-wizard');
     }
 
