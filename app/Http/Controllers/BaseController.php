@@ -41,6 +41,7 @@ class BaseController extends Controller
         $userData['lp_supplier_id'] = "25154";
         $userData['lp_subid2'] = "nat";
         $userData['lp_response'] = "JSON";
+        $userData['sub_id1'] = "int";
         $userData['zip_code'] = $request->input('zip_code');
         $userData['ip_address'] = $request->ip();
         $userData['homeowner'] = "Yes";
