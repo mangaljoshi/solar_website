@@ -534,7 +534,7 @@ input[type="range"]::-moz-range-thumb {
 
 .lead_text {
     margin-top: 1rem;
-    font-size: 12px;
+    font-size: 10px;
     line-height: 1.5;
     margin: 50px 20px 20px;
 }
