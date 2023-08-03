@@ -157,7 +157,7 @@
                                                             <h2>{{ __('solar.sunlight_heading')}}</h2>
                                                             <p>{{ __('solar.sunlight_text')}}</p>
                                                         </div>
-                                                        <div class="wizard__main mx-680">
+                                                        <div class="wizard__main mx-680 home-type">
                                                             <div class="row justify-content-center">
                                                             <div class="col-sm-6 col-6">
                                                                 <div class="sunlight-box text-center">

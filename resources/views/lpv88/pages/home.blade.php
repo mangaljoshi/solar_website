@@ -43,7 +43,7 @@
                                         {{ csrf_field() }}
                                         <div class="form-list d-flex justify-content-between align-items-center">
                                             <div class="form-group">
-                                                <input class="form-control" id="zipCode" type="text" size="5" maxlength="5" onkeypress="return isNumberKey(event)" name="zip_code"  value="{{ Session::has('userData') && isset(Session::get('userData')['zip_code']) ? Session::get('userData')['zip_code'] : '' }}" placeholder="{{ __('home.section_1.zip_code') }}">
+                                                <input class="form-control" id="zipCode" type="text" size="5" maxlength="5" onkeypress="return isNumberKey(event)" name="zip_code"  value="{{ Session::has('userData') && isset(Session::get('userData')['zip_code']) ? Session::get('userData')['zip_code'] : '' }}"   placeholder="{{ __('home.section_1.zip_code') }}">
                                             </div>
                                             
                                             <button type="submit" class="btn-main next-url">

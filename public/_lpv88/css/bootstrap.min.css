@@ -196,11 +196,11 @@ sup {
     top: -0.5em;
 }
 a {
-    color: #0d6efd;
+    color: green;
     text-decoration: underline;
 }
 a:hover {
-    color: #0a58ca;
+    color: yellow;
 }
 a:not([href]):not([class]),
 a:not([href]):not([class]):hover {
@@ -561,7 +561,7 @@ progress {
     .container-md,
     .container-sm,
     .container-xl {
-        max-width: 1140px;
+        max-width: 1060px;
     }
 }
 @media (min-width: 1400px) {
