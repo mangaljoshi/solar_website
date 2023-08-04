@@ -586,9 +586,25 @@ const con = getGeo();
   });
   
 
+let oneWordRegex = /^\S+$/;
+
   $(".step6").click(function(e){
     var first_name = $(".firstNameInp").val();
+    if(first_name.length < 2 || !oneWordRegex.test(first_name)){
+     if(first_name.length < 2 ) {
+      $(".error_step_6").text("First name must be at least 2 characters");
+    }else{
+      $(".error_step_6").text("First name should not contain spaces");
+    } 
+    $(".error_step_6").show();
+    return false;
+    }
     var last_name = $(".lastNameInp").val();
+    if(last_name.length < 2){
+      $(".error_step_6").text("last name must be at least 2 characters");
+      $(".error_step_6").show();
+      return false;
+    }
     updateData(6, {'first_name': first_name, 'last_name': last_name});
     progressBar(6);
   });
