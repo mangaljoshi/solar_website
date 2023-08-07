@@ -468,6 +468,7 @@ const con = getGeo();
       var number = formData.get('phone');
       number = number.replace(/\D+/g, "");
       updateData(7, {'phone': number, 'trusted_form_cert_url': trustedForm, 'jornaya_lead_id': jornaya});
+      $('#loading').show();
     })
   }
 
@@ -550,6 +551,7 @@ const con = getGeo();
     
     updateData(1, {'monthly_bill': monthly_bill});
     progressBar(1);
+    autoScroll()
   });
 
   $(".step3").click(function(e){
@@ -560,6 +562,7 @@ const con = getGeo();
     }
     updateData(3, {'address': enteredAddress, 'city': enteredCity, 'state': enteredState});
     progressBar(3);
+    autoScroll()
   });
   
   if (document.querySelector(".roofSunlight")) {
@@ -580,6 +583,7 @@ const con = getGeo();
         }
         updateData(4, {'roof_shade': roof_shade_type});
         progressBar(4);
+        autoScroll()
       });
     });
   }
@@ -588,6 +592,7 @@ const con = getGeo();
     var email = $(".emailInp").val();
     updateData(5, {'email': email});
     progressBar(5);
+    autoScroll()
   });
   
 
@@ -612,6 +617,7 @@ let oneWordRegex = /^\S+$/;
     }
     updateData(6, {'first_name': first_name, 'last_name': last_name});
     progressBar(6);
+    autoScroll()
   });
 
   $('*[class^="prev-step-"]').click(function(){
@@ -624,9 +630,9 @@ let oneWordRegex = /^\S+$/;
   });
 
   const updateData = (step, data) => {
-    if (step == 7) {
-      $('#loading').show();
-    }
+    // if (step == 7) {
+    //   $('#loading').show();
+    // }
     $.ajax({
       type:'POST',
       url: '/update-data/'+step,
@@ -636,8 +642,16 @@ let oneWordRegex = /^\S+$/;
       },
       success: function (response) {
         var stepNumber = Number(response.step);
+        var success = response.success;
+        console.log(stepNumber, response.message)
         if (stepNumber == 7) {
-          return window.location.href = "/lpv88/quote-report";
+          if(success == false){
+            $('#loading').hide();
+            $('.error_step_'+stepNumber).text(response.message);
+            $('.error_step_'+stepNumber).show();
+            return true;
+          }
+          // return window.location.href = "/lpv88/quote-report";
         }
         $('#step'+stepNumber).hide();
         stepNumber = stepNumber + 1;
@@ -654,6 +668,9 @@ let oneWordRegex = /^\S+$/;
       }
     });
   }
+
+ 
+
 
   const progressBar = (step) => {   
     var percent = (parseFloat(step) / 7) * 100;
@@ -729,18 +746,8 @@ let oneWordRegex = /^\S+$/;
           
       })
 
- let allowScrolling = false;
 
-    function keepPageOnTop(event) {
-      if (!allowScrolling) {
-        event.preventDefault();
+      function autoScroll() {
+        $('html,body').scrollTop(0);
       }
-    }
-
-    // Attach the keepPageOnTop function to the scroll event
-    window.addEventListener('scroll', keepPageOnTop);
-
-    // Allow scrolling when the user interacts with the page (e.g., clicks, scrolls, etc.)
-    window.addEventListener('click', function() {
-      allowScrolling = true;
-    });
+      

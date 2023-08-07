@@ -135,6 +135,14 @@ class BaseController extends Controller
                 'phone' => 'required|size:10'
             ]);
             $userData['phone'] = $request->get('phone');
+            $phoneResponse = $this->verifyPhone($userData['phone']);
+            if ($phoneResponse) {
+                return response()->json([
+                    'success' => false,
+                    'step' => $step,
+                    'message' => "Phone Number Is Invalid"
+                ]);
+            }
             $userData['trusted_form_cert_url'] = $request->get('trusted_form_cert_url');
             $userData['jornaya_lead_id'] = $request->get('jornaya_lead_id');
             Session::put('userData', $userData);
@@ -259,7 +267,7 @@ class BaseController extends Controller
         return view($route_name.'.pages.thank-you');
     }
 
-    public function verifyPhone(Request $request, $number) {
+    public function verifyPhone($number) {
         $apiKey = "5f2506a1-c62e-4600-8c3f-bbf61b2819ed";
         $url = "https://api.phonevalidator.com/api/v3/phonesearch?apikey=".$apiKey."&phone=".$number."&type=fake,basic";
         
@@ -276,7 +284,13 @@ class BaseController extends Controller
         }
         curl_close($ch);
         $responseData = json_decode($responseData);
-        return $responseData;
+        $FakeNumber =$responseData->PhoneBasic->FakeNumber;
+        if($FakeNumber == "YES"){
+            return true;
+        }else{
+            return false;
+        }
+        // return $responseData;
     }
     
 }
