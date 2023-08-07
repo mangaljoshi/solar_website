@@ -737,7 +737,7 @@ let oneWordRegex = /^\S+$/;
       
           if(zipVal != ""){
           setTimeout( function(){
-            window.location.href="https://smartconsumer.powersolarsavings.com/";
+            window.location.href="https://homeownersavings.powersolarsavings.com/";
         
         }, 100);
           }else{
