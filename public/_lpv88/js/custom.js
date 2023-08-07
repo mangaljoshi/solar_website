@@ -131,6 +131,7 @@ const con = getGeo();
     })
     .change();
 
+   
 
     //asdsad
     $(".nav-tabs > li a[title]").tooltip();
@@ -506,15 +507,19 @@ const con = getGeo();
   }
 
   function onlyNumberKey(evt) {      
+
     var currentInput = evt.target.value;
-    var ASCIICode = (evt.which) ? evt.which : evt.keyCode;
-    if (ASCIICode === 49 && currentInput.length <= 1) {
-      return false;
-    } else if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) {
-      return false;
+
+    currentInput = currentInput.replace(/[&\/\\#,_+()$~%.'":*?<>{}-]/g, '');
+    currentInput = currentInput.replace(/\s/g, '');
+    if (evt.key == '1' && currentInput.length < 1) {
+        evt.preventDefault()     
+        alert('Invalid US Number. Should not start with 1');
+        return true;
     }
     return true;
   }
+
 
   function isValidEmail(email) {
     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
@@ -723,3 +728,19 @@ let oneWordRegex = /^\S+$/;
           }
           
       })
+
+ let allowScrolling = false;
+
+    function keepPageOnTop(event) {
+      if (!allowScrolling) {
+        event.preventDefault();
+      }
+    }
+
+    // Attach the keepPageOnTop function to the scroll event
+    window.addEventListener('scroll', keepPageOnTop);
+
+    // Allow scrolling when the user interacts with the page (e.g., clicks, scrolls, etc.)
+    window.addEventListener('click', function() {
+      allowScrolling = true;
+    });
