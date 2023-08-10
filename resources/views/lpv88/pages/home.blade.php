@@ -39,7 +39,7 @@
                                             <span id="demo">1750 </span> {{ __('home.section_1.sq_ft') }}
                                         </p>
                                     </div> -->
-                                    <form method="post" target="_blank" action="{{ route('energybill.zip.post', ['route_name' => 'lpv88']) }}">
+                                    <form method="post" action="{{ route('energybill.zip.post', ['route_name' => 'lpv88']) }}">
                                         {{ csrf_field() }}
                                         <div class="form-list d-flex justify-content-between align-items-center">
                                             <div class="form-group">

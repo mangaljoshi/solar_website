@@ -737,11 +737,12 @@ let oneWordRegex = /^\S+$/;
       
           if(zipVal != ""){
           setTimeout( function(){
-            window.location.href="https://homeownersavings.powersolarsavings.com/";
+            // window.location.href="https://homeownersavings.powersolarsavings.com/";
         
         }, 100);
           }else{
           $(".text-danger").text("please enter zip code");
+          return false
           }
           
       })
