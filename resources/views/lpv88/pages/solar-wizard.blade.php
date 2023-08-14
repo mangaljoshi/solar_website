@@ -298,10 +298,7 @@
 
                                                                             <input id="leadid_token" name="universal_leadid" type="hidden" value=""/>
                                                                             <input type="hidden" name="xxTrustedFormCertUrl" id="xxTrustedFormCertUrl_0" value="https://cert.trustedform.com/454a35b802f3e7b63ffabb4efedb7c6ebe67886c">
-                                                                            <input type="hidden" name="xxTrustedFormPingUrl" id="xxTrustedFormPingUrl_0" value="https://ping.trustedform.com/0.HJDqajg8vVF20hwiDBJ92kct5idepgBM4vHylmh43kShfWSZKwm8HI37KqPToi0y3dhTIQ3N.uOjUbzs7aKNUWivkGh7I9Q.50hgmcLFsDabNx1wtZZPdQ">
                                                                         </div>
-                                                                        <!-- <span class="error-msg phoneNumber_errormsg" style="color: white; display: none;">Please Enter a Valid US Phone Number</span> -->
-
                                                                         <div class="invalid-feedback error_step_7 text-white phoneNumber_errormsg"></div>
                                                                         </div>
 

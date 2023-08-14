@@ -595,7 +595,7 @@ input[type="range"]::-moz-range-thumb {
     height: calc(100vh - 129px);
 }
 .wizard__box .page-title h2 {
-    font-size: 48px;
+    font-size: 41px;;
     font-weight: 600;
     color: #fff;
     margin-bottom: 15px;

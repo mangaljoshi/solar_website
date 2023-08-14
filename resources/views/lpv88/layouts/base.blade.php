@@ -4,10 +4,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="icon" type="image/x-icon" href="./solar/images/logo.png">
+        <link rel="icon" type="image/x-icon" href="{{asset('_lpv88/images/logo.png')}}">
 
         <title>{{ config('base.website_name') }}-Best Solar Panels For Solar & Renewable Energy</title>
         <link rel="icon" type="image/x-icon" href="./solar/images/logo.png">
+
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
