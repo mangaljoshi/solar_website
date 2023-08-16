@@ -693,3 +693,30 @@ const con = getGeo();
   $(".qualify-text").click(function(){
     $(".hidden-text").toggle(100);
   });
+
+  $(document).ready(function() {
+
+    var urlParams = new URLSearchParams(window.location.search);
+    var scrollToSection = urlParams.get('scroll_to');
+    
+    if (scrollToSection) {
+      var targetElement = $('#' + scrollToSection);
+      
+      if (targetElement.length) {
+        var targetOffset = targetElement.offset().top; // Change from offset().down to offset().top
+        $('html, body').animate(
+          {
+            scrollTop: targetOffset // Change scrollDown to scrollTop
+          },
+          1000
+        );
+      }
+    }
+  });
+  
+  
+  
+  
+  
+  
+  

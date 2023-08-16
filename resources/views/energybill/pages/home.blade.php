@@ -82,7 +82,7 @@
                   <a href="{{ route('contact', ['route_name' => 'energybill']) }}">Contact Us</a>
                   <a href="{{ route('privacy', ['route_name' => 'energybill']) }}">Privacy Policy</a>
                   <a href="{{ route('terms', ['route_name' => 'energybill']) }}" target="_blank">Terms of Use</a>
-                  <a href="{{ route('ccpa', ['route_name' => 'energybill']) }}" target="_blank">CCPA</a>
+                  <a href="{{ route('privacy', ['route_name' => 'energybill', 'scroll_to' => 'doNotSellMyInfo']) }}" id="next-url">CCPA</a>
                </footer>
             </div>
          </div>
