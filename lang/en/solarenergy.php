@@ -19,9 +19,9 @@ return [
     'final_step' => "You've Been Matched With Solar Experts In Your Area!",
     'savings_text_final' => 'Complete The Final Step To See Savings!',
 
-    'tcpa_text' => 'By clicking the "View My Savings" button, you authorizeFinal www.powersolarsavings.com and up to 4 solar partners to call you and send you pre-recorded messages and text messages at the number you entered above, using an autodialer, with offers about their products or services, even if your phone number is on any national or state "Do Not Call" list. Message and data rates may apply. Your consent here is not based on a condition of purchase. You agree to the Terms of Use and Privacy Page.',
+    'tcpa_text' => 'By clicking the "Get Free Quote" button, you authorizeFinal www.powersolarsavings.com and up to 4 solar partners to call you and send you pre-recorded messages and text messages at the number you entered above, using an autodialer, with offers about their products or services, even if your phone number is on any national or state "Do Not Call" list. Message and data rates may apply. Your consent here is not based on a condition of purchase. You agree to the Terms of Use and Privacy Page.',
     'tcpa_label' => [
-        '_1' => 'By clicking the "View My Savings" button, you authorize www.powersolarsavings.com and up to ',
+        '_1' => 'By clicking the "Get Free Quote" button, you authorize www.powersolarsavings.com and up to ',
         '_2' => '4 solar partners',
         '_3' => 'to call you and send you pre-recorded messages and text messages at the number you entered above, using an autodialer, with offers about their products or services, even if your phone number is on any national or state "Do Not Call" list. Message and data rates may apply. Your consent here is not based on a condition of purchase. You agree to the',
         '_4' => ' Terms of Use',
