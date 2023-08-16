@@ -295,20 +295,21 @@
                                                                 </div>
                                                             </div>
                                                             <div class="row justify-content-center">
-                                                                <div class="col-xs-12 col-md-6 col-sm-6 mt-2" style="margin-top: 80px;">
-                                                                    <div class="form-group picker text-center mb-4">
-                                                                        <button type="submit" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary btn-main" style="background-color: #e11c1c; font-weight: bold; margin-top: 0px;">Get Free Quote</button>
-                                                                    </div>
-                                                                </div>
-
                                                                 <div class="col-xs-12 col-md-10 col-md-10 mt-4 mb-4">
-                                                                    <label for="leadid_tcpa_disclosure" class="lead_text" style="margin: 85px auto 0px;">
+                                                                    <label for="leadid_tcpa_disclosure" class="lead_text"style="margin: 5px 116px 5px;text-align: justify;">
                                                                     {{ __('solarenergy.tcpa_label._1')}} <a href="{{ route('marketing', ['route_name' => 'energybill']) }}" target="_blank" tabindex="0" style="color:#7b7b7b;text-decoration:underline">{{ __('solarenergy.tcpa_label._2')}}</a> {{ __('solarenergy.tcpa_label._3')}} <a href="{{ route('terms', ['route_name' => 'energybill']) }}" target="_blank" tabindex="0" style="color:#7b7b7b;text-decoration:underline">{{ __('solarenergy.tcpa_label._4')}}</a>
                                                                     {{ __('solarenergy.tcpa_label._5')}} <a href="{{ route('privacy', ['route_name' => 'energybill']) }}" target="_blank" tabindex="0" style="color:#7b7b7b;text-decoration:underline">{{ __('solarenergy.tcpa_label._6')}}</a>
                                                                     </label>  
                                                                         
                                                                     <input type="hidden" id="leadid_tcpa_disclosure" name="tcpa" tabindex="0" value="{{ __('solarenergy.tcpa_text')}}">
                                                                 </div>
+                                                                <div class="col-xs-12 col-md-6 col-sm-6 mt-2" style="margin-top: 80px;">
+                                                                    <div class="form-group picker text-center mb-4">
+                                                                        <button type="submit" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary btn-main" style="background-color: #e11c1c; font-weight: bold; margin-top: 0px;">Get Free Quote</button>
+                                                                    </div>
+                                                                </div>
+
+                                                                
                                                             </div>
                                                         </div>
                                                     </div>
