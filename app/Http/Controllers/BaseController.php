@@ -86,6 +86,11 @@ class BaseController extends Controller
         return view($route_name.'.pages.privacy');
     }
 
+    public function ccpa($route_name = 'energybill') {
+        return view($route_name.'.pages.ccpa');
+    }
+
+
     public function quotereport($route_name = 'energybill') {
         return view($route_name.'.pages.quote-report');
     }

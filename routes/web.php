@@ -60,11 +60,13 @@ Route::get('/marketing-partners', [BaseController::class, 'marketingPartners'])-
 Route::get('/terms', [BaseController::class, 'terms'])->name('terms');
 Route::get('/contact', [BaseController::class, 'contact'])->name('contact');
 Route::get('/privacy', [BaseController::class, 'privacy'])->name('privacy');
+Route::get('/ccpa', [BaseController::class, 'ccpa'])->name('ccpa');
 Route::get('/quote-report', [BaseController::class, 'quotereport'])->name('quotereport');
 Route::post('/update-data/{step}', [BaseController::class, 'updateData'])->name('update.data');
 Route::post('/second-service', [BaseController::class, 'secondService'])->name('second.service');
 Route::get('/thank-you', [BaseController::class, 'thankYou'])->name('thank.you');
 Route::get('/verify-phone/{number}', [BaseController::class, 'verifyPhone'])->name('verify.phone');
+
 
 Route::group(['prefix'=>'{route_name}','as'=>'energybill.'], function(){
     Route::get('/', [BaseController::class, 'home'])->name('home');
@@ -74,7 +76,9 @@ Route::group(['prefix'=>'{route_name}','as'=>'energybill.'], function(){
     Route::get('/terms', [BaseController::class, 'terms'])->name('terms');
     Route::get('/contact', [BaseController::class, 'contact'])->name('contact');
     Route::get('/privacy', [BaseController::class, 'privacy'])->name('privacy');
+    Route::get('/ccpa', [BaseController::class, 'ccpa'])->name('ccpa');
     Route::get('/quote-report', [BaseController::class, 'quotereport'])->name('quotereport');
     Route::post('/second-service', [BaseController::class, 'secondService'])->name('second.service');
     Route::get('/thank-you', [BaseController::class, 'thankyou'])->name('thank.you');
+    
 });
