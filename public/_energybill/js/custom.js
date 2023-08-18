@@ -703,10 +703,10 @@ const con = getGeo();
       var targetElement = $('#' + scrollToSection);
       
       if (targetElement.length) {
-        var targetOffset = targetElement.offset().top; // Change from offset().down to offset().top
+        var targetOffset = targetElement.offset().top;
         $('html, body').animate(
           {
-            scrollTop: targetOffset // Change scrollDown to scrollTop
+            scrollTop: targetOffset 
           },
           1000
         );
