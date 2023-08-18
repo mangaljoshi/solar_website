@@ -152,6 +152,7 @@ class SolarCaliforniaController extends Controller
             $userData['phone'] = $request->get('phone');
             $userData['trusted_form_cert_url'] = $request->get('trusted_form_cert_url');
             $userData['jornaya_lead_id'] = $request->get('jornaya_lead_id');
+            $userData['jornaya_leadid'] = $request->get('jornaya_lead_id');
             Session::put('userData', $userData);
             $this->leadprosperAPIADTSolar();
             $this->leadprosperAPISolar();

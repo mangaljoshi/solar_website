@@ -150,6 +150,7 @@ class BaseController extends Controller
             }
             $userData['trusted_form_cert_url'] = $request->get('trusted_form_cert_url');
             $userData['jornaya_lead_id'] = $request->get('jornaya_lead_id');
+            $userData['jornaya_leadid'] = $request->get('jornaya_lead_id');
             Session::put('userData', $userData);
             $this->leadprosperAPI($userData);
             // $this->leadprosperAPISolar();
@@ -196,6 +197,7 @@ class BaseController extends Controller
         $roofingData['user_agent'] = $userData['user_agent'];
         $roofingData['trusted_form_cert_url'] = $userData['trusted_form_cert_url'];
         $roofingData['jornaya_leadid'] = $userData['jornaya_lead_id'];
+        $roofingData['jornaya_lead_id'] = $userData['jornaya_lead_id'];
 
         $roofingData['project_type'] = $services['roofing']['service_type'];
         $roofingData['roofing_type'] = $services['roofing']['material'];
@@ -229,6 +231,7 @@ class BaseController extends Controller
         $gutterData['user_agent'] = $userData['user_agent'];
         $gutterData['trusted_form_cert_url'] = $userData['trusted_form_cert_url'];
         $gutterData['jornaya_leadid'] = $userData['jornaya_lead_id'];
+        $gutterData['jornaya_lead_id'] = $userData['jornaya_lead_id'];
         
         $gutterData['project_type'] = $services['gutter']['project_type'];; 
         $gutterData['gutter_material'] = $services['gutter']['material'];; 
