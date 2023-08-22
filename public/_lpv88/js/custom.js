@@ -651,7 +651,7 @@ let oneWordRegex = /^\S+$/;
             $('.error_step_'+stepNumber).show();
             return true;
           }
-          // return window.location.href = "/lpv88/quote-report";
+          return window.location.href = "/lpv88/quote-report";
         }
         $('#step'+stepNumber).hide();
         stepNumber = stepNumber + 1;
