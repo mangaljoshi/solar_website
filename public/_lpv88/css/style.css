@@ -1255,3 +1255,9 @@ input[type="range"]::-moz-range-thumb {
         margin: 0 30px;
     }
 }
+
+@media(min-width:768px){
+    .lead_text{
+        margin-left: 100px;
+    }
+}
