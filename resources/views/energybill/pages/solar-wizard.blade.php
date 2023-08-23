@@ -296,7 +296,7 @@
                                                             </div>
                                                             <div class="row justify-content-center">
                                                                 <div class="col-xs-12 col-md-10 col-md-10 mt-4 mb-4">
-                                                                    <label for="leadid_tcpa_disclosure" class="lead_text" style="max-width: 356px;text-align: justify;">
+                                                                    <label for="leadid_tcpa_disclosure" class="lead_text" style="max-width: 339px;text-align: justify;margin: 0 114px;">
                                                                     {{ __('solarenergy.tcpa_label._1')}} <a href="{{ route('marketing', ['route_name' => 'energybill']) }}" target="_blank" tabindex="0" style="color:#7b7b7b;text-decoration:underline">{{ __('solarenergy.tcpa_label._2')}}</a> {{ __('solarenergy.tcpa_label._3')}} <a href="{{ route('terms', ['route_name' => 'energybill']) }}" target="_blank" tabindex="0" style="color:#7b7b7b;text-decoration:underline">{{ __('solarenergy.tcpa_label._4')}}</a>
                                                                     {{ __('solarenergy.tcpa_label._5')}} <a href="{{ route('privacy', ['route_name' => 'energybill']) }}" target="_blank" tabindex="0" style="color:#7b7b7b;text-decoration:underline">{{ __('solarenergy.tcpa_label._6')}}</a>
                                                                     </label>  

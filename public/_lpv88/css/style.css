@@ -662,7 +662,7 @@ input[type="range"]::-moz-range-thumb {
     margin-left: auto;
     margin-right: auto;
     font-family: 'Noto Sans SC', sans-serif;
-    font-size: 24px;
+    font-size: 22px;
     color: #fff;
     line-height: 1.6;
 }
@@ -1259,5 +1259,7 @@ input[type="range"]::-moz-range-thumb {
 @media(min-width:768px){
     .lead_text{
         margin-left: 100px;
+        margin-right: 100px;
+        text-align: justify;
     }
 }
