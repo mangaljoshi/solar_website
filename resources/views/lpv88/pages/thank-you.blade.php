@@ -2,13 +2,24 @@
 
 @section('content')
 @include('lpv88.partials.header_common')
-    <section class="user-text page-paddings" style="height: 600px;">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12" style="margin-top: 40px;">
-                    <h3>Thank you! We received your request. Your local pro will call you for your project.</h3>
-                </div>
+<div class="container">
+    <div class="row test-center thank-text-center">
+        <div class="col-md-12" style="margin-top: 20px;">
+            
+            <div class="test-center  thank-text-center">
+            <h3>Thank you, we are on it!</h3>
+            <h3 class="bold-11" style="color:#2d830b; font-weight:bold;"> Special Promotion for <span class="city"></span> Window Replacement! </h3>
             </div>
+            
         </div>
-    </section>
+        <div class="col-md-12 thank-you-banner" style="text-align:center">
+             <a href="https://qualitywindowsdirect.com/rbaw40a-200.aspx?eccmp=7025&eckwd=&ecadid=native&Offerid=">
+            <img src="{{asset('_lpv88/images/thank-you-banner.jpg')}}" alt="thank-you-banner">
+        
+        </a>
+        </div> 
+
+       
+    </div>
+</div>
 @endsection 

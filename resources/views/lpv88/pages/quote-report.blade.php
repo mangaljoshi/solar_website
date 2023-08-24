@@ -24,6 +24,27 @@
                                     <h2 style="font-size: 22px !important;font-weight:400">You’ve been Pre-Qualified for $0 Out of Pocket Solar with Estimated Savings of <span style="color:#FB7306">$64,741*</span></h2>
                                     <p class="mobile-text" style="font-size: 14px;">*based on a special offer from a solar provider. Expect a phone call from a solar expert to claim the offer and your spot in the line.</p>
                                 </div>
+
+                                <div class="row test-center thank-text-center">
+                                    <div class="col-md-12" style="margin-top: 20px;">
+                                        
+                                        {{-- <div class="test-center  thank-text-center">
+                                        <h3>Thank you, we are on it!</h3>
+                                        <h3 class="bold-11" style="color:#2d830b; font-weight:bold;"> Special Promotion for <span class="city"></span> Window Replacement! </h3>
+                                        </div> --}}
+                                        
+                                    </div>
+                                    <div class="col-md-12 thank-you-banner-2" style="text-align:center">
+                                         <a href="https://qualitywindowsdirect.com/rbaw40a-200.aspx?eccmp=7025&eckwd=&ecadid=native&Offerid=" target="_balnk">
+                                        <img src="{{asset('_lpv88/images/banner1.jpg')}}" style="border-radius: 20px" alt="thank-you-banner">
+                                    
+                                    </a>
+                                    </div> 
+                            
+                                   
+                                </div>
+
+
                                 <div class="wizard__main">
                                     <div class="row justify-content-center">
                                     <div class="col-xs-12 col-sm-12 col-md-12">
@@ -128,6 +149,13 @@
                                                                 <div class="col-xs-12 col-md-6 col-md-offset-3">
                                                                     <button type="submit" data-disable-with="Please Wait <i class='linearicon linearicon-ellipsis'></i>" class="btn btn-warning btn-block btn-lg">Get Quotes</button>
                                                                 </div>
+                                                                <div style="display: grid; place-items:center"> 
+                                                                    <a href="{{route('energybill.thank.you', ['route_name' => 'lpv88'])}}"
+                                                                    className="mt-30" style="font-size: 18px; margin-top:20px">
+                                                                    No Thanks
+                                                                </a> 
+                                                                </div>
+                                                                
                                                             </div>
                                                         </div>
                                                     </form>
@@ -135,7 +163,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-12">
+                                    {{-- <div class="col-sm-12">
                                         <div class="yell-wrapper box-2">
 
                                             <div class="yell">
@@ -165,7 +193,7 @@
                                             </div>
 
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     </div>
                                 </div>
                             </div>
