@@ -125,7 +125,7 @@ class BaseController extends Controller
             $userData['roof_shade'] = $request->get('roof_shade');
         } else if ($step == 5) {
             $this->validate($request, [
-                'email' => 'required|email'
+                'email' => 'required|email|regex:/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/'
             ]);
             $userData['email'] = $request->get('email');
         } else if ($step == 6) {
