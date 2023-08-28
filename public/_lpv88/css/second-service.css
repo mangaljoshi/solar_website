@@ -12808,3 +12808,8 @@ footer a {
 body.no-scroll {
     overflow-y: hidden;
 }
+
+.thank-you-banner-2{
+    margin-bottom: 16px;
+    margin-top: 0px;
+}
