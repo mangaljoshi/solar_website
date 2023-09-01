@@ -2,8 +2,16 @@
 
 @section('content')
 @include('lpv88.partials.header_common')
-<div class="container">
-    <div class="row test-center thank-text-center">
+
+<div class="container" style="height: 100vh">
+    <div class="row test-center">
+        <div class="col-md-12 thank-you-banner2" style="text-align:center">
+            <img src="{{asset('_lpv88/images/thank-you-banner.png')}}" alt="thank-you-banner">
+        </div>    
+    </div>
+</div>
+{{-- <div class="container"> --}}
+    {{-- <div class="row test-center thank-text-center">
         <div class="col-md-12" style="margin-top: 20px;">
             
             <div class="test-center  thank-text-center">
@@ -20,6 +28,6 @@
         </div> 
 
        
-    </div>
-</div>
+    </div> --}}
+{{-- </div> --}}
 @endsection 

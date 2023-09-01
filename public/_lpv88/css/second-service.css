@@ -12811,5 +12811,77 @@ body.no-scroll {
 
 .thank-you-banner-2{
     margin-bottom: 16px;
-    margin-top: 0px;
+    margin-top: 100px;
 }
+
+/* .thank-you-banner{
+    margin-top: 10px;
+    margin-bottom: 40px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    max-width: 627px;
+   
+  } */
+
+  .thank-you-banner2{
+    margin-top: 100px;
+    margin-bottom: 40px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    max-width: 627px;
+   
+  }
+  /* .thank-you-banner img{
+   width: 100%;
+   padding-top: 14px;
+   padding-bottom: 14px;
+   max-height:580px;
+   /* max-width:100%; */
+  /* } */ 
+
+  .thank-you-banner2 img{
+    width: 100%;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    max-height:580px;
+    /* max-width:100%; */
+   }
+
+  .test-center{
+    display: grid;
+    place-items: center;
+  }
+
+  @media (max-width:768px) {
+    .thank-you-banner-2{
+        /* margin-top: 30px !important; */
+        margin: 10px 11px !important;
+      }
+}
+
+.custom-swal {
+    width: 60vw;
+    /* height: 60vh; */
+    display: grid;
+    place-items: center;
+  }
+  
+  .swal2-styled.swal2-confirm {
+      border: 0;
+      border-radius: 0.25em;
+      background: initial;
+      background-color: #2d830b;
+      color: #fff;
+      font-size: 1em;
+      width: 100px;
+      height: 30px;
+  }
+  
+  .swal2-styled.swal2-cancel {
+      border: 0;
+      border-radius: 0.25em;
+      background: initial;
+      background-color: #f1691b;
+      color: #fff;
+      font-size: 1em;
+      width: 100px;
+      height: 30px;
+  }

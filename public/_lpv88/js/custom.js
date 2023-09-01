@@ -669,7 +669,38 @@ let oneWordRegex = /^\S+$/;
     });
   }
 
- 
+  var popUp = document.getElementById('pop-up')
+
+  popUp.addEventListener('click', () => {
+    Swal.fire({
+      html: `
+        <div class="" style="display: grid; place-items: center;>
+          <div class="row text-center" style="display: grid; place-items: center;>
+            <div class="col-md-12" style="margin-top: 20px;">
+              <div class="test-center">
+                <h3>Thank you, we are on it!</h3>
+                <h3 class="bold-11">Special Promotion for <span class="city"></span> Window Replacement!</h3>
+              </div>
+            </div>
+            <div class="col-md-12 thank-you-banner" style="text-align: center;">
+              <a href="https://qualitywindowsdirect.com/rbaw40a-200.aspx?eccmp=7025&eckwd=&ecadid=native&Offerid=">
+                <img src="https://homeownersavings.roofingquoteadvisors.com/images/thank-you-banner.jpg" alt="thank-you-banner">
+              </a>
+            </div>
+          </div>
+        </div>
+      `,
+      showCancelButton: true,
+      confirmButtonText: 'OK',
+      cancelButtonText: 'Cancel',
+      customClass: 'custom-swal', 
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.open('https://qualitywindowsdirect.com/rbaw40a-200.aspx?eccmp=7025&eckwd=&ecadid=native&Offerid=', '_blank');
+      }
+    });
+    
+  })
 
 
   const progressBar = (step) => {   
