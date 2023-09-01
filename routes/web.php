@@ -80,5 +80,6 @@ Route::group(['prefix'=>'{route_name}','as'=>'energybill.'], function(){
     Route::get('/quote-report', [BaseController::class, 'quotereport'])->name('quotereport');
     Route::post('/second-service', [BaseController::class, 'secondService'])->name('second.service');
     Route::get('/thank-you', [BaseController::class, 'thankyou'])->name('thank.you');
+    Route::get('/thankyou-service', [BaseController::class, 'thankyouService'])->name('thank.you.service');
     
 });

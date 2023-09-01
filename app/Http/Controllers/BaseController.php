@@ -99,6 +99,10 @@ class BaseController extends Controller
         return view($route_name.'.pages.thank-you');
     }
 
+     public function thankyouService($route_name = 'energybill') {
+        return view($route_name.'.pages.thankyou-service');
+    }
+
     public function updateData(Request $request, $step) {
         $userData = Session::get('userData');
         if ($step == 1) {
@@ -166,7 +170,7 @@ class BaseController extends Controller
     public function secondService(Request $request, $route_name = 'energybill') {
         $userData = Session::get('userData');
         if(!$request->has('services')) {
-            return redirect($route_name.'/thank-you');
+            return redirect($route_name.'/thankyou-service');
         }
 
         if (array_key_exists("roofing", $request->get('services'))) {
@@ -177,7 +181,7 @@ class BaseController extends Controller
             $this->gutterData($userData, $request->get('services'));
         } 
 
-        return redirect($route_name.'/thank-you');
+        return redirect($route_name.'/thank-you-service');
     }
 
     public function roofingData($userData, $services) {

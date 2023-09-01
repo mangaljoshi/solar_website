@@ -150,12 +150,12 @@
                                                                     <button type="submit" data-disable-with="Please Wait <i class='linearicon linearicon-ellipsis'></i>" class="btn btn-warning btn-block btn-lg">Get Quotes</button>
                                                                 </div>
                                                                 <div style="display: grid; place-items:center"> 
-                                                                    {{-- <a href="{{route('energybill.thank.you', ['route_name' => 'lpv88'])}}" --}}
-                                                                     <p
-                                                                    className="mt-30" id="pop-up" style="font-size: 18px; margin-top:20px; cursor: pointer;">
+                                                                    <a href="{{route('energybill.thank.you.service', ['route_name' => 'lpv88'])}}"
+                                                                     {{-- <p --}}
+                                                                    className="mt-30" style="font-size: 18px; margin-top:20px; cursor: pointer;">
                                                                     No Thanks
-                                                                    </p>
-                                                                {{-- </a>  --}}
+                                                                    {{-- </p> --}}
+                                                                </a> 
                                                                 </div>
                                                                 
                                                             </div>
