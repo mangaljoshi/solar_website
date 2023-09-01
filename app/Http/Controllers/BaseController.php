@@ -181,7 +181,7 @@ class BaseController extends Controller
             $this->gutterData($userData, $request->get('services'));
         } 
 
-        return redirect($route_name.'/thank-you-service');
+        return redirect($route_name.'/thankyou-service');
     }
 
     public function roofingData($userData, $services) {
