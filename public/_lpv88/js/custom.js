@@ -669,38 +669,38 @@ let oneWordRegex = /^\S+$/;
     });
   }
 
-  var popUp = document.getElementById('pop-up')
+  // var popUp = document.getElementById('pop-up')
 
-  popUp.addEventListener('click', () => {
-    Swal.fire({
-      html: `
-        <div class="" style="display: grid; place-items: center;>
-          <div class="row text-center" style="display: grid; place-items: center;>
-            <div class="col-md-12" style="margin-top: 20px;">
-              <div class="test-center">
-                <h3>Thank you, we are on it!</h3>
-                <h3 class="bold-11">Special Promotion for <span class="city"></span> Window Replacement!</h3>
-              </div>
-            </div>
-            <div class="col-md-12 thank-you-banner" style="text-align: center;">
-              <a href="https://qualitywindowsdirect.com/rbaw40a-200.aspx?eccmp=7025&eckwd=&ecadid=native&Offerid=">
-                <img src="https://homeownersavings.roofingquoteadvisors.com/images/thank-you-banner.jpg" alt="thank-you-banner">
-              </a>
-            </div>
-          </div>
-        </div>
-      `,
-      showCancelButton: true,
-      confirmButtonText: 'OK',
-      cancelButtonText: 'Cancel',
-      customClass: 'custom-swal', 
-    }).then((result) => {
-      if (result.isConfirmed) {
-        window.open('https://qualitywindowsdirect.com/rbaw40a-200.aspx?eccmp=7025&eckwd=&ecadid=native&Offerid=', '_blank');
-      }
-    });
+  // popUp.addEventListener('click', () => {
+  //   Swal.fire({
+  //     html: `
+  //       <div class="" style="display: grid; place-items: center;>
+  //         <div class="row text-center" style="display: grid; place-items: center;>
+  //           <div class="col-md-12" style="margin-top: 20px;">
+  //             <div class="test-center">
+  //               <h3>Thank you, we are on it!</h3>
+  //               <h3 class="bold-11">Special Promotion for <span class="city"></span> Window Replacement!</h3>
+  //             </div>
+  //           </div>
+  //           <div class="col-md-12 thank-you-banner" style="text-align: center;">
+  //             <a href="https://qualitywindowsdirect.com/rbaw40a-200.aspx?eccmp=7025&eckwd=&ecadid=native&Offerid=">
+  //               <img src="https://homeownersavings.roofingquoteadvisors.com/images/thank-you-banner.jpg" alt="thank-you-banner">
+  //             </a>
+  //           </div>
+  //         </div>
+  //       </div>
+  //     `,
+  //     showCancelButton: true,
+  //     confirmButtonText: 'OK',
+  //     cancelButtonText: 'Cancel',
+  //     customClass: 'custom-swal', 
+  //   }).then((result) => {
+  //     if (result.isConfirmed) {
+  //       window.open('https://qualitywindowsdirect.com/rbaw40a-200.aspx?eccmp=7025&eckwd=&ecadid=native&Offerid=', '_blank');
+  //     }
+  //   });
     
-  })
+  // })
 
 
   const progressBar = (step) => {   
@@ -782,4 +782,25 @@ let oneWordRegex = /^\S+$/;
       function autoScroll() {
         $('html,body').scrollTop(0);
       }
+
+
+      var queryString = window.location.search;
+
+      // Parse the query string into an object
+      var queryParams = {};
+      if (queryString) {
+          queryString = queryString.substring(1); // Remove the leading '?'
+          var pairs = queryString.split('&');
+          pairs.forEach(function(pair) {
+              var parts = pair.split('=');
+              var key = decodeURIComponent(parts[0]);
+              var value = decodeURIComponent(parts[1] || '');
+              console.log(value)
+              queryParams[key] = value;
+          });
+      }
       
+      console.log(queryParams.headline);
+      var mainHeanding = queryParams.headline.replace(/"/g, '');
+      
+       $('.main-heading').text(mainHeanding);

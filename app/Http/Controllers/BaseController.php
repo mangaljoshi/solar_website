@@ -167,6 +167,87 @@ class BaseController extends Controller
         return response()->json(['success' => true, 'step' => $step]);
     }
 
+    public function updateRoofDataLPV23(Request $request, $step){
+
+        $userData = Session::get('userData');
+        // dd($userData);
+
+       if ($step == 1) {
+            $this->validate($request, [
+                'zip_code' => 'required|digits:5|numeric'
+            ]);
+            $userData['zip_code'] = $request->get('zip_code');
+        } else if ($step == 2) {
+            $this->validate($request, [
+                'project_type' => 'required'
+            ]);
+            $userData['project_type'] = $request->get('project_type');
+        }  else if ($step == 3) {
+            $this->validate($request, [
+                'time_frame' => 'required'
+            ]);
+            $userData['time_frame'] = $request->get('time_frame');
+        } else if ($step == 4) {
+            $this->validate($request, [
+                'home_owner' => 'required'
+            ]);
+            $userData['home_owner'] = $request->get('home_owner');
+        }  else if ($step == 5) {
+            $this->validate($request, [
+                'first_name' => 'required|regex:/^[A-Za-z]+$/'
+            ]);
+            $userData['first_name'] = $request->get('first_name');
+        } else if ($step == 6) {
+            $this->validate($request, [
+                'last_name' => 'required|regex:/^[A-Za-z]+$/'
+            ]);
+            $userData['last_name'] = $request->get('last_name');
+        }else if ($step == 7) {
+            $this->validate($request, [
+                'address' => 'required',
+            ]);
+            $userData['address'] = $request->get('address');
+            $userData['city'] = $request->get('city');
+            $userData['state'] = $request->get('state');
+        } else if ($step == 8) {
+            $this->validate($request, [
+                'email' => 'required|email'
+            ]);
+            $userData['email'] = $request->get('email');
+        }else if ($step == 9) {
+            $this->validate($request, [
+                'phone' => 'required|digits:10'
+
+            ]);
+            $userData['phone'] = $request->get('phone');
+            $phoneResponse = $this->verifyPhone( $userData['phone'] );
+            // dd($phoneResponse); 
+            if ($phoneResponse) {
+                return response()->json([
+                    'success' => false,
+                    'step' => $step,
+                    'message' => "Phone Number Is Invalid"
+                ]);
+            }
+            $userData['trusted_form_cert_url'] = $request->get('trusted_form_cert_url');
+            $userData['jornaya_leadid'] = $request->get('jornaya_leadid');
+            $userData['jornaya_lead_id'] = $request->get('jornaya_leadid');
+            // dd($userData);
+            Session::put('userData', $userData);
+            $userData = Session::get('userData');
+            $this->leadprosperAPI($userData);
+
+            //Session::forget('userData');
+            return response()->json(['success' => true, 'step' => $step]);
+        } else {
+            return response()->json(['success' => false]);
+        }
+
+        Session::put('userData', $userData);
+
+        return response()->json(['success' => true, 'step' => $step]);
+    }
+
     public function secondService(Request $request, $route_name = 'energybill') {
         $userData = Session::get('userData');
         if(!$request->has('services')) {
