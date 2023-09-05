@@ -34,7 +34,7 @@
           <div class="item indicator-4">Amazing</div>
           <div class="item indicator-5">Massive</div>
         </div>
-        <div class="status">Estimated Savings: <span>Great</span></div>
+        <div class="status">Estimated Savings: <span class="status">Great</span></div>
       </div>
     </header>
     <header id="header-with-id" style="display: none">
@@ -88,37 +88,32 @@
   </div>
 </form>
 
-
-{{-- @include('lpv23.partials.footers.mainFooter')
-
-@endsection
-
 @section('script')
-<!-- TrustedForm -->
-<script type="text/javascript">
-  (function() {
+    <script id="LeadiDscript" type="text/javascript">
+         (function() {
+         var s = document.createElement('script');
+         s.id = 'LeadiDscript_campaign';
+         s.type = 'text/javascript';
+         s.async = true;
+         s.src = '//create.lidstatic.com/campaign/093ae24d-3c6c-1874-691e-bbfd5eac0c88.js?snippet_version=2';
+         var LeadiDscript = document.getElementById('LeadiDscript');
+         LeadiDscript.parentNode.insertBefore(s, LeadiDscript);
+         })();
+    </script>
+    <noscript>
+        <img src='//create.leadid.com/noscript.gif?lac=997AF13F-C149-B106-54A8-4676CF210163&lck=093ae24d-3c6c-1874-691e-bbfd5eac0c88&snippet_version=2' />
+    </noscript>
+    <!-- TrustedForm -->
+    <script type="text/javascript">
+        (function() {
         var tf = document.createElement('script');
         tf.type = 'text/javascript'; tf.async = true;
         tf.src = ("https:" == document.location.protocol ? 'https' : 'http') + "://api.trustedform.com/trustedform.js?field=xxTrustedFormCertUrl&ping_field=xxTrustedFormPingUrl&l=" + new Date().getTime() + Math.random();
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s);
         })();
-</script>
-<noscript>
-  <img src="https://api.trustedform.com/ns.gif" />
-</noscript>
-<!-- End TrustedForm -->
-
-<script id="LeadiDscript" type="text/javascript">
-  (function() {
-        var s = document.createElement('script');
-        s.id = 'LeadiDscript_campaign';
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = '//create.lidstatic.com/campaign/71619c25-d83b-d0bc-9f63-d233e634621e.js?snippet_version=2';
-        var LeadiDscript = document.getElementById('LeadiDscript');
-        LeadiDscript.parentNode.insertBefore(s, LeadiDscript);
-        })();
-</script>
-<noscript><img
-    src='//create.leadid.com/noscript.gif?lac=997AF13F-C149-B106-54A8-4676CF210163&lck=71619c25-d83b-d0bc-9f63-d233e634621e&snippet_version=2' /></noscript>
-@endsection --}}
+    </script>
+    <noscript>
+        <img src="https://api.trustedform.com/ns.gif" />
+    </noscript>
+    <!-- End TrustedForm -->
+@endsection

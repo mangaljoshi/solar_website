@@ -27,6 +27,29 @@ class BaseController extends Controller
             ];
             Session::put('userData', $userData);
         }
+
+        if($route_name == 'lpv23'){
+            $userData = Session::get('userData');
+            $userData['lp_campaign_id'] = "12325";
+            $userData['lp_key'] = "wo2jugw6bkwqy";
+            $userData['lp_supplier_id'] = "25154";
+            $userData['lp_subid2'] = "nat";
+            $userData['lp_response'] = "JSON";
+            $userData['sub_id1'] = "int";
+            $userData['ip_address'] = $request->ip();
+            $userData['homeowner'] = "Yes";
+            $userData['landing_page'] = $_SERVER['SERVER_NAME'];
+            $userData['user_agent'] = $request->header('User-Agent');
+            $userData['tcpa_text'] = config('base.tcpa_text');
+            $userData['time_frame'] = "Immediate";
+            $userData["house_size"] = "2-3 Bedroom";
+            $userData["credit_rating"] = "Good";
+            $userData["type_of_home"] = "Single Family";
+            $userData["gclid"] = "";
+    
+            Session::put('userData', $userData);
+            return view($route_name.'.pages.home');
+        }
         // dd($route_name.'.pages.home');
         return view($route_name.'.pages.home');
     }
@@ -92,7 +115,12 @@ class BaseController extends Controller
 
 
     public function quotereport($route_name = 'energybill') {
-        return view($route_name.'.pages.quote-report');
+        if($route_name == "lpv23"){
+            return view($route_name.'.pages.second-service');
+        }else{
+             return view($route_name.'.pages.quote-report');
+        }
+       
     }
 
     public function thankyou($route_name = 'energybill') {
@@ -167,61 +195,58 @@ class BaseController extends Controller
         return response()->json(['success' => true, 'step' => $step]);
     }
 
-    public function updateRoofDataLPV23(Request $request, $step){
+    public function updateSolarDataLPV23(Request $request, $step){
 
         $userData = Session::get('userData');
-        // dd($userData);
-
        if ($step == 1) {
             $this->validate($request, [
-                'zip_code' => 'required|digits:5|numeric'
+                'zip_code' => 'required|digits:5|numeric',
+                'monthly_savings' => 'required'
             ]);
             $userData['zip_code'] = $request->get('zip_code');
+            $userData['monthly_savings'] = $request->get('monthly_savings');
         } else if ($step == 2) {
             $this->validate($request, [
-                'project_type' => 'required'
+                'monthly_bill' => 'required'
             ]);
-            $userData['project_type'] = $request->get('project_type');
+            $userData['monthly_bill'] = $request->get('monthly_bill');
         }  else if ($step == 3) {
             $this->validate($request, [
-                'time_frame' => 'required'
+                'utility_provider' => 'required'
             ]);
-            $userData['time_frame'] = $request->get('time_frame');
+            $userData['utility_provider'] = $request->get('utility_provider');
         } else if ($step == 4) {
-            $this->validate($request, [
-                'home_owner' => 'required'
-            ]);
-            $userData['home_owner'] = $request->get('home_owner');
-        }  else if ($step == 5) {
-            $this->validate($request, [
-                'first_name' => 'required|regex:/^[A-Za-z]+$/'
-            ]);
-            $userData['first_name'] = $request->get('first_name');
-        } else if ($step == 6) {
-            $this->validate($request, [
-                'last_name' => 'required|regex:/^[A-Za-z]+$/'
-            ]);
-            $userData['last_name'] = $request->get('last_name');
-        }else if ($step == 7) {
             $this->validate($request, [
                 'address' => 'required',
             ]);
             $userData['address'] = $request->get('address');
             $userData['city'] = $request->get('city');
             $userData['state'] = $request->get('state');
-        } else if ($step == 8) {
+        }else if ($step == 5) {
+            $this->validate($request, [
+                'roof_shade' => 'required'
+            ]);
+            $userData['roof_shade'] = $request->get('roof_shade');
+        }else if ($step == 6) {
             $this->validate($request, [
                 'email' => 'required|email'
             ]);
             $userData['email'] = $request->get('email');
-        }else if ($step == 9) {
+        }  else if ($step == 7) {
+            $this->validate($request, [
+                'first_name' => 'required|regex:/^[A-Za-z]+$/',
+                'last_name' => 'required|regex:/^[A-Za-z]+$/'
+
+            ]);
+            $userData['first_name'] = $request->get('first_name');
+            $userData['last_name'] = $request->get('last_name');
+        } else if ($step == 8) {
             $this->validate($request, [
                 'phone' => 'required|digits:10'
 
             ]);
             $userData['phone'] = $request->get('phone');
             $phoneResponse = $this->verifyPhone( $userData['phone'] );
-            // dd($phoneResponse); 
             if ($phoneResponse) {
                 return response()->json([
                     'success' => false,
@@ -230,8 +255,8 @@ class BaseController extends Controller
                 ]);
             }
             $userData['trusted_form_cert_url'] = $request->get('trusted_form_cert_url');
-            $userData['jornaya_leadid'] = $request->get('jornaya_leadid');
             $userData['jornaya_lead_id'] = $request->get('jornaya_leadid');
+            $userData['jornaya_leadid'] = $request->get('jornaya_leadid');
             // dd($userData);
             Session::put('userData', $userData);
             $userData = Session::get('userData');
@@ -250,6 +275,7 @@ class BaseController extends Controller
 
     public function secondService(Request $request, $route_name = 'energybill') {
         $userData = Session::get('userData');
+        // dd($userData);
         if(!$request->has('services')) {
             return redirect($route_name.'/thankyou-service');
         }
@@ -263,6 +289,7 @@ class BaseController extends Controller
         } 
 
         return redirect($route_name.'/thankyou-service');
+        // return redirect($route_name.'/quote-report')
     }
 
     public function roofingData($userData, $services) {

@@ -29,7 +29,7 @@ Route::get('/privacy', [BaseController::class, 'privacy'])->name('privacy');
 Route::get('/ccpa', [BaseController::class, 'ccpa'])->name('ccpa');
 Route::get('/quote-report', [BaseController::class, 'quotereport'])->name('quotereport');
 Route::post('/update-data/{step}', [BaseController::class, 'updateData'])->name('update.data');
-Route::post('/second-service', [BaseController::class, 'secondService'])->name('second.service');
+// Route::post('/second-service', [BaseController::class, 'secondService'])->name('second.service');
 Route::get('/thank-you', [BaseController::class, 'thankYou'])->name('thank.you');
 Route::get('/verify-phone/{number}', [BaseController::class, 'verifyPhone'])->name('verify.phone');
 Route::get('/second-service', [BaseController::class, 'secondService'])->name('secondService');
@@ -50,9 +50,9 @@ Route::group(['prefix'=>'{route_name}','as'=>'energybill.'], function(){
     Route::post('/second-service', [BaseController::class, 'secondService'])->name('second.service');
     Route::get('/thank-you', [BaseController::class, 'thankyou'])->name('thank.you');
     Route::get('/thankyou-service', [BaseController::class, 'thankyouService'])->name('thank.you.service');
-    Route::get('/second-service', [BaseController::class, 'secondService'])->name('secondService');
+    // Route::get('/second-service', [BaseController::class, 'secondService'])->name('secondService');
     Route::post('/upsell-data', [BaseController::class, 'secondServiceData'])->name('upsell.data');
     
 });
 
-Route::post('/update-data-lpv23/{step}', [BaseController::class, 'updateRoofDataLPV23'])->name('update.roof.lpv23');
+Route::post('/update-data-lpv23/{step}', [BaseController::class, 'updateSolarDataLPV23'])->name('update.roof.lpv23');

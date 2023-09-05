@@ -5,7 +5,7 @@
             alt="" /></a>
       </div>
       <div class="links">
-        <div class="copyright"></div>
+        <div class="copyright">{{ config('base.domain') }} © 2023 </div>
         <ul class="footer-menu">
           <li><a href="{{ route('contact') }}">Contact Us</a></li>
           <li><a href="{{ route('privacy') }}">Privacy Policy</a></li>

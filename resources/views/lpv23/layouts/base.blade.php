@@ -10,9 +10,9 @@
     <meta name="csrf-param" content="authenticity_token" />
     <meta name="csrf-token" content="Ed+9E73ZMivHhfJoqDc+rIf2gLkY+IOGCo3PvzVR0ZHmr2fPP4XoAcqCuIvDrHDwxAih34yo9KgKnwNfRTXHVw==" />
 
-    <link rel="icon" type="image/x-icon" href="{{ asset('_solar/images/fav.png') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('_lpv23/images/fav.png') }}">
 
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('_solar/images/fav.png') }}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('_lpv23/images/fav.png') }}" />
 
 
     <!-- Fonts -->

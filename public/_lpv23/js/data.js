@@ -104,62 +104,61 @@ function onlyNumberKey(evt) {
 
     let step = $(this).data("step");
     if (step == 1) {
+      let monthly_savings = $('input[name="range"]').val();
         let zip_code = $('input[name="zip_code"]').val();
-        console.log(zip_code);
-        updateData(step, { zip_code: zip_code });
+        updateData(step, { 
+                   zip_code: zip_code,
+                      monthly_savings:monthly_savings
+                    });
         autoScroll();
     } else if (step == 2) {
-        let project_type = $(this).data("project_type");
-        console.log(project_type);
-        updateData(step, { project_type: project_type });
+        let monthly_bill = $('input[name="monthly_bill"]').val();
+        updateData(step, { monthly_bill: monthly_bill });
         autoScroll();
     } else if (step == 3) {
-        let time_frame = $(this).data("time_frame");
-        console.log(time_frame);
-        updateData(step, { time_frame: time_frame });
+        let utility_provider = $(this).data("utility_provider");
+        updateData(step, { utility_provider: utility_provider });
         autoScroll();
     } else if (step == 4) {
-        let home_owner = $(this).data("home_owner");
-        console.log(home_owner);
-        updateData(step, { home_owner: home_owner });
+      updateData(step, {
+          address: enteredAddress,
+          city: enteredCity,
+          state: enteredState,
+      });
+      autoScroll();
+  }  else if (step == 5) {
+        let roof_shade =$('input[name="shade"]').val();
+        updateData(step, { roof_shade: roof_shade });
         autoScroll();
-    } else if (step == 5) {
+    }else if (step == 6) {
+      let email = $('input[name="email"]').val();
+      updateData(step, { email: email });
+      autoScroll();
+  } else if (step == 7) {
         let first_name = $('input[name="first_name"]').val();
+        let last_name = $('input[name="last_name"]').val();
           if(first_name.length < 2){
-            $(".step_error_5").text("First name must be at least 2 characters");
-            $(".step_error_5").show();
+            $(".step_error_7_1").text("First name must be at least 2 characters");
+            $(".step_error_7_1").show();
+            return false;
+          }
+          if(last_name.length < 2){
+            $(".step_error_7_2").text("last name must be at least 2 characters");
+            $(".step_error_7_2").show();
             return false;
           }
           if (!oneWordRegex.test(first_name)) {
-            $(".step_error_5").text("First name should not contain spaces");
-            $(".step_error_5").show();
+            $(".step_error_7_1").text("First name should not contain spaces");
+            $(".step_error_7_1").show();
             return false;
           } 
-        updateData(step, { first_name: first_name });
-        autoScroll();
-    } else if (step == 6) {
-        let last_name = $('input[name="last_name"]').val();
-        if(last_name.length < 2){
-          $(".step_error_6").text("last name must be at least 2 characters");
-          $(".step_error_6").show();
-          return false;
-        }
-        updateData(step, { last_name: last_name });
-        autoScroll();
-    } else if (step == 7) {
-        updateData(step, {
-            address: enteredAddress,
-            city: enteredCity,
-            state: enteredState,
-        });
+        updateData(step, { 
+             first_name: first_name,
+             last_name: last_name
+           });
         autoScroll();
     } else if (step == 8) {
-        let email = $('input[name="email"]').val();
-        console.log(email);
-        updateData(step, { email: email });
-        autoScroll();
-    } else if (step == 9) {
-        let number = $('input[name="phone"]').val();
+        let number = $('input[name="phone_number"]').val();
         phone_number = number.replace(/\D/g, "");
         var trustedForm = $("#xxTrustedFormCertUrl_0").val();
         var jornaya = $("#leadid_token").val();
@@ -184,15 +183,20 @@ function goNext(step) {
 
   if (step > 1) {
     $(".status-indicator").css("display", "block");
-      $(".title_VRTut_h2").show();
-      $(".title_VRTut_h3").show();
-      $(".FormSteps_progress__YPWkn").show();
-      $(".FormStep_tcpa__Y7q13").hide();
+    $( "#content-part").hide();
   } else {
-      $(".title_VRTut_h2").hide();
-      $(".title_VRTut_h3").hide();
-      $(".FormSteps_progress__YPWkn").hide();
-      $(".FormStep_tcpa__Y7q13").show();
+    $( "#content-part").show();
+  }
+  if(step==3){
+    $('.indicator').css("width", "220px");
+  }else if (step==4){
+    $('.indicator').css("width", "529px");
+    $('.status').text("Amazing");
+  }else if (step==5){
+    $('.indicator').css("width", "730px");
+    $('.status').text("Massive");
+  }else if (step==6){
+    $('.indicator').css("width", "800px");
   }
   $(".step-" + step).show("step_active");
   $(".form-error-message").hide();
@@ -209,17 +213,11 @@ $(".colback").on("click", function () {
   progressBar(step);
   step--;
 
-  if (step < 9) {
-    // console.log("this is for step 9", step)
-    $(".title_VRTut_h2").show();
-    $(".title_VRTut_h3").show();
-    $(".FormSteps_progress__YPWkn").show();
-    $(".FormStep_tcpa__Y7q13").hide();
+  if (step < 2) {
+    $(".status-indicator").css("display", "none");
+     $( ".content-part").css("display", "block");
 } else {
-    $(".title_VRTut_h2").hide();
-    $(".title_VRTut_h3").hide();
-    $(".FormSteps_progress__YPWkn").hide();
-    $(".FormStep_tcpa__Y7q13").show();
+
 }
   $(".step-" + step).show("step_active");
   $("#slidenum").html(step);
@@ -258,14 +256,14 @@ function updateData(step, data) {
               var stepNumber = Number(response.step);
               var success = response.success;
               
-               if (step == 9) {
+               if (step == 8) {
                 if(success== false){
                   $('#loading').hide();
                   $('.step_error_'+stepNumber).text(response.message);
                   $('.step_error_'+stepNumber).show();
                   return true;
                    }
-                   return window.location.href = "/lpv23/second-service";
+                   return window.location.href = "/lpv23/quote-report";
                 }
                 goNext(step);
                 responseResult = true;
@@ -322,7 +320,7 @@ const getGeo = async() => {
 
 $(document).ready(function() {
 
-const params = new URLSearchParams(window.location.search);
+// const params = new URLSearchParams(window.location.search);
 var queryString = window.location.search;
 
 // Parse the query string into an object
@@ -342,6 +340,7 @@ if (queryString) {
 console.log(queryParams.headline);
 var mainHeandingpre = queryParams.headline.replace(/"/g, '');
 var mainHeanding = mainHeandingpre + "?"
+console.log(mainHeanding);
  $('.main-heading').text(mainHeanding);
 
 });
@@ -355,9 +354,27 @@ setValue = ()=>{
     const
         newValue = Number( (range.value - range.min) * 100 / (range.max - range.min) ),
         newPosition = 16 - (newValue * 0.32);
-    tooltip.innerHTML = `<span>${range.value}</span>`;
+    output.innerHTML = `<span>${range.value}</span>`;
     tooltip.style.left = `calc(${newValue}% + (${newPosition}px))`;
     document.documentElement.style.setProperty("--range-progress", `calc(${newValue}% + (${newPosition}px))`);
 };
 document.addEventListener("DOMContentLoaded", setValue);
 range.addEventListener('input', setValue);
+
+
+
+// bill range slider//
+
+// -------------------RangeSlider-------------------
+const
+billRange = document.getElementById('bill-range'),
+setValuetwo = ()=>{
+    const
+        newValue = Number( (billRange.value - billRange.min) * 100 / (billRange.max - billRange.min) ),
+        newPosition = 16 - (newValue * 0.32);
+    outputtwo.innerHTML = `<span>${billRange.value}</span>`;
+    tooltip.style.left = `calc(${newValue}% + (${newPosition}px))`;
+    document.documentElement.style.setProperty("--billRange-progress", `calc(${newValue}% + (${newPosition}px))`);
+};
+document.addEventListener("DOMContentLoaded", setValuetwo);
+billRange.addEventListener('input', setValuetwo);
