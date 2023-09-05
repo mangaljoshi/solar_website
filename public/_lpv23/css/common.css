@@ -1094,8 +1094,9 @@ input:focus {
 }
 
 .wrapper .font-12 {
-    font-size: 12px;
+    font-size: 9px;
     line-height: normal;
+    text-align: justify;
 }
 
 
@@ -1472,7 +1473,7 @@ input:focus {
 }
 .wrapper .btn-block .back-link {
     position: absolute;
-    top: 50%;
+    /* top: 50%; */
     transform: translateY(-50%);
     left: 60px;
 }
@@ -1832,7 +1833,7 @@ input:focus {
         min-width: 120px;
     }
     .wrapper .btn-block .back-link {
-        left: 30px;
+        left: 231px;
     }
     .wrapper .map-box {
         height: 250px;
@@ -1879,7 +1880,56 @@ input:focus {
         top: 50px;
     }
 }
+
+@media (max-width:400px) {
+    #companies{
+        margin: 10px;
+    }
+
+    .back-link-3 {
+        margin-left: 149px;
+    }
+    .wrapper .btn-block .back-link {
+        left: 129px;
+    }
+    .wrapper .btn-block .back-link {
+        top: none;
+        
+    }
+
+    .wrapper .font-12 {
+        font-size: 9px;
+        line-height: normal;
+        text-align: justify;
+    }
+
+    .wrapper .btn.default-1 {
+        color: #ffffff;
+        background-color: #83be63;
+        /* max-width: 334px; */
+        margin-left: 68px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+}
 @media screen and (max-width: 767px) {
+
+    .wrapper .btn.default-1 {
+        color: #ffffff;
+        background-color: #83be63;
+        max-width: 334px;
+        /* margin-left: 179px; */
+        margin-top: 10px;
+        margin-bottom: 30px;
+        margin: 10px 45px;
+    }
+    #companies{
+        margin-left: 134px;
+    }
+
+    /* .back-link-3 {
+        margin-left: 149px;
+    } */
     .show-in-mobile {
         display: block;
     }

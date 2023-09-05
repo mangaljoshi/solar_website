@@ -372,6 +372,7 @@ setValuetwo = ()=>{
     const
         newValue = Number( (billRange.value - billRange.min) * 100 / (billRange.max - billRange.min) ),
         newPosition = 16 - (newValue * 0.32);
+        console.log(newValue)
     outputtwo.innerHTML = `<span>${billRange.value}</span>`;
     tooltip.style.left = `calc(${newValue}% + (${newPosition}px))`;
     document.documentElement.style.setProperty("--billRange-progress", `calc(${newValue}% + (${newPosition}px))`);
