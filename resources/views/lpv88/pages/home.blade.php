@@ -15,8 +15,8 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="hero-inner text-center">
-                                    <h1 class="main-heading">
-                                        <span class="city bold"></span> {{ __('home.section_1.h1') }}
+                                    <h1 class="">
+                                        <span class="city bold"></span> <span class="main-heading"> {{ __('home.section_1.h1') }} </span> 
                                     </h1>
                                     <h4 class="sub-title mb-20 location-text">
                                         {{ __('home.section_1.h4') }}

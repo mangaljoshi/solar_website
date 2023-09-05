@@ -8,12 +8,17 @@
             <h5 id="footage-headline"><strong>How Much Would You Like To
                 Save?</strong></h5>
             <div class="rangeslider-block footage">
+              <div class="range-slider">
+                <div id="tooltip"></div>
+                <input id="range" type="range" step="10" value="300" min="100" max="500">
+            </div>
               <input type="range" min="100" max="500" step="50" id="range-slider" data-rangeslider=""
                 style="position: absolute;width: 36px;height: 76px;overflow: hidden;opacity: 0;">
-              <div class="rangeslider rangeslider--horizontal" id="js-rangeslider-0">
+                {{-- <range-slider min="0" max="100" step="1" dir="rtl"></range-slider> --}}
+              {{-- <div class="rangeslider rangeslider--horizontal" id="js-rangeslider-0">
                 <div class="rangeslider__fill" style="width: 275px;"></div>
                 <div class="rangeslider__handle" style="left: 260px;"></div>
-              </div>
+              </div> --}}
               <div class="rangeslider-tooltip"><span id="unit-pre">$</span><output id="output">300</output><span
                   id="unit-post">/Month</span></div>
               <div class="sliderLegend">

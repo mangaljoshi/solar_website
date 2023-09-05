@@ -318,7 +318,7 @@ const getGeo = async() => {
   
 
 
-      // /////
+      // ///////////////
 
 $(document).ready(function() {
 
@@ -346,34 +346,16 @@ console.log(mainHeanding)
 
 
 // -------------------RangeSlider-------------------
- $(document).ready(function () {
-      const handle = $(".rangeslider__handle");
-      let isMouseDown = false;
-      let startPositionX = 0;
-
-      // Handle mouse down event
-      handle.on("mousedown", function (event) {
-        isMouseDown = true;
-        startPositionX = event.clientX;
-
-        // Prevent text selection while dragging
-        event.preventDefault();
-      });
-
-      // Handle mouse up event
-      $(document).on("mouseup", function () {
-        isMouseDown = false;
-      });
-
-      // Handle mousemove event to change left position while dragging
-      $(document).on("mousemove", function (event) {
-        if (isMouseDown) {
-          const currentLeft = parseFloat(handle.css("left"));
-          const offsetX = event.clientX - startPositionX;
-          const newLeft = currentLeft + offsetX;
-          handle.css("left", newLeft + "px");
-          startPositionX = event.clientX;
-        }
-      });
-    });
-
+const
+range = document.getElementById('range'),
+tooltip = document.getElementById('tooltip'),
+setValue = ()=>{
+    const
+        newValue = Number( (range.value - range.min) * 100 / (range.max - range.min) ),
+        newPosition = 16 - (newValue * 0.32);
+    tooltip.innerHTML = `<span>${range.value}</span>`;
+    tooltip.style.left = `calc(${newValue}% + (${newPosition}px))`;
+    document.documentElement.style.setProperty("--range-progress", `calc(${newValue}% + (${newPosition}px))`);
+};
+document.addEventListener("DOMContentLoaded", setValue);
+range.addEventListener('input', setValue);
