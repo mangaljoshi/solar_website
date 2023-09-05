@@ -21,7 +21,7 @@
                      <div class="fu7ycq-0 eNUsAC">
                         <div class="fu7ycq-1 iUWgez">
                            <h1 class="fu7ycq-2 bMYtbr">
-                              <span class="city"> </span> </br> Residents Own Your Power By Going Solar
+                              <span class="main-heading"></span>  <span class="city"> </span> </br> Residents Own Your Power By Going Solar
                            </h1>
                            <h1 class="fu7ycq-3 ieziWX">
                               Enter basic home information to see your free quote

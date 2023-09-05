@@ -713,6 +713,28 @@ const con = getGeo();
       }
     }
   });
+
+
+  var queryString = window.location.search;
+
+  // Parse the query string into an object
+  var queryParams = {};
+  if (queryString) {
+      queryString = queryString.substring(1); // Remove the leading '?'
+      var pairs = queryString.split('&');
+      pairs.forEach(function(pair) {
+          var parts = pair.split('=');
+          var key = decodeURIComponent(parts[0]);
+          var value = decodeURIComponent(parts[1] || '');
+          console.log(value)
+          queryParams[key] = value;
+      });
+  }
+  
+  console.log(queryParams.headline);
+  var mainHeandingpre = queryParams.headline.replace(/"/g, '');
+  var mainHeanding = mainHeandingpre + "?"
+   $('.main-heading').text(mainHeanding);
   
   
   

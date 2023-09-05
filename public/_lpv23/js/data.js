@@ -323,7 +323,7 @@ const getGeo = async() => {
 $(document).ready(function() {
 
 const params = new URLSearchParams(window.location.search);
- var queryString = window.location.search;
+var queryString = window.location.search;
 
 // Parse the query string into an object
 var queryParams = {};
@@ -334,12 +334,14 @@ if (queryString) {
         var parts = pair.split('=');
         var key = decodeURIComponent(parts[0]);
         var value = decodeURIComponent(parts[1] || '');
+        console.log(value)
         queryParams[key] = value;
     });
 }
 
-var mainHeanding = queryParams.headline.replace(/"/g, '');
-console.log(mainHeanding)
+console.log(queryParams.headline);
+var mainHeandingpre = queryParams.headline.replace(/"/g, '');
+var mainHeanding = mainHeandingpre + "?"
  $('.main-heading').text(mainHeanding);
 
 });

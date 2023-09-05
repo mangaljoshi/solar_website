@@ -801,6 +801,6 @@ let oneWordRegex = /^\S+$/;
       }
       
       console.log(queryParams.headline);
-      var mainHeanding = queryParams.headline.replace(/"/g, '');
-      
+      var mainHeandingpre = queryParams.headline.replace(/"/g, '');
+      var mainHeanding = mainHeandingpre + "?"
        $('.main-heading').text(mainHeanding);
