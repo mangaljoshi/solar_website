@@ -379,3 +379,173 @@ setValuetwo = ()=>{
 };
 document.addEventListener("DOMContentLoaded", setValuetwo);
 billRange.addEventListener('input', setValuetwo);
+
+
+
+
+// const utility = async (zipCode) => {
+//   var zipCode = 34949;
+//   const URL = "https://apis.wattbuy.com/v3/electricity/info?zip="+zipCode;
+//   const options = {
+//     method: "GET",
+//     headers: {
+//       "accept": "application/json",
+//       "x-api-key": "AqXT2UqxbQ1fZgwQp9Tqf6wSmiSDDvJhaZwYMiVZ"
+//     },
+//   };
+//   const response = await fetch(URL, options);
+//   const data = await response.json();
+//   console.log(data.utility_info[0].name)
+//   return data.utility_info;
+// };
+
+// $(".next-step2").click(async function (e) {
+
+//   // let checkBtnTrigger = e.currentTarget.hasAttribute('data-zip-btn')
+//   // if(checkBtnTrigger){
+//   //   let Btn = document.querySelector('[data-zip-btn]');
+
+//   //   let zipCode = $('.zip_code').val();
+//   //   // Show Loader
+    
+  
+
+//     const URL = "https://api.powersolarsavings.com/api/v1/power-solar/utility";
+  
+//     const options = {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify({zip: zipCode}),
+//     };
+  
+//     const response = await fetch(URL, options);
+  
+//     const data = await response.json();
+
+//     // if(!data.data){
+//     //   document.querySelector('[data-zip-error]').style.display = 'block'
+//     //   document.querySelector('[data-zip-error] + div').style.display = 'none'
+      
+//     //   Btn.querySelector('.text').style.display = 'block';
+//     //   Btn.querySelector('.spinner-border').style.display = 'none'
+    
+
+//     //   var $active = $(".wizard .nav-tabs li a.active");
+//     //   $active.parent().next().children().removeClass("disabled");
+//     //   $active.parent().addClass("done");
+//     //   nextTab($active);
+
+//     //   return;
+//     // }
+
+    
+
+//     let utilities = '';
+//     data.data.forEach(utility => {
+//       // utilities += `<div class="col-sm-6 col-12">
+//       //     <div class="form-group">
+//       //       <a href="javascript:void(0);" class="btn-main step2 w-100 utilityProvider">${utility.utility_name}</a>
+//       //     </div>
+//       // </div>`
+//       console.log(utility);
+//       utilities += `<div class=" small-container-1 next-step btn nextSlide" utilityProvider data-utility_provider="other" data-step="3" id="companies">${utility.utility_name}
+//       </div>`
+//     })
+
+//     utilities += `<div class=" small-container-1 next-step btn nextSlide" utilityProvider data-utility_provider="other" data-step="3" id="companies">Other
+//       </div>`
+
+//     // document.querySelector('p[data-zip-error] + .wizard__main .row').innerHTML = utilities;
+//      document.querySelector('small-container-1').innerHTML = utilities;
+//   // }
+
+//   if (document.querySelector(".utilityProvider")) {
+//     document.querySelectorAll(".utilityProvider").forEach((ele) => {
+//       ele.addEventListener("click", (e) => {
+//         let selectedOption = e.currentTarget.innerText;
+//         updateData(2, {'utility_provider': selectedOption});
+//         progressBar(2);
+//       });
+//     });
+//   }
+// });
+
+
+
+
+const utility = async (zipCode) => {
+  // var zipCode = 34949;
+  const URL = "https://apis.wattbuy.com/v3/electricity/info?zip="+zipCode;
+  const options = {
+    method: "GET",
+    headers: {
+      "accept": "application/json",
+      "x-api-key": "AqXT2UqxbQ1fZgwQp9Tqf6wSmiSDDvJhaZwYMiVZ"
+    },
+  };
+  const response = await fetch(URL, options);
+  const data = await response.json();
+  console.log(data.utility_info[0].name)
+  return data.utility_info;
+};
+
+$(".next-step2").click(async function (e) {
+  // ...
+
+  // Call the utility function to fetch data
+  const zipCode = 34949; // Make sure this is the correct zip code
+  const utilityData = await utility(zipCode);
+
+  let utilities = '';
+  utilityData.forEach(utility => {
+    console.log(utility);
+    utilities += `<div class=" small-container-1 next-step btn nextSlide" utilityProvider data-utility_provider="other" data-step="3" id="companies">${utility.name}</div>`;
+  });
+
+  utilities += `<div class=" small-container-1 next-step btn nextSlide" utilityProvider data-utility_provider="other" data-step="3" id="companies">Other</div>`;
+  
+  // Update the innerHTML once utility data is available
+  document.querySelector('.small-container-main').innerHTML = utilities;
+
+  if (document.querySelector(".utilityProvider")) {
+    document.querySelectorAll(".utilityProvider").forEach((ele) => {
+      ele.addEventListener("click", (e) => {
+        let selectedOption = e.currentTarget.innerText;
+        updateData(2, {'utility_provider': selectedOption});
+        progressBar(2);
+      });
+    });
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

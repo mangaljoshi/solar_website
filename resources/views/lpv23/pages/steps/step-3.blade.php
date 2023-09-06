@@ -5,8 +5,13 @@
         </h2>
         <h2 class="title mb-5 show-in-mobile">Who is your utility
           provider?</h2>
-        <div class=" small-container-1 next-step btn nextSlide" data-utility_provider="other" data-step="3" id="companies">Other
-        </div>
+          <div class="small-container-main">
+            <div class="next-step btn nextSlide" data-utility_provider="other" data-step="3" id="companies">
+          </div>
+          </div>
+          
+        {{-- <div class=" small-container-1 next-step btn nextSlide" data-utility_provider="other" data-step="3" id="companies">Other
+        </div> --}}
         <span class="error-msg step_error_2" id="companies-error" style="text-align: center;">&nbsp;</span>
       </div>
 
