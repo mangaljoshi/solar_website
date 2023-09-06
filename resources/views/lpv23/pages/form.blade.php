@@ -1,16 +1,6 @@
-{{-- @extends('lpv23.layouts.base')
-
-@section('style') --}}
-{{--
-<link rel="stylesheet" href="{{ asset('_lpv23/css/style.css') }}" />
-<link rel="stylesheet" href="{{ asset('_lpv23/css/common.css') }}" /> --}}
-{{-- @endsection --}}
-
-
-{{-- @section('content') --}}
-{{-- <div id="loading" style="display: none;">
+<div id="loading" style="display: none;">
   <img id="loading-image" src="{{ asset('_lpv23/images/loader.gif') }}" alt="Loading..." />
-</div> --}}
+</div>
 <form id="solarForm">
   <input name="full_address" class="fulladdress" type="hidden">
   <input name="google_address" id="google-address" type="hidden" value="">

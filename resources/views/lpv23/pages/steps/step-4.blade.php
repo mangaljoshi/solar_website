@@ -25,8 +25,8 @@
             </template>
         </div>
 
-          <span class="error-msg step_error_3" id="address-error">&nbsp;</span>
-          <a href="javascript:;" class="btn default-1 nextSlide next-step" data-step="4">Next</a>
+          <span class="error-msg step_error_4" id="address-error">&nbsp;</span>
+          <a href="javascript:;" class="btn default-1 nextSlide next-step address-btn" data-step="4">Next</a>
 
           <div id="slider-block" class="btn-block" data-slide="">
             <a href="javascript:;" class=" back-link back-link-4 prevSlide colback" data-step="4">Back</a>

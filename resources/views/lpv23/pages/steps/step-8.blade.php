@@ -5,10 +5,10 @@
           reach you at if you qualify?</h2>
         <h2 class="title mb-5 show-in-mobile">What is the best number
           to reach you at if you qualify?</h2>
-        <h4 class="sub-title show-in-mobile">Don't worry, we won't bug
+        {{-- <h4 class="sub-title show-in-mobile">Don't worry, we won't bug
           you... We HATE bugs! 🕷</h4>
         <h4 class="sub-title hide-in-mobile">Don't worry, we won't bug
-          you... We HATE bugs! 🕷</h4>
+          you... We HATE bugs! 🕷</h4> --}}
         <div class="medium-container">
           <input type="tel" inputmode="numeric" class="text-field vsmall-container" id="phone"
             name="phone_number" placeholder="Enter phone number" onkeypress="return onlyNumberKey(event)" minlength="10" maxlength="10">
@@ -36,7 +36,7 @@
             condition of purchase.
           </label>
 
-          <a href="javascript:;" class=" back-link back-link-8 prevSlide colback" data-step="7">Back</a>
+          <a href="javascript:;" class=" back-link back-link-8 prevSlide colback" data-step="8">Back</a>
         </div>
       </div>
     </div>

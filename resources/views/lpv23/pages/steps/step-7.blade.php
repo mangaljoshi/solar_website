@@ -1,10 +1,9 @@
 <li class="swiper-slide steps step-7" data-step="7">
     <div class="v-center" id="estimate-name">
       <div class="container text-center">
-        <h2 class="title hide-in-mobile">What is your name, stranger?
+        <h2 class="title hide-in-mobile">Who is this estimate for?
         </h2>
-        <h2 class="title mb-5 show-in-mobile">What is your name,
-          stranger?</h2>
+        <h2 class="title mb-5 show-in-mobile">"Who is this estimate for?</h2>
         <div class="medium-container">
           <ul class="form-list">
             <li>
@@ -17,7 +16,7 @@
                 autocomplete="on">
               <span class="error-msg step_error_7_2" id="lname-error"></span>
             </li>
-            <a href="javascript:;" class="btn default-1 nextSlide next-step" data-step="7">Next</a>
+            <a href="javascript:;" class="btn default-1 nextSlide address-btn next-step" data-step="7">Next</a>
             <a href="javascript:;" class="back-link back-link-7 prevSlide colback" data-step="7">Back</a>
 
            

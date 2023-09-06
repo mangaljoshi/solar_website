@@ -30,7 +30,7 @@
                       <p class="sliderLegendItem--end">$800+</p>
                     </div>
                     {{-- <div id="" class="mainbtn" data-slide=""> --}}
-                    <a href="javascript:;" class="btn default-1 nextSlide next-step next-step2" data-step="2">Next</a>
+                    <a href="javascript:;" class="btn default-1 address-btn nextSlide next-step next-step2" data-step="2">Next</a>
                     {{-- </div> --}}
 
                     <a href="javascript:;" class=" back-link back-link-2 prevSlide colback" data-step="2">Back</a>
