@@ -22,7 +22,7 @@
           <span class="final-btn" style="padding-top:15px;display:block;margin:0 auto">
             <input type="submit" id="submit" class="btn default submitButton next-step" data-step="8" value="submit" />
           </span>
-          <label for="leadid_tcpa_disclosure" class="font-12" style="margin-top:20px;display:block;     margin-bottom: 20px;"
+          <label for="leadid_tcpa_disclosure" class="font-12" style="margin-top: 65px;display:block;margin-bottom: 20px;margin-right: 106px;margin-left: 106px;" 
             id="tcpa_label">
             By clicking the "Submit" button, you authorize
             sunvalue.com and up to <a href="{{route('marketing')}}" target="_blank" tabindex="0"
