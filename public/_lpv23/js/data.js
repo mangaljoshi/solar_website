@@ -115,7 +115,6 @@ $(".next-step").click(async function (e) {
     autoScroll();
   } else if (step == 2) {
     let monthly_bill = $('input[name="monthly_bill"]').val();
-    console.log(monthly_bill)
     updateData(step, { monthly_bill: monthly_bill });
     await utilityProvider();
     autoScroll();
@@ -396,48 +395,64 @@ const utility = async (zipCode) => {
       "x-api-key": "AqXT2UqxbQ1fZgwQp9Tqf6wSmiSDDvJhaZwYMiVZ"
     },
   };
-  const response = await fetch(URL, options);
-  const data = await response.json();
-  // console.log(data.utility_info[0].name)
-  return data.utility_info;
+
+  try {
+    const response = await fetch(URL, options);
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    // console.log(data);
+
+    if (data.utility_info) {
+      return data.utility_info;
+    } else {
+      return false;
+    }
+  } catch (error) {
+    console.error("Error fetching utility data:", error);
+    return false;
+  }
 };
 
-// $(".next-step2").click(async function (e) {
 
 async function utilityProvider(e) {
   $('#loading').show();
 
   let zipCode = $('input[name="zipCode"]').val();
-  console.log("zipCode==>", zipCode);
-  // const zipCode = 34949; 
   const utilityData = await utility(zipCode);
- 
-    let utilities = '';
+  // console.log(utilityData);
+
+  let utilities = '';
+
+  if (utilityData && Array.isArray(utilityData) && utilityData.length > 0) {
     utilityData.forEach(utility => {
       utilities += `<div class="small-container-1 next-step btn nextSlide utilityProvider"  data-utility_provider="${utility.name}" data-step="3" id="companies">${utility.name}</div>`;
     });
-
+  } else {
     utilities += `<div class="small-container-1 next-step btn nextSlide utilityProvider"  data-utility_provider="other" data-step="3" id="companies">Other</div>`;
+  }
 
-    // Update the innerHTML once utility data is available
-    document.querySelector('.small-container-main').innerHTML = utilities;
-    $('#loading').hide();
-
+  utilities += `<div class="small-container-1 next-step btn nextSlide utilityProvider"  data-utility_provider="other" data-step="3" id="companies">Other</div>`;
   
-  //  return true;
-  // });
+  // Update the innerHTML once utility data is available or the default option
+  document.querySelector('.small-container-main').innerHTML = utilities;
+  $('#loading').hide();
 
   if (document.querySelector(".utilityProvider")) {
     document.querySelectorAll(".utilityProvider").forEach((ele) => {
       ele.addEventListener("click", (e) => {
         let selectedOption = e.currentTarget.innerText;
-        console.log(selectedOption)
+        console.log(selectedOption);
         updateData(3, { 'utility_provider': selectedOption });
         progressBar(2);
       });
     });
   }
 }
+
 
 
 
