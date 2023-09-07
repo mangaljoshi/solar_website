@@ -430,12 +430,14 @@ async function utilityProvider(e) {
   if (utilityData && Array.isArray(utilityData) && utilityData.length > 0) {
     utilityData.forEach(utility => {
       utilities += `<div class="small-container-1 next-step btn nextSlide utilityProvider"  data-utility_provider="${utility.name}" data-step="3" id="companies">${utility.name}</div>`;
+
+      utilities += `<div class="small-container-1 next-step btn nextSlide utilityProvider"  data-utility_provider="other" data-step="3" id="companies">Other</div>`;
     });
   } else {
     utilities += `<div class="small-container-1 next-step btn nextSlide utilityProvider"  data-utility_provider="other" data-step="3" id="companies">Other</div>`;
   }
 
-  utilities += `<div class="small-container-1 next-step btn nextSlide utilityProvider"  data-utility_provider="other" data-step="3" id="companies">Other</div>`;
+
   
   // Update the innerHTML once utility data is available or the default option
   document.querySelector('.small-container-main').innerHTML = utilities;
