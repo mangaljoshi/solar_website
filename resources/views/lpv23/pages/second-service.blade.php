@@ -21,7 +21,7 @@
                 <div class="thankYouPromoSection">
                     <div class="thankYouPage__title thankYouPage__title_center">
                         <span class="greenColor">Thanks For Requesting</span> An Estimate!<br />
-                        <span class="orangeColor"> A roofing specialist will be contacting you</span>
+                        <span class="orangeColor"> A solar specialist will be contacting you</span>
                     </div>
                 </div>
             </div>
