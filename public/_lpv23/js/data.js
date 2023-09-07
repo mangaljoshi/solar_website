@@ -331,15 +331,19 @@ $(document).ready(function () {
   // Parse the query string into an object
   var queryParams = {};
   if (queryString) {
-    queryString = queryString.substring(1); // Remove the leading '?'
-    var pairs = queryString.split('&');
-    pairs.forEach(function (pair) {
-      var parts = pair.split('=');
-      var key = decodeURIComponent(parts[0]);
-      var value = decodeURIComponent(parts[1] || '');
-      console.log(value)
-      queryParams[key] = value;
-    });
+      queryString = queryString.substring(1); // Remove the leading '?'
+      var pairs = queryString.split('&');
+      pairs.forEach(function(pair) {
+          var parts = pair.split('=');
+          var key = decodeURIComponent(parts[0]);
+          var value = decodeURIComponent(parts[1] || '');
+          
+          // Replace '+' with space in the parameter value
+          value = value.replace(/\+/g, ' ');
+  
+          console.log(value);
+          queryParams[key] = value;
+      });
   }
 
   console.log(queryParams.headline);

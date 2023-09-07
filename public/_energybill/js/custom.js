@@ -726,7 +726,11 @@ const con = getGeo();
           var parts = pair.split('=');
           var key = decodeURIComponent(parts[0]);
           var value = decodeURIComponent(parts[1] || '');
-          console.log(value)
+          
+          // Replace '+' with space in the parameter value
+          value = value.replace(/\+/g, ' ');
+  
+          console.log(value);
           queryParams[key] = value;
       });
   }
