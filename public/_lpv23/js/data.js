@@ -319,7 +319,19 @@ function autoScroll() {
   $('html,body').scrollTop(0);
 }
 
+$(document).ready(function () {
+  const header = $('.site-header');
 
+  function handleScroll() {
+      if ($(window).scrollTop() > 0) {
+          header.addClass('fixed');
+      } else {
+          header.removeClass('fixed');
+      }
+  }
+
+  $(window).scroll(handleScroll);
+});
 
 // ///////////////
 
@@ -348,9 +360,10 @@ $(document).ready(function () {
 
   console.log(queryParams.headline);
   var mainHeandingpre = queryParams.headline.replace(/"/g, '');
-  var mainHeanding = mainHeandingpre + "?"
-  console.log(mainHeanding);
-  $('.main-heading').text(mainHeanding);
+  if(mainHeandingpre || mainHeandingpre != "" ){
+    var mainHeanding = mainHeandingpre + "?"
+          $('.main-heading').text(mainHeanding);
+  }
 
 });
 
@@ -422,24 +435,22 @@ const utility = async (zipCode) => {
 };
 
 
-async function utilityProvider(e) {
-  $('#loading').show();
+  async function utilityProvider(e) {
+    $('#loading').show();
 
-  let zipCode = $('input[name="zipCode"]').val();
-  const utilityData = await utility(zipCode);
-  // console.log(utilityData);
+    let zipCode = $('input[name="zipCode"]').val();
+    const utilityData = await utility(zipCode);
+    // console.log(utilityData);
 
-  let utilities = '';
+    let utilities = '';
 
-  if (utilityData && Array.isArray(utilityData) && utilityData.length > 0) {
-    utilityData.forEach(utility => {
-      utilities += `<div class="small-container-1 next-step btn nextSlide utilityProvider"  data-utility_provider="${utility.name}" data-step="3" id="companies">${utility.name}</div>`;
-
+    if (utilityData && Array.isArray(utilityData) && utilityData.length > 0) {
+      utilityData.forEach(utility => {
+        utilities += `<div class="small-container-1 next-step btn nextSlide utilityProvider"  data-utility_provider="${utility.name}" data-step="3" id="companies">${utility.name}</div>`;
+      });
+    } 
       utilities += `<div class="small-container-1 next-step btn nextSlide utilityProvider"  data-utility_provider="other" data-step="3" id="companies">Other</div>`;
-    });
-  } else {
-    utilities += `<div class="small-container-1 next-step btn nextSlide utilityProvider"  data-utility_provider="other" data-step="3" id="companies">Other</div>`;
-  }
+    
 
 
   

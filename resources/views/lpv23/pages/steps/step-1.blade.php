@@ -3,7 +3,7 @@
           <div class="container text-center">
             {{-- <h1 class="title htitle">New State Solar Program Offers $0
               Down &amp; Reduces Utility Costs.</h1> --}}
-             <h1 class="title htitle"><span class="main-heading"></span> National Capital Territory of <span class="city"></span> Solar Incentive Program</h1> 
+             <h1 class="title htitle"><span class="main-heading"></span> <span class="city"></span> Solar Incentive Program</h1> 
             <h4 class="sub-title mb-20 location-text"></h4>
             <h5 id="footage-headline"><strong>How Much Would You Like To
                 Save?</strong></h5>

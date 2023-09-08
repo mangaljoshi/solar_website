@@ -9,7 +9,7 @@
           you... We HATE bugs! 🕷</h4>
         <h4 class="sub-title hide-in-mobile">Don't worry, we won't bug
           you... We HATE bugs! 🕷</h4> --}}
-        <div class="medium-container">
+        <div class="medium-container" style="margin-top: 40px">
           <input type="tel" inputmode="numeric" class="text-field vsmall-container" id="phone"
             name="phone_number" placeholder="Enter phone number" onkeypress="return onlyNumberKey(event)" minlength="10" maxlength="10">
 
@@ -22,8 +22,7 @@
           <span class="final-btn" style="padding-top:15px;display:block;margin:0 auto">
             <input type="submit" id="submit" class="btn default submitButton next-step" data-step="8" value="submit" />
           </span>
-          <label for="leadid_tcpa_disclosure" class="font-12" style="margin-top: 65px;display:block;margin-bottom: 20px;margin-right: 106px;margin-left: 106px;" 
-            id="tcpa_label">
+          <label for="leadid_tcpa_disclosure" class="font-12" id="tcpa_label">
             By clicking the "Submit" button, you authorize
             sunvalue.com and up to <a href="{{route('marketing')}}" target="_blank" tabindex="0"
               style="color: #5C5D61;text-decoration:underline">4 solar

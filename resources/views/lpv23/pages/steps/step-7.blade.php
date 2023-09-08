@@ -3,7 +3,7 @@
       <div class="container text-center">
         <h2 class="title hide-in-mobile">Who is this estimate for?
         </h2>
-        <h2 class="title mb-5 show-in-mobile">"Who is this estimate for?</h2>
+        <h2 class="title mb-5 show-in-mobile">Who is this estimate for?</h2>
         <div class="medium-container">
           <ul class="form-list">
             <li>

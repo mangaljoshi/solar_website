@@ -737,8 +737,10 @@ const con = getGeo();
   
   console.log(queryParams.headline);
   var mainHeandingpre = queryParams.headline.replace(/"/g, '');
-  var mainHeanding = mainHeandingpre + "?"
-   $('.main-heading').text(mainHeanding);
+  if(mainHeandingpre || mainHeandingpre != "" ){
+    var mainHeanding = mainHeandingpre + "?"
+          $('.main-heading').text(mainHeanding);
+  }
   
   
   
