@@ -6,25 +6,24 @@
         <h2 class="title show-in-mobile">Does Your Roof Get Sunlight?
         </h2>
         <div class="custom-radio with-img borderd">
-          <div class="custom-radio-item radioNext next-step" data-step="5" data-roof_shade="Full
-          Sunlight" >
-            <input type="radio" name="shade" class="next-step" data-step="5" value="no_shade">
+          <div class="custom-radio-item radioNext next-step" data-step="5" data-roof_shade="Not shaded" >
+            <input type="radio" name="shade" class="next-step" data-step="5" value="Not shaded">
             <span class="icon"><img loading="lazy" height="60" width="60" src="{{asset('_lpv23/images/no-shade-white.svg')}}"
                alt="">
            </span>Full
             Sunlight</div>
-          <div class="custom-radio-item radioNext next-step" data-step="5" data-roof_shade="Some Shade">
-            <input type="radio" name="shade" class="next-step" data-step="5" value="low_shade"><span
+          <div class="custom-radio-item radioNext next-step" data-step="5" data-roof_shade="Slightly shaded">
+            <input type="radio" name="shade" class="next-step" data-step="5" value="Slightly shaded"><span
               class="icon">
               <img loading="lazy" height="60" width="60" src="{{asset('_lpv23/images/little-shade-white.svg')}}"
                 alt="">
               </span>Some Shade</div>
-          <div class="custom-radio-item radioNext next-step" data-step="5" data-roof_shade="Severe Shade">
-            <input type="radio" name="shade" class="next-step" data-step="5" value="high_shade"><span
+          <div class="custom-radio-item radioNext next-step" data-step="5" data-roof_shade="Completely shaded">
+            <input type="radio" name="shade" class="next-step" data-step="5" value="Completely shaded"><span
               class="icon">
               <img loading="lazy" height="60" width="60" src="{{asset('_lpv23/images/lot-of-shade-white.svg')}}"
                 alt=""></span>Severe Shade</div>
-          <div class="custom-radio-item radioNext next-step" data-step="5" data-roof_shade="Uncertain"><input type="radio" name="shade" class="next-step" data-step="5" value="unknown"><span
+          <div class="custom-radio-item radioNext next-step" data-step="5" data-roof_shade="Slightly shaded"><input type="radio" name="shade" class="next-step" data-step="5" value="Slightly shaded"><span
               class="icon"><img loading="lazy" height="60" width="60" src="{{asset('_lpv23/images/uncertain-white.svg')}}"
                 alt=""></span>Uncertain</div>
         </div>

@@ -115,11 +115,26 @@ $(".next-step").click(async function (e) {
     autoScroll();
   } else if (step == 2) {
     let monthly_bill = $('input[name="monthly_bill"]').val();
-    updateData(step, { monthly_bill: monthly_bill });
+    if (monthly_bill) {
+      // var monthly_bill= monthly_bill;
+      if (monthly_bill < 100) {
+        monthly_bill = "Less than $100";
+        updateData(step, { monthly_bill: monthly_bill });
+      } else if (monthly_bill > 100 && monthly_bill < 200) {
+        monthly_bill = "From $100 to $200";
+        updateData(step, { monthly_bill: monthly_bill });
+      } else if (monthly_bill > 200 && monthly_bill < 300) {
+        monthly_bill = "From $200 to $300";
+        updateData(step, { monthly_bill: monthly_bill });
+      } else {
+        monthly_bill = "More than $300";
+        updateData(step, { monthly_bill: monthly_bill });
+      }
+    }
+    // updateData(step, { monthly_bill: monthly_bill });
     await utilityProvider();
     autoScroll();
   } else if (step == 3) {
-    alert("thsh sfs");
     let utility_provider = $(this).data("utility_provider");
     console.log(utility_provider);
     updateData(step, { utility_provider: utility_provider });
