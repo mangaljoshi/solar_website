@@ -19,7 +19,7 @@
           <span class="error-msg vsmall-container mb-20 step_error_8" id="phone-error"></span>
 
     
-          <span class="final-btn" style="padding-top:15px;display:block;margin:0 auto">
+          <span class="final-btn" style="padding-top:15px;display:block;margin:0 auto; margin-bottom: 107px;">
             <input type="submit" id="submit" class="btn default submitButton next-step" data-step="8" value="submit" />
           </span>
           <label for="leadid_tcpa_disclosure" class="font-12" id="tcpa_label">
@@ -35,7 +35,7 @@
             condition of purchase.
           </label>
 
-          <a href="javascript:;" class=" back-link back-link-8 prevSlide colback" data-step="8">Back</a>
+          {{-- <a href="javascript:;" class=" back-link back-link-8 prevSlide colback" data-step="8">Back</a> --}}
         </div>
       </div>
     </div>
