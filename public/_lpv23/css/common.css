@@ -2392,6 +2392,7 @@ margin-top: 10px;
     line-height: normal;
     display: block;
     position: relative;
+    margin-top: -26px;
 }
 .rangeslider-wrapper {
     position: relative;
