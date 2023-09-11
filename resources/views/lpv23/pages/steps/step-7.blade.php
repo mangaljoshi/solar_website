@@ -1,6 +1,6 @@
 <li class="swiper-slide steps step-7" data-step="7">
     <div class="v-center" id="estimate-name">
-      <div class="container text-center">
+      <div class="container text-center" style=" margin-top: 60px;">
         <h2 class="title hide-in-mobile">Who is this estimate for?
         </h2>
         <h2 class="title mb-5 show-in-mobile">Who is this estimate for?</h2>

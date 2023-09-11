@@ -110,7 +110,7 @@
     <div class="container">
       <div class="row space-between align-center cost-section">
         <div class="content">
-          <h2>The Cost of Solar Panels in 2021</h2>
+          <h2>The Cost of Solar Panels in 2023</h2>
           <p>With the cost of solar panels dropping every year, there’s
             never been a better time to go solar. Due to new government
             incentives, many homeowners are taking advantage of these

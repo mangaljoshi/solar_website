@@ -84,7 +84,7 @@ h1 {
 }
 h1 span,
 h2 span {
-	color: #83be63;
+	/* color: #83be63; */
 }
 h2 {
 	font-family: 'PT Sans', sans-serif;
