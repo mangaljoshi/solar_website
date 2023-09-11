@@ -301,11 +301,11 @@
                                                                     {{ __('solarenergy.tcpa_label._5')}} <a href="{{ route('privacy', ['route_name' => 'energybill']) }}" target="_blank" tabindex="0" style="color:#7b7b7b;text-decoration:underline">{{ __('solarenergy.tcpa_label._6')}}</a>
                                                                     </label>  
                                                                         
-                                                                    <input type="hidden" id="leadid_tcpa_disclosure" name="tcpa" tabindex="0" value="{{ __('solarenergy.tcpa_text')}}">
+                                                                    <input type="hidden" id="leadid_tcpa_disclosure" name="tcpa" tabindex="0" value="By clicking the 'View My Savings' button, you authorize powersolarsavings.com and up to 4 solar partners to call you and send you pre-recorded messages and text messages at the number you entered above, using an autodialer, with offers about their products or services, even if your phone number is on any national or state 'Do Not Call' list. Message and data rates may apply. Your consent here is not based on a condition of purchase. You agree to the Terms of Use and Privacy Policy.">
                                                                 </div>
                                                                 <div class="col-xs-12 col-md-6 col-sm-6 mt-2" style="margin-top: 80px;">
                                                                     <div class="form-group picker text-center mb-4">
-                                                                        <button type="submit" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary btn-main" style="background-color: #e11c1c; font-weight: bold; margin-top: 0px;">Get Free Quote</button>
+                                                                        <button type="submit" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary btn-main" style="background-color: #e11c1c; font-weight: bold; margin-top: 0px;">View My Savings</button>
                                                                     </div>
                                                                 </div>
 
