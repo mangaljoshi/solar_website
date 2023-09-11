@@ -24,7 +24,7 @@
           <div class="item indicator-4">Amazing</div>
           <div class="item indicator-5">Massive</div>
         </div>
-        <div class="status">Estimated Savings: <span class="status">Great</span></div>
+        <div class="status">Estimated Savings: <span class="status-2">Great</span></div>
       </div>
     </header>
     <header id="header-with-id" style="display: none">

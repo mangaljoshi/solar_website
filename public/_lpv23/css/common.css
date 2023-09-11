@@ -1239,6 +1239,7 @@ input:focus {
     padding: 0 30px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 40px;
 }
 .wrapper .medium-container {
     width: 100%;

@@ -211,10 +211,10 @@ function goNext(step) {
     $('.indicator').css("width", "220px");
   } else if (step == 4) {
     $('.indicator').css("width", "529px");
-    $('.status').text("Amazing");
+    $('.status-2').text("Amazing").css("color", "#5faa19")
   } else if (step == 5) {
     $('.indicator').css("width", "730px");
-    $('.status').text("Massive");
+    $('.status-2').text("Massive").css("color", "#078041");
   } else if (step == 6) {
     $('.indicator').css("width", "800px");
   }
