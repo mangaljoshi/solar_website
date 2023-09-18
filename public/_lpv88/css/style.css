@@ -534,7 +534,7 @@ input[type="range"]::-moz-range-thumb {
 
 .lead_text {
     margin-top: 1rem;
-    font-size: 10px;
+    font-size: 8px;
     line-height: 1.5;
     margin: 80px 20px 20px;
     /* text-align: justify; */
@@ -932,7 +932,7 @@ input[type="range"]::-moz-range-thumb {
 .how-it-works .work-process {
     background-color: rgb(255 255 255 / 5%);
     text-align: center;
-    padding: 40px 30px 19px;
+    padding: 40px 12px 19px;
     box-shadow: 0 0 0 rgb(0 0 0 / 0%);
     border-bottom: 3px solid transparent;
     transform: translateY(0);

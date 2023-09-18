@@ -182,7 +182,7 @@
                 <div class="col-lg-8 col-md-12 col-sm-12 col-12">
                     <div class="s-py-info">
                         <div class="page-title">
-                        <h2>The Cost of solar Panels in 2022</h2>
+                        <h2>The Cost of solar Panels in 2023</h2>
                         <p>With the cost of solar panels dropping every year, there’s never been a better time to go solar. Due to new government incentives, many homeowners are taking advantage of these opportunities. A solar panel installation ranges in cost depending on many factors, including your state, equipment brand, and energy usage. That all brings us to a key question: how much do solar panels cost? Use our FREE solar Calculator to calculate the cost of solar in your area.</p>
                         </div>
                     </div>
