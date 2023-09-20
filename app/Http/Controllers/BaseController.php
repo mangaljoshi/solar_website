@@ -131,6 +131,25 @@ class BaseController extends Controller
         return view($route_name.'.pages.thankyou-service');
     }
 
+    public function thankyouConfirmation(Request $request, $route_name = 'energybill', $zipCode = null, $category = null) {
+
+        if ($zipCode === null) {
+            $zipCode = $request->session()->get('zipCode');
+        }
+    
+        if ($category === null) {
+            $category = $request->session()->get('category');
+            $category = str_replace('%20', ' ', $category);
+        }
+        $response = $this->fetchData($request, $route_name);
+    
+        $apiResponse = $request->session()->get('api_response');
+        return view($route_name . '.pages.thankyou-confirmation', ['apiResponse' => $apiResponse,
+        'zipCode' => $zipCode,
+        'category' => $category,]);
+        
+    }
+
     public function updateData(Request $request, $step) {
         $userData = Session::get('userData');
         if ($step == 1) {
@@ -411,6 +430,57 @@ class BaseController extends Controller
             return false;
         }
         // return $responseData;
+    }
+
+    public function fetchData(Request $request, $route_name) {
+        try {
+            $username = "Maxadsmedia";
+            $password = "IJc4zVGCP45y9U2N1AD2AIJZLD5ZU4dZotua59IClZQ=";
+    
+            // $zipCode = $request->route('zipCode');
+            $zipCode = $request->input('zipCode');
+            $category = $request->input('category');
+        //    dd($zipCode);
+            if (!$zipCode) {
+                $userData = Session::get('userData');
+                $zipCode = $userData['zip_code'];
+            }
+            $credentials = base64_encode($username . ':' . $password);
+    
+            $ch = curl_init();
+    
+            curl_setopt($ch, CURLOPT_URL, "https://api.thumbtack.com/v1/partners/discoverylite/pros?zip_code={$zipCode}&category={$category}}&utm_medium=partnership&utm_source=cma-maxads");
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, [
+                'Authorization: Basic ' . $credentials,
+                'Content-Type: application/json'
+            ]);
+    
+            $response = curl_exec($ch);
+    
+            if (curl_errno($ch)) {
+                throw new \Exception('cURL Error: ' . curl_error($ch));
+            }
+            $httpStatus = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+            if ($httpStatus !== 200) {
+                throw new \Exception('API request failed with HTTP status: ' . $httpStatus);
+            }
+    
+            curl_close($ch);
+    
+            $data = json_decode($response, true);
+    
+            $request->session()->put('api_response', $data);
+            $request->session()->put('zipCode', $zipCode);
+            $request->session()->put('category', $category);
+            // dd($data);
+    
+            // return response()->json($data);
+            // return redirect()->route('thank-you');
+            return redirect($route_name."/thankyou-confirmation");
+        } catch (\Exception $e) {
+            return response()->json(['error' => 'Error fetching data: ' . $e->getMessage()], 500);
+        }
     }
     
 }

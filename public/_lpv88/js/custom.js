@@ -783,6 +783,47 @@ let oneWordRegex = /^\S+$/;
         $('html,body').scrollTop(0);
       }
 
+         
+  $(document).ready(function() {
+    function fetchData() {
+      $('#loading').show();
+      let zipCode = $('#zipCode').val();
+      let category = $('#category').val();
+      category = category.replace(/ /g, '%20');
+      console.log(zipCode);
+      console.log(category)
+  
+      $.ajax({
+        type: 'POST',
+        url: '/lpv88/fetch-data',
+        data: { zipCode: zipCode,
+                category: category
+              }, 
+        headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        success: function(response) {
+          $('#loading').hide();
+          console.log("Success:", response);
+          window.location.href = "/lpv88/thankyou-confirmation"; 
+        },
+        error: function(errorResponse) {
+          $('#loading').hide();
+          $('#thumbtack-error').show();
+          console.log(errorResponse);
+        }
+      });
+    }
+  
+    $(".thumb-tack-btn").on("click", fetchData);
+  
+    $('#zipCode, #category').on('keydown', function(event) {
+      if (event.which === 13) { 
+        fetchData(); 
+      }
+    });
+  });
+  
 
       var queryString = window.location.search;
 

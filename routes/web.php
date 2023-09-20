@@ -33,6 +33,7 @@ Route::post('/update-data/{step}', [BaseController::class, 'updateData'])->name(
 Route::get('/thank-you', [BaseController::class, 'thankYou'])->name('thank.you');
 Route::get('/verify-phone/{number}', [BaseController::class, 'verifyPhone'])->name('verify.phone');
 Route::get('/second-service', [BaseController::class, 'secondService'])->name('secondService');
+Route::post('/fetch-data', [BaseController::class, 'fetchData'])->name('fetch.data');
 
 
 Route::group(['prefix'=>'{route_name}','as'=>'energybill.'], function(){
@@ -50,8 +51,9 @@ Route::group(['prefix'=>'{route_name}','as'=>'energybill.'], function(){
     Route::post('/second-service', [BaseController::class, 'secondService'])->name('second.service');
     Route::get('/thank-you', [BaseController::class, 'thankyou'])->name('thank.you');
     Route::get('/thankyou-service', [BaseController::class, 'thankyouService'])->name('thank.you.service');
-    // Route::get('/second-service', [BaseController::class, 'secondService'])->name('secondService');
+    Route::get('/thankyou-confirmation', [BaseController::class, 'thankyouConfirmation'])->name('thankyouConfirmation');
     Route::post('/upsell-data', [BaseController::class, 'secondServiceData'])->name('upsell.data');
+    Route::post('/fetch-data', [BaseController::class, 'fetchData'])->name('fetch.data');
     
 });
 

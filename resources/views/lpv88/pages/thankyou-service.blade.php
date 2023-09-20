@@ -3,20 +3,13 @@
 @section('content')
 @include('lpv88.partials.header_common')
 
-{{-- <div class="container" style="height: 100vh">
-    <div class="row test-center">
-        <div class="col-md-12 thank-you-banner2" style="text-align:center">
-            <img src="{{asset('_lpv88/images/thank-you-banner.png')}}" alt="thank-you-banner">
-        </div>    
-    </div>
-</div> --}}
+
 <div class="container">
     <div class="row test-center thank-text-center">
         <div class="col-md-12" style="margin-top: 20px;">
             
             <div class="test-center  thank-text-center">
             <h3>Thank you, we are on it!</h3>
-            {{-- <h3 class="bold-11" style="color:#2d830b; font-weight:bold;"> Special Promotion for <span class="city"></span> Window Replacement! </h3> --}}
             </div>
             
         </div>
@@ -27,7 +20,7 @@
         </a>
         </div> 
 
-       
+        <a class="no-thanks-btn" href="{{ route('energybill.thankyouConfirmation', ['route_name' => 'lpv88']) }}"> No Thanks</a>
     </div>
 </div>
 @endsection 
