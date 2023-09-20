@@ -13183,9 +13183,10 @@ body {
     .subscribe-button-1{
         display: block !important;
     }
+    
     .serch-box span .input-1 {
-        font-size: 14px;
-        padding: 0 0px;
+        font-size: 16px;
+        padding: 0 4px;
     }
 
     .search-box .input-2::placeholder { 
