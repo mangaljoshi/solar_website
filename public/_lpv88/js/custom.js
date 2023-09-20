@@ -825,6 +825,55 @@ let oneWordRegex = /^\S+$/;
   });
   
 
+  function updateOptionValue() {
+    var option = $('#category option:first');
+  
+    if ($(window).width() < 500) {
+      option.attr('value', 'select-service');
+      option.text('Select Service');
+    } else {
+      // option.attr('value', "{{ isset($category) && $category != '' ? $category : 'Select Service In Your Area ' }}");
+      // option.text("{{ isset($category) && $category != '' ? $category : 'Select Service In Your Area ' }}");
+      return true;
+    }
+  }
+  
+  // Call the function on page load and window resize
+  $(document).ready(function() {
+    updateOptionValue();
+    $(window).resize(function() {
+      updateOptionValue();
+    });
+  });
+  
+  // Call the function on page load and window resize
+  $(document).ready(function() {
+    updateOptionValue();
+    $(window).resize(function() {
+      updateOptionValue();
+    });
+  });
+
+
+  function updateZipCodeInput() {
+    var zipCodeInput = $('#zipCode');
+  
+    if ($(window).width() < 500) {
+      zipCodeInput.attr('placeholder', 'Enter zip');
+    } else {
+      zipCodeInput.attr('placeholder', 'Enter your zip code');
+    }
+  }
+  
+  // Call the function on page load and window resize
+  $(document).ready(function() {
+    updateZipCodeInput();
+    $(window).resize(function() {
+      updateZipCodeInput();
+    });
+  });
+
+
       var queryString = window.location.search;
 
       // Parse the query string into an object

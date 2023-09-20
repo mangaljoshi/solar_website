@@ -13076,7 +13076,7 @@ body {
     place-items: center;
 }
 .serch-box span .input-1{
-    width: 50vw;
+    width: 60vw;
     /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.05); */
     border-top: 2px solid #bbbbbb;
     border-bottom: 2px solid #bbbbbb;
@@ -13185,7 +13185,7 @@ body {
     }
     
     .serch-box span .input-1 {
-        font-size: 16px;
+        font-size: 17px;
         padding: 0 4px;
     }
 
@@ -13195,8 +13195,14 @@ body {
     }
   
     .serch-box span .input-2 {
-        font-size: 12px;
-        padding: 0 0px;
+        font-size: 14px;
+    padding: 0 6px;
+    }
+
+    .thumbtack-heading h1 {
+        font-size: 28px;
+        margin-top: -10px;
+        margin-bottom: 18px;
     }
 }
 
@@ -13266,4 +13272,24 @@ body {
 
 .no-thanks-btn:hover{
     color: #030381 !important;
+}
+
+@media (max-width:400px) {
+    .container-11{
+        max-width: 354px;
+    }
+
+    .container-11 .title {
+        margin-left: 127px;
+        margin-top: 10px;
+        font-size: 30px;
+    }
+    .mobile-option{
+        display: block !important;
+    
+    }
+
+    .desktop-option{
+        display: none !important;
+    }
 }
