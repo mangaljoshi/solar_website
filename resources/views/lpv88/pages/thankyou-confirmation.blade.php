@@ -42,8 +42,8 @@
             <select name="categories" id="category" class="input-1">
 
 
-                <option value="{{ isset($category) && $category != "" ? $category : 'Select Service ' }}">{{
-                    isset($category) && $category != "" ? $category : 'Select Service ' }}</option>
+                <option value="{{ isset($category) && $category != "" ? $category : 'Select Service Select Service In Your Area ' }}">{{
+                    isset($category) && $category != "" ? $category : 'Select Service In Your Area  ' }}</option>
                 <option value="bathroom remodel">bathroom remodel</option>
                 <option value="kitchen remodel">kitchen remodel</option>
                 <option value="stair installation or remodel">stair installation or remodel</option>
