@@ -23,17 +23,16 @@
             <input type="submit" id="submit" class="btn default submitButton next-step" data-step="8" value="submit" />
           </span>
           <label for="leadid_tcpa_disclosure" class="font-12" id="tcpa_label">
-            By clicking the "Submit" button, you authorize
-            sunvalue.com and up to <a href="{{route('marketing')}}" target="_blank" tabindex="0"
-              style="color: #5C5D61;text-decoration:underline">4 solar
-              partners</a> to call you and send you pre-recorded
-            messages and text messages at the number you entered
-            above, using an autodialer, with offers about their
-            products or services, even if your phone number is on any
-            national or state "Do Not Call" list. Message and data
-            rates may apply. Your consent here is not based on a
-            condition of purchase.
+            By clicking the 'View My Savings' button, you authorize powersolarsavings.com and up to <a href="{{route('marketing')}}" target="_blank" tabindex="0" style="color: #7b7b7b; text-decoration: underline;">4 solar partners</a> to call you and send you pre-recorded messages and text messages at the number you entered above, using an autodialer, with offers about their products or services, even if your phone number is on any national or state 'Do Not Call' list. Message and data rates may apply. Your consent here is not based on a condition of purchase. You agree to the Terms of Use and Privacy Policy.
           </label>
+
+          <input
+              type="hidden"
+              id="leadid_tcpa_disclosure"
+              name="tcpa"
+              tabindex="0"
+              value="By clicking the 'View My Savings' button, you authorize powersolarsavings.com and up to 4 solar partners  to call you and send you pre-recorded messages and text messages at the number you entered above, using an autodialer, with offers about their products or services, even if your phone number is on any national or state 'Do Not Call' list. Message and data rates may apply. Your consent here is not based on a condition of purchase. You agree to the Terms of Use and Privacy Policy."
+          />
 
           {{-- <a href="javascript:;" class=" back-link back-link-8 prevSlide colback" data-step="8">Back</a> --}}
         </div>
