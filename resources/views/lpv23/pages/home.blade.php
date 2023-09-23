@@ -17,7 +17,7 @@
   <section class="s-py-half hide-in-mobile">
     <div class="container text-center">
       <div class="title">
-        <h2>Get Your Free Solar Cost <span>+Savings Report</span></h2>
+        <h2>Get Your Free Solar Cost <span style="color: #83be63;">+Savings Report</span></h2>
         <h5>Includes incentives in your state.</h5>
       </div>
     </div>
@@ -123,8 +123,8 @@
         <div class="form-block">
           <ul class="form-list">
             <li class="full">
-              <button class="button w-100" id="cta2">Get Free Solar
-                Report</button>
+              <a class="button w-100" id="cta2" href="#">Get Free Solar
+                Report</a>
             </li>
           </ul>
           <p class="msg"><i class="icon"></i>Get Your Free Solar Cost
