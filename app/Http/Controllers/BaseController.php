@@ -33,7 +33,7 @@ class BaseController extends Controller
             $userData['lp_campaign_id'] = "12325";
             $userData['lp_key'] = "wo2jugw6bkwqy";
             $userData['lp_supplier_id'] = "25154";
-            $userData['lp_subid2'] = "nat";
+            $userData['lp_subid2'] = "lpv23";
             $userData['lp_response'] = "JSON";
             $userData['sub_id1'] = "int";
             $userData['ip_address'] = $request->ip();
@@ -62,7 +62,7 @@ class BaseController extends Controller
         $userData['lp_campaign_id'] = "12325";
         $userData['lp_key'] = "wo2jugw6bkwqy";
         $userData['lp_supplier_id'] = "25154";
-        $userData['lp_subid2'] = "nat";
+        $userData['lp_subid2'] = ($route_name == 'lpv88') ? 'lpv88' : "nat";
         $userData['lp_response'] = "JSON";
         $userData['sub_id1'] = "int";
         $userData['zip_code'] = $request->input('zip_code');
