@@ -139,37 +139,44 @@ $(".next-step").click(async function (e) {
     console.log(utility_provider);
     updateData(step, { utility_provider: utility_provider });
     autoScroll();
-  } else if (step == 4) {
+  }else if (step == 4) {
+    let type_of_home = $(this).data("type_of_home");
+    console.log(type_of_home);
+    updateData(step, { type_of_home: type_of_home });
+   
+    autoScroll();
+  } else if (step == 5) {
     updateData(step, {
       address: enteredAddress,
       city: enteredCity,
       state: enteredState,
     });
     autoScroll();
-  } else if (step == 5) {
-    let roof_shade = $('input[name="shade"]').val();
+  } else if (step == 6) {
+    let roof_shade = $(this).data("roof_shade");
+    console.log(roof_shade);
     updateData(step, { roof_shade: roof_shade });
     autoScroll();
-  } else if (step == 6) {
+  } else if (step == 7) {
     let email = $('input[name="email"]').val();
     updateData(step, { email: email });
     autoScroll();
-  } else if (step == 7) {
+  } else if (step == 8) {
     let first_name = $('input[name="first_name"]').val();
     let last_name = $('input[name="last_name"]').val();
     if (first_name.length < 2) {
-      $(".step_error_7_1").text("First name must be at least 2 characters");
-      $(".step_error_7_1").show();
+      $(".step_error_8_1").text("First name must be at least 2 characters");
+      $(".step_error_8_1").show();
       return false;
     }
     if (last_name.length < 2) {
-      $(".step_error_7_2").text("last name must be at least 2 characters");
-      $(".step_error_7_2").show();
+      $(".step_error_8_2").text("last name must be at least 2 characters");
+      $(".step_error_8_2").show();
       return false;
     }
     if (!oneWordRegex.test(first_name)) {
-      $(".step_error_7_1").text("First name should not contain spaces");
-      $(".step_error_7_1").show();
+      $(".step_error_8_1").text("First name should not contain spaces");
+      $(".step_error_8_1").show();
       return false;
     }
     updateData(step, {
@@ -177,7 +184,7 @@ $(".next-step").click(async function (e) {
       last_name: last_name
     });
     autoScroll();
-  } else if (step == 8) {
+  } else if (step == 9) {
     let number = $('input[name="phone_number"]').val();
     phone_number = number.replace(/\D/g, "");
     var trustedForm = $("#xxTrustedFormCertUrl_0").val();
@@ -227,6 +234,7 @@ $(".colback").on("click", function () {
   let step = $(this).data("step");
   console.log("step-->", step);
   if (step == 1) {
+    $("#content-part").show();
     return false;
   }
   $(".step-" + step).hide("step_active");
@@ -276,7 +284,7 @@ function updateData(step, data) {
       var stepNumber = Number(response.step);
       var success = response.success;
 
-      if (step == 8) {
+      if (step == 9) {
         if (success == false) {
           $('#loading').hide();
           $('.step_error_' + stepNumber).text(response.message);

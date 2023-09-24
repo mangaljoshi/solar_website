@@ -1,39 +1,39 @@
 <li class="swiper-slide steps step-4" data-step="4">
-    <div class="v-center" id="estimate-map">
+    <div class="v-center" id="estimate-home-type">
       <div class="container text-center">
-        <h2 class="title hide-in-mobile">Where is your home located?
+        <h2 class="title hide-in-mobile">What Type of Home Do You Live In?
         </h2>
-        <h2 class="title mb-5 show-in-mobile">Where is your home
-          located?</h2>
-        <h4 class="sub-title hide-in-mobile">This helps us find your
-          home's position relative to the sun.</h4>
-        <h4 class="sub-title show-in-mobile">This helps us find your
-          home's position relative to the sun.</h4>
-        <div class="map-loader">
-          <img src="/images/loader.svg">
+        <h2 class="title show-in-mobile">What Type of Home Do You Live In?
+        </h2>
+        <div class="custom-radio with-img borderd">
+          <div class="custom-radio-item radioNext next-step" data-step="4" data-type_of_home="Single Family" >
+            <input type="radio" name="type_of_home" class="" data-step="4" value="Single Family">
+            <span class="icon"><img loading="lazy" height="60" width="60" src="{{asset('_lpv23/images/single-family-outline.svg')}}"
+               alt="">
+           </span>Single Family</div>
+          <div class="custom-radio-item radioNext next-step" data-step="4" data-type_of_home="3+ Stories">
+            <input type="radio" name="type_of_home" class="" data-step="4" value="3+ Stories"><span
+              class="icon">
+              <img loading="lazy" height="60" width="60" src="{{asset('_lpv23/images/multi-family-outline.svg')}}"
+                alt="">
+              </span>Multi Family</div>
+          <div class="custom-radio-item radioNext next-step" data-step="4" data-type_of_home="2 Stories">
+            <input type="radio" name="type_of_home" class="" data-step="4" value="2 Stories"><span
+              class="icon">
+              <img loading="lazy" height="60" width="60" src="{{asset('_lpv23/images/mobile-home-outline.svg')}}"
+                alt=""></span>Mobile Home</div>
+          <div class="custom-radio-item radioNext next-step" data-step="4" data-type_of_home="1 Story"><input type="radio" name="type_of_home" class="" data-step="4" value="1 Story"><span
+              class="icon"><img loading="lazy" height="60" width="60" src="{{asset('_lpv23/images/townhome-outline.svg')}}"
+                alt=""></span>Townhome</div>
         </div>
-        <div class="small-container">
-          <input type="search" class="text-field" id="address-radar" name="street"  x-bind="GeoCompleteInput($data)" autocomplete="nope"placeholder="Type Here e.g. 123 West Main Road">
+        <span class="error-msg step_error_4" id="home-type-error" style="text-align: center;">&nbsp;</span>
+        {{-- <a href="javascript:;" class="btn default-2 nextSlide next-step" data-step="4">Next</a> --}}
+        <a href="javascript:;" class=" back-link back-link-5 prevSlide colback" data-step="4">Back</a>
 
-          <div x-bind="GeoCompletePanel($data)">
-            <template x-for="item in items" :key="item.distance">
-                <div x-bind="GeoCompleteItem($data, item)">
-                    <img src="../../img/marker.svg" />
-    
-                    <div x-text="item.formattedAddress" class="autocomplete-item__label"></div>
-                </div>
-            </template>
-        </div>
-
-          <span class="error-msg step_error_4" id="address-error">&nbsp;</span>
-          <a href="javascript:;" class="btn default-1 nextSlide next-step address-btn" data-step="4">Next</a>
-
-          <div id="slider-block" class="btn-block" data-slide="">
-            <a href="javascript:;" class=" back-link back-link-4 prevSlide colback" data-step="4">Back</a>
-            
-          </div>
-          <div id="map_canvas" class="map-box"></div>
-        </div>
+        {{-- <div id="slider-block" class="btn-block" data-slide="">
+          <a href="javascript:;" class="back-link prevSlide colback" data-step="4">Back</a>
+         
+        </div> --}}
       </div>
     </div>
   </li>

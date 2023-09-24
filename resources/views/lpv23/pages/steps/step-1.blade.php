@@ -32,7 +32,7 @@
                   <span class="error-msg step_error_1" id="zip-error">&nbsp;</span>
                 </li>
                 <li>
-                  <a id="calculateYourSavings" href="javascript:;" class="btn default btn-with-loader">
+                  <a id="calculateYourSavings" href="javascript:;" data-step="1" class="btn default btn-with-loader next-step">
                     <div class="loader-hidden"></div>
                     <span class="next-step" data-step="1">Calculate</span>
                   </a>

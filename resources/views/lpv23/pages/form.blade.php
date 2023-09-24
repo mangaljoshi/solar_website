@@ -49,6 +49,7 @@
         @include('lpv23.pages.steps.step-6')
         @include('lpv23.pages.steps.step-7')
         @include('lpv23.pages.steps.step-8')
+        @include('lpv23.pages.steps.step-9')
 
       </ul>
       <div id="next-block" class="hide d-none" data-slide="">

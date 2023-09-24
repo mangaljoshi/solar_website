@@ -44,7 +44,6 @@ class BaseController extends Controller
             $userData['time_frame'] = "Immediate";
             $userData["house_size"] = "2-3 Bedroom";
             $userData["credit_rating"] = "Good";
-            $userData["type_of_home"] = "Single Family";
             $userData["gclid"] = "";
     
             Session::put('userData', $userData);
@@ -236,22 +235,27 @@ class BaseController extends Controller
             $userData['utility_provider'] = $request->get('utility_provider');
         } else if ($step == 4) {
             $this->validate($request, [
+                'type_of_home' => 'required'
+            ]);
+            $userData['type_of_home'] = $request->get('type_of_home');
+        }else if ($step == 5) {
+            $this->validate($request, [
                 'address' => 'required',
             ]);
             $userData['address'] = $request->get('address');
             $userData['city'] = $request->get('city');
             $userData['state'] = $request->get('state');
-        }else if ($step == 5) {
+        }else if ($step == 6) {
             $this->validate($request, [
                 'roof_shade' => 'required'
             ]);
             $userData['roof_shade'] = $request->get('roof_shade');
-        }else if ($step == 6) {
+        }else if ($step == 7) {
             $this->validate($request, [
                 'email' => 'required|email'
             ]);
             $userData['email'] = $request->get('email');
-        }  else if ($step == 7) {
+        }  else if ($step == 8) {
             $this->validate($request, [
                 'first_name' => 'required|regex:/^[A-Za-z]+$/',
                 'last_name' => 'required|regex:/^[A-Za-z]+$/'
@@ -259,7 +263,7 @@ class BaseController extends Controller
             ]);
             $userData['first_name'] = $request->get('first_name');
             $userData['last_name'] = $request->get('last_name');
-        } else if ($step == 8) {
+        } else if ($step == 9) {
             $this->validate($request, [
                 'phone' => 'required|digits:10'
 
