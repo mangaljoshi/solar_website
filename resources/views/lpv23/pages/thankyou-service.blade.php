@@ -20,10 +20,11 @@
          </a>
         </div>
 
-        <a class="no-thanks-btn" style=" font-size: 18px !important;
+        <a class="no-thanks-btn" style=" font-size: 20px !important;
         text-align: center !important;
         margin-top: -17px !important;
-        margin-bottom: 17px !important;"
+        margin-bottom: 17px !important;
+        font-weight: bold !important;"
         href="{{ route('energybill.thankyouConfirmation', ['route_name' => 'lpv23']) }}"> No Thanks</a>
     </div>
 
