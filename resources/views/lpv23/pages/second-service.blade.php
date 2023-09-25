@@ -20,7 +20,7 @@
             <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-center">
                 <div class="thankYouPromoSection">
                     <div class="thankYouPage__title thankYouPage__title_center">
-                        <span class="greenColor">Thanks For Requesting</span> An Estimate!<br />
+                        <span class="thanks-orange-color">Thanks For Requesting</span> An Estimate!<br />
                         <span class="orangeColor"> A solar specialist will be contacting you</span>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                 <div class="" style="margin-top: 20px;">   
                 </div>
                 <div class="thank-you-banner-2" style="text-align:center; margin-top: 30px;margin: 18px 81px;">
-                     <a href="https://qualitywindowsdirect.com/rbaw40a-200.aspx?eccmp=7025&eckwd=natroof&ecadid=&Offerid=" target="_balnk">
+                     <a href="https://qualitywindowsdirect.com/rbaw40a-200.aspx?eccmp=7025&eckwd=natsolar&ecadid=&Offerid=" target="_balnk">
                     <img src="{{asset('_lpv23/images/banner1.jpg')}}" style="border-radius: 20px; width:100%" alt="thank-you-banner">
                 
                 </a>

@@ -13201,3 +13201,414 @@ body.no-scroll {
     left: 50%;
     z-index: 100;
   }
+
+
+.thanks-orange-color{
+    color: #ffa500;
+}
+
+
+  
+/* Importing Google font -Open+Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    /* width: 100%;
+    height: 100vh;*/
+    background: #fff6f6; 
+    /* display: grid;
+    place-items: center; */
+}
+
+.container-11 {
+    /* width: 80vw; */
+    padding: 40px;
+    /* background: #ffffff; */
+    /* text-align: center; */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    margin: 20px;
+    background-color: #ffffff;
+}
+
+.container-11 .title {
+    /* font-size: 2rem; */
+    color: #333;
+    font-weight: bold;
+    margin-left: 163px;
+}
+
+.container-11 .price {
+    color: #FF6B6B;
+    font-weight: 700;
+    font-size: 2.2rem;
+    margin: 15px 0;
+}
+
+/* .container-11 span {
+    font-size: 1.2rem;
+} */
+
+.container-11 .description {
+    color: #3b3b3b;
+    font-size: 1.8rem;
+    /* margin: 25px 0 29px; */
+    /* opacity: .5; */
+    margin-top: 30px;
+    margin-left: 163px;
+}
+
+.container-11 .offer {
+    display: block;
+    color: #555;
+    font-size: 1rem;
+    margin-top: 25px;
+}
+
+.subscribe-button {
+    display: inline-block;
+    padding: 11px 0;
+    /* background-color: #1E88E5; */
+    background-color: #b7e254;
+    color: black;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 2.2rem;
+    margin-top: 12px;
+    width: 200px;
+    font-weight: bold;
+    transition: 0.2s ease;
+    margin-left: 841px;
+    text-align: center;
+    position: absolute;
+    top: 42px;
+
+}
+
+
+.subscribe-button-1{
+    display: inline-block;
+    padding: 11px 0;
+    /* background-color: #1E88E5; */
+    background-color: #b7e254;
+    color: black;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 2.2rem;
+    margin-top: 12px;
+    width: 200px;
+    font-weight: bold;
+    transition: 0.2s ease;
+    margin-left: 27px;
+    text-align: center;
+}
+
+/* .subscribe-button:hover {
+    background: #ff4d4d;
+} */
+
+.ribbon-wrap {
+    width: 188px;
+    height: 204px;
+    position: absolute;
+    top: -25px;
+    left: -10px;
+    /* pointer-events: none; */
+}
+
+.ribbon {
+    width: 136px;
+    height: 146px;
+    font-size: 0.918rem;
+    text-align: center;
+    padding: 8px 0;
+    /* background: #FF6B6B; */
+    color: #fff;
+    position: absolute;
+    /* transform: rotate(-45deg); */
+    right: 23px;
+    top: 29%;
+    border-radius: 20px;
+}
+
+.thumbtack-container{
+    display: grid;
+    place-items: center;
+    margin-top: 30px;
+    /* max-width: 700px; */
+}
+
+.thumbtack-heading{
+    text-align: center;
+}
+
+.list{
+    text-align: start;
+    /* margin-top: 49px; */
+    margin-top: 10px;
+    margin-left: 167px;
+}
+
+.list span{
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.list span i{
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.thumbtack-heading h1{
+  font-weight: bold;
+  color: #030381;
+}
+
+.thumbtack-heading p{
+    font-size: 13px;
+    /* font-weight: bold; */
+  }
+
+  .thumbtack-children{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+  }
+/* .rating{
+    font-size: 1.7rem;
+  /* opacity: .6; */
+/* }  */
+.serch-box{
+    display: flex;
+    justify-content: center;
+    /* flex-direction:column; */
+    place-items: center;
+}
+.serch-box span .input-1{
+    width: 60vw;
+    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.05); */
+    border-top: 2px solid #bbbbbb;
+    border-bottom: 2px solid #bbbbbb;
+    border-left: 2px solid #bbbbbb;
+    border-right: 2px solid #bbbbbb;
+    /* border: 1px gainsboro; */
+    height: 60px;
+    border-radius: 10px 0 0 10px;
+    outline: none;
+    padding: 0 27px;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.search-box .input-2::placeholder { 
+
+    font-size: 12px !important;
+}
+@media (min-width:768px) {
+    .serch-box span .input-1{
+    width: 33vw;
+    }
+    .serch-box span .input-2 {
+        width: 14vw !important;
+    }
+    .thumb-tack-btn{
+        width: 8vw !important;
+    }
+    .search-box .input-2::placeholder { 
+
+        font-size: 12px;
+    }
+}
+
+    .serch-box span .input-2 {
+        width: 20vw;
+        /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.05); */
+        /* border: 1px gainsboro; */
+        height: 60px;
+        border-top: 2px solid #bbbbbb;
+        border-right: none;
+        border-left: none;
+        border-bottom: 2px solid #bbbbbb;
+        outline: none;
+        /* border-radius: 0 10px 10px 0px; */
+        padding: 0 17px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+.thumb-tack-btn{
+    width: 10vw;
+    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.05); */
+    /* border: 1px gainsboro; */
+    height: 60px;
+    border-top: 2px solid #b3afaf;
+    border-right: 2px solid #b3afaf;
+    border-bottom: 2px solid #b3afaf;
+    border-left: none;
+    border-radius: 0 10px 10px 0px;
+    background-color: #ffffff;
+    font-size: 25px;
+    font-weight: bold;
+    opacity: .7;
+}
+
+.reviews{
+    font-size: 15px;
+}
+
+
+@media (max-width:1350px) {
+    .subscribe-button{
+        position: absolute;
+        left: -80px;
+    }
+    .search-box .input-2::placeholder { 
+
+        font-size: 12px;
+    }
+    
+}
+
+@media (max-width:760px) {
+    .list {
+        text-align: start;
+        margin-top: 75px;
+        margin-left: -13px;
+    }
+
+    .container-11 .description {
+        margin-top: 30px;
+        margin-left: -12px;
+        text-align: justify;
+    }
+
+    .container-11 .title {
+        margin-left: 123px;
+    }
+
+    .subscribe-button {
+        display: none;
+    }
+
+    .subscribe-button-1{
+        display: block !important;
+    }
+    
+    .serch-box span .input-1 {
+        font-size: 17px;
+        padding: 0 4px;
+    }
+
+    .search-box .input-2::placeholder { 
+
+        font-size: 12px;
+    }
+  
+    .serch-box span .input-2 {
+        font-size: 14px;
+    padding: 0 6px;
+    }
+
+    .thumbtack-heading h1 {
+        font-size: 28px;
+        margin-top: -10px;
+        margin-bottom: 18px;
+    }
+}
+
+@media (min-width:768px) {
+    .container-11{
+        width: 800px;
+        padding: 20px;
+    }
+
+    .container-11 .title{
+        font-size: 20px;
+        margin-left: 136px;
+    }
+
+    .list{
+        margin-left: 136px;
+    }
+
+    .container-11 .description{
+        margin-left: 136px;
+        font-size: 1.4rem;
+    }
+    .ribbon {
+        width: 106px;
+        height: 112px;
+        right: 43px;
+        top: 24%;
+        border-radius: 20px;
+    }
+
+    .thumbtack-heading h1 {
+        font-weight: bold;
+        font-size: 30px;
+        width: 895px;
+        margin-bottom: 10px;
+        color: #030381;
+    }
+
+    .subscribe-button {
+        display: inline-block;
+        padding: 9px 0;
+        /* background-color: #1E88E5; */
+        background-color: #b7e254;
+        color: black;
+        text-decoration: none;
+        border-radius: 30px;
+        font-size: 2.1rem;
+        margin-top: 12px;
+        width: 176px;
+        font-weight: bold;
+        transition: 0.2s ease;
+        margin-left: 543px;
+        text-align: center;
+        position: absolute;
+        top: 20px;
+    }
+}
+
+.no-thanks-btn{
+    
+    font-size: 18px !important;
+    text-align: center !important;
+    margin-top: -17px !important;
+    margin-bottom: 17px !important;
+    /* font-weight: 900 !important; */
+}
+
+.no-thanks-btn:hover{
+    color: #030381 !important;
+}
+
+@media (max-width:400px) {
+    .container-11{
+        max-width: 354px;
+    }
+
+    .container-11 .title {
+        margin-left: 127px;
+        margin-top: 10px;
+        font-size: 30px;
+    }
+    .mobile-option{
+        display: block !important;
+    
+    }
+
+    .desktop-option{
+        display: none !important;
+    }
+}

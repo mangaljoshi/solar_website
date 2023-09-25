@@ -14,11 +14,17 @@
             </div>
         </div>
         <div class="col-md-12 thank-you-banner" style="text-align:center">
-          <a href="https://qualitywindowsdirect.com/rbaw40a-200.aspx?eccmp=7025&eckwd=natroof&ecadid=&Offerid=">
+          <a href="https://qualitywindowsdirect.com/rbaw40a-200.aspx?eccmp=7025&eckwd=natsolar&ecadid=&Offerid=">
             <img src="{{asset('_lpv23/images/thank-you-banner1.jpg')}}" alt="thank-you-banner">
 
          </a>
         </div>
+
+        <a class="no-thanks-btn" style=" font-size: 18px !important;
+        text-align: center !important;
+        margin-top: -17px !important;
+        margin-bottom: 17px !important;"
+        href="{{ route('energybill.thankyouConfirmation', ['route_name' => 'lpv23']) }}"> No Thanks</a>
     </div>
 
 </div>

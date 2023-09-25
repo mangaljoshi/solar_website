@@ -358,6 +358,99 @@ $(document).ready(function () {
 
 // ///////////////
 
+$(document).ready(function() {
+  function fetchData() {
+    $('#loading').show();
+    let zipCode = $('#zipCode').val();
+    let category = $('#category').val();
+    category = category.replace(/ /g, '%20');
+    console.log(zipCode);
+    console.log(category)
+
+    $.ajax({
+      type: 'POST',
+      url: '/lpv88/fetch-data',
+      data: { zipCode: zipCode,
+              category: category
+            }, 
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      },
+      success: function(response) {
+        $('#loading').hide();
+        console.log("Success:", response);
+        window.location.href = "/lpv23/thankyou-confirmation"; 
+      },
+      error: function(errorResponse) {
+        $('#loading').hide();
+        $('#thumbtack-error').show();
+        console.log(errorResponse);
+      }
+    });
+  }
+
+  $(".thumb-tack-btn").on("click", fetchData);
+
+  $('#zipCode, #category').on('keydown', function(event) {
+    if (event.which === 13) { 
+      fetchData(); 
+    }
+  });
+});
+
+
+function updateOptionValue() {
+  var option = $('#category option:first');
+
+  if ($(window).width() < 500) {
+    option.attr('value', 'select-service');
+    option.text('Select Service');
+  } else {
+    // option.attr('value', "{{ isset($category) && $category != '' ? $category : 'Select Service In Your Area ' }}");
+    // option.text("{{ isset($category) && $category != '' ? $category : 'Select Service In Your Area ' }}");
+    return true;
+  }
+}
+
+// Call the function on page load and window resize
+$(document).ready(function() {
+  updateOptionValue();
+  $(window).resize(function() {
+    updateOptionValue();
+  });
+});
+
+// Call the function on page load and window resize
+$(document).ready(function() {
+  updateOptionValue();
+  $(window).resize(function() {
+    updateOptionValue();
+  });
+});
+
+
+function updateZipCodeInput() {
+  var zipCodeInput = $('#zipCode');
+
+  if ($(window).width() < 500) {
+    zipCodeInput.attr('placeholder', 'Enter zip');
+  } else {
+    zipCodeInput.attr('placeholder', 'Enter your zip code');
+  }
+}
+
+// Call the function on page load and window resize
+$(document).ready(function() {
+  updateZipCodeInput();
+  $(window).resize(function() {
+    updateZipCodeInput();
+  });
+});
+
+
+// /////////// // 
+
+
 $(document).ready(function () {
 
   // const params = new URLSearchParams(window.location.search);

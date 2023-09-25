@@ -13055,8 +13055,8 @@ body {
 }
 
 .thumbtack-heading p{
-    font-size: 15px;
-    font-weight: bold;
+    font-size: 13px;
+    /* font-weight: bold; */
   }
 
   .thumbtack-children{
