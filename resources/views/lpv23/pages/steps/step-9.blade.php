@@ -1,6 +1,6 @@
 <li class="swiper-slide steps last step-9" data-step="9">
     <div class="v-center" id="estimate-phone">
-      <div class="container text-center">
+      <div class="container text-center" style="margin-top: 10px;">
         <h2 class="title hide-in-mobile">What is the best number to
           reach you at if you qualify?</h2>
         <h2 class="title mb-5 show-in-mobile">What is the best number
