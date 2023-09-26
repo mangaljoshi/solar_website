@@ -144,7 +144,7 @@ const con = getGeo();
 
       // handle with prgressbar
       var step = $(e.target).data("step");
-      var percent = (parseFloat(step) / 7) * 100;
+      var percent = (parseFloat(step) / 8) * 100;
       percent = parseInt(percent);
       $(".wizard-persantage").html(percent + "%");
       $(".progress-bar").css({ width: percent + "%" });
@@ -248,14 +248,14 @@ const con = getGeo();
   
   function nextTab(elem) {
     $(".error-msg").hide();
-    if($("#step5").hasClass('active')){
+    if($("#step6").hasClass('active')){
       var email = isValidEmail($('.emailInp').val());
       if(email == false){
         $('.emailInp_vemail').show()
         return false;
       }
     }
-    if($("#step6").hasClass('active')){
+    if($("#step7").hasClass('active')){
 
       var len = {min:2};
 
@@ -467,7 +467,7 @@ const con = getGeo();
       
       var number = formData.get('phone');
       number = number.replace(/\D+/g, "");
-      updateData(7, {'phone': number, 'trusted_form_cert_url': trustedForm, 'jornaya_lead_id': jornaya});
+      updateData(8, {'phone': number, 'trusted_form_cert_url': trustedForm, 'jornaya_lead_id': jornaya});
       $('#loading').show();
     })
   }
@@ -554,14 +554,37 @@ const con = getGeo();
     autoScroll()
   });
 
-  $(".step3").click(function(e){
+  if (document.querySelector(".homeType")) {
+    document.querySelectorAll(".homeType").forEach((ele) => {
+      ele.addEventListener("click", (e) => {
+        let selectedOption = e.currentTarget.querySelector("h3").innerText;
+
+        var home_type= selectedOption;
+        
+        if (home_type == 'Single Family') {
+          type_of_home = "Single Family";
+        } else if (home_type == 'Multi-Family') {
+          type_of_home = "Condo";
+        } else if (home_type == 'Mobile Home') {
+          type_of_home = "Condo";
+        } else if (home_type == 'Townhome') {
+          type_of_home = "Condo";
+        }
+        updateData(3, {'type_of_home': type_of_home});
+        progressBar(3);
+        autoScroll()
+      });
+    });
+  }
+
+  $(".step4").click(function(e){
     if (!$(".pac-target-input").val()) {
       enteredAddress='';
       enteredCity='';
       enteredState='';
     }
-    updateData(3, {'address': enteredAddress, 'city': enteredCity, 'state': enteredState});
-    progressBar(3);
+    updateData(4, {'address': enteredAddress, 'city': enteredCity, 'state': enteredState});
+    progressBar(4);
     autoScroll()
   });
   
@@ -581,42 +604,42 @@ const con = getGeo();
         } else if (roof_shade == 'Severe Shade') {
           roof_shade_type = "Completely shaded";
         }
-        updateData(4, {'roof_shade': roof_shade_type});
-        progressBar(4);
+        updateData(5, {'roof_shade': roof_shade_type});
+        progressBar(5);
         autoScroll()
       });
     });
   }
 
-  $(".step5").click(function(e){
+  $(".step6").click(function(e){
     var email = $(".emailInp").val();
-    updateData(5, {'email': email});
-    progressBar(5);
+    updateData(6, {'email': email});
+    progressBar(6);
     autoScroll()
   });
   
 
 let oneWordRegex = /^\S+$/;
 
-  $(".step6").click(function(e){
+  $(".step7").click(function(e){
     var first_name = $(".firstNameInp").val();
     if(first_name.length < 2 || !oneWordRegex.test(first_name)){
      if(first_name.length < 2 ) {
-      $(".error_step_6").text("First name must be at least 2 characters");
+      $(".error_step_7").text("First name must be at least 2 characters");
     }else{
-      $(".error_step_6").text("First name should not contain spaces");
+      $(".error_step_7").text("First name should not contain spaces");
     } 
-    $(".error_step_6").show();
+    $(".error_step_7").show();
     return false;
     }
     var last_name = $(".lastNameInp").val();
     if(last_name.length < 2){
-      $(".error_step_6").text("last name must be at least 2 characters");
-      $(".error_step_6").show();
+      $(".error_step_7").text("last name must be at least 2 characters");
+      $(".error_step_7").show();
       return false;
     }
-    updateData(6, {'first_name': first_name, 'last_name': last_name});
-    progressBar(6);
+    updateData(7, {'first_name': first_name, 'last_name': last_name});
+    progressBar(7);
     autoScroll()
   });
 
@@ -644,7 +667,7 @@ let oneWordRegex = /^\S+$/;
         var stepNumber = Number(response.step);
         var success = response.success;
         console.log(stepNumber, response.message)
-        if (stepNumber == 7) {
+        if (stepNumber == 8) {
           if(success == false){
             $('#loading').hide();
             $('.error_step_'+stepNumber).text(response.message);
@@ -660,7 +683,7 @@ let oneWordRegex = /^\S+$/;
         return true;
       },
       error: function (errorResponse) {
-          if (step == 7) {
+          if (step == 8) {
             $('#loading').hide();
           }
           $('.error_step_'+step).text(errorResponse.responseJSON.message);
@@ -704,7 +727,7 @@ let oneWordRegex = /^\S+$/;
 
 
   const progressBar = (step) => {   
-    var percent = (parseFloat(step) / 7) * 100;
+    var percent = (parseFloat(step) / 8) * 100;
     percent = parseInt(percent);
     $(".wizard-persantage").html(percent + "%");
     $(".progress-bar").css({ width: percent + "%" });

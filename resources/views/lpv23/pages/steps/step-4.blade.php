@@ -11,18 +11,18 @@
             <span class="icon"><img loading="lazy" style="scale: 1.6;" height="60" width="60" src="{{asset('_lpv23/images/single-family-outline.svg')}}"
                alt="">
            </span>Single Family</div>
-          <div class="custom-radio-item radioNext next-step" data-step="4" data-type_of_home="3+ Stories">
-            <input type="radio" name="type_of_home" class="" data-step="4" value="3+ Stories"><span
+          <div class="custom-radio-item radioNext next-step" data-step="4" data-type_of_home="Condo">
+            <input type="radio" name="type_of_home" class="" data-step="4" value="Condo"><span
               class="icon">
               <img loading="lazy" height="60" width="60" style="scale: 1.6;"  src="{{asset('_lpv23/images/multi-family-outline.svg')}}"
                 alt="">
               </span>Multi Family</div>
-          <div class="custom-radio-item radioNext next-step" data-step="4" data-type_of_home="2 Stories">
-            <input type="radio" name="type_of_home" class="" data-step="4" value="2 Stories"><span
+          <div class="custom-radio-item radioNext next-step" data-step="4" data-type_of_home="Condo">
+            <input type="radio" name="type_of_home" class="" data-step="4" value="Condo"><span
               class="icon">
               <img loading="lazy" height="60" width="60" style="scale: 1.6;"  src="{{asset('_lpv23/images/mobile-home-outline.svg')}}"
                 alt=""></span>Mobile Home</div>
-          <div class="custom-radio-item radioNext next-step" data-step="4" data-type_of_home="1 Story"><input type="radio" name="type_of_home" class="" data-step="4" value="1 Story"><span
+          <div class="custom-radio-item radioNext next-step" data-step="4" data-type_of_home="Condo"><input type="radio" name="type_of_home" class="" data-step="4" value="Condo"><span
               class="icon"><img loading="lazy" height="60" width="60" style="scale: 1.6;"  src="{{asset('_lpv23/images/townhome-outline.svg')}}"
                 alt=""></span>Townhome</div>
         </div>

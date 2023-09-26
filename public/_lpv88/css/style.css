@@ -710,7 +710,7 @@ input[type="range"]::-moz-range-thumb {
 .wizard__main .sunlight-box {
     display: block;
     background-color: #078041;
-    padding: 7px 30px;
+    /* padding: 7px 30px; */
     border-radius: 42px;
     text-decoration: none;
     color: #fff;
@@ -735,9 +735,9 @@ input[type="range"]::-moz-range-thumb {
 /* .home-type{
     padding: 0 98px !important;
 } */
-.wizard__main .sunlight-box:hover {
+/* .wizard__main .sunlight-box:hover {
     background-color: #f7c51d;
-}
+} */
 .wizard__main .sunlight-box > a .theme-title {
     color: #fff;
     margin-top: 15px;

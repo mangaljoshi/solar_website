@@ -161,31 +161,36 @@ class BaseController extends Controller
                 'utility_provider' => 'required'
             ]);
             $userData['utility_provider'] = $request->get('utility_provider');
-        } else if ($step == 3) {
+        }else if ($step == 3) {
+            $this->validate($request, [
+                'type_of_home' => 'required'
+            ]);
+            $userData['type_of_home'] = $request->get('type_of_home');
+        } else if ($step == 4) {
             $this->validate($request, [
                 'address' => 'required'
             ]);
             $userData['address'] = $request->get('address');
             $userData['city'] = $request->get('city');
             $userData['state'] = $request->get('state');
-        } else if ($step == 4) {
+        } else if ($step == 5) {
             $this->validate($request, [
                 'roof_shade' => 'required'
             ]);
             $userData['roof_shade'] = $request->get('roof_shade');
-        } else if ($step == 5) {
+        } else if ($step == 6) {
             $this->validate($request, [
                 'email' => 'required|email|regex:/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/'
             ]);
             $userData['email'] = $request->get('email');
-        } else if ($step == 6) {
+        } else if ($step == 7) {
             $this->validate($request, [
                 'first_name' => 'required|min:2',
                 'last_name' => 'required|min:2'
             ]);
             $userData['first_name'] = $request->get('first_name');
             $userData['last_name'] = $request->get('last_name');
-        } else if ($step == 7) {
+        } else if ($step == 8) {
             $this->validate($request, [
                 'phone' => 'required|size:10'
             ]);

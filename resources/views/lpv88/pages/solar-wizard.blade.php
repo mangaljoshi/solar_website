@@ -102,7 +102,62 @@
                                                         </a>
                                                     </div>
                                                 </div>
-                                                <div class="tab-pane tab-pane" role="tabpanel" id="step3">
+                                                <div class="tab-pane tab-pane home-type-container" role="tabpanel" id="step3">
+                                                    <div class="wizard__box">
+                                                        <div class="page-title text-center mb-3">
+                                                            <h2 style="font-size: 39px;">What Type of Home Do You Live In?</h2>
+                                                        </div>
+                                                        <div class=" home-t wizard__main mx-680">
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-6 col-666 col-sm-6">
+                                                                    <div class="sunlight-box text-center">
+                                                                        <a href="javascript:void(0);" class="step3 homeType">
+                                                                            <div class="sunlight-ico">
+                                                                                <img class="home-img" src="{{asset('_lpv88/images/single-family-outline.svg')}}" alt="">
+                                                                            </div>
+                                                                            <h3 class="theme-title-home">Single Family</h3>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6 col-666 col-sm-6">
+                                                                    <div class="sunlight-box text-center">
+                                                                        <a href="javascript:void(0);" class="step3 homeType">
+                                                                            <div class="sunlight-ico">
+                                                                            <img class="home-img" src="{{asset('_lpv88/images/multi-family-outline.svg')}}" alt="">
+                                                                            </div>
+                                                                            <h3 class="theme-title-home">Multi-Family</h3>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6 col-666 col-sm-6">
+                                                                    <div class="sunlight-box text-center">
+                                                                        <a href="javascript:void(0);" class="step3 homeType">
+                                                                            <div class="sunlight-ico">
+                                                                            <img class="home-img" src="{{asset('_lpv88/images/mobile-home-outline.svg')}}" alt="">
+                                                                            </div>
+                                                                            <h3 class="theme-title-home">Mobile Home</h3>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6 col-666 col-sm-6">
+                                                                    <div class="sunlight-box text-center">
+                                                                        <a href="javascript:void(0);" class="step3 homeType">
+                                                                            <div class="sunlight-ico">
+                                                                            <img class="home-img" src="{{asset('_lpv88/images/townhome-outline.svg')}}" alt="">
+                                                                            </div>
+                                                                            <h3 class="theme-title-home">Townhome</h3>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="wizard-back-btn text-center mt-4">
+                                                        <div class="invalid-feedback error_step_4 text-white"></div>
+                                                        <span class="prev-step-2" data-prev-step="2"><i class="fas fa-chevron-left"></i> Back</span>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane tab-pane" role="tabpanel" id="step4">
                                                     <div class="wizard__box">
                                                         <div class="page-title text-center mb-3">
                                                             <h2>{{ __('solar.address')}}</h2>
@@ -118,7 +173,7 @@
                                                                         <div class="dropdown">
                                                                         <input type="search" id="pac-input" name="home_address" class="jAuto form-control" placeholder="Type Here e.g. 123 West Main Road" autocomplete="off" required>
 
-                                                                        <div class="invalid-feedback error_step_3 text-white"></div>
+                                                                        <div class="invalid-feedback error_step_4 text-white"></div>
 
                                                                         <div class="dropdown-menu">
                                                                             <i class="hasNoResults">{{ __('solar.matching_results')}}</i>
@@ -140,7 +195,7 @@
                                                             <div class="col-md-12 col-sm-12 col-12">
                                                                 <div class="form-group picker text-center mt-20">
                                                                     <!-- <a href="javascript:void(0);" style="display: none;" class="btn-main step3">Continue</a> -->
-                                                                    <button type="submit" class="btn-main step3">Continue</button>
+                                                                    <button type="submit" class="btn-main step4">Continue</button>
                                                                 </div>
                                                             </div>
                                                             </div>
@@ -148,10 +203,10 @@
                                                         </form>
                                                     </div>
                                                     <div class="wizard-back-btn text-center mt-4">
-                                                        <span class="prev-step-2" data-prev-step="2"><i class="fas fa-chevron-left"></i> Back</span>
+                                                        <span class="prev-step-3" data-prev-step="3"><i class="fas fa-chevron-left"></i> Back</span>
                                                     </div>
                                                 </div>
-                                                <div class="tab-pane tab-pane" role="tabpanel" id="step4">
+                                                <div class="tab-pane tab-pane" role="tabpanel" id="step5">
                                                     <div class="wizard__box">
                                                         <div class="page-title text-center mb-3">
                                                             <h2>{{ __('solar.sunlight_heading')}}</h2>
@@ -161,7 +216,7 @@
                                                             <div class="row justify-content-center">
                                                             <div class="col-sm-6 col-6">
                                                                 <div class="sunlight-box text-center">
-                                                                    <a href="javascript:void(0);" class="step4 roofSunlight">
+                                                                    <a href="javascript:void(0);" class="step5 roofSunlight">
                                                                         <div class="sunlight-ico">
                                                                         <img src="{{ asset('_lpv88/images/no-shade.svg') }}" alt="">
                                                                         </div>
@@ -171,7 +226,7 @@
                                                             </div>
                                                             <div class="col-sm-6 col-6">
                                                                 <div class="sunlight-box text-center">
-                                                                    <a href="javascript:void(0);" class="step4 roofSunlight">
+                                                                    <a href="javascript:void(0);" class="step5 roofSunlight">
                                                                         <div class="sunlight-ico">
                                                                         <img src="{{ asset('_lpv88/images/little-shade.svg') }}" alt="">
                                                                         </div>
@@ -181,7 +236,7 @@
                                                             </div>
                                                             <div class="col-sm-6 col-6">
                                                                 <div class="sunlight-box text-center">
-                                                                    <a href="javascript:void(0);" class="step4 roofSunlight">
+                                                                    <a href="javascript:void(0);" class="step5 roofSunlight">
                                                                         <div class="sunlight-ico">
                                                                         <img src="{{ asset('_lpv88/images/lot-of-shade.svg') }}" alt="">
                                                                         </div>
@@ -191,7 +246,7 @@
                                                             </div>
                                                             <div class="col-sm-6 col-6">
                                                                 <div class="sunlight-box text-center">
-                                                                    <a href="javascript:void(0);" class="step4 roofSunlight">
+                                                                    <a href="javascript:void(0);" class="step5 roofSunlight">
                                                                         <div class="sunlight-ico">
                                                                         <img src="{{ asset('_lpv88/images/uncertain.svg') }}" alt="">
                                                                         </div>
@@ -204,10 +259,10 @@
                                                     </div>
                                                     <div class="wizard-back-btn text-center mt-4">
                                                         <div class="invalid-feedback error_step_4 text-white"></div>
-                                                        <span class="prev-step-3" data-prev-step="3"><i class="fas fa-chevron-left"></i> Back</span>
+                                                        <span class="prev-step-4" data-prev-step="4"><i class="fas fa-chevron-left"></i> Back</span>
                                                     </div>
                                                 </div>
-                                                <div class="tab-pane tab-pane" role="tabpanel" id="step5">
+                                                <div class="tab-pane tab-pane" role="tabpanel" id="step6">
                                                     <div class="wizard__box">
                                                         <div class="page-title text-center mb-3">
                                                             <h2>{{ __('solar.estimate_heading')}}</h2>
@@ -219,24 +274,24 @@
                                                                 <div class="form-group">
                                                                     <input type="email"  value="{{ Session::has('userData') && isset(Session::get('userData')['email']) ? Session::get('userData')['email'] : '' }}" oninput="handleInput(event)" class="form-control emailInp" placeholder="Email address" required>
                                                                     <!-- <span class="error-msg emailInp_vemail" style="color: white; display: none;">Please Enter a Valid Email Address</span> -->
-                                                                    <div class="invalid-feedback error_step_5 text-white"></div>
+                                                                    <div class="invalid-feedback error_step_6 text-white"></div>
                                                                 </div>
                                                             </div>
                                                             </div>
                                                             <div class="row">
                                                             <div class="col-md-12 col-sm-12 col-12">
                                                                 <div class="form-group picker text-center mt-20">
-                                                                    <a href="javascript:void(0);" class="btn-main step5">Next</a>
+                                                                    <a href="javascript:void(0);" class="btn-main step6">Next</a>
                                                                 </div>
                                                             </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="wizard-back-btn text-center mt-4">
-                                                        <span class="prev-step-4" data-prev-step="4"><i class="fas fa-chevron-left"></i> Back</span>
+                                                        <span class="prev-step-5" data-prev-step="5"><i class="fas fa-chevron-left"></i> Back</span>
                                                     </div>
                                                 </div>
-                                                <div class="tab-pane tab-pane" role="tabpanel" id="step6">
+                                                <div class="tab-pane tab-pane" role="tabpanel" id="step7">
                                                     <div class="row">
                                                         <div class="col-12">
                                                             <div class="wizard__box">
@@ -259,25 +314,25 @@
                                                                     </div>
 
                                                                     <div class="col-sm-6 col-12 text-center">
-                                                                        <div class="invalid-feedback error_step_6 text-white"></div>
+                                                                        <div class="invalid-feedback error_step_7 text-white"></div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="row">
                                                                     <div class="col-md-12 col-sm-12 col-12">
                                                                         <div class="form-group picker text-center mt-20">
-                                                                        <a href="javascript:void(0);" class="btn-main step6">Next</a>
+                                                                        <a href="javascript:void(0);" class="btn-main step7">Next</a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             </div>
                                                             <div class="wizard-back-btn text-center mt-4">
-                                                            <span class="prev-step-5" data-prev-step="5"><i class="fas fa-chevron-left"></i> Back</span>
+                                                            <span class="prev-step-6" data-prev-step="6"><i class="fas fa-chevron-left"></i> Back</span>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="tab-pane tab-pane" role="tabpanel" id="step7">
+                                                <div class="tab-pane tab-pane" role="tabpanel" id="step8">
                                                     <form id="phoneNumberForm">
                                                         <div class="row">
                                                             <div class="col-12">
@@ -299,7 +354,7 @@
                                                                             <input id="leadid_token" name="universal_leadid" type="hidden" value=""/>
                                                                             <input type="hidden" name="xxTrustedFormCertUrl" id="xxTrustedFormCertUrl_0" value="https://cert.trustedform.com/454a35b802f3e7b63ffabb4efedb7c6ebe67886c">
                                                                         </div>
-                                                                        <div class="invalid-feedback error_step_7 text-white phoneNumber_errormsg"></div>
+                                                                        <div class="invalid-feedback error_step_8 text-white phoneNumber_errormsg"></div>
                                                                         </div>
 
                                                                         <div class="col-md-12 col-sm-12 col-12 mt-2">
