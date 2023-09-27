@@ -32,7 +32,7 @@
 
 <div class="thumbtack-container">
     <div class="thumbtack-heading">
-        <h1>Additional home services from top-rated pros through our trusted partner - Thumbtack</h1>
+        <h1>Get more done by hiring a pro through our trusted partner, Thumbtack</h1>
 
     </div>
 
