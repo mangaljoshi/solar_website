@@ -568,7 +568,7 @@ const con = getGeo();
         } else if (home_type == 'Mobile Home') {
           type_of_home = "Condo";
         } else if (home_type == 'Townhome') {
-          type_of_home = "Condo";
+          type_of_home = "2 Stories ";
         }
         updateData(3, {'type_of_home': type_of_home});
         progressBar(3);
