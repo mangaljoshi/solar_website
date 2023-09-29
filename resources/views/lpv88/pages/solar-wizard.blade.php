@@ -15,6 +15,16 @@
                             <div class="hero-logo">
                                 <a href="{{ route('home') }}"><img src="{{ asset('_lpv88/images/logo.png') }}" alt=""></a>
                             </div>
+                            <div class="header-right">
+                                <div class="step-loading" style="">
+                                    <div class="wave">
+                                        <div class="dot"></div>
+                                        <div class="dot"></div>
+                                        <div class="dot"></div>
+                                    </div>
+                                    <div class="loading" data-loading-text="Calculating..."></div>
+                                </div>
+                            </div>
                             <div class="wizard-bg-box mt-4">
                                 <div class="progress" style="height: 20px;">
                                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="5" style="width: 10%;"></div>

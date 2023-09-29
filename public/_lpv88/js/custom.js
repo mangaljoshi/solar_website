@@ -105,12 +105,16 @@ const getGeo = async() => {
   });
 }
 
+
 const con = getGeo();
 
   
-  $(".solar-cost-data .btn-main").click(function () {
+  $(".solar-cost-data .btn-main").click( function () {
+    $('.step-loading').show();
+     
     $(".solar-cost-data .btn-main.active").removeClass("active"); // Just remove class from all folder
     $(this).addClass("active"); // add onto current
+    $('.step-loading').hide();
   });
 
   // ------------register-steps--------------
@@ -166,11 +170,13 @@ const con = getGeo();
     });
   
     $(".picker .next-step").click(function () {
+      $('.step-loading').show();
       $(this).parent().children().removeClass("active");
       $(this).addClass("active");
     });
   
     $(".next-step1").click(async function (e) {
+      $('.step-loading').show();
       let checkBtnTrigger = e.currentTarget.hasAttribute('data-zip-btn')
       if(checkBtnTrigger){
         let Btn = document.querySelector('[data-zip-btn]');
@@ -231,12 +237,22 @@ const con = getGeo();
       if (document.querySelector(".utilityProvider")) {
         document.querySelectorAll(".utilityProvider").forEach((ele) => {
           ele.addEventListener("click", (e) => {
+            $('.step-loading').show();
+           
+            // await new Promise(resolve => setTimeout(resolve, 600)); 
             let selectedOption = e.currentTarget.innerText;
-            updateData(2, {'utility_provider': selectedOption});
+            console.log('Selected option:', selectedOption);  
+      
+            setTimeout( function(){
+              updateData(2, {'utility_provider': selectedOption});
+          
+            }, 700);
+          
             progressBar(2);
           });
         });
       }
+      
     });
   
     $(".prev-step").click(function (e) {
@@ -538,6 +554,7 @@ const con = getGeo();
   }
 
   $(".step1").click(function(e){
+    $('.step-loading').show();
     var range = $(".avgBillRange").val();
     if (range < 100) {
       monthly_bill = "Less than $100";
@@ -548,15 +565,18 @@ const con = getGeo();
     } else {
       monthly_bill = "More than $300";
     }   
+    setTimeout( function(){
+      updateData(1, {'monthly_bill': monthly_bill});
+  }, 700);
     
-    updateData(1, {'monthly_bill': monthly_bill});
     progressBar(1);
     autoScroll()
   });
 
   if (document.querySelector(".homeType")) {
     document.querySelectorAll(".homeType").forEach((ele) => {
-      ele.addEventListener("click", (e) => {
+      ele.addEventListener("click",  (e) => {
+        $('.step-loading').show();
         let selectedOption = e.currentTarget.querySelector("h3").innerText;
 
         var home_type= selectedOption;
@@ -570,27 +590,38 @@ const con = getGeo();
         } else if (home_type == 'Townhome') {
           type_of_home = "Condo";
         }
-        updateData(3, {'type_of_home': type_of_home});
+        setTimeout( function(){
+          updateData(3, {'type_of_home': type_of_home});
+         },600);
+        
         progressBar(3);
+       
         autoScroll()
       });
     });
   }
 
-  $(".step4").click(function(e){
+  $(".step4").click( function(e){
+    $('.step-loading').show();
     if (!$(".pac-target-input").val()) {
       enteredAddress='';
       enteredCity='';
       enteredState='';
     }
-    updateData(4, {'address': enteredAddress, 'city': enteredCity, 'state': enteredState});
+    setTimeout( function(){
+      updateData(4, {'address': enteredAddress, 'city': enteredCity, 'state': enteredState});
+  }, 700);
+    
     progressBar(4);
+   
     autoScroll()
   });
   
   if (document.querySelector(".roofSunlight")) {
     document.querySelectorAll(".roofSunlight").forEach((ele) => {
       ele.addEventListener("click", (e) => {
+        $('.step-loading').show();
+      
         let selectedOption = e.currentTarget.querySelector("h3").innerText;
 
         var roof_shade= selectedOption;
@@ -604,16 +635,23 @@ const con = getGeo();
         } else if (roof_shade == 'Severe Shade') {
           roof_shade_type = "Completely shaded";
         }
-        updateData(5, {'roof_shade': roof_shade_type});
+         setTimeout( function(){
+          updateData(5, {'roof_shade': roof_shade_type});
+      }, 700);
         progressBar(5);
+       
         autoScroll()
       });
     });
   }
 
-  $(".step6").click(function(e){
+  $(".step6").click( function(e){
+    $('.step-loading').show();
     var email = $(".emailInp").val();
-    updateData(6, {'email': email});
+    setTimeout( function(){
+      updateData(6, {'email': email});
+  }, 700);
+   
     progressBar(6);
     autoScroll()
   });
@@ -622,9 +660,12 @@ const con = getGeo();
 let oneWordRegex = /^\S+$/;
 
   $(".step7").click(function(e){
+    $('.step-loading').show();
+      
     var first_name = $(".firstNameInp").val();
     if(first_name.length < 2 || !oneWordRegex.test(first_name)){
      if(first_name.length < 2 ) {
+      
       $(".error_step_7").text("First name must be at least 2 characters");
     }else{
       $(".error_step_7").text("First name should not contain spaces");
@@ -638,7 +679,9 @@ let oneWordRegex = /^\S+$/;
       $(".error_step_7").show();
       return false;
     }
-    updateData(7, {'first_name': first_name, 'last_name': last_name});
+    setTimeout( function(){
+      updateData(7, {'first_name': first_name, 'last_name': last_name});
+  }, 700);  
     progressBar(7);
     autoScroll()
   });
@@ -664,6 +707,7 @@ let oneWordRegex = /^\S+$/;
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
       },
       success: function (response) {
+        $('.step-loading').hide();
         var stepNumber = Number(response.step);
         var success = response.success;
         console.log(stepNumber, response.message)
@@ -787,6 +831,7 @@ let oneWordRegex = /^\S+$/;
   // -----------------------Script for corss sell-------------------------//
 
  $(".next-url").click(function(){
+  $('.step-loading').show();
         let zipVal = $('#zip').val();
       
           if(zipVal != ""){
