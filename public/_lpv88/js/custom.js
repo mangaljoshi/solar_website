@@ -246,7 +246,7 @@ const con = getGeo();
             setTimeout( function(){
               updateData(2, {'utility_provider': selectedOption});
           
-            }, 700);
+            }, 900);
           
             progressBar(2);
           });
@@ -567,7 +567,7 @@ const con = getGeo();
     }   
     setTimeout( function(){
       updateData(1, {'monthly_bill': monthly_bill});
-  }, 700);
+  }, 900);
     
     progressBar(1);
     autoScroll()
@@ -610,7 +610,7 @@ const con = getGeo();
     }
     setTimeout( function(){
       updateData(4, {'address': enteredAddress, 'city': enteredCity, 'state': enteredState});
-  }, 700);
+  }, 900);
     
     progressBar(4);
    
@@ -637,7 +637,7 @@ const con = getGeo();
         }
          setTimeout( function(){
           updateData(5, {'roof_shade': roof_shade_type});
-      }, 700);
+      }, 900);
         progressBar(5);
        
         autoScroll()
@@ -650,7 +650,7 @@ const con = getGeo();
     var email = $(".emailInp").val();
     setTimeout( function(){
       updateData(6, {'email': email});
-  }, 700);
+  }, 900);
    
     progressBar(6);
     autoScroll()
@@ -681,7 +681,7 @@ let oneWordRegex = /^\S+$/;
     }
     setTimeout( function(){
       updateData(7, {'first_name': first_name, 'last_name': last_name});
-  }, 700);  
+  }, 900);  
     progressBar(7);
     autoScroll()
   });
