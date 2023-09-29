@@ -9633,3 +9633,12 @@ fieldset:disabled .btn {
     }
   }
   
+
+  @media (min-width: 768px) {
+    .header-right {
+        position: absolute;
+        right: 78px;
+        top: 53px;
+        width: 130px;
+    }
+  }
