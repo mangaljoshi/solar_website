@@ -204,6 +204,7 @@ class BaseController extends Controller
                 ]);
             }
             $userData['trusted_form_cert_url'] = $request->get('trusted_form_cert_url');
+            $userData['trusted_form_cert_id'] = basename($request->get('trusted_form_cert_url'));
             $userData['jornaya_lead_id'] = $request->get('jornaya_lead_id');
             $userData['jornaya_leadid'] = $request->get('jornaya_lead_id');
             Session::put('userData', $userData);
@@ -283,6 +284,7 @@ class BaseController extends Controller
                 ]);
             }
             $userData['trusted_form_cert_url'] = $request->get('trusted_form_cert_url');
+            $userData['trusted_form_cert_id'] = basename($request->get('trusted_form_cert_url'));
             $userData['jornaya_lead_id'] = $request->get('jornaya_leadid');
             $userData['jornaya_leadid'] = $request->get('jornaya_leadid');
             // dd($userData);
