@@ -38,7 +38,7 @@ class BaseController extends Controller
             $userData['sub_id1'] = "int";
             $userData['ip_address'] = $request->ip();
             $userData['homeowner'] = "Yes";
-            $userData['landing_page'] = 'wisesolaradvisor.com';
+            $userData['landing_page'] = 'powersolarsavings.com';
             $userData['user_agent'] = $request->header('User-Agent');
             $userData['tcpa_text'] = config('base.tcpa_text');
             $userData['time_frame'] = "Immediate";
@@ -67,7 +67,7 @@ class BaseController extends Controller
         $userData['zip_code'] = $request->input('zip_code');
         $userData['ip_address'] = $request->ip();
         $userData['homeowner'] = "Yes";
-        $userData['landing_page'] = 'wisesolaradvisor.com';
+        $userData['landing_page'] = 'powersolarsavings.com';
         $userData['user_agent'] = $request->header('User-Agent');
         $userData['tcpa_text'] = config('base.tcpa_text');
         $userData['time_frame'] = "Immediate";
