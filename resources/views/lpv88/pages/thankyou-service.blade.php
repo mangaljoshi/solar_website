@@ -14,7 +14,7 @@
             
         </div>
         <div class="col-md-12 thank-you-banner" style="text-align:center">
-             <a href="https://qualitywindowsdirect.com/rbaw40a-200.aspx?eccmp=7025&eckwd=&ecadid=native&Offerid=">
+             <a href="https://qualitywindowsdirect.com/rbaw40a-200.aspx?eccmp=7025&eckwd=&ecadid=solarcs&Offerid=">
             <img src="{{asset('_lpv88/images/thank-you-banner1.jpg')}}" alt="thank-you-banner">
         
         </a>
