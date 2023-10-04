@@ -24,6 +24,7 @@
         text-align: center !important;
         margin-top: -17px !important;
         margin-bottom: 17px !important;
+        color:rgb(0, 0, 161) !important;
         font-weight: 900 !important;" href="{{ route('energybill.thankyouConfirmation', ['route_name' => 'lpv88']) }}"> No Thanks</a>
     </div>
 </div>
