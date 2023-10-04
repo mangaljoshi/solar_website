@@ -54,6 +54,46 @@
                                                     <p>Select needed project(s):</p>
                                                     <form novalidate="novalidate" action="{{ route('energybill.second.service', ['route_name' => 'lpv90']) }}" accept-charset="UTF-8" method="post">
                                                         @csrf()
+
+                                                        <div class="service">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+                                                                <title>home_pros_center_icons</title>
+                                                                <circle class="circle-orange" cx="160" cy="160" r="35"></circle>
+                                                                <circle class="circle-blue" cx="115" cy="115" r="65"></circle>
+                                                                <path
+                                                                    class="fill-dark"
+                                                                    d="M173.38,136.24,151,61a2,2,0,0,0-1.92-1.41H94.24V45.46a2,2,0,0,0-2-2H76.64a2,2,0,0,0-2,2V59.6H58.55A2,2,0,0,0,56.63,61L34.22,136.24a2,2,0,0,0,1.92,2.58h90.52a2,2,0,0,0,1.92-1.43l20.48-68.72,19.71,66.14H146.45a2,2,0,1,0,0,4h25a2,2,0,0,0,1.92-2.58ZM78.64,47.46H90.23V81.93H78.64ZM38.83,134.8,60,63.61H74.63V83.94a2,2,0,0,0,2,2h15.6a2,2,0,0,0,2-2V63.61h20.94L94,134.8ZM143.09,74.64H126.33a2,2,0,0,0,0,4H141.9l-3.29,11H121.84a2,2,0,0,0,0,4h15.57l-3.29,11H117.36a2,2,0,1,0,0,4h15.58l-3.29,11H112.87a2,2,0,0,0,0,4h15.58l-3.29,11h-27l21.21-71.19h27Z"
+                                                                ></path>
+                                                                <rect class="fill-orange" x="78.64" y="47.46" width="11.59" height="34.47"></rect>
+                                                            </svg>
+
+                                                            <label class="custom-checkbox">
+                                                                Roofing
+                                                                <input type="checkbox" name="services[roofing]" id="services_roofing_" value="roofing" />
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                            <div class="second-service-questions">
+                                                                <div class="form-group mb-xs-15">
+                                                                    <label>What is your roofing project type?</label>
+                                                                    <select class="form-control" name="services[roofing][service_type]" disabled="true">
+                                                                        <option value="Install" selected="">Install</option>
+                                                                        <option value="Replace">Replace</option>
+                                                                        <option value="Repair">Repair</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form-group mb-xs-15">
+                                                                    <label>What type of roof do you need help with?</label>
+                                                                    <select class="form-control" name="services[roofing][material]" disabled="true">
+                                                                        <option value="Asphalt" selected="">Asphalt/Shingle</option>
+                                                                        <option value="Metal">Metal</option>
+                                                                        <option value="Natural Slate">Natural Slate</option>
+                                                                        <option value="Composite">Wood/Composite</option>
+                                                                        <option value="Tile">Tile</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
                                                         <div class="service">
                                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
                                                                 <title>home_pros_center_icons</title>
@@ -105,44 +145,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="service">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-                                                                <title>home_pros_center_icons</title>
-                                                                <circle class="circle-orange" cx="160" cy="160" r="35"></circle>
-                                                                <circle class="circle-blue" cx="115" cy="115" r="65"></circle>
-                                                                <path
-                                                                    class="fill-dark"
-                                                                    d="M173.38,136.24,151,61a2,2,0,0,0-1.92-1.41H94.24V45.46a2,2,0,0,0-2-2H76.64a2,2,0,0,0-2,2V59.6H58.55A2,2,0,0,0,56.63,61L34.22,136.24a2,2,0,0,0,1.92,2.58h90.52a2,2,0,0,0,1.92-1.43l20.48-68.72,19.71,66.14H146.45a2,2,0,1,0,0,4h25a2,2,0,0,0,1.92-2.58ZM78.64,47.46H90.23V81.93H78.64ZM38.83,134.8,60,63.61H74.63V83.94a2,2,0,0,0,2,2h15.6a2,2,0,0,0,2-2V63.61h20.94L94,134.8ZM143.09,74.64H126.33a2,2,0,0,0,0,4H141.9l-3.29,11H121.84a2,2,0,0,0,0,4h15.57l-3.29,11H117.36a2,2,0,1,0,0,4h15.58l-3.29,11H112.87a2,2,0,0,0,0,4h15.58l-3.29,11h-27l21.21-71.19h27Z"
-                                                                ></path>
-                                                                <rect class="fill-orange" x="78.64" y="47.46" width="11.59" height="34.47"></rect>
-                                                            </svg>
-
-                                                            <label class="custom-checkbox">
-                                                                Roofing
-                                                                <input type="checkbox" name="services[roofing]" id="services_roofing_" value="roofing" />
-                                                                <span class="checkmark"></span>
-                                                            </label>
-                                                            <div class="second-service-questions">
-                                                                <div class="form-group mb-xs-15">
-                                                                    <label>What is your roofing project type?</label>
-                                                                    <select class="form-control" name="services[roofing][service_type]" disabled="true">
-                                                                        <option value="Install" selected="">Install</option>
-                                                                        <option value="Replace">Replace</option>
-                                                                        <option value="Repair">Repair</option>
-                                                                    </select>
-                                                                </div>
-                                                                <div class="form-group mb-xs-15">
-                                                                    <label>What type of roof do you need help with?</label>
-                                                                    <select class="form-control" name="services[roofing][material]" disabled="true">
-                                                                        <option value="Asphalt" selected="">Asphalt/Shingle</option>
-                                                                        <option value="Metal">Metal</option>
-                                                                        <option value="Natural Slate">Natural Slate</option>
-                                                                        <option value="Composite">Wood/Composite</option>
-                                                                        <option value="Tile">Tile</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                        
                                                         <div class="mt-xs-30">
                                                             <h5 id="seconde_service_validation" class="text-danger text-left" style="display: none;"></h5>
                                                             <div class="row justify-content-cente">

@@ -1,7 +1,7 @@
 @extends('lpv90.layouts.base')
 
 @section('content')
-@include('lpv90.partials.header_common')
+{{-- @include('lpv90.partials.header_common') --}}
 
 
 <div class="container">
