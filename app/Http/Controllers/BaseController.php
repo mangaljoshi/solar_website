@@ -54,6 +54,32 @@ class BaseController extends Controller
     }
 
     public function zipForm(Request $request, $route_name = 'energybill') {
+        if($route_name == 'lpv90'){
+            $this->validate($request, [
+                'zip_code' => 'required|digits:5|numeric'
+            ]);
+            $userData = Session::get('userData');
+            $userData['lp_campaign_id'] = "18690";
+            $userData['lp_key'] = "g3drfd3v0i5ngr";
+            $userData['lp_supplier_id'] = "42019";
+            $userData['lp_subid2'] ="lpv90";
+            $userData['lp_response'] = "JSON";
+            $userData['sub_id1'] = "int";
+            $userData['zip_code'] = $request->input('zip_code');
+            $userData['ip_address'] = $request->ip();
+            $userData['homeowner'] = "Yes";
+            $userData['landing_page'] = 'powersolarsavings.com';
+            $userData['user_agent'] = $request->header('User-Agent');
+            $userData['tcpa_text'] = config('base.tcpa_text');
+            $userData['time_frame'] = "Immediate";
+            $userData["house_size"] = "2-3 Bedroom";
+            $userData["credit_rating"] = "Good";
+            $userData["type_of_home"] = "Single Family";
+            $userData["gclid"] = "";
+    
+            Session::put('userData', $userData);
+            return redirect($route_name.'/solar-wizard');
+        }
         $this->validate($request, [
             'zip_code' => 'required|digits:5|numeric'
         ]);

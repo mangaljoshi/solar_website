@@ -58,3 +58,5 @@ Route::group(['prefix'=>'{route_name}','as'=>'energybill.'], function(){
 });
 
 Route::post('/update-data-lpv23/{step}', [BaseController::class, 'updateSolarDataLPV23'])->name('update.roof.lpv23');
+
+// Route::post('/update-data-lpv90/{step}', [BaseController::class, 'updateSolarDataLPV90'])->name('update.roof.lpv90');
