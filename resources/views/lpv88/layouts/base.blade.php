@@ -30,10 +30,16 @@
                 if(typeof anura === 'object') {
                     var url_params_obj = {};
                     window.location.search.slice(1).split('&').forEach(function (item){url_params_obj[item.split('=')[0]] = item.split('=').slice(1).join('')});
+                    var additional_obj = {
+                                1: url_params_obj['lptoken'],
+                                2: url_params_obj['lptoken3'],
+                                3: url_params_obj['vid'],
+                            }
+                            var additional = JSON.stringify(additional_obj);
                     var request = {
                         instance: '1723947302',
-                        source: url_params_obj['utm_source'],
-                        campaign: url_params_obj['utm_campaign'],
+                        source: url_params_obj['trafficsource'],
+                        additional: additional,
                         callback: 'anuraResponseHandler',
                     };
                     var params = [];
