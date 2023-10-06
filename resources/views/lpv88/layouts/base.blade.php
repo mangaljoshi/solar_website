@@ -126,6 +126,17 @@
                 }
             }
         </script>
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RXZ3171R34"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-RXZ3171R34');
+        </script>
+
     </head>
     <body>    
         {{-- @if(Route::current()->getName() != 'home' && Route::current()->getName() != 'solar.home' && Route::current()->getName() != 'solar.thankyou' && Route::current()->getName() != 'solar.solar.wizard')
