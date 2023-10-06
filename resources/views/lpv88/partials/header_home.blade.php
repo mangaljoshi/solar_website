@@ -8,7 +8,7 @@
                         <img src="{{ asset('_lpv88/images/logo.png') }}" alt="" class=" d-lg-block">
                     </a>
                 </div>
-                <div class="header-right">
+                {{-- <div class="header-right">
                     <div class="step-loading" style="">
                         <div class="wave">
                             <div class="dot"></div>
@@ -17,7 +17,7 @@
                         </div>
                         <div class="loading" data-loading-text="Calculating..."></div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
