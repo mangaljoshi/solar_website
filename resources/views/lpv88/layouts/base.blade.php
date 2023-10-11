@@ -154,6 +154,30 @@
         src="https://www.facebook.com/tr?id=798504555355901&ev=PageView&noscript=1"
         /></noscript>
         <!-- End Meta Pixel Code -->
+           <!--  ClickCease.com tracking-->
+      <script type='text/javascript'>var script = document.createElement('script');
+      script.async = true; script.type = 'text/javascript';
+      var target = 'https://www.clickcease.com/monitor/stat.js';
+      script.src = target;var elem = document.head;elem.appendChild(script);
+      </script>
+      <noscript>
+      <a href='https://www.clickcease.com' rel='nofollow'><img src='https://monitor.clickcease.com' alt='ClickCease'/></a>
+      </noscript>
+      <!--  ClickCease.com tracking-->
+      
+      <!--  ClickCease.com Conversion tracking-->
+        <script type="text/javascript">
+        ccConVal = 0;
+        var script = document.createElement("script");
+        script.async = true;
+        script.type = "text/javascript";
+        var target = 'https://www.clickcease.com/monitor/cccontrack.js';
+        script.src = target; var elem = document.head; elem.appendChild(script);
+        </script>
+        <noscript>
+        <a href="https://www.clickcease.com" rel="nofollow"><img src="https://monitor.clickcease.com/conversions/conversions.aspx?value=0" alt="ClickCease"/></a>
+        </noscript>
+        <!--  ClickCease.com Conversion tracking-->
 
     </head>
     <body>    

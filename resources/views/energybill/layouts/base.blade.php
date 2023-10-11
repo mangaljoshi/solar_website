@@ -17,6 +17,30 @@
 
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+           <!--  ClickCease.com tracking-->
+      <script type='text/javascript'>var script = document.createElement('script');
+      script.async = true; script.type = 'text/javascript';
+      var target = 'https://www.clickcease.com/monitor/stat.js';
+      script.src = target;var elem = document.head;elem.appendChild(script);
+      </script>
+      <noscript>
+      <a href='https://www.clickcease.com' rel='nofollow'><img src='https://monitor.clickcease.com' alt='ClickCease'/></a>
+      </noscript>
+      <!--  ClickCease.com tracking-->
+      
+      <!--  ClickCease.com Conversion tracking-->
+        <script type="text/javascript">
+        ccConVal = 0;
+        var script = document.createElement("script");
+        script.async = true;
+        script.type = "text/javascript";
+        var target = 'https://www.clickcease.com/monitor/cccontrack.js';
+        script.src = target; var elem = document.head; elem.appendChild(script);
+        </script>
+        <noscript>
+        <a href="https://www.clickcease.com" rel="nofollow"><img src="https://monitor.clickcease.com/conversions/conversions.aspx?value=0" alt="ClickCease"/></a>
+        </noscript>
+        <!--  ClickCease.com Conversion tracking-->
     </head>
     <body>  
         {{-- @if(Route::current()->getName() != 'home' && Route::current()->getName() != 'thankyou' && Route::current()->getName() != 'solar.wizard')
