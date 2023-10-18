@@ -97,6 +97,15 @@ function onlyNumberKey(evt) {
   return true;
 }
 
+
+$(document).ready(function() {
+  $('#fname, #lname').on('keydown', function(e) {
+    if (e.keyCode === 32) {
+      e.preventDefault();
+    }
+  });
+});
+
 let oneWordRegex = /^\S+$/;
 
 

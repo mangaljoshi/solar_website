@@ -656,7 +656,14 @@ const con = getGeo();
     autoScroll()
   });
   
-
+  $(document).ready(function() {
+    $('.firstNameInp, .lastNameInp').on('keydown', function(e) {
+      if (e.keyCode === 32) {
+        e.preventDefault();
+      }
+    });
+  });
+  
 let oneWordRegex = /^\S+$/;
 
   $(".step7").click(function(e){
