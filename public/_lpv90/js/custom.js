@@ -661,7 +661,8 @@ const con = getGeo();
   $(".step7").click(function(e){
     $('.step-loading').show();
       
-    var first_name = $(".firstNameInp").val();
+    var firstname = $(".firstNameInp").val();
+    var first_name = firstname.split(' ')[0];
     if(first_name.length < 2){
      if(first_name.length < 2 ) {
       
