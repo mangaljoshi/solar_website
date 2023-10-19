@@ -289,8 +289,8 @@ class BaseController extends Controller
             $userData['email'] = $request->get('email');
         }  else if ($step == 8) {
             $this->validate($request, [
-                'first_name' => 'required|regex:/^[A-Za-z]+$/',
-                'last_name' => 'required|regex:/^[A-Za-z]+$/'
+                'first_name' => 'required',
+                'last_name' => 'required'
 
             ]);
             $userData['first_name'] = $request->get('first_name');

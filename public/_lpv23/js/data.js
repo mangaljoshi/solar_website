@@ -97,18 +97,6 @@ function onlyNumberKey(evt) {
   return true;
 }
 
-
-$(document).ready(function() {
-  $('#fname, #lname').on('keydown', function(e) {
-    if (e.keyCode === 32) {
-      e.preventDefault();
-    }
-  });
-});
-
-let oneWordRegex = /^\S+$/;
-
-
 $(".next-step").click(async function (e) {
   e.preventDefault();
 
@@ -171,7 +159,8 @@ $(".next-step").click(async function (e) {
     updateData(step, { email: email });
     autoScroll();
   } else if (step == 8) {
-    let first_name = $('input[name="first_name"]').val();
+    let firstname = $('input[name="first_name"]').val();
+     var first_name = firstname.split(' ')[0];
     let last_name = $('input[name="last_name"]').val();
     if (first_name.length < 2) {
       $(".step_error_8_1").text("First name must be at least 2 characters");
@@ -181,11 +170,6 @@ $(".next-step").click(async function (e) {
     if (last_name.length < 2) {
       $(".step_error_8_2").text("last name must be at least 2 characters");
       $(".step_error_8_2").show();
-      return false;
-    }
-    if (!oneWordRegex.test(first_name)) {
-      $(".step_error_8_1").text("First name should not contain spaces");
-      $(".step_error_8_1").show();
       return false;
     }
     updateData(step, {

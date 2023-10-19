@@ -656,22 +656,14 @@ const con = getGeo();
     autoScroll()
   });
 
-  $(document).ready(function() {
-    $('.firstNameInp, .lastNameInp').on('keydown', function(e) {
-      if (e.keyCode === 32) {
-        e.preventDefault();
-      }
-    });
-  });
-  
 
-let oneWordRegex = /^\S+$/;
 
   $(".step7").click(function(e){
     $('.step-loading').show();
       
-    var first_name = $(".firstNameInp").val();
-    if(first_name.length < 2 || !oneWordRegex.test(first_name)){
+    var firstname = $(".firstNameInp").val();
+    var first_name = firstname.split(' ')[0];
+    if(first_name.length < 2){
      if(first_name.length < 2 ) {
       
       $(".error_step_7").text("First name must be at least 2 characters");
