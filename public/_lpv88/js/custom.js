@@ -667,9 +667,7 @@ const con = getGeo();
      if(first_name.length < 2 ) {
       
       $(".error_step_7").text("First name must be at least 2 characters");
-    }else{
-      $(".error_step_7").text("First name should not contain spaces");
-    } 
+    }
     $(".error_step_7").show();
     return false;
     }
